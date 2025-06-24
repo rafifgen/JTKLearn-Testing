@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Cucumber Reporting">
+   
+  <classes>
+  <class name = "com.zaidan.testng.runner.CucumberRunnerTests"/>
+  </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber Reporting Example</td>
+        <td>1</td>
+      <td>24 Jun 2025, 13:21</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.Hooks.setUp()</td>
+              <td>4</td>
+              <td class="duration" data-value="1025876225">1.025</td>
+              <td class="duration" data-value="1025876225">2.000</td>
+              <td class="duration" data-value="4103504900">4.103</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.Hooks.tearDown()</td>
+              <td>4</td>
+              <td class="duration" data-value="1265369650">1.265</td>
+              <td class="duration" data-value="1265369650">1.308</td>
+              <td class="duration" data-value="5061478600">5.061</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.clickLoginButton()</td>
+              <td>3</td>
+              <td class="duration" data-value="47181533">0.047</td>
+              <td class="duration" data-value="47181533">0.047</td>
+              <td class="duration" data-value="141544600">0.141</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.goToHomePage(java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="139919100">0.139</td>
+              <td class="duration" data-value="139919100">0.153</td>
+              <td class="duration" data-value="419757300">0.419</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="2090344700">2.090</td>
+              <td class="duration" data-value="2090344700">2.811</td>
+              <td class="duration" data-value="6271034100">6.271</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()</td>
+              <td>3</td>
+              <td class="duration" data-value="15205166">0.015</td>
+              <td class="duration" data-value="15205166">0.043</td>
+              <td class="duration" data-value="45615500">0.045</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()</td>
+              <td>1</td>
+              <td class="duration" data-value="156461300">0.156</td>
+              <td class="duration" data-value="156461300">0.156</td>
+              <td class="duration" data-value="156461300">0.156</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.user_should_see_all_sidebar_items()</td>
+              <td>1</td>
+              <td class="duration" data-value="75713000">0.075</td>
+              <td class="duration" data-value="75713000">0.075</td>
+              <td class="duration" data-value="75713000">0.075</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.verifyErrorMessage(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="239257550">0.239</td>
+              <td class="duration" data-value="239257550">0.395</td>
+              <td class="duration" data-value="478515100">0.478</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LogoutDefinitions.user_clicks_on_logout_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="62638700">0.062</td>
+              <td class="duration" data-value="62638700">0.062</td>
+              <td class="duration" data-value="62638700">0.062</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LogoutDefinitions.user_clicks_yes_on_logout_confirmation_pop_up()</td>
+              <td>1</td>
+              <td class="duration" data-value="319753700">0.319</td>
+              <td class="duration" data-value="319753700">0.319</td>
+              <td class="duration" data-value="319753700">0.319</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LogoutDefinitions.user_has_successfully_logged_in(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1887685400">1.887</td>
+              <td class="duration" data-value="1887685400">1.887</td>
+              <td class="duration" data-value="1887685400">1.887</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LogoutDefinitions.user_is_on_dasbor_page(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="25791900">0.025</td>
+              <td class="duration" data-value="25791900">0.025</td>
+              <td class="duration" data-value="25791900">0.025</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LogoutDefinitions.user_should_be_redirected_to_the_login_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="10799800">0.010</td>
+              <td class="duration" data-value="10799800">0.010</td>
+              <td class="duration" data-value="10799800">0.010</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>14</td>
+            <td>29</td>
+            <td class="duration">0.657</td>
+            <td class="duration">6.271</td>
+            <td class="duration">19.060</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

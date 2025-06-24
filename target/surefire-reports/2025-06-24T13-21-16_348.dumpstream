@@ -1,0 +1,5 @@
+# Created at 2025-06-24T13:21:16.496
+Boot Manifest-JAR contains absolute paths in classpath 'E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
