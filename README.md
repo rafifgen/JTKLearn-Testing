@@ -1,14 +1,3 @@
-# 📘 **Tugas Kelompok: Pengujian Perangkat Lunak**
-
-## 🧑‍🤝‍🧑 **Anggota Kelompok**
-| NIM        | Nama                     |
-|------------|--------------------------|
-| 221524044  | Mahardika Pratama        |
-| 221524052  | Naia Siti Az-zahra       |
-| 221524058  | Salsabil Khoirunisa      |
-
----
-
 ## 💻 **Deskripsi Proyek**
 Proyek ini merupakan web automation testing untuk aplikasi **Pengelolaan Dana Pendidikan Sekolah Zaidan Educare** menggunakan **Selenium**, **Cucumber**, dan **TestNG**. Pengujian dilakukan secara otomatis berdasarkan skenario yang ditulis dalam format Gherkin.
 
@@ -82,12 +71,6 @@ b9-ppl-zaidan-educare-selenium-cucumber
 3. Laporan pengujian akan tersedia di:
    - 'target/cucumber-report-html/' (Net Masterthought Report)
    - 'test-output/' (Laporan TestNG)
-
----
-
-## 📈 **Hasil Laporan Pengujian Otomatis**
-Laporan hasil pengujian otomatis dapat diakses melalui tautan berikut:
-- [Report](https://mahardikapratama.github.io/b9-ppl-zaidan-educare-selenium-cucumber/target/cucumber-report-html/cucumber-html-reports/overview-failures.html)
 
 ---
 
