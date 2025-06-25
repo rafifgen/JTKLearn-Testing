@@ -1,5 +1,5 @@
 ## 💻 **Deskripsi Proyek**
-Proyek ini merupakan web automation testing untuk aplikasi **Pengelolaan Dana Pendidikan Sekolah Zaidan Educare** menggunakan **Selenium**, **Cucumber**, dan **TestNG**. Pengujian dilakukan secara otomatis berdasarkan skenario yang ditulis dalam format Gherkin.
+Proyek ini merupakan web automation testing untuk aplikasi **JTK Learn** menggunakan **Selenium**, **Cucumber**, dan **TestNG**. Pengujian dilakukan secara otomatis berdasarkan skenario yang ditulis dalam format Gherkin.
 
 ---
 
