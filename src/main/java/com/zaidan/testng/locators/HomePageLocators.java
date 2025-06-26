@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 public class HomePageLocators {
 
 //    @FindBy(xpath = "/html/body/div[2]/main/div/div[1]/div/div/div[1]/h1")
-    @FindBy(xpath = "/html/body/div/main/div/div[1]/div/div/div[1]/h1")
+    @FindBy(xpath = "/html/body/div/div/div/div/div/h3")
     public WebElement homePageUserName;
 
 //    @FindBy(xpath = "//ul[@data-sidebar='menu']/li/a/span")

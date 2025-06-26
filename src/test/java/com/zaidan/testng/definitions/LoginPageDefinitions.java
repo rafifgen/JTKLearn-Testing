@@ -23,7 +23,7 @@ public class LoginPageDefinitions {
         HelperClass.setUpDriver();
     }
 
-    @And("User has navigated to the login page of Education Fund Payment Management System for Zaidan Educare School app {string}")
+    @And("User has navigated to the login page of JTK Learn app {string}")
     public void user_has_navigated_to_login_page(String url) {
         HelperClass.openPage(url);
     }
@@ -42,37 +42,48 @@ public class LoginPageDefinitions {
 
     }
 
+//    @Then("User is navigated to the dashboard page")
+//    public void user_is_navigated_to_dashboard() {
+//        Assert.assertTrue(objHomePage.getHomePageText().contains("Admin | Pelajar | Pengajar"));
+//    }
     @Then("User is navigated to the dashboard page")
     public void user_is_navigated_to_dashboard() {
-        Assert.assertTrue(objHomePage.getHomePageText().contains("Dasbor - Bendahara"));
+        String dashboardText = objHomePage.getHomePageText();
+        // Validasi bahwa teks dashboard mengandung setidaknya salah satu dari ketiga peran
+        boolean isAdmin = dashboardText.contains("Admin");
+        boolean isPelajar = dashboardText.contains("Pelajar");
+        boolean isPengajar = dashboardText.contains("Pengajar");
+
+        Assert.assertTrue(isAdmin || isPelajar || isPengajar,
+                "Dashboard page did not contain expected roles text.");
     }
 
-    @And("User should be able to see navigation bar for bendahara")
-    public void user_should_see_all_sidebar_items() {
-        List<String> expectedItems = Arrays.asList(
-            "Dasbor",
-            "Tagihan Siswa",
-            "Transaksi Penerimaan Dana",
-            "Pengaturan Notifikasi",
-            "Status Pembayaran",
-            "Rekapitulasi",
-            "Progres Transaksi Penerima Dana"
-        );
-        List<String> actualItems = objHomePage.getSidebarItems();
-        Assert.assertEquals(actualItems, expectedItems, "Sidebar items do not match!");
-    }
+
+//    @And("User should be able to see navigation bar for bendahara")
+//    public void user_should_see_all_sidebar_items() {
+//        List<String> expectedItems = Arrays.asList(
+//            "Dasbor",
+//            "Tagihan Siswa",
+//            "Transaksi Penerimaan Dana",
+//            "Pengaturan Notifikasi",
+//            "Status Pembayaran",
+//            "Rekapitulasi",
+//            "Progres Transaksi Penerima Dana"
+//        );
+//        List<String> actualItems = objHomePage.getSidebarItems();
+//        Assert.assertEquals(actualItems, expectedItems, "Sidebar items do not match!");
+//    }
 
     @Then("User should be able to see {string} notification message")
     public void verifyErrorMessage(String notificationType) {
         String actualErrorMessage = objLogin.getErrorMessage();
-        String expectedErrorMessage = "Incorrect username or password, please try again!";
+        String expectedErrorMessage = "Kesalahan!";
 
         // Verifikasi pesan error untuk "un-successful login"
-        if (notificationType.equals("Incorrect username or password, please try again!")) {
+        if (notificationType.equals("Kesalahan!")) {
             Assert.assertEquals(actualErrorMessage, expectedErrorMessage, "Error message does not match!");
         } else {
             Assert.fail("Unknown notification type: " + notificationType);
         }
     }
-
 }
