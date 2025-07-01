@@ -42,10 +42,6 @@ public class LoginPageDefinitions {
 
     }
 
-//    @Then("User is navigated to the dashboard page")
-//    public void user_is_navigated_to_dashboard() {
-//        Assert.assertTrue(objHomePage.getHomePageText().contains("Admin | Pelajar | Pengajar"));
-//    }
     @Then("User is navigated to the dashboard page")
     public void user_is_navigated_to_dashboard() {
         String dashboardText = objHomePage.getHomePageText();
@@ -59,20 +55,26 @@ public class LoginPageDefinitions {
     }
 
 
-//    @And("User should be able to see navigation bar for bendahara")
-//    public void user_should_see_all_sidebar_items() {
-//        List<String> expectedItems = Arrays.asList(
-//            "Dasbor",
-//            "Tagihan Siswa",
-//            "Transaksi Penerimaan Dana",
-//            "Pengaturan Notifikasi",
-//            "Status Pembayaran",
-//            "Rekapitulasi",
-//            "Progres Transaksi Penerima Dana"
-//        );
-//        List<String> actualItems = objHomePage.getSidebarItems();
-//        Assert.assertEquals(actualItems, expectedItems, "Sidebar items do not match!");
-//    }
+    @And("User should be able to see navigation bar for pelajar")
+    public void user_should_see_all_sidebar_items() {
+        List<String> expectedItems = Arrays.asList(
+            "Beranda",
+            "Kursus Saya",
+            "Riwayat Kuis"
+        );
+        List<String> actualItems = objHomePage.getSidebarItems();
+        Assert.assertEquals(actualItems, expectedItems, "Sidebar items do not match!");
+    }
+
+    @And("User should be able to see photo and username")
+    public void userShouldSeePhotoAndUsername() {
+        // Cek foto user
+        Assert.assertTrue(objHomePage.isUserPhotoDisplayed(), "User photo is not displayed");
+
+        // Cek username
+        Assert.assertTrue(objHomePage.isUsernameDisplayed(), "Username is not displayed");
+    }
+
 
     @Then("User should be able to see {string} notification message")
     public void verifyErrorMessage(String notificationType) {

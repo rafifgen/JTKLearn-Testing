@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 public class LoginPageLocators {
 
     @FindBy(xpath = "/html/body/div/div/div/main/div/section/div/div/div/div[1]/div[5]/form/div[1]/div/input")
-    public WebElement userName;
+    public WebElement email;
 
     @FindBy(xpath = "/html/body/div/div/div/main/div/section/div/div/div/div[1]/div[5]/form/div[2]/input")
     public WebElement password;

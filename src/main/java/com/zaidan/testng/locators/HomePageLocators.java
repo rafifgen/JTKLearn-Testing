@@ -12,7 +12,14 @@ public class HomePageLocators {
     public WebElement homePageUserName;
 
 //    @FindBy(xpath = "//ul[@data-sidebar='menu']/li/a/span")
-    @FindBy(xpath = "/html/body/div/div/div[2]/div/div[2]/div/div/div/div/ul/li")
-    public List<WebElement> sidebarItems;
+    @FindBy(className = "nav-item")
+    public List<WebElement> navBarItems;
+
+    @FindBy(className = "profile-img")
+    public WebElement userPhoto;
+
+    @FindBy(xpath = "/html/body/div/div/div/nav/div/div/ul/li[4]/a")
+    public WebElement username;
+
 
 }

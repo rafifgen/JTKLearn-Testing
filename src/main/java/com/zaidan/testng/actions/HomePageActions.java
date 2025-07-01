@@ -26,10 +26,18 @@ public class HomePageActions {
 
     public List<String> getSidebarItems() {
         List<String> sidebarTexts = new ArrayList<>();
-        for (WebElement item : homePageLocators.sidebarItems) {
+        for (WebElement item : homePageLocators.navBarItems) {
             sidebarTexts.add(item.getText());
         }
         return sidebarTexts;
+    }
+
+    public boolean isUserPhotoDisplayed() {
+        return homePageLocators.userPhoto.isDisplayed();
+    }
+
+    public boolean isUsernameDisplayed() {
+        return homePageLocators.homePageUserName.isDisplayed();
     }
 
 }
