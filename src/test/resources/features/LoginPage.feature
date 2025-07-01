@@ -30,5 +30,28 @@ Scenario Outline: Login with invalid credentials
     | reqi     | admin111   |
 
 
+
 @VerificationGoToHomepage
-Scenario Outline: 
+Scenario Outline:User navigates to Beranda through Kursus Saya and sees course list
+    When User enters username "<username>" and password "<password>"
+    And User clicks on the login button
+    And User clicks on Kursus Saya navigation
+    And User clicks on Beranda navigation
+    Then Page title should be displayed
+    And Course list created by the instructor should be visible
+
+    Examples:
+        |  username | password |
+        | pelajar1@example.com | pelajar1 |
+
+
+@VerificationSubMenuOnUserProfile
+Scenario Outline:User click on Username Menu and sub menu is displayed
+    When User enters username "<username>" and password "<password>"
+    And User clicks on the login button
+    And User clicks on username
+    Then Sub menu keluar is displayed
+
+    Examples:
+        |  username | password |
+        | pelajar1@example.com | pelajar1 |
