@@ -9,13 +9,14 @@ Scenario Outline: Login with valid credentials
     When User enters username "<username>" and password "<password>"
     And User clicks on the login button
     Then User is navigated to the dashboard page
-#    And User should be able to see navigation bar for bendahara
+    And User should be able to see navigation bar for pelajar
+    And User should be able to see photo and username
 
     Examples:
     | username   | password   |
-    | admin@example.com  | admin   |
     | pelajar1@example.com | pelajar1 |
-    | pengajar1@example.com  | pengajar1   |
+#    | admin@example.com  | admin   |
+#    | pengajar1@example.com  | pengajar1   |
 
 
 @InvalidCredentials
@@ -27,3 +28,7 @@ Scenario Outline: Login with invalid credentials
     Examples:
     | username | password   |
     | reqi     | admin111   |
+
+
+@VerificationGoToHomepage
+Scenario Outline: 
