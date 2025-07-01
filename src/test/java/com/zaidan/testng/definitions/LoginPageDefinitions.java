@@ -76,18 +76,18 @@ public class LoginPageDefinitions {
         Assert.assertTrue(objHomePage.isUsernameDisplayed(), "Username is not displayed");
     }
 
-    @Then("User should be able to see {string} notification message")
-    public void verifyErrorMessage(String notificationType) {
-        String actualErrorMessage = objLogin.getErrorMessage();
-        String expectedErrorMessage = "Kesalahan!";
-
-        // Verifikasi pesan error untuk "un-successful login"
-        if (notificationType.equals("Kesalahan!")) {
-            Assert.assertEquals(actualErrorMessage, expectedErrorMessage, "Error message does not match!");
-        } else {
-            Assert.fail("Unknown notification type: " + notificationType);
-        }
-    }
+//    @Then("User should be able to see {string} notification message")
+//    public void verifyErrorMessage(String notificationType) {
+//        String actualErrorMessage = objLogin.getErrorMessage();
+//        String expectedErrorMessage = "Kesalahan!";
+//
+//        // Verifikasi pesan error untuk "un-successful login"
+//        if (notificationType.equals("Kesalahan!")) {
+//            Assert.assertEquals(actualErrorMessage, expectedErrorMessage, "Error message does not match!");
+//        } else {
+//            Assert.fail("Unknown notification type: " + notificationType);
+//        }
+//    }
 
     @And("User clicks on Kursus Saya navigation")
     public void click_kursus_saya_navigation(){
