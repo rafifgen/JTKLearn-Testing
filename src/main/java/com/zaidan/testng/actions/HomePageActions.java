@@ -42,38 +42,6 @@ public class HomePageActions {
         return homePageLocators.homePageUserName.isDisplayed();
     }
 
-    public String getHomePageTitle() {
-        return homePageLocators.homePageTitle.getText();
-    }
-
-    public List<Map<String, String>> getAllUnjoinedCoursesInfo() {
-        List<Map<String, String>> actualCourses = new ArrayList<>();
-        List<WebElement> courseElements = homePageLocators.courseCards; // Use the @FindBy list
-
-        for (WebElement courseElement : courseElements) {
-            Map<String, String> courseInfo = new HashMap<>();
-
-            // Extract course name
-            WebElement nameElement = courseElement.findElement(homePageLocators.courseName);
-            courseInfo.put("courseName", nameElement.getText());
-
-            // Extract instructor name
-            WebElement instructorElement = courseElement.findElement(homePageLocators.instructorName);
-            courseInfo.put("instructorName", instructorElement.getText());
-
-            // Extract image alt text
-            WebElement imgElement = courseElement.findElement(homePageLocators.courseImage);
-            if (imgElement.isDisplayed()) {
-                courseInfo.put("coursePicAlt", imgElement.getDomProperty("alt"));
-            } else {
-                courseInfo.put("coursePicAlt", "Image Not Displayed");
-            }
-
-            actualCourses.add(courseInfo);
-        }
-        return actualCourses;
-    }
-
     /**
      * Simulates fetching expected course data from a database.
      * In a real scenario, this would involve a DB connection and query.
@@ -101,5 +69,39 @@ public class HomePageActions {
         dbCourses.add(course3);
 
         return dbCourses;
+    }
+
+    public void clickedKursusSayaNav() {
+        // Click Login button
+        homePageLocators.kursusSayaNav.click();
+    }
+
+    public void clickedBerandaNav() {
+        // Click Login button
+        homePageLocators.berandaNav.click();
+    }
+
+    public String getCourseTitle() {
+        return homePageLocators.courseTitle.getText();
+    }
+
+    public List<String> getCourses() {
+        List<String> courses = new ArrayList<>();
+        for (WebElement item : homePageLocators.courses) {
+            courses.add(item.getText());
+        }
+        return courses;
+    }
+
+    // public boolean isCourseListVisible() {
+    // return !homePageLocators.courses.isEmpty();
+    // }
+
+    public void clickOnSubMenuUsername() {
+        homePageLocators.subMenuUsername.click();
+    }
+
+    public boolean isKeluarDisplayed() {
+        return homePageLocators.subMenuKeluar.isDisplayed();
     }
 }
