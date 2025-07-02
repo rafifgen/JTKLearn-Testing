@@ -50,7 +50,9 @@ public class DatabaseUtil {
         JSch jsch = new JSch();
 
         String sshHost = HelperClass.getProperty("ssh.host");
+        System.out.println(sshHost);
         int sshPort = Integer.parseInt(HelperClass.getProperty("ssh.port"));
+        System.out.println(HelperClass.getProperty("ssh.port"));
         String sshUser = HelperClass.getProperty("ssh.username");
         String sshPass = HelperClass.getProperty("ssh.password"); // Consider using key-based auth for production
 

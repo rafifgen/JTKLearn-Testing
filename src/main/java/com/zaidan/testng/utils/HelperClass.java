@@ -1,5 +1,6 @@
 package com.zaidan.testng.utils;
 
+import java.io.InputStream;
 import  java.time.Duration;
 import java.util.Properties;
 
@@ -18,6 +19,25 @@ public class HelperClass {
     private static Properties props = new Properties();
 
     private HelperClass() {
+        try (InputStream input = HelperClass.class.getClassLoader().getResourceAsStream("application.properties")) {
+            if (input == null) {
+                System.err.println("HelperClass: ERROR! application.properties not found at " +
+                        HelperClass.class.getClassLoader().getResource("application.properties"));
+                throw new RuntimeException("application.properties not found! Ensure it's in src/main/resources.");
+            }
+            props.load(input);
+            System.out.println("HelperClass: Properties loaded successfully from application.properties.");
+
+            // Optional: Print loaded properties for debugging (be careful with sensitive data)
+            System.out.println("--- All loaded properties ---");
+            props.forEach((key, value) -> System.out.println(key + " = " + value));
+            System.out.println("-----------------------------");
+
+        } catch (Exception ex) {
+            System.err.println("HelperClass: FATAL ERROR loading application.properties: " + ex.getMessage());
+            ex.printStackTrace();
+            throw new RuntimeException("Failed to load application.properties", ex);
+        }
         // Setup Edge driver
         WebDriverManager.edgedriver().setup();
 
