@@ -40,4 +40,36 @@ public class HomePageActions {
         return homePageLocators.homePageUserName.isDisplayed();
     }
 
+    public void clickedKursusSayaNav() {
+        // Click Login button
+        homePageLocators.kursusSayaNav.click();
+    }
+    public void clickedBerandaNav() {
+        // Click Login button
+        homePageLocators.berandaNav.click();
+    }
+
+    public String getCourseTitle() {
+        return homePageLocators.courseTitle.getText();
+    }
+
+    public List<String> getCourses() {
+        List<String> courses = new ArrayList<>();
+        for (WebElement item : homePageLocators.courses) {
+            courses.add(item.getText());
+        }
+        return courses;
+    }
+
+//    public boolean isCourseListVisible() {
+//        return !homePageLocators.courses.isEmpty();
+//    }
+
+    public void clickOnSubMenuUsername() {
+        homePageLocators.subMenuUsername.click();
+    }
+
+    public boolean isKeluarDisplayed() {
+        return homePageLocators.subMenuKeluar.isDisplayed();
+    }
 }
