@@ -11,6 +11,7 @@ import java.util.Properties;
 public class DatabaseUtil {
 
     private static Properties props = new Properties();
+    private static Connection connection = null; // Declare a static connection
 
     static {
         try (InputStream input = HelperClass.class.getClassLoader().getResourceAsStream("application.properties")) {
@@ -23,43 +24,50 @@ public class DatabaseUtil {
         }
     }
 
-    // Method to get a database connection
+    // Method to initialize/get the database connection
+    // This method will now ensure only one connection is active.
     public static Connection getConnection() throws SQLException {
-        try {
-            Class.forName("org.postgresql.Driver"); // Load PostgreSQL driver
-            return DriverManager.getConnection(
+        if (connection == null || connection.isClosed()) {
+            try {
+                Class.forName("org.postgresql.Driver"); // Load PostgreSQL driver
+                connection = DriverManager.getConnection(
                     props.getProperty("db.url"),
                     props.getProperty("db.username"),
-                    props.getProperty("db.password"));
-        } catch (ClassNotFoundException e) {
-            throw new SQLException("PostgreSQL JDBC Driver not found!", e);
+                    props.getProperty("db.password")
+                );
+                System.out.println("Database connection opened.");
+            } catch (ClassNotFoundException e) {
+                throw new SQLException("PostgreSQL JDBC Driver not found!", e);
+            }
+        }
+        return connection;
+    }
+
+    // Method to explicitly close the main database connection
+    public static void closeConnection() {
+        if (connection != null) {
+            try {
+                connection.close();
+                connection = null; // Set to null after closing
+                System.out.println("Database connection closed.");
+            } catch (SQLException e) {
+                System.err.println("Error closing database connection: " + e.getMessage());
+            }
         }
     }
 
-    // Method to close connection, statement, and resultSet
-    public static void closeResources(ResultSet rs, Statement stmt, Connection conn) {
+    // This method is now only for closing Statement and ResultSet,
+    // as the main connection is managed globally by getConnection/closeConnection.
+    public static void closeResources(ResultSet rs, Statement stmt) { // Removed Connection conn from params
         try {
-            if (rs != null)
-                rs.close();
+            if (rs != null) rs.close();
         } catch (SQLException e) {
             System.err.println("Error closing ResultSet: " + e.getMessage());
         }
         try {
-            if (stmt != null)
-                stmt.close();
+            if (stmt != null) stmt.close();
         } catch (SQLException e) {
             System.err.println("Error closing Statement: " + e.getMessage());
         }
-        try {
-            if (conn != null)
-                conn.close();
-        } catch (SQLException e) {
-            System.err.println("Error closing Connection: " + e.getMessage());
-        }
     }
-
-    // You can add more utility methods here for common operations like:
-    // - executeQuery(String sql) returning ResultSet
-    // - executeUpdate(String sql) returning int
-    // - etc. (but DAOs will wrap this for specific entities)
 }

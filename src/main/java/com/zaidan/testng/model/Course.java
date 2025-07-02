@@ -24,7 +24,7 @@ public class Course {
         return idCourse;
     }
 
-    public int getIdPenganjar() {
+    public int getIdPengajar() {
         return idPengajar;
     }
 
@@ -48,11 +48,38 @@ public class Course {
     public String toString() {
         return "Course{" +
                 "idCourse=" + idCourse +
-                ", idPenganjar=" + idPengajar +
+                ", idPengajar=" + idPengajar +
                 ", namaCourse='" + namaCourse + '\'' +
                 ", enrollmentKey='" + enrollmentKey + '\'' +
                 ", gambarCourse='" + gambarCourse + '\'' +
                 ", deskripsi='" + deskripsi + '\'' +
                 '}';
+    }
+
+    // IMPORTANT: Override equals and hashCode for proper comparison of lists/sets
+    // of Course objects
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Course course = (Course) o;
+        // Compare relevant fields for equality.
+        // For UI vs DB, 'namaCourse' and 'gambarCourse' (image URL) are key.
+        // 'idCourse' might be 0 for UI objects if not extractable.
+        // So, compare only the fields you can reliably get from both.
+        return idCourse == course.idCourse &&
+                idPengajar == course.idPengajar && // Only if you can get instructor ID reliably from UI
+                namaCourse.equals(course.namaCourse) &&
+                gambarCourse.equals(course.gambarCourse) && // Compare image URLs
+                enrollmentKey.equals(course.enrollmentKey) && // If you can extract it
+                deskripsi.equals(course.deskripsi); // If you can extract it
+    }
+
+    @Override
+    public int hashCode() {
+        // Generate hash code based on the fields used in equals
+        return java.util.Objects.hash(idCourse, idPengajar, namaCourse, enrollmentKey, gambarCourse, deskripsi);
     }
 }

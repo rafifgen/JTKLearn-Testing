@@ -3,9 +3,12 @@ package com.zaidan.testng.definitions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.And;
 
+import java.util.List;
+
 import org.testng.Assert;
 
 import com.zaidan.testng.locators.HomePageLocators;
+import com.zaidan.testng.model.Course;
 import com.zaidan.testng.dao.CourseDAO;
 
 public class DashboardDefinitions {
@@ -34,6 +37,7 @@ public class DashboardDefinitions {
         // actual
         // data from the database
         CourseDAO _courseHandler = new CourseDAO();
+        List<Course> _actualCourses = _courseHandler.getAllCourses();
     }
 
     @And("User should see the joined courses matching with the database records")
