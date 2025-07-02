@@ -8,7 +8,6 @@ public class Hooks {
 
     @Before
     public static void setUp() {
-
         HelperClass.setUpDriver();
     }
 

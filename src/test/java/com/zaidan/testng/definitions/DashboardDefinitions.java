@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import org.testng.Assert;
 
 import com.zaidan.testng.locators.HomePageLocators;
+import com.zaidan.testng.dao.CourseDAO;
 
 public class DashboardDefinitions {
     HomePageLocators homePage = new HomePageLocators();
@@ -32,6 +33,7 @@ public class DashboardDefinitions {
         // 2. Compare each attribute of each course in the user interface with the
         // actual
         // data from the database
+        CourseDAO _courseHandler = new CourseDAO();
     }
 
     @And("User should see the joined courses matching with the database records")
