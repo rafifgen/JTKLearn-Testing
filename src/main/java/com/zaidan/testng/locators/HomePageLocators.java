@@ -22,12 +22,6 @@ public class HomePageLocators {
     @FindBy(xpath = "/html/body/div/div/div/nav/div/div/ul/li[4]/a")
     public WebElement username;
 
-    // Locators *relative* to a course card (used within a found courseCard
-    // WebElement)
-    public By courseImage = By.cssSelector(".custom-card-img-top");
-    public By courseName = By.cssSelector(".custom-card-title");
-    public By instructorName = By.cssSelector(".custom-card-text");
-
     @FindBy(xpath = "/html/body/div/div/div/nav/div/div/ul/li[2]")
     public WebElement kursusSayaNav;
 
@@ -44,4 +38,13 @@ public class HomePageLocators {
 
     @FindBy(xpath = "/html/body/div/div/div/nav/div/div/ul/li[4]/button")
     public WebElement subMenuKeluar;
+
+    @FindBy(xpath = "/html/body/div/div/div/div/div/div[1]/h3")
+    public WebElement homePageTitle;
+
+    // Locators *relative* to a course card (used within a found courseCard
+    // WebElement)
+    public By courseImage = By.cssSelector(".custom-card-img-top");
+    public By courseName = By.cssSelector(".custom-card-title");
+    public By instructorName = By.cssSelector(".custom-card-text");
 }
