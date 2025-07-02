@@ -13,22 +13,14 @@ public class Hooks {
     @BeforeAll
     public static void setupSuite() {
         System.out.println("--- Starting Test Suite Setup ---");
-        // Open the database connection for the entire suite
         try {
-            DatabaseUtil.getConnection(); // This will open the connection
+            // This will now establish the SSH tunnel AND the JDBC connection
+            DatabaseUtil.getConnection();
         } catch (Exception e) {
-            System.err.println("Failed to open database connection at suite start: " + e.getMessage());
-            // Optionally, throw a runtime exception or mark tests to skip
+            System.err.println("Failed to open database connection (or SSH tunnel) at suite start: " + e.getMessage());
+            throw new RuntimeException("Test suite cannot proceed without database connection.", e);
         }
         System.out.println("--- Test Suite Setup Complete ---");
-    }
-
-    @AfterAll
-    public static void tearDownSuite() {
-        System.out.println("--- Starting Test Suite Teardown ---");
-        // Close the database connection after all tests are done
-        DatabaseUtil.closeConnection();
-        System.out.println("--- Test Suite Teardown Complete ---");
     }
 
     @Before
@@ -38,7 +30,14 @@ public class Hooks {
 
     @After
     public static void tearDown() {
-
         HelperClass.tearDown();
+    }
+
+    @AfterAll
+    public static void tearDownSuite() {
+        System.out.println("--- Starting Test Suite Teardown ---");
+        // Close both JDBC connection and SSH tunnel
+        DatabaseUtil.closeAllConnections();
+        System.out.println("--- Test Suite Teardown Complete ---");
     }
 }

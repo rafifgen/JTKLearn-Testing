@@ -1,6 +1,7 @@
 package com.zaidan.testng.utils;
 
 import  java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +15,7 @@ public class HelperClass {
     private static HelperClass helperClass;
     private static WebDriver driver;
     public final static int TIMEOUT = 10;
+    private static Properties props = new Properties();
 
     private HelperClass() {
         // Setup Edge driver
@@ -50,5 +52,19 @@ public class HelperClass {
             driver.quit();
         }
         helperClass = null;
+    }
+
+    /**
+     * Retrieves a property value from the loaded application.properties file.
+     * @param key The key of the property to retrieve.
+     * @return The String value of the property, or null if the key is not found.
+     */
+    public static String getProperty(String key) {
+        // Ensure properties are loaded before attempting to retrieve
+        if (props.isEmpty() && helperClass == null) {
+            // Attempt to load properties if not already loaded (e.g., if getProperty is called before setUpDriver)
+            setUpDriver(); // This will ensure props are loaded
+        }
+        return props.getProperty(key);
     }
 }

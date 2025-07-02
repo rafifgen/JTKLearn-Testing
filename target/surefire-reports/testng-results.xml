@@ -1,59 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-02T13:08:32 WIB" name="Suite" finished-at="2025-07-02T13:08:58 WIB" duration-ms="26227">
+  <suite started-at="2025-07-02T17:03:16 WIB" name="Suite" finished-at="2025-07-02T17:03:20 WIB" duration-ms="3799">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@441772e]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-07-02T13:08:32 WIB" name="Cucumber Reporting" finished-at="2025-07-02T13:08:58 WIB" duration-ms="26227">
+    <test started-at="2025-07-02T17:03:16 WIB" name="Cucumber Reporting" finished-at="2025-07-02T17:03:20 WIB" duration-ms="3799">
       <class name="com.zaidan.testng.runner.CucumberRunnerTests">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@441772e]" started-at="2025-07-02T13:08:32 WIB" name="setUpClass" finished-at="2025-07-02T13:08:34 WIB" duration-ms="1814" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-02T17:03:16 WIB" name="setUpClass" finished-at="2025-07-02T17:03:20 WIB" duration-ms="3719" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4098dd77]]>
+                <![CDATA[org.testng.TestRunner@681adc8f]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Test suite cannot proceed without database connection.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Test suite cannot proceed without database connection.
+at com.zaidan.testng.definitions.Hooks.setupSuite(Hooks.java:21)
+Caused by: java.sql.SQLException: Failed to establish database connection through SSH tunnel.
+at com.zaidan.testng.utils.DatabaseUtil.getConnection(DatabaseUtil.java:43)
+at com.zaidan.testng.definitions.Hooks.setupSuite(Hooks.java:18)
+Caused by: java.lang.NumberFormatException: Cannot parse null string
+at java.base/java.lang.Integer.parseInt(Integer.java:526)
+at java.base/java.lang.Integer.parseInt(Integer.java:661)
+at com.zaidan.testng.utils.DatabaseUtil.establishSshTunnel(DatabaseUtil.java:53)
+at com.zaidan.testng.utils.DatabaseUtil.getConnection(DatabaseUtil.java:24)
+... 1 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@441772e]" started-at="2025-07-02T13:08:34 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-02T13:08:47 WIB" duration-ms="12696" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify dashboard page for a student who hasn't registered for any courses"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["View Dashboard"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@441772e]" started-at="2025-07-02T13:08:47 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-02T13:08:58 WIB" duration-ms="11404" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify dashboard page for a student who registered in courses from different lecturer"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["View Dashboard"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@441772e]" started-at="2025-07-02T13:08:58 WIB" name="tearDownClass" finished-at="2025-07-02T13:08:58 WIB" duration-ms="174" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-02T17:03:20 WIB" name="tearDownClass" finished-at="2025-07-02T17:03:20 WIB" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

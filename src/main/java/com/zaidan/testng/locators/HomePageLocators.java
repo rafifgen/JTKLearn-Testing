@@ -33,6 +33,7 @@ public class HomePageLocators {
 
     @FindBy(xpath = "/html/body/div/div/div/div/div/div[2]")
     public List<WebElement> courses;
+
     @FindBy(xpath = "/html/body/div/div/div/nav/div/div/ul/li[4]")
     public WebElement subMenuUsername;
 

@@ -14,7 +14,7 @@ public class CourseDAO {
 
     public List<Course> getAllCourses() {
         List<Course> courses = new ArrayList<>();
-        Connection connection = null; // Local variable to hold the shared connection
+        Connection connection; // Local variable to hold the shared connection
         Statement statement = null;
         ResultSet resultSet = null;
 
@@ -35,6 +35,7 @@ public class CourseDAO {
 
                 Course course = new Course(idCourse, idPengajar, namaCourse, enrollmentKey, gambarCourse, deskripsi);
                 courses.add(course);
+                System.out.println(course);
             }
         } catch (SQLException e) {
             System.err.println("Error retrieving all courses: " + e.getMessage());
