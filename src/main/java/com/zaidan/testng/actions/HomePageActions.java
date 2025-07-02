@@ -28,19 +28,39 @@ public class HomePageActions {
     }
 
     public List<String> getSidebarItems() {
-        List<String> sidebarTexts = new ArrayList<>();
-        for (WebElement item : homePageLocators.navBarItems) {
-            sidebarTexts.add(item.getText());
+        try {
+            // Jika locator tidak menemukan elemen, homePageLocators.courses akan menjadi list kosong.
+            if (homePageLocators.navBarItems.isEmpty()) {
+                return new ArrayList<>(); // Kembalikan list kosong secara eksplisit.
+            }
+
+            List<String> navBarTexts = new ArrayList<>();
+            for (WebElement item : homePageLocators.navBarItems) {
+                navBarTexts.add(item.getText());
+            }
+            return navBarTexts;
+        } catch (NoSuchElementException e) {
+            // Sebagai pengaman tambahan, jika terjadi error saat mengakses list,
+            // kembalikan list kosong.
+            return new ArrayList<>();
         }
-        return sidebarTexts;
     }
 
     public boolean isUserPhotoDisplayed() {
-        return homePageLocators.userPhoto.isDisplayed();
+        try {
+            return homePageLocators.userPhoto.isDisplayed();
+        } catch (NoSuchElementException e) {
+            // Jika elemen tidak ada di DOM, maka ia tidak ditampilkan.
+            return false;
+        }
     }
 
     public boolean isUsernameDisplayed() {
-        return homePageLocators.homePageUserName.isDisplayed();
+        try {
+            return homePageLocators.homePageUserName.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
 
     /**

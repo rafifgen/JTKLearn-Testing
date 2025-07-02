@@ -1,4 +1,5 @@
 com\zaidan\testng\runner\CucumberRunnerTests.class
+com\zaidan\testng\definitions\DashboardDefinitions.class
 com\zaidan\testng\definitions\LoginPageDefinitions.class
 com\zaidan\testng\definitions\LogoutDefinitions.class
 com\zaidan\testng\definitions\Hooks.class

@@ -17,7 +17,7 @@ public class LoginPageActions {
 
     public void login(String strUserName, String strPassword) {
 
-        // Fill user name
+        // Fill username
         loginPageLocators.email.sendKeys(strUserName);
 
         // Fill password
