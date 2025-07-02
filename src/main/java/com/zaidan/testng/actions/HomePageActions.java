@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import com.zaidan.testng.locators.HomePageLocators;
 import com.zaidan.testng.utils.HelperClass;
@@ -103,5 +104,16 @@ public class HomePageActions {
 
     public boolean isKeluarDisplayed() {
         return homePageLocators.subMenuKeluar.isDisplayed();
+    }
+    //click navigation menu
+    public void clickNavigationMenu(String menuName) {
+        for (WebElement item : homePageLocators.navBarItems) {
+            WebElement linkElement = item.findElement(By.cssSelector("a.nav-link"));
+            if (linkElement.getText().equalsIgnoreCase(menuName)) {
+                linkElement.click();
+                return;
+            }
+        }
+        throw new IllegalArgumentException("Menu item '" + menuName + "' not found.");
     }
 }
