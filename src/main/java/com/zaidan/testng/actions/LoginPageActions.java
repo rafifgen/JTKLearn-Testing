@@ -18,7 +18,7 @@ public class LoginPageActions {
     public void login(String strUserName, String strPassword) {
 
         // Fill user name
-        loginPageLocators.userName.sendKeys(strUserName);
+        loginPageLocators.email.sendKeys(strUserName);
 
         // Fill password
         loginPageLocators.password.sendKeys(strPassword);
@@ -30,10 +30,6 @@ public class LoginPageActions {
         loginPageLocators.login.click();
     }
 
-    // Get the title of Login Page")
-    // public String getLoginTitle() {
-    //     return loginPageLocators.titleText.getText();
-    // }
 
     // Get the error message of Login Page
     public String getErrorMessage() {

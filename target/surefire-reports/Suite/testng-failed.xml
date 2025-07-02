@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Cucumber Reporting(failed)" verbose="0">
+    <classes>
+      <class name="com.zaidan.testng.runner.CucumberRunnerTests">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- com.zaidan.testng.runner.CucumberRunnerTests -->
+    </classes>
+  </test> <!-- Cucumber Reporting(failed) -->
+</suite> <!-- Failed suite [Suite] -->

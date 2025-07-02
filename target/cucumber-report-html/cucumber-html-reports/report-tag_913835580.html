@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports (no 1) - Tag: @ValidCredentials</title>
+<title>Cucumber Reports (no 1) - Tag: @UnjoinedCourse</title>
 
 </head>
 <body>
@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber Reporting Example</td>
         <td>1</td>
-      <td>01 Jul 2025, 16:53</td>
+      <td>02 Jul 2025, 13:09</td>
     </tr>
   </tbody>
 </table>
@@ -128,19 +128,19 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">@ValidCredentials</td>
-          <td      class="passed"    >3</td>
+          <td class="tagname">@UnjoinedCourse</td>
+          <td      class="passed"    >5</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">3</td>
+          <td class="total">5</td>
 
           <td  class="passed"    >1</td>
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="344870200">0.344</td>
+          <td class="duration" data-value="2659065400">2.659</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -173,24 +173,25 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_3970567371.html">Login to JTK Learn Application</a>
+      <a href="report-feature_286151111.html">View Dashboard</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_284256703.html">@ValidCredentials</a>
+       <a href="report-tag_3411628595.html">@Dashboard</a>
+       <a href="report-tag_913835580.html">@UnjoinedCourse</a>
 </div>
 
 
-  <span class="lead-duration duration">0.344</span>
+  <span class="lead-duration duration">2.659</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Login with valid credentials</span>
+  <span class="name">Verify dashboard page for a student who hasn't registered for any courses</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -221,7 +222,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.setUp()</span>
 
-  <span class="lead-duration duration">1.606</span>
+  <span class="lead-duration duration">7.604</span>
 
           </div>
 
@@ -254,38 +255,65 @@ $(document).ready(function() {
       <div class="step">
 
 
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">User enters username <span class="argument">&quot;pelajar3@example.com&quot;</span> and password <span class="argument">&quot;pelajar3&quot;</span></span>
+
+  <span class="lead-duration duration">2.230</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User clicks on the login button</span>
+
+  <span class="lead-duration duration">0.418</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">User is navigated to the dashboard page</span>
+  <span class="name">User should see the welcome message for email <span class="argument">&quot;pelajar3@example.com&quot;</span></span>
 
-  <span class="lead-duration duration">0.279</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User should be able to see navigation bar for pelajar</span>
-
-  <span class="lead-duration duration">0.027</span>
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
@@ -310,9 +338,36 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">User should be able to see photo and username</span>
+  <span class="name">User should see the page title <span class="argument">&quot;Kursus&quot;</span></span>
 
-  <span class="lead-duration duration">0.038</span>
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User should see all courses matching with the database records</span>
+
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -357,7 +412,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.tearDown()</span>
 
-  <span class="lead-duration duration">0.166</span>
+  <span class="lead-duration duration">0.571</span>
 
           </div>
 
