@@ -1,5 +1,5 @@
 @Dashboard
-Feature: View Dashboard
+Feature: FR03-View Dashboard
 
 Background:
     Given User has opened the browser

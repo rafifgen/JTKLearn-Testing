@@ -2,7 +2,6 @@ package com.zaidan.testng.dao;
 
 import com.zaidan.testng.model.Course;
 import com.zaidan.testng.utils.DatabaseUtil;
-import org.checkerframework.checker.units.qual.C;
 
 import java.sql.*;
 import java.util.ArrayList;

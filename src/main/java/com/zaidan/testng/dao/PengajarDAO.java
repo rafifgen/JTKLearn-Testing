@@ -1,6 +1,5 @@
 package com.zaidan.testng.dao;
 
-import com.zaidan.testng.model.Pengajar; // Import Pengajar model (if you created it)
 import com.zaidan.testng.utils.DatabaseUtil;
 
 import java.sql.Connection;
