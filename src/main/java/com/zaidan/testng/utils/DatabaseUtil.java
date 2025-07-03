@@ -54,14 +54,7 @@ public class DatabaseUtil {
         int sshPort = Integer.parseInt(HelperClass.getProperty("ssh.port"));
         System.out.println(HelperClass.getProperty("ssh.port"));
         String sshUser = HelperClass.getProperty("ssh.username");
-        String sshPass = HelperClass.getProperty("ssh.password"); // Consider using key-based auth for production
-
-        // If using a private key:
-        // String privateKeyPath = HelperClass.getProperty("ssh.private_key_path");
-        // if (privateKeyPath != null && !privateKeyPath.isEmpty()) {
-        //     jsch.addIdentity(privateKeyPath);
-        //     System.out.println("SSH: Using private key: " + privateKeyPath);
-        // }
+        String sshPass = HelperClass.getProperty("ssh.password");
 
         sshSession = jsch.getSession(sshUser, sshHost, sshPort);
         sshSession.setPassword(sshPass); // Only if using password authentication

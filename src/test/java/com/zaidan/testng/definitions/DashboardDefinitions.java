@@ -56,22 +56,19 @@ public class DashboardDefinitions {
     public void userShouldSeeAllCoursesMatchingWithTheDatabaseRecords() {
         // 1. Get all courses from the database (CourseDAO remains the same)
         List<Course> dbCourses = courseDAO.getAllCourses();
-        System.out.println("Courses fetched from DB (" + dbCourses.size() + "): "
-                + dbCourses.stream().map(Course::getNamaCourse).collect(Collectors.joining(", ")));
+        // Uncomment this for debugging.
+        // System.out.println("Courses fetched from DB (" + dbCourses.size() + "): "
+        //  + dbCourses.stream().map(Course::getNamaCourse).collect(Collectors.joining(", ")));
 
         // 2. Get all courses displayed on the user interface (HomePageActions remains
         // the same)
         List<Course> uiCourses = homePageActions.getAllDisplayedCourses();
-        System.out.println("Courses fetched from UI (" + uiCourses.size() + "): "
-                + uiCourses.stream().map(Course::getNamaCourse).collect(Collectors.joining(", ")));
+        // Uncomment these 2 lines for debugging.
+//        System.out.println("Courses fetched from UI (" + uiCourses.size() + "): "
+//                + uiCourses.stream().map(Course::getNamaCourse).collect(Collectors.joining(", ")));
 
         // Basic sanity checks
         Assert.assertFalse(dbCourses.isEmpty(), "No courses found in the database!");
-        // Note: For 'all courses' view, UI might sometimes be empty if no courses
-        // exist,
-        // but typically a dashboard implies showing *something*. Adjust assert as
-        // needed.
-        // Assert.assertFalse(uiCourses.isEmpty(), "No courses found on the UI!");
 
         Assert.assertEquals(uiCourses.size(), dbCourses.size(),
                 "Mismatch in number of courses displayed on UI vs. in DB. UI: " + uiCourses.size() + ", DB: "
@@ -84,6 +81,10 @@ public class DashboardDefinitions {
         Map<String, Course> uiCoursesMap = uiCourses.stream()
                 .collect(Collectors.toMap(Course::getNamaCourse, course -> course));
 
+        compareIndividualCourses(dbCoursesMap, uiCoursesMap);
+    }
+
+    private static void compareIndividualCourses(Map<String, Course> dbCoursesMap, Map<String, Course> uiCoursesMap) {
         // Verify that the set of course names is identical
         Assert.assertTrue(dbCoursesMap.keySet().equals(uiCoursesMap.keySet()),
                 "Mismatch in course names between UI and DB. DB Names: " + dbCoursesMap.keySet() + ", UI Names: "
@@ -107,25 +108,7 @@ public class DashboardDefinitions {
             Assert.assertEquals(actualGambarLink, expectedGambarLink,
                     "Image URL mismatch for '" + courseName + "'. UI: '" + actualGambarLink + "', DB: '"
                             + expectedGambarLink + "'");
-
-            // Instructor ID/Name comparison:
-            // This remains a point for further development. The UI gives "Budi Pengajar"
-            // (text).
-            // The DB Course object has id_pengajar (int).
-            // To compare, you'd need to:
-            // 1. Get the actual instructor name from the DB using dbCourse.getIdPengajar()
-            // via an InstructorDAO.
-            // 2. Then compare that DB instructor name to the uiInstructorName extracted
-            // from the UI.
-            // For now, this assertion is commented out.
-            // Example if you have InstructorDAO:
-            // String dbInstructorName =
-            // instructorDAO.getPengajarNameById(dbCourse.getIdPengajar());
-            // Assert.assertEquals(uiCourse.getInstructorNameFromUI(), dbInstructorName,
-            // "Instructor name mismatch");
-
-            // Other attributes (enrollmentKey, deskripsi) are not directly available from
-            // UI card.
+            // TODO: Implement pengajar comparison
         }
         System.out.println("All courses displayed on UI are successfully matched with database records.");
     }
