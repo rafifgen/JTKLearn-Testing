@@ -2,6 +2,8 @@ package com.zaidan.testng.utils;
 
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
+
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;

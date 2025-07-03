@@ -29,9 +29,9 @@ public class HelperClass {
             System.out.println("HelperClass: Properties loaded successfully from application.properties.");
 
             // Optional: Print loaded properties for debugging (be careful with sensitive data)
-            System.out.println("--- All loaded properties ---");
-            props.forEach((key, value) -> System.out.println(key + " = " + value));
-            System.out.println("-----------------------------");
+//            System.out.println("--- All loaded properties ---");
+//            props.forEach((key, value) -> System.out.println(key + " = " + value));
+//            System.out.println("-----------------------------");
 
         } catch (Exception ex) {
             System.err.println("HelperClass: FATAL ERROR loading application.properties: " + ex.getMessage());
