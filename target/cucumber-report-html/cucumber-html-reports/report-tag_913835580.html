@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber Reporting Example</td>
         <td>1</td>
-      <td>02 Jul 2025, 16:49</td>
+      <td>03 Jul 2025, 10:59</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@UnjoinedCourse</td>
-          <td      class="passed"    >2</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >2</td>
+          <td      class="passed"    >5</td>
+          <td >0</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">5</td>
 
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="2778425300">2.778</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="2617474500">2.617</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -184,12 +184,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.778</span>
+  <span class="lead-duration duration">2.617</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Verify dashboard page for a student who hasn't registered for any courses</span>
 
@@ -200,7 +200,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
   <div class="inner-level hooks-element-before">
@@ -222,7 +222,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.setUp()</span>
 
-  <span class="lead-duration duration">2.817</span>
+  <span class="lead-duration duration">0.001</span>
 
           </div>
 
@@ -239,9 +239,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -251,7 +251,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-3" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -259,7 +259,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User enters username <span class="argument">&quot;pelajar3@example.com&quot;</span> and password <span class="argument">&quot;pelajar3&quot;</span></span>
 
-  <span class="lead-duration duration">0.382</span>
+  <span class="lead-duration duration">0.518</span>
 
 </div>
 
@@ -286,7 +286,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User clicks on the login button</span>
 
-  <span class="lead-duration duration">0.162</span>
+  <span class="lead-duration duration">0.144</span>
 
 </div>
 
@@ -309,11 +309,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">User should see the welcome message for email <span class="argument">&quot;pelajar3@example.com&quot;</span></span>
 
-  <span class="lead-duration duration">2.233</span>
+  <span class="lead-duration duration">1.334</span>
 
 </div>
 
@@ -321,22 +321,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>java.lang.AssertionError:</a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>java.lang.AssertionError: Expected student name not found in database for email: pelajar3@example.com expected object to not be null
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.assertNotNull(Assert.java:1496)
-	at com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeTheWelcomeMessage(DashboardDefinitions.java:36)
-	at ✽.User should see the welcome message for email &quot;pelajar3@example.com&quot;(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/Dashboard.feature:12)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -352,11 +336,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">User should see the page title <span class="argument">&quot;Kursus&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.040</span>
 
 </div>
 
@@ -379,11 +363,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">User should see all courses matching with the database records</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.579</span>
 
 </div>
 
@@ -410,7 +394,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -422,13 +406,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-5" class="inner-level collapse collapsable-details ">
+    <div id="after-4" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.tearDown()</span>
 
-  <span class="lead-duration duration">0.381</span>
+  <span class="lead-duration duration">0.414</span>
 
           </div>
 

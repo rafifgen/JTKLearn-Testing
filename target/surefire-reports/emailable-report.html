@@ -9,31 +9,11 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Cucumber Reporting</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5.077</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Cucumber Reporting</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">15.821</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Cucumber Reporting &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.zaidan.testng.runner.CucumberRunnerTests</td><td><a href="#m0">setUpClass</a></td><td rowspan="1">1751451518681</td><td rowspan="1">5011</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Cucumber Reporting &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.zaidan.testng.runner.CucumberRunnerTests</td><td><a href="#m0">runScenario</a></td><td rowspan="2">1751515171591</td><td rowspan="2">4658</td></tr><tr class="passedeven"><td><a href="#m1">runScenario</a></td></tr></tbody>
 </table>
-<h2>Cucumber Reporting</h2><h3 id="m0">com.zaidan.testng.runner.CucumberRunnerTests#setUpClass</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@f096f37</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: Test suite cannot proceed without database connection.
-	at com.zaidan.testng.definitions.Hooks.setupSuite(Hooks.java:22)
-Caused by: java.sql.SQLException: Failed to establish database connection through SSH tunnel.
-	at com.zaidan.testng.utils.DatabaseUtil.getConnection(DatabaseUtil.java:43)
-	at com.zaidan.testng.definitions.Hooks.setupSuite(Hooks.java:19)
-Caused by: org.postgresql.util.PSQLException: The connection attempt failed.
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:358)
-	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
-	at org.postgresql.jdbc.PgConnection.&lt;init&gt;(PgConnection.java:273)
-	at org.postgresql.Driver.makeConnection(Driver.java:446)
-	at org.postgresql.Driver.connect(Driver.java:298)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:613)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:199)
-	at com.zaidan.testng.utils.DatabaseUtil.getConnection(DatabaseUtil.java:37)
-	... 1 more
-Caused by: java.io.EOFException
-	at org.postgresql.core.PGStream.receiveChar(PGStream.java:469)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.enableSSL(ConnectionFactoryImpl.java:594)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:195)
-	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:262)
-	... 8 more
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Cucumber Reporting</h2><h3 id="m0">com.zaidan.testng.runner.CucumberRunnerTests#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify dashboard page for a student who registered in courses from different lecturer&quot;</td><td>&quot;View Dashboard&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.zaidan.testng.runner.CucumberRunnerTests#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify dashboard page for a student who hasn&apos;t registered for any courses&quot;</td><td>&quot;View Dashboard&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

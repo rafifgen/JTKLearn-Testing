@@ -31,7 +31,7 @@ public class HomePageLocators {
     @FindBy(className = "courses-title")
     public WebElement courseTitle;
 
-    @FindBy(xpath = "/html/body/div/div/div/div/div/div[2]")
+    @FindBy(css = ".col-12.col-sm-6.col-lg-3")
     public List<WebElement> courses;
 
     @FindBy(xpath = "/html/body/div/div/div/nav/div/div/ul/li[4]")

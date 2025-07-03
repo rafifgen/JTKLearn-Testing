@@ -101,9 +101,12 @@ public class DashboardDefinitions {
                     "Course name mismatch for '" + courseName + "'. UI: '" + uiCourse.getNamaCourse() + "', DB: '"
                             + dbCourse.getNamaCourse() + "'");
 
-            Assert.assertEquals(uiCourse.getGambarCourse(), dbCourse.getGambarCourse(),
-                    "Image URL mismatch for '" + courseName + "'. UI: '" + uiCourse.getGambarCourse() + "', DB: '"
-                            + dbCourse.getGambarCourse() + "'");
+            String expectedGambarLink = dbCourse.getGambarCourse();
+            String actualGambarLink = uiCourse.getGambarCourse().substring(uiCourse.getGambarCourse().
+                    indexOf("images/") + 7);
+            Assert.assertEquals(actualGambarLink, expectedGambarLink,
+                    "Image URL mismatch for '" + courseName + "'. UI: '" + actualGambarLink + "', DB: '"
+                            + expectedGambarLink + "'");
 
             // Instructor ID/Name comparison:
             // This remains a point for further development. The UI gives "Budi Pengajar"

@@ -39,7 +39,6 @@ public class Hooks {
         System.out.println("--- Starting Test Suite Teardown ---");
         // Close both JDBC connection and SSH tunnel
         DatabaseUtil.closeAllConnections();
-//        HelperClass.tearDown();
         System.out.println("--- Test Suite Teardown Complete ---");
     }
 }
