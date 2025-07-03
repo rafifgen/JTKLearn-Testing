@@ -12,15 +12,12 @@ Scenario: Login with valid credentials
     And User should be able to see navigation bar for pelajar
     And User should be able to see photo and username
 
-
 @VerificationGoToHomepage
 Scenario:User navigates to Beranda through Kursus Saya and sees course list
     When User clicks on Kursus Saya navigation
     And User clicks on Beranda navigation
     Then Page title should be displayed
     And Course list created by the instructor should be visible
-
-
 
 @VerificationSubMenuOnUserProfile
 Scenario:User click on Username Menu and sub menu is displayed
