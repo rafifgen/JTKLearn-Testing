@@ -68,7 +68,14 @@ b9-ppl-zaidan-educare-selenium-cucumber
    ```bash
    mvn clean test
    ```
-3. Laporan pengujian akan tersedia [di sini](https://rafifgen.github.io/JTKLearn-Testing/target/cucumber-report-html/cucumber-html-reports/overview-features.html)
+3. Laporan pengujian akan tersedia di:
+   - 'target/cucumber-report-html/' (Net Masterthought Report)
+   - 'test-output/' (Laporan TestNG)
+
+---
+
+## 🌏 Reportas
+Reportase dari tes yang sudah dijalankan dapat dilihat di [tautan berikut](https://rafifgen.github.io/JTKLearn-Testing/target/cucumber-report-html/cucumber-html-reports/overview-features.html).
 ---
 
 ## 📜 **Lisensi**
