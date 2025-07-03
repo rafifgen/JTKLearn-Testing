@@ -19,4 +19,4 @@ Scenario: Verify dashboard page for a student who registered in courses from dif
     And User clicks on the login button
     Then User should see the welcome message for email "pelajar1@example.com"
     And User should see the page title "Kursus"
-    And User should see the joined courses matching with the database records
+    And User should see the joined courses matching with the database records with email "pelajar1@example.com"

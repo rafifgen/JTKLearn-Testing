@@ -37,8 +37,6 @@ public class PengajarDAO {
         // Select 'nama' directly from the 'dosen' table using 'kode_dosen'
         String sql = "SELECT nama FROM pengajar WHERE kode_dosen = ?";
 
-        System.out.println("PengajarDAO: Querying DB for pengajar name with ID: " + idPengajar + ". SQL: " + sql);
-
         try {
             connection = DatabaseUtil.getConnection();
             preparedStatement = connection.prepareStatement(sql);

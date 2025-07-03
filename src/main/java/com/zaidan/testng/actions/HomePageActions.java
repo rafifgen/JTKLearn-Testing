@@ -163,7 +163,7 @@ public class HomePageActions {
         List<Course> uiCourses = new ArrayList<>();
         List<WebElement> courseCardElements = homePageLocators.courses;
 
-        System.out.println("Found " + courseCardElements.size() + " course card containers on the UI.");
+//        System.out.println("Found " + courseCardElements.size() + " course card containers on the UI.");
 
         for (WebElement cardElement : courseCardElements) {
             try {
