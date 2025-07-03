@@ -43,9 +43,4 @@ public class HomePageLocators {
     @FindBy(xpath = "/html/body/div/div/div/div/div/div[1]/h3")
     public WebElement homePageTitle;
 
-    // Locators *relative* to a course card (used within a found courseCard
-    // WebElement)
-    public By courseImage = By.cssSelector(".custom-card-img-top");
-    public By courseName = By.cssSelector(".custom-card-title");
-    public By instructorName = By.cssSelector(".custom-card-text");
 }

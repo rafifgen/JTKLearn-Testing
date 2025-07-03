@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
 import com.zaidan.testng.locators.HomePageLocators;
@@ -156,6 +157,22 @@ public class HomePageActions {
         } catch (NoSuchElementException e) {
             // Jika elemen tidak ada di DOM, maka ia tidak ditampilkan.
             return false;
+        }
+    }
+
+    public void selectCourseByName(String courseName) {
+        try {
+            // XPath ini mencari <h6> yang berisi nama kursus,
+            // lalu memilih "induk"-nya yaitu <div> utama dari card tersebut.
+            String dynamicXpath = String.format("//h6[normalize-space()='%s']/ancestor::div[@class='card custom-card']", courseName);
+
+            WebElement courseCard = HelperClass.getDriver().findElement(By.xpath(dynamicXpath));
+
+            courseCard.click();
+
+        } catch (NoSuchElementException e) {
+            System.err.println("Course card dengan nama '" + courseName + "' tidak ditemukan.");
+            throw new AssertionError("Gagal menemukan kursus: " + courseName, e);
         }
     }
 
