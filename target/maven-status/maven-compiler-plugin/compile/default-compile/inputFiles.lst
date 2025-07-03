@@ -1,8 +1,12 @@
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\LoginPageLocators.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\LoginPageActions.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\dao\CourseDAO.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\LogoutLocators.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\Pelajar.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\HomePageActions.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\Course.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\LogoutActions.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\utils\HelperClass.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\HomePageLocators.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\utils\DatabaseUtil.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\dao\UserDAO.java
