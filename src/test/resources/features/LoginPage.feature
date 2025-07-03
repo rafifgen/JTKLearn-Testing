@@ -1,4 +1,5 @@
-Feature: Login to JTK Learn Application
+@Authentication
+Feature: FR-01 Authentication
 
 Background:
     Given User has opened the browser

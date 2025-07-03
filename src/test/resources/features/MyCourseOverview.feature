@@ -1,5 +1,5 @@
 @MyCourseOverview
-Feature: Access My Course and taking the Enrollment
+Feature:FR-06 Course Overview
 
   Background:
     Given User has opened the browser
