@@ -173,7 +173,7 @@ public class HomePageActions {
 
                 String imageUrl = courseImageElement.getDomProperty("src");
                 String namaCourse = courseNameElement.getText().trim();
-                String instructorText = instructorNameElement.getText().trim();
+                String instructorName = instructorNameElement.getText().trim();
 
                 int idCourse = 0; // Not available from current UI card HTML
                 int idPengajar = 0; // Not available as ID from current UI card HTML
@@ -186,7 +186,8 @@ public class HomePageActions {
                         namaCourse,
                         enrollmentKey,
                         imageUrl,
-                        deskripsi);
+                        deskripsi,
+                        instructorName);
                 uiCourses.add(uiCourse);
 
             } catch (Exception e) {

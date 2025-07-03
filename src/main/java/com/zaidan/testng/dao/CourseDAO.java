@@ -33,7 +33,14 @@ public class CourseDAO {
                 String gambarCourse = resultSet.getString("gambar_course");
                 String deskripsi = resultSet.getString("deskripsi");
 
-                Course course = new Course(idCourse, idPengajar, namaCourse, enrollmentKey, gambarCourse, deskripsi);
+                Course course = new Course(
+                        idCourse,
+                        idPengajar,
+                        namaCourse,
+                        enrollmentKey,
+                        gambarCourse,
+                        deskripsi,
+                        null);
                 courses.add(course);
                 System.out.println(course);
             }

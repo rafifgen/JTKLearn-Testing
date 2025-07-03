@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import com.zaidan.testng.dao.PengajarDAO;
 import org.testng.Assert;
 
 import com.zaidan.testng.actions.HomePageActions;
@@ -20,6 +21,7 @@ public class DashboardDefinitions {
     HomePageActions homePageActions = new HomePageActions();
     UserDAO userDAO = new UserDAO();
     CourseDAO courseDAO = new CourseDAO();
+    static PengajarDAO pengajarDAO = new PengajarDAO();
 
     @Then("User should see the welcome message for email {string}")
     public void userShouldSeeTheWelcomeMessage(String email) {
@@ -98,17 +100,20 @@ public class DashboardDefinitions {
 
             System.out.println("Verifying attributes for course: '" + courseName + "'");
 
+            // Compare course names
             Assert.assertEquals(uiCourse.getNamaCourse(), dbCourse.getNamaCourse(),
                     "Course name mismatch for '" + courseName + "'. UI: '" + uiCourse.getNamaCourse() + "', DB: '"
                             + dbCourse.getNamaCourse() + "'");
 
+            // Compare course images name
             String expectedGambarLink = dbCourse.getGambarCourse();
             String actualGambarLink = uiCourse.getGambarCourse().substring(uiCourse.getGambarCourse().
                     indexOf("images/") + 7);
-            Assert.assertEquals(actualGambarLink, expectedGambarLink,
-                    "Image URL mismatch for '" + courseName + "'. UI: '" + actualGambarLink + "', DB: '"
-                            + expectedGambarLink + "'");
-            // TODO: Implement pengajar comparison
+            Assert.assertEquals(actualGambarLink, expectedGambarLink);
+
+            String expectedPengajar = pengajarDAO.getPengajarNameById(dbCourse.getIdPengajar());
+            String actualPengajar = uiCourse.getInstructorDisplayText();
+            Assert.assertEquals(actualPengajar, expectedPengajar);
         }
         System.out.println("All courses displayed on UI are successfully matched with database records.");
     }

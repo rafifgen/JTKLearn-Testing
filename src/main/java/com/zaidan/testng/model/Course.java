@@ -7,16 +7,18 @@ public class Course {
     private String enrollmentKey; // Maps to varchar(255)
     private String gambarCourse; // Maps to varchar(255)
     private String deskripsi; // Maps to text
+    private String instructorDisplayText; // This field stores the UI's instructor name (e.g., "Budi Pengajar")
 
     // Constructor
     public Course(int idCourse, int idPengajar, String namaCourse, String enrollmentKey, String gambarCourse,
-            String deskripsi) {
+            String deskripsi, String instructorDisplayText) {
         this.idCourse = idCourse;
         this.idPengajar = idPengajar;
         this.namaCourse = namaCourse;
         this.enrollmentKey = enrollmentKey;
         this.gambarCourse = gambarCourse;
         this.deskripsi = deskripsi;
+        this.instructorDisplayText = instructorDisplayText;
     }
 
     // Getters
@@ -42,6 +44,10 @@ public class Course {
 
     public String getDeskripsi() {
         return deskripsi;
+    }
+
+    public String getInstructorDisplayText() {
+        return instructorDisplayText;
     }
 
     @Override
