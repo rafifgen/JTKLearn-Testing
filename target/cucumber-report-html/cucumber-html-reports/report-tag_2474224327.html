@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber Reporting Example</td>
         <td>1</td>
-      <td>04 Jul 2025, 16:42</td>
+      <td>04 Jul 2025, 23:12</td>
     </tr>
   </tbody>
 </table>
@@ -129,18 +129,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@AccessMaterials</td>
-          <td      class="passed"    >18</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >2</td>
+          <td      class="passed"    >37</td>
+          <td      class="failed"    >4</td>
+          <td     class="skipped"   >13</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">21</td>
+          <td class="total">54</td>
 
           <td  class="passed"    >1</td>
-          <td  class="failed"    >1</td>
-          <td class="total">2</td>
+          <td  class="failed"    >4</td>
+          <td class="total">5</td>
 
-          <td class="duration" data-value="6423403700">6.423</td>
+          <td class="duration" data-value="21417104400">21.417</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -185,7 +185,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.335</span>
+  <span class="lead-duration duration">2.137</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -223,7 +223,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.setUp()</span>
 
-  <span class="lead-duration duration">1.466</span>
+  <span class="lead-duration duration">2.447</span>
 
           </div>
 
@@ -260,7 +260,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">User has opened the browser</span>
 
-  <span class="lead-duration duration">0.052</span>
+  <span class="lead-duration duration">0.042</span>
 
 </div>
 
@@ -287,7 +287,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User has navigated to the login page of JTK Learn app <span class="argument">&quot;https://polban-space.cloudias79.com/jtk-learn/&quot;</span></span>
 
-  <span class="lead-duration duration">0.668</span>
+  <span class="lead-duration duration">0.697</span>
 
 </div>
 
@@ -314,7 +314,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User enters username <span class="argument">&quot;pelajar1@example.com&quot;</span> and password <span class="argument">&quot;pelajar1&quot;</span></span>
 
-  <span class="lead-duration duration">0.211</span>
+  <span class="lead-duration duration">0.181</span>
 
 </div>
 
@@ -341,7 +341,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User clicks on the login button</span>
 
-  <span class="lead-duration duration">0.083</span>
+  <span class="lead-duration duration">0.069</span>
 
 </div>
 
@@ -368,7 +368,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User clicks on course <span class="argument">&quot;Contoh Kursus&quot;</span></span>
 
-  <span class="lead-duration duration">0.315</span>
+  <span class="lead-duration duration">0.337</span>
 
 </div>
 
@@ -395,7 +395,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User clicks on the continue button</span>
 
-  <span class="lead-duration duration">0.744</span>
+  <span class="lead-duration duration">0.496</span>
 
 </div>
 
@@ -422,7 +422,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">User clicks on one of the video in the navigation bar</span>
 
-  <span class="lead-duration duration">0.185</span>
+  <span class="lead-duration duration">0.266</span>
 
 </div>
 
@@ -449,7 +449,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">User should be able to see the page title <span class="argument">&quot;Contoh Kursus&quot;</span></span>
 
-  <span class="lead-duration duration">0.027</span>
+  <span class="lead-duration duration">0.025</span>
 
 </div>
 
@@ -476,7 +476,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">User should be able to play the video</span>
 
-  <span class="lead-duration duration">0.046</span>
+  <span class="lead-duration duration">0.020</span>
 
 </div>
 
@@ -488,37 +488,14 @@ $(document).ready(function() {
   <div class="inner-level">
     <div class="message indention">
       <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>org.openqa.selenium.StaleElementReferenceException:</a>
+          <a>java.lang.AssertionError:</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
-  (Session info: MicrosoftEdge=138.0.3351.65)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.32.0', revision: 'd17c8aa950'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.1'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [69546a99b33f90b82eb5862611b42bc7, clickElement {id=f.550FFC2EC40C45BE1AF4ACC7B38A9721.d.E19EBC3795790612301BF7AD7A9EA806.e.44}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55387}, msedge: {msedgedriverVersion: 138.0.3351.65 (81e3782c3ab4..., userDataDir: C:\Users\MSI\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55387/devtoo..., se:cdpVersion: 138.0.3351.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: MicrosoftEdge on windows (69546a99b33f90b82eb5862611b42bc7)] -&gt; xpath: /html/body/div/div/div/div/div[2]/div[1]/div/iframe]
-Session ID: 69546a99b33f90b82eb5862611b42bc7
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
-	at com.zaidan.testng.actions.LearnCoursePageActions.playExampleVideo(LearnCoursePageActions.java:53)
-	at com.zaidan.testng.definitions.AccessMaterials.userPlaysVideo(AccessMaterials.java:57)
+        <pre>java.lang.AssertionError: The video cannot be played because it doesn't contain the embed link expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.zaidan.testng.definitions.AccessMaterials.userPlaysVideo(AccessMaterials.java:63)
 	at ✽.User should be able to play the video(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:16)
 </pre>
       </div>
@@ -615,7 +592,7 @@ Session ID: 69546a99b33f90b82eb5862611b42bc7
             <span class="keyword indention">After</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.tearDown()</span>
 
-  <span class="lead-duration duration">0.206</span>
+  <span class="lead-duration duration">0.220</span>
 
           </div>
 
@@ -648,7 +625,7 @@ Session ID: 69546a99b33f90b82eb5862611b42bc7
 </div>
 
 
-  <span class="lead-duration duration">4.088</span>
+  <span class="lead-duration duration">2.799</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-6">
@@ -686,7 +663,7 @@ Session ID: 69546a99b33f90b82eb5862611b42bc7
             <span class="keyword indention">Before</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.setUp()</span>
 
-  <span class="lead-duration duration">0.773</span>
+  <span class="lead-duration duration">0.864</span>
 
           </div>
 
@@ -750,7 +727,7 @@ Session ID: 69546a99b33f90b82eb5862611b42bc7
   <span class="keyword indention">And</span>
   <span class="name">User has navigated to the login page of JTK Learn app <span class="argument">&quot;https://polban-space.cloudias79.com/jtk-learn/&quot;</span></span>
 
-  <span class="lead-duration duration">1.618</span>
+  <span class="lead-duration duration">0.928</span>
 
 </div>
 
@@ -777,7 +754,1303 @@ Session ID: 69546a99b33f90b82eb5862611b42bc7
   <span class="keyword indention">And</span>
   <span class="name">User enters username <span class="argument">&quot;pelajar1@example.com&quot;</span> and password <span class="argument">&quot;pelajar1&quot;</span></span>
 
-  <span class="lead-duration duration">0.129</span>
+  <span class="lead-duration duration">0.177</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User clicks on the login button</span>
+
+  <span class="lead-duration duration">0.066</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User clicks on course <span class="argument">&quot;Contoh Kursus&quot;</span></span>
+
+  <span class="lead-duration duration">0.298</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User clicks on the continue button</span>
+
+  <span class="lead-duration duration">0.793</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">User clicks on the example PDF material</span>
+
+  <span class="lead-duration duration">0.223</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">User should be able to read the PDF file with material id <span class="argument">5</span></span>
+
+  <span class="lead-duration duration">0.116</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User should be able to see the next or previous button</span>
+
+  <span class="lead-duration duration">0.032</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">The course name of id <span class="argument">3</span> and material name of id <span class="argument">5</span> should be the same as in the database</span>
+
+  <span class="lead-duration duration">0.161</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-9">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-9" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.zaidan.testng.definitions.Hooks.tearDown()</span>
+
+  <span class="lead-duration duration">0.152</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_3510713691.html">FR08-Access Materials</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2474224327.html">@AccessMaterials</a>
+       <a href="report-tag_2149507997.html">@wip</a>
+</div>
+
+
+  <span class="lead-duration duration">12.084</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-10">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify the time of finishing video material</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention">    TC-FR08-09, TC-FR08-10, TC-FR08-11</div>
+
+  <div id="element-10" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-11">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-11" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">com.zaidan.testng.definitions.Hooks.setUp()</span>
+
+  <span class="lead-duration duration">0.743</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-12">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-12" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">User has opened the browser</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User has navigated to the login page of JTK Learn app <span class="argument">&quot;https://polban-space.cloudias79.com/jtk-learn/&quot;</span></span>
+
+  <span class="lead-duration duration">1.270</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User enters username <span class="argument">&quot;pelajar1@example.com&quot;</span> and password <span class="argument">&quot;pelajar1&quot;</span></span>
+
+  <span class="lead-duration duration">0.145</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User clicks on the login button</span>
+
+  <span class="lead-duration duration">0.055</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User clicks on course <span class="argument">&quot;Komputer Grafik&quot;</span></span>
+
+  <span class="lead-duration duration">0.548</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And failed">
+  <span class="keyword indention">And</span>
+  <span class="name">User clicks on the continue button</span>
+
+  <span class="lead-duration duration">10.062</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-13">
+          <a>org.openqa.selenium.NoSuchElementException:</a>
+      </div>
+      <div id="msg-13" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div/div/div/div/div[2]/div[2]/div[5]/button&quot;}
+  (Session info: MicrosoftEdge=138.0.3351.65)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [03e6175b6dddefaccab9115e1c7d82ec, findElement {value=/html/body/div/div/div/div/div[2]/div[2]/div[5]/button, using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:50242}, msedge: {msedgedriverVersion: 138.0.3351.65 (81e3782c3ab4..., userDataDir: C:\Users\MSI\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50242/devtoo..., se:cdpVersion: 138.0.3351.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 03e6175b6dddefaccab9115e1c7d82ec
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+	at com.zaidan.testng.actions.CourseDetailsPageActions.continueCourse(CourseDetailsPageActions.java:94)
+	at com.zaidan.testng.definitions.AccessMaterials.userClicksContinue(AccessMaterials.java:43)
+	at ✽.User clicks on the continue button(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:43)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">User clicks on one of the video in the navigation bar</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">User should be able to play the video</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">User moves to the next page right after <span class="argument">5</span> minutes</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">System should track the time at which the material was started</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">System should track the time at which the material was finished; start time + 5 minutes</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-14">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-14" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.zaidan.testng.definitions.Hooks.tearDown()</span>
+
+  <span class="lead-duration duration">0.229</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_3510713691.html">FR08-Access Materials</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2474224327.html">@AccessMaterials</a>
+       <a href="report-tag_2149507997.html">@wip</a>
+</div>
+
+
+  <span class="lead-duration duration">2.443</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-15">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify the time of finishing video material</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention">    TC-FR08-09, TC-FR08-10, TC-FR08-11</div>
+
+  <div id="element-15" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-16">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-16" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">com.zaidan.testng.definitions.Hooks.setUp()</span>
+
+  <span class="lead-duration duration">0.731</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-17">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-17" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">User has opened the browser</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User has navigated to the login page of JTK Learn app <span class="argument">&quot;https://polban-space.cloudias79.com/jtk-learn/&quot;</span></span>
+
+  <span class="lead-duration duration">0.938</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User enters username <span class="argument">&quot;pelajar1@example.com&quot;</span> and password <span class="argument">&quot;pelajar1&quot;</span></span>
+
+  <span class="lead-duration duration">0.135</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User clicks on the login button</span>
+
+  <span class="lead-duration duration">0.065</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User clicks on course <span class="argument">&quot;Komputer Grafik&quot;</span></span>
+
+  <span class="lead-duration duration">0.382</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User clicks on the continue button</span>
+
+  <span class="lead-duration duration">0.625</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">User clicks on one of the video in the navigation bar</span>
+
+  <span class="lead-duration duration">0.277</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And failed">
+  <span class="keyword indention">And</span>
+  <span class="name">User should be able to play the video</span>
+
+  <span class="lead-duration duration">0.016</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-18">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-18" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: The video cannot be played because it doesn't contain the embed link expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.zaidan.testng.definitions.AccessMaterials.userPlaysVideo(AccessMaterials.java:63)
+	at ✽.User should be able to play the video(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:45)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">User moves to the next page right after <span class="argument">6</span> minutes</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">System should track the time at which the material was started</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">System should track the time at which the material was finished; start time + 5 minutes</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+  <div class="inner-level hooks-element-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-19">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-19" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.zaidan.testng.definitions.Hooks.tearDown()</span>
+
+  <span class="lead-duration duration">0.184</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_3510713691.html">FR08-Access Materials</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2474224327.html">@AccessMaterials</a>
+       <a href="report-tag_2149507997.html">@wip</a>
+</div>
+
+
+  <span class="lead-duration duration">1.950</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-20">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify the time of finishing video material</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention">    TC-FR08-09, TC-FR08-10, TC-FR08-11</div>
+
+  <div id="element-20" class="collapse collapsable-details  in ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-21">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-21" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">com.zaidan.testng.definitions.Hooks.setUp()</span>
+
+  <span class="lead-duration duration">0.844</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-22">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-22" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">User has opened the browser</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User has navigated to the login page of JTK Learn app <span class="argument">&quot;https://polban-space.cloudias79.com/jtk-learn/&quot;</span></span>
+
+  <span class="lead-duration duration">0.658</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User enters username <span class="argument">&quot;pelajar1@example.com&quot;</span> and password <span class="argument">&quot;pelajar1&quot;</span></span>
+
+  <span class="lead-duration duration">0.133</span>
 
 </div>
 
@@ -829,9 +2102,9 @@ Session ID: 69546a99b33f90b82eb5862611b42bc7
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">User clicks on course <span class="argument">&quot;Contoh Kursus&quot;</span></span>
+  <span class="name">User clicks on course <span class="argument">&quot;Komputer Grafik&quot;</span></span>
 
-  <span class="lead-duration duration">0.416</span>
+  <span class="lead-duration duration">0.381</span>
 
 </div>
 
@@ -858,7 +2131,7 @@ Session ID: 69546a99b33f90b82eb5862611b42bc7
   <span class="keyword indention">And</span>
   <span class="name">User clicks on the continue button</span>
 
-  <span class="lead-duration duration">0.730</span>
+  <span class="lead-duration duration">0.492</span>
 
 </div>
 
@@ -883,36 +2156,9 @@ Session ID: 69546a99b33f90b82eb5862611b42bc7
 
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">User clicks on the example PDF material</span>
+  <span class="name">User clicks on one of the video in the navigation bar</span>
 
-  <span class="lead-duration duration">0.300</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">User should be able to read the PDF file with material id <span class="argument">5</span></span>
-
-  <span class="lead-duration duration">0.087</span>
+  <span class="lead-duration duration">0.216</span>
 
 </div>
 
@@ -935,9 +2181,53 @@ Session ID: 69546a99b33f90b82eb5862611b42bc7
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And failed">
   <span class="keyword indention">And</span>
-  <span class="name">User should be able to see the next or previous button</span>
+  <span class="name">User should be able to play the video</span>
+
+  <span class="lead-duration duration">0.013</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-23">
+          <a>java.lang.AssertionError:</a>
+      </div>
+      <div id="msg-23" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: The video cannot be played because it doesn't contain the embed link expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.zaidan.testng.definitions.AccessMaterials.userPlaysVideo(AccessMaterials.java:63)
+	at ✽.User should be able to play the video(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:45)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">User moves to the next page right after <span class="argument">7</span> minutes</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -962,11 +2252,38 @@ Session ID: 69546a99b33f90b82eb5862611b42bc7
       <div class="step">
 
 
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">The course name of id <span class="argument">3</span> and material name of id <span class="argument">5</span> should be the same as in the database</span>
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">System should track the time at which the material was started</span>
 
-  <span class="lead-duration duration">0.750</span>
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">System should track the time at which the material was finished; start time + 5 minutes</span>
+
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -993,7 +2310,7 @@ Session ID: 69546a99b33f90b82eb5862611b42bc7
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-9">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-24">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1005,13 +2322,13 @@ Session ID: 69546a99b33f90b82eb5862611b42bc7
 
     </div>
 
-    <div id="after-9" class="inner-level collapse collapsable-details ">
+    <div id="after-24" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.tearDown()</span>
 
-  <span class="lead-duration duration">0.141</span>
+  <span class="lead-duration duration">0.170</span>
 
           </div>
 

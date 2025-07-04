@@ -1,7 +1,11 @@
 package com.zaidan.testng.definitions;
 
+import java.sql.Timestamp;
 import java.sql.SQLException;
+import java.sql.Time;
+import java.time.Instant;
 
+import org.joda.time.DateTime;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
@@ -9,9 +13,11 @@ import com.zaidan.testng.actions.CourseDetailsPageActions;
 import com.zaidan.testng.actions.HomePageActions;
 import com.zaidan.testng.actions.LearnCoursePageActions;
 import com.zaidan.testng.dao.CourseDAO;
+import com.zaidan.testng.dao.HistoryMateriDAO;
 import com.zaidan.testng.dao.MateriDAO;
 import com.zaidan.testng.model.Materi;
 import com.zaidan.testng.model.Course;
+import com.zaidan.testng.model.HistoryMateri;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -23,6 +29,7 @@ public class AccessMaterials {
     LearnCoursePageActions learnCoursePageActions = new LearnCoursePageActions();
     MateriDAO materiDAO = new MateriDAO();
     CourseDAO courseDAO = new CourseDAO();
+    HistoryMateriDAO historyMateriDAO = new HistoryMateriDAO();
     int courseLookupId = 0;
     int materialLookupId = 0;
 
@@ -92,5 +99,35 @@ public class AccessMaterials {
 
         Assert.assertNotNull(uiPDFKontenMaterial);
         Assert.assertEquals(uiPDFKontenMaterial, dbPDFKontenMaterial);
+    }
+
+    @And("User moves to the next page right after {int} minutes")
+    public void userMovesToNextPage() {
+        learnCoursePageActions.goToNextPage();
+    }
+    
+    @Then("System should track the time at which the material was started")
+    public void systemTrackTimeMaterialStarted() throws SQLException {
+        int idPelajar = 1;
+        int idMateri = 10;
+        Instant nowInstant = Instant.now();
+        Timestamp startingTime = Timestamp.from(nowInstant);
+        Timestamp dbStartingTime = historyMateriDAO.getStartingTime(idPelajar, idMateri);
+
+        Assert.assertNotNull(dbStartingTime, "DB Starting time wasn't successfully retrieved.");
+        Assert.assertEquals(startingTime, dbStartingTime);
+    }
+
+    @And("System should track the time at which the material was finished; start time + 5 minutes")
+    public void systemTrackFinishTime() throws SQLException {
+        int idPelajar = 1;
+        int idMateri = 10;
+        Instant nowInstant = Instant.now();
+        Timestamp finishTime = Timestamp.from(nowInstant);
+        HistoryMateri historyMateri = historyMateriDAO.getHistoryMateri(idPelajar, idMateri);
+        Timestamp dbFinishTime = historyMateri.getWaktuSelesai();
+
+        Assert.assertNotNull(dbFinishTime);
+        Assert.assertEquals(finishTime, dbFinishTime);
     }
 }
