@@ -1,6 +1,7 @@
 package com.zaidan.testng.dao;
 
 import com.zaidan.testng.model.Course;
+import com.zaidan.testng.model.CourseDetails;
 import com.zaidan.testng.utils.DatabaseUtil;
 
 import java.sql.*;
@@ -112,5 +113,113 @@ public class CourseDAO {
             DatabaseUtil.closeResources(resultSet, preparedStatement);
         }
         return courses;
+    }
+
+    public CourseDetails getCourseDetailsForStudent(String studentEmail, String courseName) {
+        CourseDetails courseDetails = null;
+
+        String sql = "SELECT " +
+                "    c.nama_course, " +
+                "    c.gambar_course, " +
+                "    p.nama AS instructor_name, " +
+                "    cp.persentase_course " +
+                "FROM " +
+                "    \"courseParticipant\" cp " +
+                "JOIN " +
+                "    users s ON cp.id_pelajar = s.id_user " +
+                "JOIN " +
+                "    course c ON cp.id_course = c.id_course " +
+                "JOIN " +
+                "    pengajar p ON c.id_pengajar = p.kode_dosen " +
+                "WHERE " +
+                "    s.email = ? AND c.nama_course = ?";
+
+        try (Connection conn = DatabaseUtil.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, studentEmail);
+            pstmt.setString(2, courseName);
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    String dbCourseName = rs.getString("nama_course");
+                    String dbInstructorName = rs.getString("instructor_name");
+                    String dbCourseImage = rs.getString("gambar_course");
+                    double dbProgress = rs.getDouble("persentase_course");
+
+                    courseDetails = new CourseDetails(dbCourseName, dbInstructorName, dbCourseImage, dbProgress);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return courseDetails;
+    }
+
+    public Course getCourseById(int idCourse) throws SQLException {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        Course course = null; // Initialize course to null
+
+        // SQL query to select all relevant columns for a single course by its ID
+        String sql =
+            "SELECT " +
+            "id_course, " +
+            "id_pengajar, " + // Make sure this matches your DB column name exactly
+            "nama_course, " +
+            "enrollment_key, " +
+            "gambar_course, " +
+            "deskripsi " +
+            "FROM course " + // Assuming your table name is 'course'
+            "WHERE id_course = ?"; // Placeholder for the course ID
+
+        System.out.println("CourseDAO: Attempting to get course with ID: " + idCourse);
+        System.out.println("CourseDAO: SQL Query: " + sql);
+
+        try {
+            connection = DatabaseUtil.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+
+            // Set the value for the placeholder
+            preparedStatement.setInt(1, idCourse);
+
+            resultSet = preparedStatement.executeQuery();
+
+            // Check if a row was returned (there should be at most one for a unique ID)
+            if (resultSet.next()) {
+                // Extract data from the ResultSet
+                int retrievedIdCourse = resultSet.getInt("id_course");
+                int idPengajar = resultSet.getInt("id_pengajar"); // Matches DB column name
+                String namaCourse = resultSet.getString("nama_course");
+                String enrollmentKey = resultSet.getString("enrollment_key");
+                String gambarCourse = resultSet.getString("gambar_course");
+                String deskripsi = resultSet.getString("deskripsi");
+
+                // Create the Course object
+                // For DB-fetched courses, instructorDisplayText is not directly from DB, set as null
+                course = new Course(
+                    retrievedIdCourse,
+                    idPengajar,
+                    namaCourse,
+                    enrollmentKey,
+                    gambarCourse,
+                    deskripsi,
+                    null // instructorDisplayText is for UI's text, not from DB here
+                );
+
+                System.out.println("CourseDAO: Found Course: " + course.getNamaCourse() + " (ID: " + course.getIdCourse() + ")");
+            } else {
+                System.out.println("CourseDAO: No Course found for ID: " + idCourse);
+            }
+        } catch (SQLException e) {
+            System.err.println("CourseDAO: Error retrieving Course by ID: " + e.getMessage());
+            e.printStackTrace();
+            throw e; // Re-throw the exception for calling methods to handle
+        } finally {
+            // Close ResultSet and PreparedStatement
+            DatabaseUtil.closeResources(resultSet, preparedStatement);
+        }
+        return course;
     }
 }

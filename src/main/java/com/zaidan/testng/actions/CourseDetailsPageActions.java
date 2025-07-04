@@ -89,4 +89,8 @@ public class CourseDetailsPageActions {
         }
         return 0.0; // Mengembalikan nilai default jika terjadi error
     }
+
+    public void continueCourse() {
+        courseDetailsPageLocators.continueButton.click();
+    }
 }

@@ -5,7 +5,6 @@ com\zaidan\testng\dao\CourseDAO.class
 com\zaidan\testng\utils\DatabaseUtil.class
 com\zaidan\testng\locators\LogoutLocators.class
 com\zaidan\testng\actions\LogoutActions.class
-com\zaidan\testng\dao\CourseDetailsDAO.class
 com\zaidan\testng\model\CourseDetails.class
 com\zaidan\testng\utils\HelperClass.class
 com\zaidan\testng\actions\LoginPageActions.class
