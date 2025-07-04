@@ -26,4 +26,9 @@ public class Pengajar {
                 ", nip='" + nip + '\'' +
                 '}';
     }
+
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
 }

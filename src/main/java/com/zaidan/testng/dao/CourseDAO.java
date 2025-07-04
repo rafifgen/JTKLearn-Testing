@@ -1,6 +1,7 @@
 package com.zaidan.testng.dao;
 
 import com.zaidan.testng.model.Course;
+import com.zaidan.testng.model.CourseProgress;
 import com.zaidan.testng.utils.DatabaseUtil;
 
 import java.sql.*;
@@ -113,4 +114,166 @@ public class CourseDAO {
         }
         return courses;
     }
+
+    /**
+     * Ambil list kursus yang completed, beserta persentase dan statusnya.
+     */
+    public List<CourseProgress> getCompletedCourses() {
+        return getCoursesByStatus("Completed");
+    }
+
+    /**
+     * Ambil list kursus yang sedang berjalan (in progress).
+     */
+    public List<CourseProgress> getInProgressCourses() {
+        return getCoursesByStatus("In Progress");
+    }
+
+    /**
+     * General method untuk ambil courses by status.
+     */
+    private List<CourseProgress> getCoursesByStatus(String status) {
+        List<CourseProgress> list = new ArrayList<>();
+
+        String sql = """
+            SELECT 
+                c.id_course,
+                c.id_pengajar,
+                c.nama_course,
+                c.enrollment_key,
+                c.gambar_course,
+                c.deskripsi,
+                cp.id_pelajar,
+                cp.persentase_course,
+                cp.status_penyelesaian,
+                cp."createdAt",
+                cp."updatedAt"
+            FROM "courseParticipant" cp
+            JOIN course c ON cp.id_course = c.id_course
+            WHERE cp.status_penyelesaian::text = ?
+            ORDER BY cp."updatedAt" DESC
+            """;
+
+        try (
+                Connection conn = DatabaseUtil.getConnection();
+                PreparedStatement ps = conn.prepareStatement(sql)
+        ) {
+            ps.setString(1, status);
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    CourseProgress cp = new CourseProgress(
+                            rs.getInt("id_course"),
+                            rs.getInt("id_pengajar"),
+                            rs.getString("nama_course"),
+                            rs.getString("enrollment_key"),
+                            rs.getString("gambar_course"),
+                            rs.getString("deskripsi"),
+                            rs.getInt("id_pelajar"),
+                            rs.getInt("persentase_course"),
+                            rs.getString("status_penyelesaian"),
+                            rs.getTimestamp("createdAt"),
+                            rs.getTimestamp("updatedAt")
+                    );
+                    list.add(cp);
+                }
+            }
+        } catch (SQLException e) {
+            System.err.println("Error retrieving courses by status [" + status + "]: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+        return list;
+    }
+
+    /**
+     * Ambil list kursus yang completed untuk satu pelajar.
+     */
+    public List<CourseProgress> getCompletedCoursesByPelajar(int idPelajar) {
+        return getCoursesByStatusAndPelajar("Completed", idPelajar);
+    }
+
+    private List<CourseProgress> getCoursesByStatusAndPelajar(String status, int idPelajar) {
+        List<CourseProgress> list = new ArrayList<>();
+        String sql = """
+        SELECT 
+          c.id_course,
+          c.id_pengajar,
+          c.nama_course,
+          c.enrollment_key,
+          c.gambar_course,
+          c.deskripsi,
+          cp.id_pelajar,
+          cp.persentase_course,
+          cp.status_penyelesaian,
+          cp."createdAt",
+          cp."updatedAt"
+        FROM "courseParticipant" cp
+        JOIN course c ON cp.id_course = c.id_course
+        WHERE cp.status_penyelesaian::text = ?
+          AND cp.id_pelajar = ?
+        ORDER BY cp."updatedAt" DESC
+        """;
+
+        try (
+                Connection conn = DatabaseUtil.getConnection();
+                PreparedStatement ps = conn.prepareStatement(sql)
+        ) {
+            ps.setString(1, status);
+            ps.setInt   (2, idPelajar);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    list.add(new CourseProgress(
+                            rs.getInt("id_course"),
+                            rs.getInt("id_pengajar"),
+                            rs.getString("nama_course"),
+                            rs.getString("enrollment_key"),
+                            rs.getString("gambar_course"),
+                            rs.getString("deskripsi"),
+                            rs.getInt("id_pelajar"),
+                            rs.getInt("persentase_course"),
+                            rs.getString("status_penyelesaian"),
+                            rs.getTimestamp("createdAt"),
+                            rs.getTimestamp("updatedAt")
+                    ));
+                }
+            }
+        } catch (SQLException e) {
+            System.err.println("Error retrieving courses by status ["
+                    + status + "] for pelajar " + idPelajar + ": "
+                    + e.getMessage());
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    // get course by name
+    public Course getCourseByName(String courseName) {
+        String sql = "SELECT id_course, id_pengajar, nama_course, enrollment_key, gambar_course, deskripsi " +
+                     "FROM course WHERE nama_course = ?";
+
+        try (Connection conn = DatabaseUtil.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setString(1, courseName);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    return new Course(
+                            rs.getInt("id_course"),
+                            rs.getInt("id_pengajar"),
+                            rs.getString("nama_course"),
+                            rs.getString("enrollment_key"),
+                            rs.getString("gambar_course"),
+                            rs.getString("deskripsi")
+                    );
+                }
+            }
+        } catch (SQLException e) {
+            System.err.println("Error retrieving course by name [" + courseName + "]: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return null; // Return null if no course found
+    }
+
+
+
 }

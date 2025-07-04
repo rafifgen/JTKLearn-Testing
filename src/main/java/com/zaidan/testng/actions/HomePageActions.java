@@ -231,4 +231,23 @@ public class HomePageActions {
                 "TO BE IMPLEMENTED SOON");
         return new ArrayList<>(); // Return empty list until implemented correctly
     }
+
+
+    public void clickNavigationMenu(String menuName) {
+        try {
+            // Find the navigation item by its text
+            WebElement navItem = homePageLocators.navBarItems.stream()
+                    .filter(item -> item.getText().equalsIgnoreCase(menuName))
+                    .findFirst()
+                    .orElseThrow(() -> new NoSuchElementException("Navigation item '" + menuName + "' not found"));
+
+            // Click the found navigation item
+            navItem.click();
+        } catch (NoSuchElementException e) {
+            System.err.println("Navigation item '" + menuName + "' not found: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error clicking navigation item '" + menuName + "': " + e.getMessage());
+        }
+    }
 }
+
