@@ -29,6 +29,6 @@ public class Pengajar {
 
 
     public void setNama(String nama) {
-        this.nama = nama;
+        this.namaPengajar = nama;
     }
 }

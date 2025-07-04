@@ -1,39 +1,43 @@
 package com.zaidan.testng.actions;
 
-import com.zaidan.testng.locators.myCourseLocators;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+import com.zaidan.testng.locators.MyCourseLocators;
+import com.zaidan.testng.utils.HelperClass;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class myCourseActions {
+import java.time.Duration;
 
-    myCourseLocators locators;
+public class MyCourseActions {
 
-    public myCourseActions(WebDriver driver) {
-        this.locators = new myCourseLocators();
-        PageFactory.initElements(driver, this.locators);
+    private final WebDriverWait wait = new WebDriverWait(HelperClass.getDriver(), Duration.ofSeconds(15));
+
+    public void clickProgressTab() {
+        clickTab(MyCourseLocators.PROGRESS_TAB);
     }
 
-    public boolean isTabDalamProgresActive() {
-        return locators.tabDalamProgres.getAttribute("class").contains("active");
+    public void clickCompletedTab() {
+        clickTab(MyCourseLocators.COMPLETED_TAB);
     }
 
-    public void clickTabSelesai() {
-        locators.tabSelesai.click();
-    }
+    private void clickTab(By locator) {
+        // Scroll jika perlu
+        WebElement tab = wait.until(ExpectedConditions.elementToBeClickable(locator));
+        ((JavascriptExecutor) HelperClass.getDriver()).executeScript("arguments[0].scrollIntoView(true);", tab);
 
-    public boolean isAnyCourseDisplayed() {
-        return !locators.courseCards.isEmpty();
-    }
+        // Klik menggunakan JavaScript untuk menghindari masalah interaksi
+        ((JavascriptExecutor) HelperClass.getDriver()).executeScript("arguments[0].click();", tab);
 
-    public String getCourseTitle() {
-        return locators.courseTitle.getText();
-    }
+        // Tunggu sampai tab aktif berubah
+        wait.until(ExpectedConditions.attributeContains(
+                locator, "class", "active"
+        ));
 
-    public String getInstructorName() {
-        return locators.instructorName.getText();
-    }
-
-    public String getProgressValue() {
-        return locators.progressPercentage.getText();
+        // Tunggu animasi selesai
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(
+                By.cssSelector(".fade:not(.show)")
+        ));
     }
 }

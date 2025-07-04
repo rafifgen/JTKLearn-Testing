@@ -13,8 +13,8 @@ public class CourseProgress extends Course {
     // Constructor
     public CourseProgress(int idCourse, int idPengajar, String namaCourse, String enrollmentKey, String gambarCourse,
                           String deskripsi, int idPelajar, int persentase, String status, Timestamp createdAt,
-                          Timestamp updatedAt) {
-        super(idCourse, idPengajar, namaCourse, enrollmentKey, gambarCourse, deskripsi);
+                          Timestamp updatedAt, String instructorDisplayText) {
+        super(idCourse, idPengajar, namaCourse, enrollmentKey, gambarCourse, deskripsi, instructorDisplayText);
         this.idPelajar = idPelajar;
         this.persentase = persentase;
         this.status = status;

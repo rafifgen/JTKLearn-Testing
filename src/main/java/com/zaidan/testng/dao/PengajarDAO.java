@@ -22,7 +22,7 @@ public class PengajarDAO {
      * @return Objek Pengajar jika ditemukan, otherwise null
      */
     public Pengajar getPengajarById(int idPengajar) {
-        String sql = "SELECT kode_dosen, nama FROM pengajar WHERE kode_dosen = ?";
+        String sql = "SELECT kode_dosen, nama, nip FROM pengajar WHERE kode_dosen = ?";
         Pengajar pengajar = null;
 
         try (
@@ -34,7 +34,8 @@ public class PengajarDAO {
                 if (rs.next()) {
                     int id = rs.getInt("kode_dosen");
                     String nama = rs.getString("nama");
-                    pengajar = new Pengajar(id, nama); // Create Pengajar object
+                    String nip = rs.getString("nip"); // Assuming you want to fetch NIP as well
+                    pengajar = new Pengajar(id, nama, nip); // Create Pengajar object
                 }
             }
         } catch (SQLException e) {
@@ -45,7 +46,7 @@ public class PengajarDAO {
         return pengajar;
     }
 
-    private static final Map<Integer, String> pengajarNameCache = new HashMap<>();
+
 
     /**
      * Retrieves the 'nama' (name) of the dosen based on their 'kode_dosen'.

@@ -172,7 +172,8 @@ public class CourseDAO {
                             rs.getInt("persentase_course"),
                             rs.getString("status_penyelesaian"),
                             rs.getTimestamp("createdAt"),
-                            rs.getTimestamp("updatedAt")
+                            rs.getTimestamp("updatedAt"),
+                            null
                     );
                     list.add(cp);
                 }
@@ -234,7 +235,8 @@ public class CourseDAO {
                             rs.getInt("persentase_course"),
                             rs.getString("status_penyelesaian"),
                             rs.getTimestamp("createdAt"),
-                            rs.getTimestamp("updatedAt")
+                            rs.getTimestamp("updatedAt"),
+                            null
                     ));
                 }
             }
@@ -263,7 +265,8 @@ public class CourseDAO {
                             rs.getString("nama_course"),
                             rs.getString("enrollment_key"),
                             rs.getString("gambar_course"),
-                            rs.getString("deskripsi")
+                            rs.getString("deskripsi"),
+                            null
                     );
                 }
             }
