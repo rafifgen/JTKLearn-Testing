@@ -1,5 +1,6 @@
 package com.zaidan.testng.actions;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import com.zaidan.testng.locators.LearnCoursePageLocators;
@@ -60,5 +61,13 @@ public class LearnCoursePageActions {
             status = false;
         }
         return status;
+    }
+
+    public void clickExamplePDFMaterial() {
+        learnCoursePageLocators.examplePDFInNavBar.click();
+    }
+
+    public WebElement getExamplePDFMaterial() {
+        return learnCoursePageLocators.examplePDF;
     }
 }

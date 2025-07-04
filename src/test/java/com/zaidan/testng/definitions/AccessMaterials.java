@@ -2,6 +2,7 @@ package com.zaidan.testng.definitions;
 
 import java.sql.SQLException;
 
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.zaidan.testng.actions.CourseDetailsPageActions;
@@ -22,6 +23,8 @@ public class AccessMaterials {
     LearnCoursePageActions learnCoursePageActions = new LearnCoursePageActions();
     MateriDAO materiDAO = new MateriDAO();
     CourseDAO courseDAO = new CourseDAO();
+    int courseLookupId = 0;
+    int materialLookupId = 0;
 
     @And("User clicks on course {string}")
     public void userClicksOnCourse(String courseName) {
@@ -47,16 +50,6 @@ public class AccessMaterials {
         Assert.assertEquals(uiCourseTitle, dbCourseTitle);
     }
 
-    @And("User should be able to see the material name with material id {int}")
-    public void userSeesMaterialName(int idMateri) {
-        Materi dbMateri = materiDAO.getMateriById(idMateri);
-        String uiMaterialName = learnCoursePageActions.getMaterialTitle();
-        String dbMaterialName = dbMateri.getNamaMateri();
-
-        Assert.assertNotNull(uiMaterialName);
-        Assert.assertEquals(uiMaterialName, dbMaterialName);
-    }
-
     @And("User should be able to play the video")
     public void userPlaysVideo() {
         boolean vidPlayableStatus = learnCoursePageActions.verifyExampleVideoCanBePlayed();
@@ -69,11 +62,35 @@ public class AccessMaterials {
         Assert.assertTrue(learnCoursePageActions.verifyNextOrPrevButton());
     }
 
-    @And("The course name of id {int} should be the same as in the database")
-    public void uiCourseNameEqualsDBCourseName(int idCourse) throws SQLException {
+    @And("The course name of id {int} and material name of id {int} should be the same as in the database")
+    public void uiCourseNameEqualsDBCourseName(int idCourse, int idMateri) throws SQLException {
+        // Compare course title
         Course dbCourseById = courseDAO.getCourseById(idCourse);
         String dbCourseName = dbCourseById.getNamaCourse();
         String uiCourseName = learnCoursePageActions.getCourseTitle();
         Assert.assertEquals(uiCourseName, dbCourseName);
+
+        // Compare material name
+        Materi dbMaterialById = materiDAO.getMateriById(idMateri);
+        String dbMaterialName = dbMaterialById.getNamaMateri();
+        String uiMaterialName = learnCoursePageActions.getMaterialTitle();
+        Assert.assertEquals(uiMaterialName, dbMaterialName);
+    }
+
+    @And("User clicks on the example PDF material")
+    public void userClicksOnPDFMaterial() {
+        learnCoursePageActions.clickExamplePDFMaterial();
+    }
+
+    @And("User should be able to read the PDF file with material id {int}")
+    public void userReadsPDFFile(int materialId) {
+        WebElement uiPDFElement = learnCoursePageActions.getExamplePDFMaterial();
+        String uiPDFKontenMaterial = uiPDFElement.getDomProperty("src");
+        uiPDFKontenMaterial = uiPDFKontenMaterial.substring(uiPDFKontenMaterial.indexOf("materials/") + 10);
+        Materi dbPDFMaterial = materiDAO.getMateriById(materialId);
+        String dbPDFKontenMaterial = dbPDFMaterial.getKontenMateri();
+
+        Assert.assertNotNull(uiPDFKontenMaterial);
+        Assert.assertEquals(uiPDFKontenMaterial, dbPDFKontenMaterial);
     }
 }

@@ -24,7 +24,7 @@ public class CourseDAO {
                         "\tenrollment_key,\n" +
                         "\tgambar_course,\n" +
                         "\tdeskripsi\n" +
-                        "FROM course";
+                "FROM course";
         try {
             connection = DatabaseUtil.getConnection(); // Get the shared connection
             statement = connection.createStatement();

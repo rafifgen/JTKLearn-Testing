@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-04T11:14:56 WIB" name="Suite" finished-at="2025-07-04T11:15:05 WIB" duration-ms="9118">
+  <suite started-at="2025-07-04T16:41:54 WIB" name="Suite" finished-at="2025-07-04T16:42:05 WIB" duration-ms="10705">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-07-04T11:14:56 WIB" name="Cucumber Reporting" finished-at="2025-07-04T11:15:05 WIB" duration-ms="9118">
+    <test started-at="2025-07-04T16:41:54 WIB" name="Cucumber Reporting" finished-at="2025-07-04T16:42:05 WIB" duration-ms="10705">
       <class name="com.zaidan.testng.runner.CucumberRunnerTests">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-04T11:14:56 WIB" name="setUpClass" finished-at="2025-07-04T11:14:58 WIB" duration-ms="1902" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-04T16:41:54 WIB" name="setUpClass" finished-at="2025-07-04T16:41:56 WIB" duration-ms="1479" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@69d45cca]]>
+                <![CDATA[org.testng.TestRunner@44be69aa]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-04T11:14:58 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-04T11:15:05 WIB" duration-ms="7110" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-04T16:41:56 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-04T16:42:00 WIB" duration-ms="4124" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,10 +34,72 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found in the current frame
+  (Session info: MicrosoftEdge=138.0.3351.65)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [69546a99b33f90b82eb5862611b42bc7, clickElement {id=f.550FFC2EC40C45BE1AF4ACC7B38A9721.d.E19EBC3795790612301BF7AD7A9EA806.e.44}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55387}, msedge: {msedgedriverVersion: 138.0.3351.65 (81e3782c3ab4..., userDataDir: C:\Users\MSI\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55387/devtoo..., se:cdpVersion: 138.0.3351.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (69546a99b33f90b82eb5862611b42bc7)] -> xpath: /html/body/div/div/div/div/div[2]/div[1]/div/iframe]
+Session ID: 69546a99b33f90b82eb5862611b42bc7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: MicrosoftEdge=138.0.3351.65)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [69546a99b33f90b82eb5862611b42bc7, clickElement {id=f.550FFC2EC40C45BE1AF4ACC7B38A9721.d.E19EBC3795790612301BF7AD7A9EA806.e.44}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55387}, msedge: {msedgedriverVersion: 138.0.3351.65 (81e3782c3ab4..., userDataDir: C:\Users\MSI\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55387/devtoo..., se:cdpVersion: 138.0.3351.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (69546a99b33f90b82eb5862611b42bc7)] -> xpath: /html/body/div/div/div/div/div[2]/div[1]/div/iframe]
+Session ID: 69546a99b33f90b82eb5862611b42bc7
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
+at com.zaidan.testng.actions.LearnCoursePageActions.playExampleVideo(LearnCoursePageActions.java:53)
+at com.zaidan.testng.definitions.AccessMaterials.userPlaysVideo(AccessMaterials.java:57)
+at ✽.User should be able to play the video(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:16)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-04T11:15:05 WIB" name="tearDownClass" finished-at="2025-07-04T11:15:05 WIB" duration-ms="66" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-04T16:42:00 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-04T16:42:05 WIB" duration-ms="5015" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify PDF file can be opened and read"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR08-Access Materials"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-04T16:42:05 WIB" name="tearDownClass" finished-at="2025-07-04T16:42:05 WIB" duration-ms="49" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
