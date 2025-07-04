@@ -4,8 +4,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(tags = "", features = "src/test/resources/features", glue = "com.zaidan.testng.definitions", plugin = {
-        "pretty", "html:report_test_suit_so_far.html", "json:target/cucumber/report_test_suit_so_far.json",
-        "html:target/report_test_suit_so_far.html" })
+        "pretty", "html:report_test.html", "json:target/cucumber/report_test.json",
+        "html:target/report_tes.html" })
 
 public class CucumberRunnerTests extends AbstractTestNGCucumberTests {
 }

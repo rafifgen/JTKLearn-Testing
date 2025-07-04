@@ -75,7 +75,7 @@ b9-ppl-zaidan-educare-selenium-cucumber
 ---
 
 ## 📈 **Reportase**
-Reportase dari tes yang sudah dijalankan dapat dilihat di [tautan berikut](https://rafifgen.github.io/JTKLearn-Testing/target/cucumber-report-html/cucumber-html-reports/overview-features.html).
+Reportase dari tes yang sudah dijalankan dapat dilihat di [Versi_1_tautan berikut](https://rafifgen.github.io/JTKLearn-Testing/target/cucumber-report-html/cucumber-html-reports/overview-features.html) - [Versi_2_tautan berikut](https://rafifgen.github.io/JTKLearn-Testing/report_test.html).
 
 
 ## 📜 **Lisensi**
