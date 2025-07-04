@@ -52,3 +52,24 @@ Scenario Outline: Verify the time of finishing video material
     | 5        |
     | 6        |
     | 7        |
+
+@wip
+Scenario Outline: Verify the time of finishing video material
+    TC-FR08-14, TC-FR08-15, TC-FR08-16
+    Given User has opened the browser
+    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And User enters username "pelajar1@example.com" and password "pelajar1"
+    And User clicks on the login button
+    And User clicks on course "Komputer Grafik"
+    And User clicks on the continue button
+    When User clicks on one of the text material in the navigation bar
+    And User should be able to read the PDF
+    And User moves to the next page right after <duration> minutes
+    Then System should track the time at which the material was started
+    And System should track the time at which the material was finished; start time + 5 minutes
+
+    Examples:
+    | duration |
+    | 2        |
+    | 3        |
+    | 4        |
