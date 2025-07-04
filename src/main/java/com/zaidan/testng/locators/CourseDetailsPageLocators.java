@@ -19,4 +19,14 @@ public class CourseDetailsPageLocators {
 
     @FindBy(className = "progress-percentage-text")
     public WebElement progressPercentageText;
+
+    // CourseEnrollmentLocator
+    @FindBy(className = "form-control")
+    public WebElement enrollmentKeyInput;
+
+    @FindBy(className = "button-enroll")
+    public WebElement enrollButton;
+
+    @FindBy(className = "swal2-html-container")
+    public WebElement errorMessage;
 }

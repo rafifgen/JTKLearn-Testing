@@ -89,4 +89,20 @@ public class CourseDetailsPageActions {
         }
         return 0.0; // Mengembalikan nilai default jika terjadi error
     }
+
+    public void enterEnrollmentKey(String key) {
+        courseDetailsPageLocators.enrollmentKeyInput.sendKeys(key);
+    }
+
+    public void clickEnrollButton() {
+        courseDetailsPageLocators.enrollButton.click();
+    }
+
+    public String getEnrollmentErrorMessage() {
+        try {
+            return courseDetailsPageLocators.errorMessage.getText();
+        } catch (NoSuchElementException e) {
+            return "Pesan Error Tidak Ditemukan";
+        }
+    }
 }
