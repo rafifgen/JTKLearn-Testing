@@ -48,32 +48,32 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@EmptyCourseHistory",  "@QuizHistory",  "@QuizHistoryForEnrolledCourse", ] ,
+        labels:  [ "@EmptyCourseHistory",  "@QuizHistory",  "@QuizHistoryForEnrolledCourse",  "@QuizHistoryWithFullAttempts",  "@QuizHistoryWithSomeAttempts",  "@SearchQuizHistory", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 100.00,  100.00,  100.00, ] 
+                data:  [ 100.00,  100.00,  100.00,  100.00,  100.00,  100.00, ] 
             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data:  [ 0.00,  0.00,  0.00, ] 
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 0.00,  0.00,  0.00, ] 
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Pending",
                 backgroundColor: "#F5F28F",
-                data:  [ 0.00,  0.00,  0.00, ] 
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data:  [ 0.00,  0.00,  0.00, ] 
+                data:  [ 0.00,  0.00,  0.00,  0.00,  0.00,  0.00, ] 
             }
         ]
     };
@@ -135,7 +135,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber Reporting Example</td>
         <td>1</td>
-      <td>07 Jul 2025, 09:29</td>
+      <td>07 Jul 2025, 15:54</td>
     </tr>
   </tbody>
 </table>
@@ -210,24 +210,24 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="2715490700">2.715</td>
+        <td class="duration" data-value="580606100">0.580</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
         <td class="tagname"><a href="report-tag_439353374.html">@QuizHistory</a></td>
 
-        <td      class="passed"    >14</td>
+        <td      class="passed"    >36</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">14</td>
+        <td class="total">36</td>
 
-        <td  class="passed"    >2</td>
+        <td  class="passed"    >5</td>
         <td >0</td>
-        <td class="total">2</td>
+        <td class="total">5</td>
 
-        <td class="duration" data-value="5734297200">5.734</td>
+        <td class="duration" data-value="7490037100">7.490</td>
         <td class="passed">Passed</td>
       </tr>
       <tr>
@@ -244,7 +244,58 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="3018806500">3.018</td>
+        <td class="duration" data-value="1154117700">1.154</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_657735961.html">@QuizHistoryWithFullAttempts</a></td>
+
+        <td      class="passed"    >7</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">7</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="1594605100">1.594</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_4098350718.html">@QuizHistoryWithSomeAttempts</a></td>
+
+        <td      class="passed"    >7</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">7</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2054615000">2.054</td>
+        <td class="passed">Passed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_1973186902.html">@SearchQuizHistory</a></td>
+
+        <td      class="passed"    >8</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">8</td>
+
+        <td  class="passed"    >1</td>
+        <td >0</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="2106093200">2.106</td>
         <td class="passed">Passed</td>
       </tr>
   </tbody>
@@ -252,19 +303,19 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>28</td>
+      <td>72</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>28</td>
+      <td>72</td>
 
-      <td>4</td>
+      <td>10</td>
       <td>0</td>
-      <td>4</td>
+      <td>10</td>
 
-      <td class="duration">11.468</td>
-      <td>3</td>
+      <td class="duration">14.980</td>
+      <td>6</td>
     </tr>
     <tr>
       <td></td>
