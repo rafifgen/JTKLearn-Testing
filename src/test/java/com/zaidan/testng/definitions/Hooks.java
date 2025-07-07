@@ -3,10 +3,7 @@ package com.zaidan.testng.definitions;
 import com.zaidan.testng.utils.DatabaseUtil;
 import com.zaidan.testng.utils.HelperClass;
 
-import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
-import io.cucumber.java.Before;
-import io.cucumber.java.BeforeAll;
+import io.cucumber.java.*;
 
 public class Hooks {
     // These run once before/after the entire test suite (all feature files)
@@ -26,7 +23,18 @@ public class Hooks {
 
     @Before
     public static void setUp() {
+
         HelperClass.setUpDriver();
+    }
+
+    @AfterStep
+    public void afterStep() {
+        // Tunggu 500ms setelah setiap step
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     }
 
     @After
