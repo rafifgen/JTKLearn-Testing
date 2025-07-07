@@ -463,7 +463,7 @@ public class MyCourseDefinitions {
 
                 // matching the uiInstuctor with retrieved instructor name from DB
                 Pengajar expectedInstructor = new PengajarDAO().getPengajarById(idPengajar);
-                String expectedInstructorName = expectedInstructor.getNama();
+                String expectedInstructorName = expectedInstructor.getNamaPengajar();
                 Assert.assertEquals(uiInstructor, expectedInstructorName,
                         "Instructor name UI does not match DB");
             }
