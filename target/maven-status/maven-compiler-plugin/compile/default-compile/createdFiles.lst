@@ -1,4 +1,5 @@
 com\zaidan\testng\dao\PengajarDAO.class
+com\zaidan\testng\dao\QuizHistoryDAO.class
 com\zaidan\testng\model\Course.class
 com\zaidan\testng\utils\DatabaseUtil.class
 com\zaidan\testng\dao\PelajarDAO.class
@@ -7,6 +8,7 @@ com\zaidan\testng\locators\QuizHistoryPageLocators.class
 com\zaidan\testng\utils\HelperClass.class
 com\zaidan\testng\actions\MyCourseActions.class
 com\zaidan\testng\model\CourseProgress.class
+com\zaidan\testng\model\QuizAttemptDetails.class
 com\zaidan\testng\locators\CourseDetailsPageLocators.class
 com\zaidan\testng\locators\LoginPageLocators.class
 com\zaidan\testng\model\Pengajar.class

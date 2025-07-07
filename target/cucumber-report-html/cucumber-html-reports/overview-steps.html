@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber Reporting Example</td>
+        <td>1</td>
+      <td>07 Jul 2025, 16:04</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.AccessMaterials.userClicksOnCourse(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="502300">0.000</td>
+              <td class="duration" data-value="502300">0.000</td>
+              <td class="duration" data-value="502300">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.AccessMaterials.userClicksOnOneVideo()</td>
+              <td>1</td>
+              <td class="duration" data-value="520300">0.000</td>
+              <td class="duration" data-value="520300">0.000</td>
+              <td class="duration" data-value="520300">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.AccessMaterials.userSeesPageTitle(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="501000">0.000</td>
+              <td class="duration" data-value="501000">0.000</td>
+              <td class="duration" data-value="501000">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.CourseDetailsDefinitions.the_course_details_page_should_display_correct_information(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1527781100">1.527</td>
+              <td class="duration" data-value="1527781100">1.527</td>
+              <td class="duration" data-value="1527781100">1.527</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.CourseDetailsDefinitions.the_displayed_course_information_should_match_database(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="191125700">0.191</td>
+              <td class="duration" data-value="191125700">0.191</td>
+              <td class="duration" data-value="191125700">0.191</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.CourseDetailsDefinitions.the_displayed_course_progress_should_be_between_0_and_100()</td>
+              <td>1</td>
+              <td class="duration" data-value="28478600">0.028</td>
+              <td class="duration" data-value="28478600">0.028</td>
+              <td class="duration" data-value="28478600">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.CourseDetailsDefinitions.user_clicks_the_enroll_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="73450433">0.073</td>
+              <td class="duration" data-value="73450433">0.091</td>
+              <td class="duration" data-value="220351300">0.220</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.CourseDetailsDefinitions.user_enters_an_invalid_enrollment_key(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="812963933">0.812</td>
+              <td class="duration" data-value="812963933">1.201</td>
+              <td class="duration" data-value="2438891800">2.438</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.CourseDetailsDefinitions.user_navigates_to_page_and_selects_course(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="79638800">0.079</td>
+              <td class="duration" data-value="79638800">0.079</td>
+              <td class="duration" data-value="79638800">0.079</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.CourseDetailsDefinitions.user_selects_unenrolled_course(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="183624533">0.183</td>
+              <td class="duration" data-value="183624533">0.357</td>
+              <td class="duration" data-value="550873600">0.550</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.CourseDetailsDefinitions.user_should_remain_on_the_course_information_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="16019000">0.016</td>
+              <td class="duration" data-value="16019000">0.017</td>
+              <td class="duration" data-value="48057000">0.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.CourseDetailsDefinitions.user_should_see_an_enrollment_error_message(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="267930066">0.267</td>
+              <td class="duration" data-value="267930066">0.727</td>
+              <td class="duration" data-value="803790200">0.803</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeAllCoursesMatchingWithTheDatabaseRecords()</td>
+              <td>1</td>
+              <td class="duration" data-value="549550100">0.549</td>
+              <td class="duration" data-value="549550100">0.549</td>
+              <td class="duration" data-value="549550100">0.549</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeJoinedCourses(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="381324000">0.381</td>
+              <td class="duration" data-value="381324000">0.381</td>
+              <td class="duration" data-value="381324000">0.381</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeThePageTitle(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="29618750">0.029</td>
+              <td class="duration" data-value="29618750">0.033</td>
+              <td class="duration" data-value="59237500">0.059</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeTheWelcomeMessage(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="97164350">0.097</td>
+              <td class="duration" data-value="97164350">0.116</td>
+              <td class="duration" data-value="194328700">0.194</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.Hooks.setUp()</td>
+              <td>18</td>
+              <td class="duration" data-value="782311966">0.782</td>
+              <td class="duration" data-value="782311966">1.323</td>
+              <td class="duration" data-value="14081615400">14.081</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.Hooks.tearDown()</td>
+              <td>18</td>
+              <td class="duration" data-value="291994811">0.291</td>
+              <td class="duration" data-value="291994811">0.773</td>
+              <td class="duration" data-value="5255906600">5.255</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.click_beranda_navigation()</td>
+              <td>1</td>
+              <td class="duration" data-value="82391200">0.082</td>
+              <td class="duration" data-value="82391200">0.082</td>
+              <td class="duration" data-value="82391200">0.082</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.click_kursus_saya_navigation()</td>
+              <td>1</td>
+              <td class="duration" data-value="69209500">0.069</td>
+              <td class="duration" data-value="69209500">0.069</td>
+              <td class="duration" data-value="69209500">0.069</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()</td>
+              <td>19</td>
+              <td class="duration" data-value="95930084">0.095</td>
+              <td class="duration" data-value="95930084">0.126</td>
+              <td class="duration" data-value="1822671600">1.822</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.click_on_username()</td>
+              <td>1</td>
+              <td class="duration" data-value="103845000">0.103</td>
+              <td class="duration" data-value="103845000">0.103</td>
+              <td class="duration" data-value="103845000">0.103</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.course_visible()</td>
+              <td>1</td>
+              <td class="duration" data-value="126430800">0.126</td>
+              <td class="duration" data-value="126430800">0.126</td>
+              <td class="duration" data-value="126430800">0.126</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)</td>
+              <td>19</td>
+              <td class="duration" data-value="174299642">0.174</td>
+              <td class="duration" data-value="174299642">0.219</td>
+              <td class="duration" data-value="3311693200">3.311</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.keluar_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="28858600">0.028</td>
+              <td class="duration" data-value="28858600">0.028</td>
+              <td class="duration" data-value="28858600">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.page_title_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="213207700">0.213</td>
+              <td class="duration" data-value="213207700">0.213</td>
+              <td class="duration" data-value="213207700">0.213</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.userShouldSeePhotoAndUsername()</td>
+              <td>1</td>
+              <td class="duration" data-value="60203400">0.060</td>
+              <td class="duration" data-value="60203400">0.060</td>
+              <td class="duration" data-value="60203400">0.060</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)</td>
+              <td>19</td>
+              <td class="duration" data-value="7608593773">7.608</td>
+              <td class="duration" data-value="7608593773">2:9.373</td>
+              <td class="duration" data-value="144563281700">2:24.563</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()</td>
+              <td>18</td>
+              <td class="duration" data-value="5302066">0.005</td>
+              <td class="duration" data-value="5302066">0.065</td>
+              <td class="duration" data-value="95437200">0.095</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()</td>
+              <td>14</td>
+              <td class="duration" data-value="16272757">0.016</td>
+              <td class="duration" data-value="16272757">0.026</td>
+              <td class="duration" data-value="227818600">0.227</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.LoginPageDefinitions.user_should_see_all_sidebar_items()</td>
+              <td>1</td>
+              <td class="duration" data-value="58412500">0.058</td>
+              <td class="duration" data-value="58412500">0.058</td>
+              <td class="duration" data-value="58412500">0.058</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.MyCourseDefinitions.clickNavigationMenu(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="95937566">0.095</td>
+              <td class="duration" data-value="95937566">0.120</td>
+              <td class="duration" data-value="287812700">0.287</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.MyCourseDefinitions.initUserSession()</td>
+              <td>1</td>
+              <td class="duration" data-value="470926000">0.470</td>
+              <td class="duration" data-value="470926000">0.470</td>
+              <td class="duration" data-value="470926000">0.470</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.MyCourseDefinitions.setupCompletedCourses()</td>
+              <td>1</td>
+              <td class="duration" data-value="489468900">0.489</td>
+              <td class="duration" data-value="489468900">0.489</td>
+              <td class="duration" data-value="489468900">0.489</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.MyCourseDefinitions.switchTab(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="32193684450">32.193</td>
+              <td class="duration" data-value="32193684450">32.229</td>
+              <td class="duration" data-value="64387368900">1:4.387</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.MyCourseDefinitions.verifyActiveTab(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="56162166">0.056</td>
+              <td class="duration" data-value="56162166">0.083</td>
+              <td class="duration" data-value="168486500">0.168</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.MyCourseDefinitions.verifyCourseList(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="2448206700">2.448</td>
+              <td class="duration" data-value="2448206700">2.448</td>
+              <td class="duration" data-value="2448206700">2.448</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.MyCourseDefinitions.verifyDatabaseConsistency()</td>
+              <td>1</td>
+              <td class="duration" data-value="487695300">0.487</td>
+              <td class="duration" data-value="487695300">0.487</td>
+              <td class="duration" data-value="487695300">0.487</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.MyCourseDefinitions.verifyEmptyMessage(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="36590500">0.036</td>
+              <td class="duration" data-value="36590500">0.038</td>
+              <td class="duration" data-value="73181000">0.073</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.QuizHistoryDefinitions.the_filtered_quiz_details_should_match_database(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="534212200">0.534</td>
+              <td class="duration" data-value="534212200">0.534</td>
+              <td class="duration" data-value="534212200">0.534</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.QuizHistoryDefinitions.the_history_for_should_show_a_message(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="27509400">0.027</td>
+              <td class="duration" data-value="27509400">0.027</td>
+              <td class="duration" data-value="27509400">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.QuizHistoryDefinitions.the_quiz_details_should_match_database(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="691285250">0.691</td>
+              <td class="duration" data-value="691285250">0.692</td>
+              <td class="duration" data-value="1382570500">1.382</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.QuizHistoryDefinitions.the_quiz_history_page_should_display_a_message(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="37962500">0.037</td>
+              <td class="duration" data-value="37962500">0.037</td>
+              <td class="duration" data-value="37962500">0.037</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.QuizHistoryDefinitions.the_quiz_history_page_should_display_the_title(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="439395800">0.439</td>
+              <td class="duration" data-value="439395800">0.439</td>
+              <td class="duration" data-value="439395800">0.439</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.QuizHistoryDefinitions.the_sub_quiz_history_page_should_display_the_title(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="24310600">0.024</td>
+              <td class="duration" data-value="24310600">0.024</td>
+              <td class="duration" data-value="24310600">0.024</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.QuizHistoryDefinitions.the_subtitle_for_the_course_should_be_visible(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="35203200">0.035</td>
+              <td class="duration" data-value="35203200">0.035</td>
+              <td class="duration" data-value="35203200">0.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.QuizHistoryDefinitions.the_system_should_display_a_filtered_list_containing(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="149707200">0.149</td>
+              <td class="duration" data-value="149707200">0.149</td>
+              <td class="duration" data-value="149707200">0.149</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.QuizHistoryDefinitions.the_system_should_display_a_list_of_quizzes(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="88784950">0.088</td>
+              <td class="duration" data-value="88784950">0.130</td>
+              <td class="duration" data-value="177569900">0.177</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.QuizHistoryDefinitions.user_clicks_the_detail_button_for_the_course(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="455843150">0.455</td>
+              <td class="duration" data-value="455843150">1.260</td>
+              <td class="duration" data-value="1823372600">1.823</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.QuizHistoryDefinitions.user_is_on_the_quiz_history_page()</td>
+              <td>4</td>
+              <td class="duration" data-value="66478625">0.066</td>
+              <td class="duration" data-value="66478625">0.074</td>
+              <td class="duration" data-value="265914500">0.265</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.QuizHistoryDefinitions.user_navigates_to_the_quiz_history_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="72731700">0.072</td>
+              <td class="duration" data-value="72731700">0.072</td>
+              <td class="duration" data-value="72731700">0.072</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.zaidan.testng.definitions.QuizHistoryDefinitions.user_searches_for_the_quiz(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="120071400">0.120</td>
+              <td class="duration" data-value="120071400">0.120</td>
+              <td class="duration" data-value="120071400">0.120</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>52</td>
+            <td>196</td>
+            <td class="duration">1.281</td>
+            <td class="duration">2:24.563</td>
+            <td class="duration">4:11.079</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
