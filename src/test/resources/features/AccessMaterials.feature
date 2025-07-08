@@ -30,7 +30,8 @@ Scenario: Verify PDF file can be opened and read
     And User should be able to see the next or previous button
     And The course name of id 4 and material name of id 10 should be the same as in the database
 
-@wip
+# @wip
+@ResetMaterialState
 Scenario Outline: Verify the time of finishing video material
     TC-FR08-09, TC-FR08-10, TC-FR08-11
     Given User has opened the browser
@@ -43,7 +44,7 @@ Scenario Outline: Verify the time of finishing video material
     When User clicks on one of the video in the navigation bar
     And User should be able to play the video
     And User moves to the next page right after <duration> minutes
-    Then The system correctly tracks video material completion for the <duration>
+    Then The system correctly tracks video material completion for <duration> minutes
 
     Examples:
     | duration |
@@ -52,6 +53,7 @@ Scenario Outline: Verify the time of finishing video material
     | 7        |
 
 @wip
+@ResetMaterialState
 Scenario Outline: Verify the time of finishing PDF material
     TC-FR08-14, TC-FR08-15, TC-FR08-16
     Given User has opened the browser
@@ -64,7 +66,7 @@ Scenario Outline: Verify the time of finishing PDF material
     When User clicks on the example PDF material
     And User should be able to read the PDF file with material id 10
     And User moves to the next page right after <duration> minutes
-    Then The system correctly tracks PDF material completion for the <duration>
+    Then The system correctly tracks PDF material completion for <duration> minutes
 
 
     Examples:

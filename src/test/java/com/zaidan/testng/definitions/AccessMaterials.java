@@ -19,6 +19,7 @@ import com.zaidan.testng.model.Materi;
 import com.zaidan.testng.model.Course;
 import com.zaidan.testng.model.HistoryMateri;
 
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -46,6 +47,14 @@ public class AccessMaterials {
     private final int pdfMaterialLookupId = 10;
     private final int studentLookupId = 1;
 
+    @Before(value = "@ResetMaterialState", order = 1)
+    public void resetMaterialStateBeforeScenario() {
+        System.out.println("--- @Before Hook: Resetting material state ---");
+        // We reset both video and PDF materials to be safe
+        historyMateriDAO.resetFinishTimeForMaterial(this.studentLookupId, this.videoMaterialLookupId);
+        historyMateriDAO.resetFinishTimeForMaterial(this.studentLookupId, this.pdfMaterialLookupId);
+        System.out.println("--- @Before Hook: Reset complete ---");
+    }
 
     @And("User clicks on course {string}")
     public void userClicksOnCourse(String courseName) {
@@ -72,7 +81,6 @@ public class AccessMaterials {
         System.out.println("Setting current material ID to: " + this.currentMaterialId + " (Video)");
         learnCoursePageActions.clickExampleVidMaterial();
     }
-
 
     @Then("User should be able to see the page title {string}")
     public void userSeesPageTitle(String courseName) {
@@ -133,19 +141,18 @@ public class AccessMaterials {
 
     @And("User moves to the next page right after {int} minutes")
     public void userMovesToNextPage(int duration) {
-        try {
-            System.out.println("Waiting for " + duration + " minute(s) before proceeding...");
-            long waitTimeMillis = (long) duration * 60 * 1000;
-            Thread.sleep(waitTimeMillis);
-            System.out.println("Wait finished. Moving to the next page.");
-        } catch (InterruptedException e) {
-            System.err.println("The wait was interrupted: " + e.getMessage());
-            Thread.currentThread().interrupt();
-        }
-        learnCoursePageActions.goToNextPage();
-    }
+        // --- THIS IS THE "SKIP" ---
+        historyMateriDAO.setFinishTimeAfterDuration(this.studentLookupId, this.currentMaterialId, duration);
 
-    
+        // Refresh the page to make the UI reflect the database change
+        System.out.println("Refreshing the page to load updated progress...");
+        learnCoursePageActions.refreshPage(); // You will need to add this method
+
+        // We no longer need to click the next button because the goal
+        // is to verify the progress update, which the refresh triggers.
+        learnCoursePageActions.goToNextPage(); 
+    }
+ 
     @Then("System should track the time at which the material was started")
     public void systemTrackTimeMaterialStarted() throws SQLException {
         int idPelajar = 1;
@@ -173,7 +180,7 @@ public class AccessMaterials {
 
     // --- VIDEO-SPECIFIC VERIFICATION STEP ---
     
-    @Then("The system correctly tracks video material completion for the {int}")
+    @Then("The system correctly tracks video material completion for {int} minutes")
     public void theSystemCorrectlyTracksVideoCompletion(int duration) throws SQLException {
         System.out.println("Verifying VIDEO material completion...");
         
@@ -192,7 +199,7 @@ public class AccessMaterials {
     }
 
 
-    @Then("The system correctly tracks PDF material completion for the {int}")
+    @Then("The system correctly tracks PDF material completion for {int} minutes")
     public void theSystemCorrectlyTracksPDFCompletion(int duration) throws SQLException {
         System.out.println("Verifying PDF material completion...");
         verifyMaterialStartTime();

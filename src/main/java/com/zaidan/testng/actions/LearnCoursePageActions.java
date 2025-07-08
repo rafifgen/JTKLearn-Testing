@@ -259,4 +259,8 @@ public class LearnCoursePageActions {
         }
         return color;
     }
+
+    public void refreshPage() {
+        driver.navigate().refresh();
+    }
 }
