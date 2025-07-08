@@ -222,4 +222,44 @@ public class CourseDAO {
         }
         return course;
     }
+
+    public float getCourseProgressByStudentAndCourseId(int idPelajar, int idCourse) {
+        float progress = 0.0f; // Default value if no record is found
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        // The table name "courseParticipant" is quoted because it likely contains uppercase
+        // letters in your PostgreSQL database, making it case-sensitive.
+        String sql = "SELECT persentase_course FROM \"courseParticipant\" WHERE id_pelajar = ? AND id_course = ?";
+
+        System.out.println("CourseDAO: Getting progress for student ID: " + idPelajar + ", course ID: " + idCourse);
+
+        try {
+            connection = DatabaseUtil.getConnection();
+            preparedStatement = connection.prepareStatement(sql);
+
+            // Set the integer parameters for the WHERE clause placeholders
+            preparedStatement.setInt(1, idPelajar);
+            preparedStatement.setInt(2, idCourse);
+
+            resultSet = preparedStatement.executeQuery();
+
+            // If a record is found, update the progress value from the result
+            if (resultSet.next()) {
+                progress = resultSet.getFloat("persentase_course");
+                System.out.println("CourseDAO: Progress found: " + progress + "%");
+            } else {
+                System.out.println("CourseDAO: No progress record found for this student and course.");
+            }
+        } catch (SQLException e) {
+            System.err.println("CourseDAO: Error retrieving course progress: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            // Ensure database resources are always closed to prevent leaks
+            DatabaseUtil.closeResources(resultSet, preparedStatement);
+        }
+
+        return progress;
+    }
 }

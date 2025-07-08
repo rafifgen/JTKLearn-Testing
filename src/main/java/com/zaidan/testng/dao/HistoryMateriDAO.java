@@ -18,7 +18,7 @@ public class HistoryMateriDAO {
 
         // SQL query to select 'waktu_akses' from 'history_materi'
         // based on 'id_pelajar' and 'id_materi'
-        String query = "SELECT waktu_akses FROM history_materi WHERE id_pelajar = ? AND id_materi = ?";
+        String query = "SELECT waktu_akses FROM \"historyMateri\" WHERE id_pelajar = ? AND id_materi = ?";
 
         System.out.println("HistoryMateriDAO: Attempting to get starting time for Pelajar ID: " + idPelajar + ", Materi ID: " + idMateri);
         System.out.println("HistoryMateriDAO: SQL Query: " + query);

@@ -83,72 +83,59 @@ public class LearnCoursePageActions {
     }
 
     public void playExampleVideo() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Generous timeout for video elements
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         try {
-            System.out.println("Attempting to play embedded video...");
+            System.out.println("Attempting to play YouTube embedded video...");
 
-            // 1. Wait for the iframe to be present and visible on the page
+            // 1. Wait for the iframe to be present and switch to it
             WebElement videoIframe = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(learnCoursePageLocators.exampleVidIframeLocator)
             );
             System.out.println("Video iframe found and visible.");
-
-            // 2. Switch Selenium's context to the iframe
+            
             driver.switchTo().frame(videoIframe);
             System.out.println("Switched to video iframe context.");
 
-            // 3. Wait for the HTML5 <video> element itself to be present in the DOM
-            // Using presenceOfElementLocated is robust as visibility might depend on video loading.
-            WebElement videoElement = wait.until(
-                ExpectedConditions.presenceOfElementLocated(learnCoursePageLocators.html5VideoPlayer)
+            // 2. Wait for the YouTube Play button to be clickable and click it
+            System.out.println("Waiting for the YouTube play button to be clickable...");
+            WebElement playButton = wait.until(
+                ExpectedConditions.elementToBeClickable(learnCoursePageLocators.youTubePlayButton)
             );
-            System.out.println("HTML5 video element found inside iframe.");
+            System.out.println("YouTube play button found. Clicking it now.");
+            playButton.click();
 
-            // Get JavascriptExecutor for interacting with video properties
-            JavascriptExecutor js = (JavascriptExecutor) driver;
-
-            // 4. Wait for the video's readyState to indicate it's ready to play
-            // readyState 4 = HAVE_ENOUGH_DATA (enough data to play through without interruption)
-            System.out.println("Waiting for video readyState to be 4 (HAVE_ENOUGH_DATA)...");
-            wait.until(d -> {
-                Long readyState = (Long) js.executeScript("return arguments[0].readyState;", videoElement);
-                System.out.println("Current video readyState: " + readyState);
-                return readyState == 4L;
-            });
-            System.out.println("Video is ready to play (readyState 4).");
-
-            // 5. Use JavaScript to play the video
-            // This is the most reliable way to interact with HTML5 media elements.
-            js.executeScript("arguments[0].play();", videoElement);
-            System.out.println("Executed JavaScript to play video.");
-
-            // 6. Optional: Verify that the video is actually playing
-            // Wait until the 'paused' property is false AND 'currentTime' is greater than 0
+            // 3. (Verification) Wait for the video to enter the "playing" state.
+            // After clicking play, the main player element's state changes. We can check this with JavaScript.
+            // A player state of '1' means the video is playing.
             System.out.println("Verifying video playback status...");
             wait.until(d -> {
-                Double currentTime = (Double) js.executeScript("return arguments[0].currentTime;", videoElement);
-                Boolean paused = (Boolean) js.executeScript("return arguments[0].paused;", videoElement);
-                System.out.println("Video playback check: currentTime=" + currentTime + ", paused=" + paused);
-                return !paused && currentTime > 0; // Not paused AND time has advanced
+                JavascriptExecutor js = (JavascriptExecutor) d;
+                // This script accesses the YouTube player's internal API to get the current state
+                Long playerState = (Long) js.executeScript(
+                    "return document.getElementById('movie_player').getPlayerState()"
+                );
+                System.out.println("Current YouTube player state: " + playerState + " (1 = playing)");
+                return playerState == 1; // 1 means playing, 2 means paused
             });
-            System.out.println("Video is confirmed playing (currentTime > 0 and not not paused).");
+            
+            System.out.println("Video is confirmed to be playing.");
 
         } catch (Exception e) {
-            System.err.println("Error playing embedded video via HTML5 controls: " + e.getMessage());
+            System.err.println("Error playing embedded YouTube video: " + e.getMessage());
             e.printStackTrace();
-            throw new RuntimeException("Failed to play video due to: " + e.getMessage(), e);
+            throw new RuntimeException("Failed to play YouTube video due to: " + e.getMessage(), e);
         } finally {
-            // CRITICAL: Always switch back to the default content (main page)
+            // CRITICAL: Always switch back to the main page content
             try {
                 driver.switchTo().defaultContent();
-                System.out.println("Switched back to main content.");
+                System.out.println("Switched back to main page content.");
             } catch (Exception ex) {
                 System.err.println("Failed to switch back to default content after iframe interaction: " + ex.getMessage());
-                ex.printStackTrace();
             }
         }
     }
+
 
     public boolean verifyNextOrPrevButton() {
         boolean status = false;
@@ -182,10 +169,22 @@ public class LearnCoursePageActions {
         WebElement pdfIframe = null;
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(HelperClass.TIMEOUT));
-            // Assuming examplePDF is a WebElement @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div[1]/div/iframe")
-            // This locator is IDENTICAL to exampleVidIframe. You MUST verify it's the correct one for PDF.
-            pdfIframe = wait.until(ExpectedConditions.visibilityOf(learnCoursePageLocators.examplePDF));
-            System.out.println("PDF iframe found.");
+            
+            System.out.println("Attempting to find the PDF content iframe and wait for it to be ready...");
+
+            // This is the new, more robust wait condition.
+            // It waits until the element located by 'contentIframe' has an 'src' attribute
+            // that contains the substring ".pdf".
+            // This solves the race condition.
+            wait.until(ExpectedConditions.attributeContains(
+                learnCoursePageLocators.contentIframe, "src", ".pdf"
+            ));
+            
+            // Now that we know the element is fully ready, we can safely find and return it.
+            pdfIframe = driver.findElement(learnCoursePageLocators.contentIframe);
+
+            System.out.println("PDF iframe is fully rendered and found successfully.");
+            
         } catch (Exception e) {
             System.err.println("Failed to get example PDF material: " + e.getMessage());
         }
@@ -194,5 +193,70 @@ public class LearnCoursePageActions {
 
     public void goToNextPage() {
         learnCoursePageLocators.nextButton.click();
+    }
+
+    public double getProgressBarPercentage() {
+        double progress = 0.0;
+        try {
+            // Find the progress bar element using the locator
+            WebElement progressBarElement = learnCoursePageLocators.progressBar;
+            
+            // Get the value from the 'aria-valuenow' attribute, which holds the precise number
+            String progressValue = progressBarElement.getAttribute("aria-valuenow");
+            
+            System.out.println("UI Progress Bar 'aria-valuenow' attribute found: " + progressValue);
+            
+            // Convert the string value to a double so it can be used in assertions
+            if (progressValue != null && !progressValue.isEmpty()) {
+                progress = Double.parseDouble(progressValue);
+            }
+        } catch (Exception e) {
+            System.err.println("Could not get or parse the progress bar percentage: " + e.getMessage());
+            // You might want to throw the exception or handle it as needed
+            // For now, it will return 0.0
+        }
+        return progress;
+    }
+
+    public String getVidNavStatusColor() {
+        String color = null;
+        try {
+            // Get the specific navigation element using the locator
+            WebElement vidNavItem = learnCoursePageLocators.exampleVidInNavBar;
+            
+            // It's good practice to ensure the element is visible before checking its style
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(HelperClass.TIMEOUT));
+            wait.until(ExpectedConditions.visibilityOf(vidNavItem));
+
+            // Get the computed background color property
+            color = vidNavItem.getCssValue("background-color");
+            
+            System.out.println("Navigation item background color is: " + color);
+
+        } catch (Exception e) {
+            System.err.println("Could not get background color of navigation item: " + e.getMessage());
+        }
+        return color;
+    }
+
+    public String getPDFNavStatusColor() {
+        String color = null;
+        try {
+            // Get the specific navigation element using the locator
+            WebElement PDFNavItem = learnCoursePageLocators.examplePDFInNavBar;
+            
+            // It's good practice to ensure the element is visible before checking its style
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(HelperClass.TIMEOUT));
+            wait.until(ExpectedConditions.visibilityOf(PDFNavItem));
+
+            // Get the computed background color property
+            color = PDFNavItem.getCssValue("background-color");
+            
+            System.out.println("Navigation item background color is: " + color);
+
+        } catch (Exception e) {
+            System.err.println("Could not get background color of navigation item: " + e.getMessage());
+        }
+        return color;
     }
 }
