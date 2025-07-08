@@ -2,6 +2,8 @@ E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jt
 E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\dao\UserDAO.java
 E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\actions\QuizHistoryPageActions.java
 E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\actions\LoginPageActions.java
+E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\actions\QuizAttemptPageActions.java
+E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\locators\QuizAttemptPageLocators.java
 E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\model\Pelajar.java
 E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\locators\HomePageLocators.java
 E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\locators\LogoutLocators.java
@@ -21,6 +23,8 @@ E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jt
 E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\locators\QuizHistoryPageLocators.java
 E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\model\Course.java
 E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\locators\CourseDetailsPageLocators.java
+E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\actions\QuizResultPageActions.java
 E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\utils\HelperClass.java
 E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\dao\CourseDAO.java
 E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\locators\MyCourseLocators.java
+E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\locators\QuizResultPageLocators.java

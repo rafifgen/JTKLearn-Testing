@@ -4,8 +4,11 @@ import com.zaidan.testng.locators.CourseDetailsPageLocators;
 import com.zaidan.testng.utils.HelperClass;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.time.Duration;
 
 public class CourseDetailsPageActions {
 
@@ -104,5 +107,10 @@ public class CourseDetailsPageActions {
         } catch (NoSuchElementException e) {
             return "Pesan Error Tidak Ditemukan";
         }
+    }
+
+    WebDriverWait wait = new WebDriverWait(HelperClass.getDriver(), Duration.ofSeconds(3));
+    public void clickLanjutkanKursus() {
+        wait.until(ExpectedConditions.visibilityOf(courseDetailsPageLocators.lanjutkanKursusButton)).click();
     }
 }

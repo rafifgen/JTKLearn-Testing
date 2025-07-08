@@ -249,5 +249,7 @@ public class HomePageActions {
             System.err.println("Error clicking navigation item '" + menuName + "': " + e.getMessage());
         }
     }
+
+
 }
 

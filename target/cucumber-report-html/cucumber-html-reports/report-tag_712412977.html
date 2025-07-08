@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports (no 1) - Tag: @QuizHistoryWithSomeAttempts</title>
+<title>Cucumber Reports (no 1) - Tag: @QuizResult</title>
 
 </head>
 <body>
@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber Reporting Example</td>
         <td>1</td>
-      <td>07 Jul 2025, 16:04</td>
+      <td>08 Jul 2025, 22:42</td>
     </tr>
   </tbody>
 </table>
@@ -128,20 +128,20 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">@QuizHistoryWithSomeAttempts</td>
-          <td      class="passed"    >7</td>
+          <td class="tagname">@QuizResult</td>
+          <td      class="passed"    >3</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >5</td>
           <td >0</td>
           <td >0</td>
-          <td >0</td>
-          <td >0</td>
-          <td class="total">7</td>
+          <td class="total">9</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="1283314700">1.283</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="39239966800">39.239</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -173,25 +173,25 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_4_3647074738.html">TC FR-11 Quiz Results History</a>
+      <a href="report-feature_1673720109.html">Pengerjaan Kuis</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_439353374.html">@QuizHistory</a>
-       <a href="report-tag_4098350718.html">@QuizHistoryWithSomeAttempts</a>
+       <a href="report-tag_712412977.html">@QuizResult</a>
+       <a href="report-tag_1319426501.html">@AttemptQuizAndPass</a>
 </div>
 
 
-  <span class="lead-duration duration">1.283</span>
+  <span class="lead-duration duration">39.239</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">View quiz history for an enrolled course with some quiz attempts</span>
+  <span class="name">Student attempts a quiz and gets a passing score of 80</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -200,7 +200,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
   <div class="inner-level hooks-element-before">
@@ -222,7 +222,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.setUp()</span>
 
-  <span class="lead-duration duration">0.729</span>
+  <span class="lead-duration duration">1.149</span>
 
           </div>
 
@@ -239,9 +239,9 @@ $(document).ready(function() {
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -251,15 +251,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details ">
+  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">User enters username <span class="argument">&quot;sa@example.com&quot;</span> and password <span class="argument">&quot;sapelajar&quot;</span></span>
+  <span class="name">User selects the course <span class="argument">&quot;Komdatjar&quot;</span> from the dashboard</span>
 
-  <span class="lead-duration duration">0.153</span>
+  <span class="lead-duration duration">0.050</span>
 
 </div>
 
@@ -296,7 +296,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.afterStep()</span>
 
-  <span class="lead-duration duration">0.514</span>
+  <span class="lead-duration duration">0.503</span>
 
           </div>
 
@@ -316,9 +316,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">User clicks on the login button</span>
+  <span class="name">User clicks the <span class="argument">&quot;Lanjutkan Kursus&quot;</span> button</span>
 
-  <span class="lead-duration duration">0.069</span>
+  <span class="lead-duration duration">0.371</span>
 
 </div>
 
@@ -355,7 +355,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.afterStep()</span>
 
-  <span class="lead-duration duration">0.502</span>
+  <span class="lead-duration duration">0.510</span>
 
           </div>
 
@@ -373,11 +373,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">User is navigated to the dashboard page</span>
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">User starts the quiz named <span class="argument">&quot;kursus nilai 80&quot;</span></span>
 
-  <span class="lead-duration duration">0.013</span>
+  <span class="lead-duration duration">30.048</span>
 
 </div>
 
@@ -414,7 +414,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.afterStep()</span>
 
-  <span class="lead-duration duration">0.509</span>
+  <span class="lead-duration duration">0.513</span>
 
           </div>
 
@@ -432,11 +432,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And failed">
   <span class="keyword indention">And</span>
-  <span class="name">User is on the Quiz History page</span>
+  <span class="name">User clicks the <span class="argument">&quot;Ulangi Kuis&quot;</span> button</span>
 
-  <span class="lead-duration duration">0.056</span>
+  <span class="lead-duration duration">8.768</span>
 
 </div>
 
@@ -445,64 +445,45 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
-
-
-
-  <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-7">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="after-7" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-              <span class="location name">com.zaidan.testng.definitions.Hooks.afterStep()</span>
-
-  <span class="lead-duration duration">0.510</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-7">
+          <a>org.openqa.selenium.StaleElementReferenceException:</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: MicrosoftEdge=138.0.3351.65)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [8fa410e1352cc51590ce253e23caa881, clickElement {id=f.ADF72D146FEEB9BB496C3D2E095ED32C.d.41D444C2599F4CA751985BAC4D18CEFF.e.67}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:58156}, msedge: {msedgedriverVersion: 138.0.3351.77 (efaf6935b436..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58156/devtoo..., se:cdpVersion: 138.0.3351.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (8fa410e1352cc51590ce253e23caa881)] -&gt; xpath: /html/body/div/div/div/div/div[2]/div[1]/div/div/div[2]/div/button[1]]
+Session ID: 8fa410e1352cc51590ce253e23caa881
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy26.click(Unknown Source)
+	at com.zaidan.testng.actions.QuizResultPageActions.clickUlangiKuis(QuizResultPageActions.java:19)
+	at com.zaidan.testng.definitions.QuizAttemptDefinitions.user_clicks_the_button(QuizAttemptDefinitions.java:27)
+	at ✽.User clicks the &quot;Ulangi Kuis&quot; button(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Penelitian%20Fault%20Seeding/Tester/jtklearn-testing/jtklearn-testing/src/test/resources/features/QuizResult.feature:16)
+</pre>
+      </div>
     </div>
   </div>
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User clicks the detail button for the course <span class="argument">&quot;Komdatjar&quot;</span></span>
-
-  <span class="lead-duration duration">0.170</span>
-
-</div>
-
-
-
-
-
 
 
 
@@ -532,7 +513,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.afterStep()</span>
 
-  <span class="lead-duration duration">0.505</span>
+  <span class="lead-duration duration">0.506</span>
 
           </div>
 
@@ -550,70 +531,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
-  <span class="keyword indention">Then</span>
-  <span class="name">The system should display a list of quizzes for <span class="argument">&quot;Komdatjar&quot;</span></span>
-
-  <span class="lead-duration duration">0.130</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-9">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="after-9" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-              <span class="location name">com.zaidan.testng.definitions.Hooks.afterStep()</span>
-
-  <span class="lead-duration duration">0.507</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
-  <span class="name">The quiz details displayed on the UI for student <span class="argument">&quot;sa@example.com&quot;</span> and course <span class="argument">&quot;Komdatjar&quot;</span> should match the database records</span>
+  <span class="name">User answers the questions to get a score of 80</span>
 
-  <span class="lead-duration duration">0.690</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -632,9 +554,9 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-step-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-10">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-9">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
 
@@ -644,13 +566,249 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-10" class="inner-level collapse collapsable-details ">
+    <div id="after-9" class="inner-level collapse collapsable-details  in ">
         <div class="hook">
-          <div class="brief passed">
+          <div class="brief skipped">
             <span class="keyword indention">After</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.afterStep()</span>
 
-  <span class="lead-duration duration">0.501</span>
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">User submits the quiz</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-10">
+
+<div class="brief failed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-10" class="inner-level collapse collapsable-details  in ">
+        <div class="hook">
+          <div class="brief skipped">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.zaidan.testng.definitions.Hooks.afterStep()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">The result page should show the title <span class="argument">&quot;Hasil Kuis&quot;</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-11">
+
+<div class="brief failed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-11" class="inner-level collapse collapsable-details  in ">
+        <div class="hook">
+          <div class="brief skipped">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.zaidan.testng.definitions.Hooks.afterStep()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">The result page should confirm <span class="argument">&quot;4 dari 5 soal dengan benar&quot;</span> and a score of <span class="argument">&quot;80&quot;</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-12">
+
+<div class="brief failed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-12" class="inner-level collapse collapsable-details  in ">
+        <div class="hook">
+          <div class="brief skipped">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.zaidan.testng.definitions.Hooks.afterStep()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">The result page should show the passing message <span class="argument">&quot;Kamu lulus!&quot;</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#after-13">
+
+<div class="brief failed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-13" class="inner-level collapse collapsable-details  in ">
+        <div class="hook">
+          <div class="brief skipped">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.zaidan.testng.definitions.Hooks.afterStep()</span>
+
+  <span class="lead-duration duration">0.000</span>
 
           </div>
 
@@ -672,7 +830,7 @@ $(document).ready(function() {
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-11">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-14">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -684,13 +842,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-11" class="inner-level collapse collapsable-details ">
+    <div id="after-14" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">com.zaidan.testng.definitions.Hooks.tearDown()</span>
 
-  <span class="lead-duration duration">0.230</span>
+  <span class="lead-duration duration">0.156</span>
 
           </div>
 
