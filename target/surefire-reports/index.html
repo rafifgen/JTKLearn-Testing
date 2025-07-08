@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 6 failed,   </span>
+                    <span class="method-stats">3 methods, 3 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,16 +103,6 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.zaidan.testng.runner.CucumberRunnerTests" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the time of finishing video material&quot;, &quot;FR08-Access Materials&quot;)">runScenario("Verify the time of finishing video material", "FR08-Access Materials")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.zaidan.testng.runner.CucumberRunnerTests" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the time of finishing video material&quot;, &quot;FR08-Access Materials&quot;)">runScenario("Verify the time of finishing video material", "FR08-Access Materials")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.zaidan.testng.runner.CucumberRunnerTests" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the time of finishing PDF material&quot;, &quot;FR08-Access Materials&quot;)">runScenario("Verify the time of finishing PDF material", "FR08-Access Materials")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -124,11 +114,6 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.zaidan.testng.runner.CucumberRunnerTests" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the time of finishing PDF material&quot;, &quot;FR08-Access Materials&quot;)">runScenario("Verify the time of finishing PDF material", "FR08-Access Materials")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.zaidan.testng.runner.CucumberRunnerTests" class="method navigator-link" hash-for-method="runScenario(&quot;Verify the time of finishing video material&quot;, &quot;FR08-Access Materials&quot;)">runScenario("Verify the time of finishing video material", "FR08-Access Materials")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -151,98 +136,14 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verify the time of finishing video material&quot;, &quot;FR08-Access Materials&quot;)">
-                  </a> <!-- runScenario("Verify the time of finishing video material", "FR08-Access Materials") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify the time of finishing video material","FR08-Access Materials")</span>
-                  <div class="stack-trace">java.lang.RuntimeException: Failed to play YouTube video due to: Expected condition failed: waiting for element to be clickable: By.cssSelector: button.ytp-large-play-button (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;24.0.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53668}, msedge: {msedgedriverVersion: 138.0.3351.65 (81e3782c3ab4..., userDataDir: C:\Users\MSI\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53668/devtoo..., se:cdpVersion: 138.0.3351.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0455a80113dc35316b5195f0cb4b0a46
-	at com.zaidan.testng.actions.LearnCoursePageActions.playExampleVideo(LearnCoursePageActions.java:127)
-	at com.zaidan.testng.definitions.AccessMaterials.userPlaysVideo(AccessMaterials.java:89)
-	at ✽.User should be able to play the video(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:44)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: button.ytp-large-play-button (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;24.0.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53668}, msedge: {msedgedriverVersion: 138.0.3351.65 (81e3782c3ab4..., userDataDir: C:\Users\MSI\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53668/devtoo..., se:cdpVersion: 138.0.3351.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0455a80113dc35316b5195f0cb4b0a46
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.zaidan.testng.actions.LearnCoursePageActions.playExampleVideo(LearnCoursePageActions.java:102)
-	... 2 more
-
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Verify the time of finishing video material&quot;, &quot;FR08-Access Materials&quot;)">
-                  </a> <!-- runScenario("Verify the time of finishing video material", "FR08-Access Materials") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify the time of finishing video material","FR08-Access Materials")</span>
-                  <div class="stack-trace">java.lang.RuntimeException: Failed to play YouTube video due to: Expected condition failed: waiting for element to be clickable: By.cssSelector: button.ytp-large-play-button (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;24.0.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53597}, msedge: {msedgedriverVersion: 138.0.3351.65 (81e3782c3ab4..., userDataDir: C:\Users\MSI\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53597/devtoo..., se:cdpVersion: 138.0.3351.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5020831c5a09b8c7f8aeaf70197f1620
-	at com.zaidan.testng.actions.LearnCoursePageActions.playExampleVideo(LearnCoursePageActions.java:127)
-	at com.zaidan.testng.definitions.AccessMaterials.userPlaysVideo(AccessMaterials.java:89)
-	at ✽.User should be able to play the video(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:44)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: button.ytp-large-play-button (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;24.0.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53597}, msedge: {msedgedriverVersion: 138.0.3351.65 (81e3782c3ab4..., userDataDir: C:\Users\MSI\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53597/devtoo..., se:cdpVersion: 138.0.3351.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5020831c5a09b8c7f8aeaf70197f1620
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.zaidan.testng.actions.LearnCoursePageActions.playExampleVideo(LearnCoursePageActions.java:102)
-	... 2 more
-
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="runScenario(&quot;Verify the time of finishing PDF material&quot;, &quot;FR08-Access Materials&quot;)">
                   </a> <!-- runScenario("Verify the time of finishing PDF material", "FR08-Access Materials") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Verify the time of finishing PDF material","FR08-Access Materials")</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div/div/div/div/div[2]/div[2]/div[5]/button&quot;}
-  (Session info: MicrosoftEdge=138.0.3351.65)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;24.0.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [75171a847797f8d6bc9495238633d582, findElement {value=/html/body/div/div/div/div/div[2]/div[2]/div[5]/button, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53737}, msedge: {msedgedriverVersion: 138.0.3351.65 (81e3782c3ab4..., userDataDir: C:\Users\MSI\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53737/devtoo..., se:cdpVersion: 138.0.3351.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 75171a847797f8d6bc9495238633d582
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy24.click(Unknown Source)
-	at com.zaidan.testng.actions.CourseDetailsPageActions.continueCourse(CourseDetailsPageActions.java:94)
-	at com.zaidan.testng.definitions.AccessMaterials.userClicksContinue(AccessMaterials.java:57)
-	at ✽.User clicks on the continue button(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:62)
+                  <div class="stack-trace">java.lang.AssertionError: The database progress percentage did not increase. expected [true] but found [false]
+	at com.zaidan.testng.definitions.AccessMaterials.theDbPercentageIsUpdated(AccessMaterials.java:220)
+	at com.zaidan.testng.definitions.AccessMaterials.theSystemCorrectlyTracksPDFCompletion(AccessMaterials.java:207)
+	at ✽.The system correctly tracks PDF material completion for 4 minutes(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:69)
 ... Removed 3 stack frames
 </div> <!-- stack-trace -->
                   <em>
@@ -255,10 +156,10 @@ Session ID: 75171a847797f8d6bc9495238633d582
                   </a> <!-- runScenario("Verify the time of finishing PDF material", "FR08-Access Materials") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Verify the time of finishing PDF material","FR08-Access Materials")</span>
-                  <div class="stack-trace">java.lang.AssertionError: The recorded start time is not close to the actual event time (within 15s). expected [true] but found [false]
-	at com.zaidan.testng.definitions.AccessMaterials.verifyMaterialStartTime(AccessMaterials.java:260)
-	at com.zaidan.testng.definitions.AccessMaterials.theSystemCorrectlyTracksPDFCompletion(AccessMaterials.java:198)
-	at ✽.The system correctly tracks PDF material completion for the 3(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:67)
+                  <div class="stack-trace">java.lang.AssertionError: The database progress percentage did not increase. expected [true] but found [false]
+	at com.zaidan.testng.definitions.AccessMaterials.theDbPercentageIsUpdated(AccessMaterials.java:220)
+	at com.zaidan.testng.definitions.AccessMaterials.theSystemCorrectlyTracksPDFCompletion(AccessMaterials.java:207)
+	at ✽.The system correctly tracks PDF material completion for 3 minutes(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:69)
 ... Removed 3 stack frames
 </div> <!-- stack-trace -->
                   <em>
@@ -271,41 +172,9 @@ Session ID: 75171a847797f8d6bc9495238633d582
                   </a> <!-- runScenario("Verify the time of finishing PDF material", "FR08-Access Materials") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Verify the time of finishing PDF material","FR08-Access Materials")</span>
-                  <div class="stack-trace">java.lang.AssertionError: The recorded start time is not close to the actual event time (within 15s). expected [true] but found [false]
-	at com.zaidan.testng.definitions.AccessMaterials.verifyMaterialStartTime(AccessMaterials.java:260)
-	at com.zaidan.testng.definitions.AccessMaterials.theSystemCorrectlyTracksPDFCompletion(AccessMaterials.java:198)
-	at ✽.The system correctly tracks PDF material completion for the 4(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:67)
-... Removed 3 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Verify the time of finishing video material&quot;, &quot;FR08-Access Materials&quot;)">
-                  </a> <!-- runScenario("Verify the time of finishing video material", "FR08-Access Materials") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify the time of finishing video material","FR08-Access Materials")</span>
-                  <div class="stack-trace">java.lang.RuntimeException: Failed to play YouTube video due to: Expected condition failed: waiting for element to be clickable: By.cssSelector: button.ytp-large-play-button (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;24.0.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53521}, msedge: {msedgedriverVersion: 138.0.3351.65 (81e3782c3ab4..., userDataDir: C:\Users\MSI\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53521/devtoo..., se:cdpVersion: 138.0.3351.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: be694156a449a2ab99ef197522630f78
-	at com.zaidan.testng.actions.LearnCoursePageActions.playExampleVideo(LearnCoursePageActions.java:127)
-	at com.zaidan.testng.definitions.AccessMaterials.userPlaysVideo(AccessMaterials.java:89)
-	at ✽.User should be able to play the video(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:44)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: button.ytp-large-play-button (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;24.0.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 138.0.3351.65, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53521}, msedge: {msedgedriverVersion: 138.0.3351.65 (81e3782c3ab4..., userDataDir: C:\Users\MSI\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53521/devtoo..., se:cdpVersion: 138.0.3351.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: be694156a449a2ab99ef197522630f78
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.zaidan.testng.actions.LearnCoursePageActions.playExampleVideo(LearnCoursePageActions.java:102)
-	... 2 more
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.getDomProperty(String)&quot; because &quot;uiPDFElement&quot; is null
+	at com.zaidan.testng.definitions.AccessMaterials.userReadsPDFFile(AccessMaterials.java:133)
+	at ✽.User should be able to read the PDF file with material id 10(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:67)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -374,36 +243,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.zaidan.testng.runner.CucumberRunnerTests')
-data.setCell(0, 3, 243630);
+data.setCell(0, 3, 11569);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'com.zaidan.testng.runner.CucumberRunnerTests')
-data.setCell(1, 3, 185098);
+data.setCell(1, 3, 9253);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'com.zaidan.testng.runner.CucumberRunnerTests')
-data.setCell(2, 3, 36058);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'runScenario')
-data.setCell(3, 2, 'com.zaidan.testng.runner.CucumberRunnerTests')
-data.setCell(3, 3, 34646);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'runScenario')
-data.setCell(4, 2, 'com.zaidan.testng.runner.CucumberRunnerTests')
-data.setCell(4, 3, 34569);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'runScenario')
-data.setCell(5, 2, 'com.zaidan.testng.runner.CucumberRunnerTests')
-data.setCell(5, 3, 13016);
+data.setCell(2, 3, 5798);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 minutes</span>
+              <span class="suite-total-time">Total running time: 26 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -431,48 +288,30 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.zaidan.testng.runner.CucumberRunnerTests</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@1e1e837d)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@4570d7b6)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Verify the time of finishing video material", "FR08-Access Materials")</span>
-                <span class="method-start">2168 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">runScenario("Verify the time of finishing video material", "FR08-Access Materials")</span>
-                <span class="method-start">38230 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">runScenario("Verify the time of finishing video material", "FR08-Access Materials")</span>
-                <span class="method-start">72877 ms</span>
+                <span class="method-name">runScenario("Verify the time of finishing PDF material", "FR08-Access Materials")</span>
+                <span class="method-start">1625 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Verify the time of finishing PDF material", "FR08-Access Materials")</span>
-                <span class="method-start">107447 ms</span>
+                <span class="method-start">7430 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Verify the time of finishing PDF material", "FR08-Access Materials")</span>
-                <span class="method-start">120464 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">runScenario("Verify the time of finishing PDF material", "FR08-Access Materials")</span>
-                <span class="method-start">305562 ms</span>
+                <span class="method-start">19000 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">549194 ms</span>
+                <span class="method-start">28257 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
