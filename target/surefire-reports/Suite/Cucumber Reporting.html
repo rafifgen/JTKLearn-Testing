@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Cucumber Reporting</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 08 13:54:10 WIB 2025</td>
+<td>Started on:</td><td>Wed Jul 09 22:40:30 WIB 2025</td>
 </tr>
-<tr><td>Total time:</td><td>28 seconds (28377 ms)</td>
+<tr><td>Total time:</td><td>13 seconds (13639 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,50 +76,9 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the time of finishing PDF material", "FR08-Access Materials"</td>
-<td><div><pre>java.lang.AssertionError: The database progress percentage did not increase. expected [true] but found [false]
-	at com.zaidan.testng.definitions.AccessMaterials.theDbPercentageIsUpdated(AccessMaterials.java:220)
-	at com.zaidan.testng.definitions.AccessMaterials.theSystemCorrectlyTracksPDFCompletion(AccessMaterials.java:207)
-	at ✽.The system correctly tracks PDF material completion for 4 minutes(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:69)
-... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace728370857", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace728370857'><pre>java.lang.AssertionError: The database progress percentage did not increase. expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.zaidan.testng.definitions.AccessMaterials.theDbPercentageIsUpdated(AccessMaterials.java:220)
-	at com.zaidan.testng.definitions.AccessMaterials.theSystemCorrectlyTracksPDFCompletion(AccessMaterials.java:207)
-	at ✽.The system correctly tracks PDF material completion for 4 minutes(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:69)
-</pre></div></td>
-<td>9</td>
-<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
-<tr>
-<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the time of finishing PDF material", "FR08-Access Materials"</td>
-<td><div><pre>java.lang.AssertionError: The database progress percentage did not increase. expected [true] but found [false]
-	at com.zaidan.testng.definitions.AccessMaterials.theDbPercentageIsUpdated(AccessMaterials.java:220)
-	at com.zaidan.testng.definitions.AccessMaterials.theSystemCorrectlyTracksPDFCompletion(AccessMaterials.java:207)
-	at ✽.The system correctly tracks PDF material completion for 3 minutes(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:69)
-... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1494896526", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1494896526'><pre>java.lang.AssertionError: The database progress percentage did not increase. expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.zaidan.testng.definitions.AccessMaterials.theDbPercentageIsUpdated(AccessMaterials.java:220)
-	at com.zaidan.testng.definitions.AccessMaterials.theSystemCorrectlyTracksPDFCompletion(AccessMaterials.java:207)
-	at ✽.The system correctly tracks PDF material completion for 3 minutes(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:69)
-</pre></div></td>
+<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify progress overview page with some students finished some materials and quizzez", "FR-12 Progress Overview"</td>
+<td></td>
 <td>11</td>
-<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
-<tr>
-<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the time of finishing PDF material", "FR08-Access Materials"</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.getDomProperty(String)&quot; because &quot;uiPDFElement&quot; is null
-	at com.zaidan.testng.definitions.AccessMaterials.userReadsPDFFile(AccessMaterials.java:133)
-	at ✽.User should be able to read the PDF file with material id 10(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:67)
-</pre></div><a href='#' onClick='toggleBox("stack-trace565847109", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace565847109'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.getDomProperty(String)&quot; because &quot;uiPDFElement&quot; is null
-	at com.zaidan.testng.definitions.AccessMaterials.userReadsPDFFile(AccessMaterials.java:133)
-	at ✽.User should be able to read the PDF file with material id 10(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:67)
-</pre></div></td>
-<td>5</td>
 <td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
 </table><p>
 </body>

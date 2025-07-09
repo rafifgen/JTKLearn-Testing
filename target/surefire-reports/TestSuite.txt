@@ -1,27 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 28.96 s <<< FAILURE! -- in TestSuite
-com.zaidan.testng.runner.CucumberRunnerTests.runScenario["Verify the time of finishing PDF material", "FR08-Access Materials"](1) -- Time elapsed: 5.804 s <<< FAILURE!
-java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.getDomProperty(String)" because "uiPDFElement" is null
-	at com.zaidan.testng.definitions.AccessMaterials.userReadsPDFFile(AccessMaterials.java:133)
-	at ✽.User should be able to read the PDF file with material id 10(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:67)
-
-com.zaidan.testng.runner.CucumberRunnerTests.runScenario["Verify the time of finishing PDF material", "FR08-Access Materials"](2) -- Time elapsed: 11.56 s <<< FAILURE!
-java.lang.AssertionError: The database progress percentage did not increase. expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.zaidan.testng.definitions.AccessMaterials.theDbPercentageIsUpdated(AccessMaterials.java:220)
-	at com.zaidan.testng.definitions.AccessMaterials.theSystemCorrectlyTracksPDFCompletion(AccessMaterials.java:207)
-	at ✽.The system correctly tracks PDF material completion for 3 minutes(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:69)
-
-com.zaidan.testng.runner.CucumberRunnerTests.runScenario["Verify the time of finishing PDF material", "FR08-Access Materials"](3) -- Time elapsed: 9.254 s <<< FAILURE!
-java.lang.AssertionError: The database progress percentage did not increase. expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.zaidan.testng.definitions.AccessMaterials.theDbPercentageIsUpdated(AccessMaterials.java:220)
-	at com.zaidan.testng.definitions.AccessMaterials.theSystemCorrectlyTracksPDFCompletion(AccessMaterials.java:207)
-	at ✽.The system correctly tracks PDF material completion for 4 minutes(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/AccessMaterials.feature:69)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.06 s -- in TestSuite

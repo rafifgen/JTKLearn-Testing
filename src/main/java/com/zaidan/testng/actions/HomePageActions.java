@@ -14,7 +14,6 @@ import com.zaidan.testng.utils.HelperClass;
 import org.openqa.selenium.WebElement;
 
 public class HomePageActions {
-
     HomePageLocators homePageLocators = null;
 
     public HomePageActions() {
@@ -201,5 +200,9 @@ public class HomePageActions {
         System.out.println(
                 "TO BE IMPLEMENTED SOON");
         return new ArrayList<>(); // Return empty list until implemented correctly
+    }
+
+    public void clickOnPemantauan() {
+        homePageLocators.pemantauanNav.click();
     }
 }

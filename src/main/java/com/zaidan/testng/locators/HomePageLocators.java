@@ -46,4 +46,7 @@ public class HomePageLocators {
     public By courseImage = By.cssSelector(".custom-card-img-top");
     public By courseName = By.cssSelector(".custom-card-title");
     public By instructorName = By.cssSelector(".custom-card-text");
+
+    @FindBy(xpath = "//*[@id=\"navbarNav\"]/ul/li[2]/a")
+    public WebElement pemantauanNav;
 }

@@ -3,13 +3,16 @@ package com.zaidan.testng.dao;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.concurrent.TimeUnit;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.zaidan.testng.enums.TaskStatus;
 import com.zaidan.testng.model.HistoryMateri;
 import com.zaidan.testng.utils.DatabaseUtil;
+import com.zaidan.testng.utils.HelperClass;
 
 public class HistoryMateriDAO {
     public Timestamp getStartingTime(int idPelajar, int idMateri) throws SQLException {
@@ -109,62 +112,135 @@ public class HistoryMateriDAO {
         }
     }
 
-    public void setFinishTimeAfterDuration(int studentId, int materialId, int minutesLater) {
-        System.out.println("DAO: Simulating " + minutesLater + " minute wait by updating the database directly.");
+    public void setFinishTimeAfterDuration(int studentId, int materialId, int durationMinutes) {
+        String deleteSql = "DELETE FROM \"historyMateri\" WHERE \"id_pelajar\" = ? AND \"id_materi\" = ?";
         
-        Timestamp startTime = null;
-        
-        // Step 1: Read the current start time from the database
-        String selectSql = "SELECT \"waktu_akses\" FROM \"historyMateri\" WHERE \"id_pelajar\" = ? AND \"id_materi\" = ?";
-        
-        try (Connection conn = DatabaseUtil.getConnection();
-             PreparedStatement selectStmt = conn.prepareStatement(selectSql)) {
-            
-            selectStmt.setInt(1, studentId);
-            selectStmt.setInt(2, materialId);
-            
-            try (ResultSet rs = selectStmt.executeQuery()) {
-                if (rs.next()) {
-                    startTime = rs.getTimestamp("waktu_akses");
-                }
-            }
-        } catch (SQLException e) {
-            System.err.println("DAO: Error reading start time: " + e.getMessage());
-            e.printStackTrace();
-            return; // Exit if we can't read the start time
-        }
+        // This SQL inserts a start time of NOW() and calculates the finish time based on the duration
+        String insertSql = "INSERT INTO \"historyMateri\" (id_pelajar, id_materi, waktu_akses, waktu_selesai) " +
+                        "VALUES (?, ?, NOW(), NOW() + INTERVAL '" + durationMinutes + " minutes')";
 
-        if (startTime == null) {
-            System.out.println("DAO WARNING: Could not find a start time for the given student/material. Cannot set finish time.");
-            return;
-        }
+        System.out.println("DAO: Setting material " + materialId + " to FINISHED for student " + studentId);
 
-        // Step 2: Calculate the new finish time in Java
-        Instant startInstant = startTime.toInstant();
-        Instant finishInstant = startInstant.plus(minutesLater, ChronoUnit.MINUTES);
-        Timestamp newFinishTime = Timestamp.from(finishInstant);
-
-        // Step 3: Update the record with the new, final timestamp
-        String updateSql = "UPDATE \"historyMateri\" SET \"waktu_selesai\" = ? WHERE \"id_pelajar\" = ? AND \"id_materi\" = ?";
-
-        try (Connection conn = DatabaseUtil.getConnection();
-             PreparedStatement updateStmt = conn.prepareStatement(updateSql)) {
-            
-            updateStmt.setTimestamp(1, newFinishTime);
-            updateStmt.setInt(2, studentId);
-            updateStmt.setInt(3, materialId);
-            
-            int rowsAffected = updateStmt.executeUpdate();
-            if (rowsAffected > 0) {
-                System.out.println("DAO: Successfully set finish time to: " + newFinishTime);
-            } else {
-                System.out.println("DAO WARNING: Update did not affect any rows, though a start time was found.");
+        try (Connection conn = DatabaseUtil.getConnection()) {
+            // Step 1: Delete any old record to ensure a clean state
+            try (PreparedStatement deleteStmt = conn.prepareStatement(deleteSql)) {
+                deleteStmt.setInt(1, studentId);
+                deleteStmt.setInt(2, materialId);
+                deleteStmt.executeUpdate();
             }
 
+            // Step 2: Insert the new, finished record
+            try (PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
+                insertStmt.setInt(1, studentId);
+                insertStmt.setInt(2, materialId);
+                insertStmt.executeUpdate();
+            }
         } catch (SQLException e) {
-            System.err.println("DAO: Error writing new finish time: " + e.getMessage());
+            System.err.println("DAO: Error in delete-then-insert for material history: " + e.getMessage());
             e.printStackTrace();
         }
     }
 
+
+    public void resetMateriProgressByStudentAndMateriId(int idPelajar, int idMateri) throws SQLException {
+        String deleteSQL = "DELETE FROM \"historyMateri\" WHERE \"id_pelajar\" = ? AND \"id_materi\" = ?";
+        
+        // This 'try-with-resources' block automatically closes the connection and statement.
+        try (Connection conn = DatabaseUtil.getConnection();
+            PreparedStatement pStatement = conn.prepareStatement(deleteSQL)) {
+            
+            // Set the parameters for the WHERE clause
+            pStatement.setInt(1, idPelajar);
+            pStatement.setInt(2, idMateri);
+            
+            // Execute the DELETE command
+            pStatement.executeUpdate();
+            
+            System.out.println("DAO: Successfully deleted history for student " + idPelajar + " and material " + idMateri);
+
+        } catch (SQLException e) {
+            System.err.println("DAO: Error deleting history record: " + e.getMessage());
+            // Re-throw the exception so the calling method knows something went wrong.
+            throw e;
+        }
+    }
+
+    public boolean isHistoryRecordUnavailable(int idPelajar, int idMateri) throws SQLException {
+        String sql = "SELECT COUNT(*) FROM \"historyMateri\" WHERE \"id_pelajar\" = ? AND \"id_materi\" = ?";
+        int rowCount = 0;
+
+        // try-with-resources ensures the connection and statement are always closed safely
+        try (Connection conn = DatabaseUtil.getConnection();
+            PreparedStatement pStatement = conn.prepareStatement(sql)) {
+
+            pStatement.setInt(1, idPelajar);
+            pStatement.setInt(2, idMateri);
+
+            try (ResultSet rs = pStatement.executeQuery()) {
+                // There will always be one row in the result set for a COUNT(*) query
+                if (rs.next()) {
+                    rowCount = rs.getInt(1); // Get the count from the first column
+                }
+            }
+        } catch (SQLException e) {
+            System.err.println("DAO: Error counting historyMateri records: " + e.getMessage());
+            throw e; // Re-throw the exception to let the test know something failed
+        }
+        
+        // If the count is 0, the row is unavailable, so we return true.
+        return rowCount == 0;
+    }
+
+    public TaskStatus getDBMaterialStatus(int studentId, int materialId, int requiredMinutes) throws SQLException {
+        HistoryMateri history = getHistoryMateri(studentId, materialId); // Assuming you have this method
+
+        // Rule 1: Not Started (no record exists)
+        if (history == null) {
+            return TaskStatus.NOT_TAKEN;
+        }
+        
+        // Rule 2: In Progress (record exists but has no finish time yet)
+        if (history.getWaktuSelesai() == null) {
+            return TaskStatus.IN_PROGRESS;
+        }
+
+        // Rule 3: Record exists and has a finish time. Check if the duration is long enough.
+        long diffInMillis = history.getWaktuSelesai().getTime() - history.getWaktuAkses().getTime();
+        long diffInMinutes = TimeUnit.MILLISECONDS.toMinutes(diffInMillis);
+
+        if (diffInMinutes >= requiredMinutes) {
+            // The time spent was long enough to be considered finished.
+            return TaskStatus.PASSED;
+        } else {
+            // The time spent was too short, so it's still considered in progress.
+            return TaskStatus.IN_PROGRESS;
+        }
+    }
+
+    public void setMaterialInProgress(int studentId, int materialId) {
+        // First, delete any existing record to ensure a clean slate
+        String deleteSql = "DELETE FROM \"historyMateri\" WHERE \"id_pelajar\" = ? AND \"id_materi\" = ?";
+        // Then, insert a new record with the current time as the start time
+        String insertSql = "INSERT INTO \"historyMateri\"(\"id_pelajar\", \"id_materi\", \"waktu_akses\", \"waktu_selesai\") " +
+        "VALUES (?, ?, NOW(), NOW() + INTERVAL '2 seconds')";
+
+        try (Connection conn = DatabaseUtil.getConnection()) {
+            // Run DELETE
+            try (PreparedStatement deleteStmt = conn.prepareStatement(deleteSql)) {
+                deleteStmt.setInt(1, studentId);
+                deleteStmt.setInt(2, materialId);
+                deleteStmt.executeUpdate();
+            }
+            // Run INSERT
+            try (PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
+                insertStmt.setInt(1, studentId);
+                insertStmt.setInt(2, materialId);
+                insertStmt.executeUpdate();
+            }
+            System.out.println("DAO: Set material " + materialId + " to IN_PROGRESS for student " + studentId);
+        } catch (SQLException e) {
+            System.err.println("DAO: Error setting material to in-progress state: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
 }
