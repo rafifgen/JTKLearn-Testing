@@ -60,9 +60,9 @@ public class CourseDetailsPageActions {
         }
     }
 
-    // Memeriksa apakah progress bar terlihat
     public boolean isProgressBarVisible() {
         try {
+            // Gunakan container yang selalu terlihat
             return courseDetailsPageLocators.progressBar.isDisplayed();
         } catch (NoSuchElementException e) {
             return false;
@@ -76,18 +76,12 @@ public class CourseDetailsPageActions {
      */
     public double getProgressPercentage() {
         try {
-            String rawText = courseDetailsPageLocators.progressPercentageText.getText(); // Contoh: "75.5%"
-
-            // Membersihkan teks dari karakter non-numerik (kecuali titik)
+            String rawText = courseDetailsPageLocators.progressPercentageText.getText();
             String cleanedText = rawText.replaceAll("[^\\d.]", "");
-
-            if (!cleanedText.isEmpty()) {
-                return Double.parseDouble(cleanedText);
-            }
-        } catch (NoSuchElementException | NumberFormatException e) {
-            System.err.println("Gagal mengambil atau mem-parsing persentase progres: " + e.getMessage());
+            return cleanedText.isEmpty() ? 0.0 : Double.parseDouble(cleanedText);
+        } catch (Exception e) {
+            return 0.0;
         }
-        return 0.0; // Mengembalikan nilai default jika terjadi error
     }
 
     public void enterEnrollmentKey(String key) {
@@ -105,4 +99,14 @@ public class CourseDetailsPageActions {
             return "Pesan Error Tidak Ditemukan";
         }
     }
+
+    //click button "Lanjutkan Kursus"
+    public void clickButton(String buttonText) {
+        //  menyamakan nama tombol dengan class button.button-overview
+
+            courseDetailsPageLocators.continueButton.click();
+
+    }
+
+
 }

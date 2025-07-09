@@ -2,13 +2,19 @@ package com.zaidan.testng.definitions;
 
 import com.zaidan.testng.actions.HomePageActions; // Asumsi: Anda punya kelas ini
 import com.zaidan.testng.actions.CourseDetailsPageActions; // Asumsi: Anda perlu membuat kelas ini
+import com.zaidan.testng.actions.MyCourseActions;
 import com.zaidan.testng.dao.CourseDetailsDAO;
+import com.zaidan.testng.model.Course;
 import com.zaidan.testng.model.CourseDetails;
 import com.zaidan.testng.utils.HelperClass;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.When;
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+
+import java.util.List;
+import java.util.Map;
 
 public class CourseDetailsDefinitions {
 
@@ -41,7 +47,7 @@ public class CourseDetailsDefinitions {
         Assert.assertTrue(courseDetailsPageActions.isProgressBarVisible(), "Progress bar tidak ditampilkan.");
     }
 
-    @Then("The displayed course progress should be greater than 0 and less than 100 percent")
+    @Then("The displayed course progress should be greatUser opens the course content pageer than 0 and less than 100 percent")
     public void the_displayed_course_progress_should_be_between_0_and_100() {
         // Mengambil nilai progres dari UI
         // TODO: Anda perlu membuat method courseDetailsPageActions.getProgressPercentage();
@@ -106,5 +112,33 @@ public class CourseDetailsDefinitions {
         String currentUrl = HelperClass.getDriver().getCurrentUrl();
         Assert.assertTrue(currentUrl.contains("/course/"), "User tidak berada di halaman informasi kursus.");
     }
+
+    @Given("User clicks on course titled {string} that has not been started")
+    public void userClicksOnUnstartedCourse(String courseTitle) {
+        homePageActions.selectCourseByName(courseTitle);
+    }
+
+
+
+
+//    @Then("The navigation menu should display materials and quizzes")
+//    public void validateMenuDisplaysContent() {
+//        // Ensure both sections visible
+//    }
+//
+//    @Then("The material and quiz should be ordered correctly")
+//    public void validateOrderOfContent() {
+//        // Check if DOM list of materials/quizzes follows expected order
+//    }
+//
+//    @Then("The background color of all navigation items should be white")
+//    public void validateWhiteBackground() {
+//        // Use CSS property to ensure white background
+//    }
+//
+//    @Then("The course name, material, and quiz data should match the database")
+//    public void validateAllContentMatchesDatabase() {
+//        // Cross-check course title, materials, and quizzes from backend response
+//    }
 
 }

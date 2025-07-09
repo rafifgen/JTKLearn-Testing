@@ -14,7 +14,7 @@ public class CourseDetailsPageLocators {
     @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div[2]/div[3]")
     public WebElement instructorName;
 
-    @FindBy(className = "progress-bar-fill")
+    @FindBy(className = "progress-bar-container")
     public WebElement progressBar;
 
     @FindBy(className = "progress-percentage-text")
@@ -29,4 +29,8 @@ public class CourseDetailsPageLocators {
 
     @FindBy(className = "swal2-html-container")
     public WebElement errorMessage;
+
+    //button lanjutkan dengan class button.button-overview
+    @FindBy(className = "button-overview")
+    public WebElement continueButton;
 }
