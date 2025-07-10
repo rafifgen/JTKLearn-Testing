@@ -141,7 +141,6 @@ public class AccessMaterials {
 
     @And("User moves to the next page right after {int} minutes")
     public void userMovesToNextPage(int duration) {
-        // --- THIS IS THE "SKIP" ---
         historyMateriDAO.setFinishTimeAfterDuration(this.studentLookupId, this.currentMaterialId, duration);
 
         // Refresh the page to make the UI reflect the database change

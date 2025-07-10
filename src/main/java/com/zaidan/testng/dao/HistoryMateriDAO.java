@@ -127,6 +127,7 @@ public class HistoryMateriDAO {
                 deleteStmt.setInt(1, studentId);
                 deleteStmt.setInt(2, materialId);
                 deleteStmt.executeUpdate();
+                System.out.println("HistoryMateriDAO: Delete successful");
             }
 
             // Step 2: Insert the new, finished record
