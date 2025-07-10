@@ -2,7 +2,6 @@ package com.zaidan.testng.definitions;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -191,7 +190,7 @@ public class ProgressOverview {
 
         // 2. Create a copy and sort it in reverse alphabetical order (Z-A)
         List<String> sortedNames = new ArrayList<>(uiNames);
-        sortedNames.sort(Collections.reverseOrder());
+        sortedNames.sort(String.CASE_INSENSITIVE_ORDER.reversed());
 
         System.out.println("Original UI Order: " + uiNames);
         System.out.println("Expected Sorted Order (Desc): " + sortedNames);
