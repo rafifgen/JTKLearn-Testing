@@ -20,7 +20,7 @@ public class Course {
         this.deskripsi = deskripsi;
         this.instructorDisplayText = instructorDisplayText;
     }
-
+    public Pengajar pengajar;
     // Getters
     public int getIdCourse() {
         return idCourse;
@@ -88,4 +88,12 @@ public class Course {
         // Generate hash code based on the fields used in equals
         return java.util.Objects.hash(idCourse, idPengajar, namaCourse, enrollmentKey, gambarCourse, deskripsi);
     }
+
+    public void setPengajar(Pengajar pengajar) {
+        this.pengajar = pengajar;
+    }
+    public String getnamaPengajar() {
+        return pengajar.getNamaPengajar();
+    }
+
 }

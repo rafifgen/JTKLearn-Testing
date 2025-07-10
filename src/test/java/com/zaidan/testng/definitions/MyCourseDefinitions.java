@@ -14,6 +14,7 @@ import com.zaidan.testng.utils.HelperClass;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -28,7 +29,12 @@ public class MyCourseDefinitions {
     private final MyCourseActions myCourseActions = new MyCourseActions();
     private final HomePageActions homePageActions = new HomePageActions();
     private final WebDriver driver = HelperClass.getDriver();
-    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Increased timeout
+    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+    private final MyCourseLocators locators = new MyCourseLocators();
+
+    public MyCourseDefinitions() {
+        PageFactory.initElements(driver, locators);
+    }
 
     @When("User clicks on {string} navigation")
     public void clickNavigationMenu(String menuName) {
@@ -47,9 +53,6 @@ public class MyCourseDefinitions {
             default:
                 throw new IllegalArgumentException("Invalid tab name: " + tabName);
         }
-
-        // Wait for tab content to load
-        waitForTabContentToLoad();
     }
 
     @Given("User has completed courses in database")
@@ -67,32 +70,25 @@ public class MyCourseDefinitions {
 
     @Then("System displays active tab {string}")
     public void verifyActiveTab(String expectedTab) {
-        WebElement activeTab = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                MyCourseLocators.ACTIVE_TAB
-        ));
-
-        Assert.assertEquals(activeTab.getText(), expectedTab,
-                "Active tab doesn't match expected");
+        WebElement activeTab = wait.until(ExpectedConditions.visibilityOf(locators.activeTab));
+        Assert.assertEquals(activeTab.getText(), expectedTab, "Active tab doesn't match expected");
     }
 
     @Then("System shows message {string}")
     public void verifyEmptyMessage(String expectedMessage) {
         try {
-            By locator;
+            WebElement emptyMessageElement;
             if (expectedMessage.contains("Belum ada kursus yang sedang dijalani")) {
-                locator = MyCourseLocators.EMPTY_STATE_MESSAGE_IN_PROGRESS;
+                emptyMessageElement = wait.until(ExpectedConditions.visibilityOf(locators.emptyStateMessageInProgress));
             } else if (expectedMessage.contains("Belum ada kursus yang selesai")) {
-                locator = MyCourseLocators.EMPTY_STATE_MESSAGE_COMPLETED;
+                emptyMessageElement = wait.until(ExpectedConditions.visibilityOf(locators.emptyStateMessageCompleted));
             } else {
                 throw new IllegalArgumentException("Unexpected message: " + expectedMessage);
             }
-
-            WebElement emptyMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-            Assert.assertTrue(emptyMessage.getText().contains(expectedMessage),
+            Assert.assertTrue(emptyMessageElement.getText().contains(expectedMessage),
                     "Empty state message doesn't contain expected text");
         } catch (TimeoutException e) {
-            // Verify no course cards are present
-            List<WebElement> courseCards = driver.findElements(MyCourseLocators.COURSE_CARDS);
+            List<WebElement> courseCards = locators.completedcourseCards;
             Assert.assertTrue(courseCards.isEmpty(), "Course cards should not be present when empty message is expected");
         }
     }
@@ -112,13 +108,10 @@ public class MyCourseDefinitions {
             handleEmptyState();
             return;
         }
-
-        // Verify the first card is properly loaded
-        WebElement firstCard = courseCards.get(0);
-        ensureCardIsVisible(firstCard);
-
-        // Verify each component as specified in the data table
-        verifyCardComponents(firstCard, dataTable);
+        for (WebElement card : courseCards) {
+            ensureCardIsVisible(card);
+            verifyCardComponents(card, dataTable);
+        }
     }
 
     @Given("User session is initialized")
@@ -137,14 +130,9 @@ public class MyCourseDefinitions {
     public void verifyDatabaseConsistency() {
         int idPelajar = HelperClass.getLoggedInUserId();
         CourseDAO dao = new CourseDAO();
-        List<CourseProgress> dbCoursesProgress =
-                dao.getCompletedCoursesByPelajar(idPelajar);
-
-        List<WebElement> courseCards =
-                driver.findElements(MyCourseLocators.COURSE_CARDS);
-
-        Assert.assertEquals(courseCards.size(),
-                dbCoursesProgress.size(),
+        List<CourseProgress> dbCoursesProgress = dao.getCompletedCoursesByPelajar(idPelajar);
+        List<WebElement> courseCards = locators.completedcourseCards;
+        Assert.assertEquals(courseCards.size(), dbCoursesProgress.size(),
                 "Jumlah card UI vs record Completed di DB untuk id_pelajar=" + idPelajar);
 
         for (WebElement card : courseCards) {
@@ -155,24 +143,18 @@ public class MyCourseDefinitions {
 
 
     // ============ HELPER METHODS ============
-
-    private void waitForTabContentToLoad() {
-        try {
-            // Wait for any loading indicators to disappear
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(
-                    By.cssSelector(".loader, .loading, [aria-busy='true']")
-            ));
-        } catch (TimeoutException e) {
-            // Loading indicator might not exist, continue
-        }
-
-        // Additional wait for content to stabilize
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
-    }
+//    private void waitForTabContentToLoad() {
+//        try {
+//            wait.until(ExpectedConditions.invisibilityOfElementLocated(
+//                    By.cssSelector(".loader, .loading, [aria-busy='true']")
+//            ));
+//        } catch (TimeoutException e) {}
+//        try {
+//            Thread.sleep(2000);
+//        } catch (InterruptedException e) {
+//            Thread.currentThread().interrupt();
+//        }
+//    }
 
     private void debugCurrentState() {
         System.out.println("=== DEBUGGING CURRENT STATE ===");
@@ -186,8 +168,7 @@ public class MyCourseDefinitions {
 
         // Check active tab
         try {
-            WebElement activeTab = driver.findElement(MyCourseLocators.ACTIVE_TAB);
-            System.out.println("Active tab text: " + activeTab.getText());
+            System.out.println("Active tab text: " + locators.activeTab.getText());
         } catch (NoSuchElementException e) {
             System.out.println("No active tab found");
         }
@@ -195,27 +176,16 @@ public class MyCourseDefinitions {
 
     private void ensureCompletedTabIsActive() {
         System.out.println("=== ENSURING COMPLETED TAB IS ACTIVE ===");
-
         try {
-            WebElement completedTab = driver.findElement(MyCourseLocators.COMPLETED_TAB);
-
-            // Check if tab is already active
-            String classes = completedTab.getDomAttribute("class");
+            String classes = locators.completedTab.getAttribute("class");
             System.out.println("Completed tab classes: " + classes);
-
             if (!classes.contains("active")) {
                 System.out.println("Clicking 'Selesai' tab...");
-                completedTab.click();
-
-                // Wait for tab to become active
-                wait.until(ExpectedConditions.attributeContains(completedTab, "class", "active"));
-
-                // Wait for content to load
-                waitForTabContentToLoad();
+                locators.completedTab.click();
+                wait.until(ExpectedConditions.attributeContains(locators.completedTab, "class", "active"));
             } else {
                 System.out.println("'Selesai' tab is already active");
             }
-
         } catch (NoSuchElementException e) {
             throw new RuntimeException("Could not find completed tab element", e);
         }
@@ -224,16 +194,14 @@ public class MyCourseDefinitions {
     private List<WebElement> waitForCourseCards() {
         System.out.println("=== WAITING FOR COURSE CARDS ===");
         try {
-            // Tunggu sampai ada >0 card di dalam panel completed
-            wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(
-                    MyCourseLocators.COURSE_CARDS, 0
-            ));
-            List<WebElement> courseCards = driver.findElements(MyCourseLocators.COURSE_CARDS);
-            System.out.println("Found " + courseCards.size() + " course cards");
-            return courseCards;
+            // Wait for at least one card to be visible
+            wait.until(driver -> {
+                // Refresh the list of elements
+                PageFactory.initElements(driver, locators);
+                return !locators.completedcourseCards.isEmpty() && locators.completedcourseCards.get(0).isDisplayed();
+            });
+            return locators.completedcourseCards;
         } catch (TimeoutException e) {
-            System.out.println("Timeout waiting for course cards with selector: "
-                    + MyCourseLocators.COURSE_CARDS);
             return new ArrayList<>();
         }
     }
@@ -244,31 +212,20 @@ public class MyCourseDefinitions {
 
         // Check if there's an empty state message
         try {
-            WebElement emptyMessage = driver.findElement(MyCourseLocators.EMPTY_STATE_MESSAGE_COMPLETED);
-            System.out.println("Empty state message: " + emptyMessage.getText());
-
-            // If we expect courses but get empty state, this is a test failure
-            Assert.fail("Expected to find completed courses but found empty state message: " + emptyMessage.getText());
-
+            System.out.println("Empty state message: " + locators.emptyStateMessageCompleted.getText());
+            Assert.fail("Expected to find completed courses but found empty state message: " +
+                    locators.emptyStateMessageCompleted.getText());
         } catch (NoSuchElementException e) {
-            // No empty state message found either
-            System.out.println("No course cards and no empty state message found");
-
-            // Check if there's any content at all
             String pageSource = driver.getPageSource();
             System.out.println("Page contains 'course': " + pageSource.contains("course"));
             System.out.println("Page contains 'completed': " + pageSource.contains("completed"));
-
             Assert.fail("No course cards found and no empty state message displayed");
         }
     }
 
     private void ensureCardIsVisible(WebElement card) {
-        // Scroll card into view
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView({behavior: 'instant', block: 'center'});", card);
-
-        // Wait for card to be visible
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].scrollIntoView({behavior: 'instant', block: 'center'});", card);
         wait.until(ExpectedConditions.visibilityOf(card));
 
         // Additional check
@@ -310,71 +267,11 @@ public class MyCourseDefinitions {
         }
     }
 
-//    private void verifyCourseImage(WebElement courseCard, String verification) {
-//        System.out.println("=== VERIFYING COURSE IMAGE ===");
-//
-//        try {
-//            WebElement image = courseCard.findElement(MyCourseLocators.COURSE_IMAGE);
-//
-//            if (verification.equals("Visible")) {
-//                Assert.assertTrue(image.isDisplayed(), "Course image should be visible");
-//
-//                // Check image source
-//                String src = image.getAttribute("src");
-//                Assert.assertNotNull(src, "Image source should not be null");
-//                Assert.assertFalse(src.isEmpty(), "Image source should not be empty");
-//
-//                System.out.println("Course image verified. Src: " + src);
-//            }
-//
-//        } catch (NoSuchElementException e) {
-//            // Try alternative selectors
-//            List<WebElement> images = courseCard.findElements(By.tagName("img"));
-//            if (images.isEmpty()) {
-//                Assert.fail("Course image element not found");
-//            }
-//
-//            // Use the first image found
-//            WebElement image = images.get(0);
-//            Assert.assertTrue(image.isDisplayed(), "Course image should be visible");
-//            System.out.println("Course image found with alternative selector");
-//        }
-//    }
-//
-//    private void verifyCourseName(WebElement courseCard, String verification) {
-//        try {
-//            WebElement name = courseCard.findElement(MyCourseLocators.COURSE_NAME);
-//            Assert.assertTrue(name.isDisplayed(), "Course name should be visible");
-//            Assert.assertFalse(name.getText().trim().isEmpty(), "Course name should not be empty");
-//
-//            System.out.println("Course name verified: " + name.getText());
-//
-//        } catch (NoSuchElementException e) {
-//            Assert.fail("Course name element not found");
-//        }
-//    }
-//
-//    private void verifyInstructorName(WebElement courseCard, String verification) {
-//        try {
-//            WebElement instructor = courseCard.findElement(MyCourseLocators.INSTRUCTOR_NAME);
-//            Assert.assertTrue(instructor.isDisplayed(), "Instructor name should be visible");
-//            Assert.assertFalse(instructor.getText().trim().isEmpty(), "Instructor name should not be empty");
-//
-//            System.out.println("Instructor name verified: " + instructor.getText());
-//
-//        } catch (NoSuchElementException e) {
-//            Assert.fail("Instructor name element not found");
-//        }
-//    }
-
     private void verifyCourseImage(WebElement courseCard, String verification) {
         System.out.println("courseCard HTML: " + courseCard.getDomAttribute("outerHTML"));
 
         System.out.println("=== VERIFYING COURSE IMAGE ===");
-
         try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            wait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(courseCard, MyCourseLocators.COURSE_IMAGE));
             WebElement image = courseCard.findElement(MyCourseLocators.COURSE_IMAGE);
             System.out.println(image.getTagName() + " element found for course image");
             String uiSrc = image.getDomAttribute("src");
@@ -392,18 +289,9 @@ public class MyCourseDefinitions {
             }
 
             if (verification.equals("Matches database")) {
-                Assert.assertTrue(image.isDisplayed(), "Course image should be visible");
-                Assert.assertNotNull(uiSrc, "Image source should not be null");
-                Assert.assertFalse(uiSrc.isEmpty(), "Image source should not be empty");
-                // Ambil nama course dari UI
-                String uiName = courseCard.findElement(MyCourseLocators.COURSE_NAME)
-                        .getText().trim();
+                String uiName = courseCard.findElement(MyCourseLocators.COURSE_NAME).getText().trim();
                 System.out.println("Course name from UI: " + uiName);
-                CourseDAO courseDAO = new CourseDAO();
-
-                // Ambil data dari database
-                Course course = courseDAO.getCourseByName(uiName);
-
+                Course course = new CourseDAO().getCourseByName(uiName);
                 if (course == null) {
                     Assert.fail("Course with name '" + uiName + "' not found in database.");
                 }
@@ -428,7 +316,6 @@ public class MyCourseDefinitions {
         try {
             WebElement name = courseCard.findElement(MyCourseLocators.COURSE_NAME);
             String uiName = name.getText().trim();
-
             Assert.assertTrue(name.isDisplayed(), "Course name should be visible");
             Assert.assertFalse(uiName.isEmpty(), "Course name should not be empty");
 
@@ -437,9 +324,7 @@ public class MyCourseDefinitions {
                 Assert.assertEquals(uiName, course.getNamaCourse(), // Use getter method
                         "Course name UI does not match DB");
             }
-
             System.out.println("Course name verified: " + uiName);
-
         } catch (NoSuchElementException e) {
             Assert.fail("Course name element not found");
         }
@@ -449,36 +334,27 @@ public class MyCourseDefinitions {
         try {
             WebElement instructorEl = courseCard.findElement(MyCourseLocators.INSTRUCTOR_NAME);
             String uiInstructor = instructorEl.getText().trim();
-
             Assert.assertTrue(instructorEl.isDisplayed(), "Instructor name should be visible");
             Assert.assertFalse(uiInstructor.isEmpty(), "Instructor name should not be empty");
 
             if (verification.equals("Matches database")) {
-                // Get course name first to retrieve idPengajar
-                String uiCourseName = courseCard.findElement(MyCourseLocators.COURSE_NAME)
-                        .getText().trim();
+                String uiCourseName = courseCard.findElement(MyCourseLocators.COURSE_NAME).getText().trim();
                 Course course = new CourseDAO().getCourseByName(uiCourseName);
-                int idPengajar = course.getIdPengajar(); // Use getter method
-
-                // matching the uiInstuctor with retrieved instructor name from DB
+                int idPengajar = course.getIdPengajar();
                 Pengajar expectedInstructor = new PengajarDAO().getPengajarById(idPengajar);
                 String expectedInstructorName = expectedInstructor.getNamaPengajar();
                 Assert.assertEquals(uiInstructor, expectedInstructorName,
                         "Instructor name UI does not match DB");
             }
-
             System.out.println("Instructor name verified: " + uiInstructor);
-
         } catch (NoSuchElementException e) {
             Assert.fail("Instructor name element not found");
         }
     }
 
-
     private void verifyProgressBar(WebElement courseCard, String verification) {
         try {
             WebElement progressBar = courseCard.findElement(MyCourseLocators.PROGRESS_BAR);
-
             if (verification.equals("Shows 100% completion")) {
                 // Check various ways the progress might be displayed
                 String style = progressBar.getDomAttribute("style");
@@ -486,14 +362,9 @@ public class MyCourseDefinitions {
                 String ariaValue = progressBar.getDomAttribute("aria-valuenow");
 
                 boolean isComplete = false;
-
-                if (style != null && style.contains("width: 100%")) {
-                    isComplete = true;
-                } else if (width != null && width.equals("100%")) {
-                    isComplete = true;
-                } else if (ariaValue != null && ariaValue.equals("100")) {
-                    isComplete = true;
-                }
+                if (style != null && style.contains("width: 100%")) isComplete = true;
+                else if (width != null && width.equals("100%")) isComplete = true;
+                else if (ariaValue != null && ariaValue.equals("100")) isComplete = true;
 
                 Assert.assertTrue(isComplete, "Progress bar should show 100% completion");
                 System.out.println("Progress bar verified as 100% complete");
@@ -532,16 +403,10 @@ public class MyCourseDefinitions {
     private void verifyCourseCardAgainstDatabase(WebElement courseCard,
                                                  List<CourseProgress> dbCoursesProgress) {
         try {
-            String actualName = courseCard
-                    .findElement(MyCourseLocators.COURSE_NAME)
-                    .getText().trim();
-            String actualProgressText = courseCard
-                    .findElement(MyCourseLocators.PROGRESS_PERCENT)
-                    .getText().trim();
-            int actualProgress = Integer.parseInt(
-                    actualProgressText.replace("%", "").trim());
+            String actualName = courseCard.findElement(MyCourseLocators.COURSE_NAME).getText().trim();
+            String actualProgressText = courseCard.findElement(MyCourseLocators.PROGRESS_PERCENT).getText().trim();
+            int actualProgress = Integer.parseInt(actualProgressText.replace("%", "").trim());
 
-            // Cari di daftar CourseProgress
             CourseProgress match = dbCoursesProgress.stream()
                     .filter(cp ->
                             cp.getNamaCourse().equals(actualName) &&
@@ -551,12 +416,10 @@ public class MyCourseDefinitions {
                     .orElse(null);
 
             Assert.assertNotNull(match,
-                    "Course dari UI tidak ditemukan atau progress mismatch: "
-                            + actualName + " (" + actualProgress + "%)");
+                    "Course dari UI tidak ditemukan atau progress mismatch: " +
+                            actualName + " (" + actualProgress + "%)");
 
-            System.out.println("Verified course: "
-                    + actualName + " → " + actualProgress + "%");
-
+            System.out.println("Verified course: " + actualName + " → " + actualProgress + "%");
         } catch (NoSuchElementException e) {
             Assert.fail("Required course card elements not found: " + e.getMessage());
         }

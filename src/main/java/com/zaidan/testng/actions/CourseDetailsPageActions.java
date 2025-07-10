@@ -106,6 +106,16 @@ public class CourseDetailsPageActions {
         }
     }
 
+    //click button "Lanjutkan Kursus"
+    public void clickButton(String buttonText) {
+        //  menyamakan nama tombol dengan class button.button-overview
+
+            courseDetailsPageLocators.continueButton.click();
+
+    }
+
+
+
     public void continueCourse() {
         courseDetailsPageLocators.continueButton.click();
     }

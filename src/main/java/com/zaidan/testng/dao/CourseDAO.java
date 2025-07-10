@@ -266,7 +266,7 @@ public class CourseDAO {
 
     public void setCourseProgressByStudentAndCourseId(int idPelajar, int idCourse, float courseProgress) {
         String deleteSql = "DELETE FROM \"courseParticipant\" WHERE id_pelajar = ? AND id_course = ?";
-        
+
         // This query inserts the new progress and sets createdAt/updatedAt to the current time
         String insertSql = "INSERT INTO \"courseParticipant\" " +
                          "(id_pelajar, id_course, persentase_course, \"createdAt\", \"updatedAt\") " +
@@ -275,7 +275,7 @@ public class CourseDAO {
         System.out.println("DAO: Setting progress for student " + idPelajar + " in course " + idCourse + " to " + courseProgress + "%");
 
         try (Connection conn = DatabaseUtil.getConnection()) {
-            
+
             // Step 1: Delete any old progress record to ensure a clean state.
             try (PreparedStatement deleteStmt = conn.prepareStatement(deleteSql)) {
                 deleteStmt.setInt(1, idPelajar);
@@ -290,7 +290,7 @@ public class CourseDAO {
                 insertStmt.setFloat(3, courseProgress);
                 insertStmt.executeUpdate();
             }
-            
+
         } catch (SQLException e) {
             System.err.println("DAO: Error setting course progress: " + e.getMessage());
             e.printStackTrace();
@@ -458,4 +458,56 @@ public class CourseDAO {
         }
         return null; // Return null if no course found
     }
+
+
+//    public List<String> getMaterialsAndQuizzes(String courseNameFromCard) {
+//    }
+
+    public CourseProgress getProgressByPelajarAndCourse(int idPelajar, String courseName) {
+        String sql = """
+            SELECT 
+                c.id_course,
+                c.id_pengajar,
+                c.nama_course,
+                c.enrollment_key,
+                c.gambar_course,
+                c.deskripsi,
+                cp.id_pelajar,
+                cp.persentase_course,
+                cp.status_penyelesaian,
+                cp."createdAt",
+                cp."updatedAt"
+            FROM "courseParticipant" cp
+            JOIN course c ON cp.id_course = c.id_course
+            WHERE cp.id_pelajar = ? AND c.nama_course = ?
+            """;
+        try (Connection conn = DatabaseUtil.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setInt(1, idPelajar);
+            ps.setString(2, courseName);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    return new CourseProgress(
+                            rs.getInt("id_course"),
+                            rs.getInt("id_pengajar"),
+                            rs.getString("nama_course"),
+                            rs.getString("enrollment_key"),
+                            rs.getString("gambar_course"),
+                            rs.getString("deskripsi"),
+                            rs.getInt("id_pelajar"),
+                            rs.getInt("persentase_course"),
+                            rs.getString("status_penyelesaian"),
+                            rs.getTimestamp("createdAt"),
+                            rs.getTimestamp("updatedAt"),
+                            null
+                    );
+                }
+            }
+        } catch (SQLException e) {
+            System.err.println("Error retrieving progress for pelajar " + idPelajar + " in course " + courseName + ": " + e.getMessage());
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }
