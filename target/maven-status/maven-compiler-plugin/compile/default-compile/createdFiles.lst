@@ -2,9 +2,6 @@ com\zaidan\testng\dao\PengajarDAO.class
 com\zaidan\testng\dao\QuizHistoryDAO.class
 com\zaidan\testng\model\Course.class
 com\zaidan\testng\utils\DatabaseUtil.class
-<<<<<<< HEAD
-com\zaidan\testng\utils\HelperClass.class
-=======
 com\zaidan\testng\dao\PelajarDAO.class
 com\zaidan\testng\model\Pelajar.class
 com\zaidan\testng\locators\QuizHistoryPageLocators.class
@@ -12,15 +9,11 @@ com\zaidan\testng\utils\HelperClass.class
 com\zaidan\testng\actions\MyCourseActions.class
 com\zaidan\testng\model\CourseProgress.class
 com\zaidan\testng\model\QuizAttemptDetails.class
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
 com\zaidan\testng\locators\CourseDetailsPageLocators.class
 com\zaidan\testng\locators\LoginPageLocators.class
 com\zaidan\testng\model\Pengajar.class
 com\zaidan\testng\dao\CourseDAO.class
-<<<<<<< HEAD
-=======
 com\zaidan\testng\actions\QuizHistoryPageActions.class
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
 com\zaidan\testng\locators\LogoutLocators.class
 com\zaidan\testng\actions\LogoutActions.class
 com\zaidan\testng\model\CourseDetails.class

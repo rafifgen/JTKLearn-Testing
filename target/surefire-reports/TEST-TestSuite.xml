@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="11.537" tests="1" errors="0" skipped="0" failures="0">
-=======
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="78.925" tests="3" errors="0" skipped="0" failures="2">
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="414.958" tests="26" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-<<<<<<< HEAD
     <property name="java.class.path" value="C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\target\test-classes;C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\target\classes;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-java\7.22.2\cucumber-java-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-core\7.22.2\cucumber-core-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-gherkin\7.22.2\cucumber-gherkin-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.22.2\cucumber-gherkin-messages-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\gherkin\32.1.1\gherkin-32.1.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\MSI\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\query\13.4.0\query-13.4.0.jar;C:\Users\MSI\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\datatable\7.22.2\datatable-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-plugin\7.22.2\cucumber-plugin-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\docstring\7.22.2\docstring-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\html-formatter\21.10.1\html-formatter-21.10.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\MSI\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-testng\7.22.2\cucumber-testng-7.22.2.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-java\4.32.0\selenium-java-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-api\4.32.0\selenium-api-4.32.0.jar;C:\Users\MSI\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.32.0\selenium-chrome-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.32.0\selenium-chromium-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-json\4.32.0\selenium-json-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.32.0\selenium-manager-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v134\4.32.0\selenium-devtools-v134-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v135\4.32.0\selenium-devtools-v135-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.32.0\selenium-devtools-v136-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.32.0\selenium-edge-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.32.0\selenium-firefox-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-http\4.32.0\selenium-http-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.32.0\selenium-ie-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.32.0\selenium-remote-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-api\1.49.0\opentelemetry-api-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-context\1.49.0\opentelemetry-context-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.49.0\opentelemetry-exporter-logging-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.49.0\opentelemetry-sdk-common-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.49.0\opentelemetry-sdk-extension-autoconfigure-spi-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.49.0\opentelemetry-sdk-extension-autoconfigure-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.49.0\opentelemetry-sdk-trace-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.49.0\opentelemetry-sdk-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.49.0\opentelemetry-sdk-metrics-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.49.0\opentelemetry-sdk-logs-1.49.0.jar;C:\Users\MSI\.m2\repository\net\bytebuddy\byte-buddy\1.17.5\byte-buddy-1.17.5.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-os\4.32.0\selenium-os-4.32.0.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.32.0\selenium-safari-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-support\4.32.0\selenium-support-4.32.0.jar;C:\Users\MSI\.m2\repository\io\github\bonigarcia\webdrivermanager\6.1.0\webdrivermanager-6.1.0.jar;C:\Users\MSI\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\MSI\.m2\repository\com\google\code\gson\gson\2.13.1\gson-2.13.1.jar;C:\Users\MSI\.m2\repository\com\google\errorprone\error_prone_annotations\2.38.0\error_prone_annotations-2.38.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java\3.5.0\docker-java-3.5.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java-core\3.5.0\docker-java-core-3.5.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java-api\3.5.0\docker-java-api-3.5.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.5.0\docker-java-transport-httpclient5-3.5.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java-transport\3.5.0\docker-java-transport-3.5.0.jar;C:\Users\MSI\.m2\repository\net\java\dev\jna\jna\5.17.0\jna-5.17.0.jar;C:\Users\MSI\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-compress\1.27.1\commons-compress-1.27.1.jar;C:\Users\MSI\.m2\repository\commons-codec\commons-codec\1.18.0\commons-codec-1.18.0.jar;C:\Users\MSI\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.4.4\httpclient5-5.4.4.jar;C:\Users\MSI\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.3.4\httpcore5-5.3.4.jar;C:\Users\MSI\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.3.4\httpcore5-h2-5.3.4.jar;C:\Users\MSI\.m2\repository\net\java\dev\jna\jna-platform\5.13.0\jna-platform-5.13.0.jar;C:\Users\MSI\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\MSI\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\MSI\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\MSI\.m2\repository\commons-io\commons-io\2.19.0\commons-io-2.19.0.jar;C:\Users\MSI\.m2\repository\net\masterthought\cucumber-reporting\5.8.1\cucumber-reporting-5.8.1.jar;C:\Users\MSI\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.0\jackson-databind-2.19.0.jar;C:\Users\MSI\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.0\jackson-annotations-2.19.0.jar;C:\Users\MSI\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.0\jackson-core-2.19.0.jar;C:\Users\MSI\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.0\jackson-datatype-jsr310-2.19.0.jar;C:\Users\MSI\.m2\repository\org\apache\velocity\velocity-engine-core\2.3\velocity-engine-core-2.3.jar;C:\Users\MSI\.m2\repository\joda-time\joda-time\2.12.7\joda-time-2.12.7.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-configuration2\2.10.1\commons-configuration2-2.10.1.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-text\1.11.0\commons-text-1.11.0.jar;C:\Users\MSI\.m2\repository\org\jsoup\jsoup\1.17.2\jsoup-1.17.2.jar;C:\Users\MSI\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20220608.1\owasp-java-html-sanitizer-20220608.1.jar;C:\Users\MSI\.m2\repository\com\google\guava\guava\33.1.0-jre\guava-33.1.0-jre.jar;C:\Users\MSI\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\MSI\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\MSI\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\MSI\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\MSI\.m2\repository\org\slf4j\jcl-over-slf4j\2.0.17\jcl-over-slf4j-2.0.17.jar;C:\Users\MSI\.m2\repository\org\postgresql\postgresql\42.7.3\postgresql-42.7.3.jar;C:\Users\MSI\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\MSI\.m2\repository\com\jcraft\jsch\0.1.55\jsch-0.1.55.jar;"/>
-=======
-    <property name="java.class.path" value="E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\target\test-classes;E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\target\classes;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-java\7.22.2\cucumber-java-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-core\7.22.2\cucumber-core-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-gherkin\7.22.2\cucumber-gherkin-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.22.2\cucumber-gherkin-messages-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\gherkin\32.1.1\gherkin-32.1.1.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\query\13.4.0\query-13.4.0.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\datatable\7.22.2\datatable-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-plugin\7.22.2\cucumber-plugin-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\docstring\7.22.2\docstring-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\html-formatter\21.10.1\html-formatter-21.10.1.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\Lenovo\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-testng\7.22.2\cucumber-testng-7.22.2.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-java\4.32.0\selenium-java-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-api\4.32.0\selenium-api-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.32.0\selenium-chrome-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.32.0\selenium-chromium-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-json\4.32.0\selenium-json-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.32.0\selenium-manager-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v134\4.32.0\selenium-devtools-v134-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v135\4.32.0\selenium-devtools-v135-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.32.0\selenium-devtools-v136-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.32.0\selenium-edge-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.32.0\selenium-firefox-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-http\4.32.0\selenium-http-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.32.0\selenium-ie-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.32.0\selenium-remote-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-api\1.49.0\opentelemetry-api-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-context\1.49.0\opentelemetry-context-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.49.0\opentelemetry-exporter-logging-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.49.0\opentelemetry-sdk-common-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.49.0\opentelemetry-sdk-extension-autoconfigure-spi-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.49.0\opentelemetry-sdk-extension-autoconfigure-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.49.0\opentelemetry-sdk-trace-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.49.0\opentelemetry-sdk-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.49.0\opentelemetry-sdk-metrics-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.49.0\opentelemetry-sdk-logs-1.49.0.jar;C:\Users\Lenovo\.m2\repository\net\bytebuddy\byte-buddy\1.17.5\byte-buddy-1.17.5.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-os\4.32.0\selenium-os-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.32.0\selenium-safari-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-support\4.32.0\selenium-support-4.32.0.jar;C:\Users\Lenovo\.m2\repository\io\github\bonigarcia\webdrivermanager\6.1.0\webdrivermanager-6.1.0.jar;C:\Users\Lenovo\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\Lenovo\.m2\repository\com\google\code\gson\gson\2.13.1\gson-2.13.1.jar;C:\Users\Lenovo\.m2\repository\com\google\errorprone\error_prone_annotations\2.38.0\error_prone_annotations-2.38.0.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java\3.5.0\docker-java-3.5.0.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-core\3.5.0\docker-java-core-3.5.0.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-api\3.5.0\docker-java-api-3.5.0.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.5.0\docker-java-transport-httpclient5-3.5.0.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-transport\3.5.0\docker-java-transport-3.5.0.jar;C:\Users\Lenovo\.m2\repository\net\java\dev\jna\jna\5.17.0\jna-5.17.0.jar;C:\Users\Lenovo\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-compress\1.27.1\commons-compress-1.27.1.jar;C:\Users\Lenovo\.m2\repository\commons-codec\commons-codec\1.18.0\commons-codec-1.18.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.4.4\httpclient5-5.4.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.3.4\httpcore5-5.3.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.3.4\httpcore5-h2-5.3.4.jar;C:\Users\Lenovo\.m2\repository\net\java\dev\jna\jna-platform\5.13.0\jna-platform-5.13.0.jar;C:\Users\Lenovo\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\Lenovo\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Lenovo\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Lenovo\.m2\repository\commons-io\commons-io\2.19.0\commons-io-2.19.0.jar;C:\Users\Lenovo\.m2\repository\net\masterthought\cucumber-reporting\5.8.1\cucumber-reporting-5.8.1.jar;C:\Users\Lenovo\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.0\jackson-databind-2.19.0.jar;C:\Users\Lenovo\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.0\jackson-annotations-2.19.0.jar;C:\Users\Lenovo\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.0\jackson-core-2.19.0.jar;C:\Users\Lenovo\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.0\jackson-datatype-jsr310-2.19.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\velocity\velocity-engine-core\2.3\velocity-engine-core-2.3.jar;C:\Users\Lenovo\.m2\repository\joda-time\joda-time\2.12.7\joda-time-2.12.7.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-configuration2\2.10.1\commons-configuration2-2.10.1.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-text\1.11.0\commons-text-1.11.0.jar;C:\Users\Lenovo\.m2\repository\org\jsoup\jsoup\1.17.2\jsoup-1.17.2.jar;C:\Users\Lenovo\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20220608.1\owasp-java-html-sanitizer-20220608.1.jar;C:\Users\Lenovo\.m2\repository\com\google\guava\guava\33.1.0-jre\guava-33.1.0-jre.jar;C:\Users\Lenovo\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\Lenovo\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Lenovo\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Lenovo\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\Lenovo\.m2\repository\org\slf4j\jcl-over-slf4j\2.0.17\jcl-over-slf4j-2.0.17.jar;C:\Users\Lenovo\.m2\repository\org\postgresql\postgresql\42.7.3\postgresql-42.7.3.jar;C:\Users\Lenovo\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\Lenovo\.m2\repository\com\jcraft\jsch\0.1.55\jsch-0.1.55.jar;"/>
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -23,17 +15,10 @@
     <property name="java.vm.specification.version" value="24"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
-<<<<<<< HEAD
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin"/>
-    <property name="sun.java.command" value="C:\Users\MSI\AppData\Local\Temp\surefire7156519659737062997\surefirebooter-20250710135810572_3.jar C:\Users\MSI\AppData\Local\Temp\surefire7156519659737062997 2025-07-10T13-58-10_299-jvmRun1 surefire-20250710135810572_1tmp surefire_0-20250710135810572_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\MSI\AppData\Local\Temp\surefire13802932771287124266\surefirebooter-20250710171326284_3.jar C:\Users\MSI\AppData\Local\Temp\surefire13802932771287124266 2025-07-10T17-13-26_026-jvmRun1 surefire-20250710171326284_1tmp surefire_0-20250710171326284_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\target\test-classes;C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\target\classes;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-java\7.22.2\cucumber-java-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-core\7.22.2\cucumber-core-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-gherkin\7.22.2\cucumber-gherkin-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.22.2\cucumber-gherkin-messages-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\gherkin\32.1.1\gherkin-32.1.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\MSI\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\query\13.4.0\query-13.4.0.jar;C:\Users\MSI\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\datatable\7.22.2\datatable-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-plugin\7.22.2\cucumber-plugin-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\docstring\7.22.2\docstring-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\html-formatter\21.10.1\html-formatter-21.10.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\MSI\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-testng\7.22.2\cucumber-testng-7.22.2.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-java\4.32.0\selenium-java-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-api\4.32.0\selenium-api-4.32.0.jar;C:\Users\MSI\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.32.0\selenium-chrome-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.32.0\selenium-chromium-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-json\4.32.0\selenium-json-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.32.0\selenium-manager-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v134\4.32.0\selenium-devtools-v134-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v135\4.32.0\selenium-devtools-v135-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.32.0\selenium-devtools-v136-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.32.0\selenium-edge-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.32.0\selenium-firefox-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-http\4.32.0\selenium-http-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.32.0\selenium-ie-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.32.0\selenium-remote-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-api\1.49.0\opentelemetry-api-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-context\1.49.0\opentelemetry-context-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.49.0\opentelemetry-exporter-logging-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.49.0\opentelemetry-sdk-common-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.49.0\opentelemetry-sdk-extension-autoconfigure-spi-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.49.0\opentelemetry-sdk-extension-autoconfigure-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.49.0\opentelemetry-sdk-trace-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.49.0\opentelemetry-sdk-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.49.0\opentelemetry-sdk-metrics-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.49.0\opentelemetry-sdk-logs-1.49.0.jar;C:\Users\MSI\.m2\repository\net\bytebuddy\byte-buddy\1.17.5\byte-buddy-1.17.5.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-os\4.32.0\selenium-os-4.32.0.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.32.0\selenium-safari-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-support\4.32.0\selenium-support-4.32.0.jar;C:\Users\MSI\.m2\repository\io\github\bonigarcia\webdrivermanager\6.1.0\webdrivermanager-6.1.0.jar;C:\Users\MSI\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\MSI\.m2\repository\com\google\code\gson\gson\2.13.1\gson-2.13.1.jar;C:\Users\MSI\.m2\repository\com\google\errorprone\error_prone_annotations\2.38.0\error_prone_annotations-2.38.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java\3.5.0\docker-java-3.5.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java-core\3.5.0\docker-java-core-3.5.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java-api\3.5.0\docker-java-api-3.5.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.5.0\docker-java-transport-httpclient5-3.5.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java-transport\3.5.0\docker-java-transport-3.5.0.jar;C:\Users\MSI\.m2\repository\net\java\dev\jna\jna\5.17.0\jna-5.17.0.jar;C:\Users\MSI\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-compress\1.27.1\commons-compress-1.27.1.jar;C:\Users\MSI\.m2\repository\commons-codec\commons-codec\1.18.0\commons-codec-1.18.0.jar;C:\Users\MSI\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.4.4\httpclient5-5.4.4.jar;C:\Users\MSI\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.3.4\httpcore5-5.3.4.jar;C:\Users\MSI\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.3.4\httpcore5-h2-5.3.4.jar;C:\Users\MSI\.m2\repository\net\java\dev\jna\jna-platform\5.13.0\jna-platform-5.13.0.jar;C:\Users\MSI\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\MSI\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\MSI\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\MSI\.m2\repository\commons-io\commons-io\2.19.0\commons-io-2.19.0.jar;C:\Users\MSI\.m2\repository\net\masterthought\cucumber-reporting\5.8.1\cucumber-reporting-5.8.1.jar;C:\Users\MSI\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.0\jackson-databind-2.19.0.jar;C:\Users\MSI\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.0\jackson-annotations-2.19.0.jar;C:\Users\MSI\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.0\jackson-core-2.19.0.jar;C:\Users\MSI\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.0\jackson-datatype-jsr310-2.19.0.jar;C:\Users\MSI\.m2\repository\org\apache\velocity\velocity-engine-core\2.3\velocity-engine-core-2.3.jar;C:\Users\MSI\.m2\repository\joda-time\joda-time\2.12.7\joda-time-2.12.7.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-configuration2\2.10.1\commons-configuration2-2.10.1.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-text\1.11.0\commons-text-1.11.0.jar;C:\Users\MSI\.m2\repository\org\jsoup\jsoup\1.17.2\jsoup-1.17.2.jar;C:\Users\MSI\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20220608.1\owasp-java-html-sanitizer-20220608.1.jar;C:\Users\MSI\.m2\repository\com\google\guava\guava\33.1.0-jre\guava-33.1.0-jre.jar;C:\Users\MSI\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\MSI\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\MSI\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\MSI\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\MSI\.m2\repository\org\slf4j\jcl-over-slf4j\2.0.17\jcl-over-slf4j-2.0.17.jar;C:\Users\MSI\.m2\repository\org\postgresql\postgresql\42.7.3\postgresql-42.7.3.jar;C:\Users\MSI\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\MSI\.m2\repository\com\jcraft\jsch\0.1.55\jsch-0.1.55.jar;"/>
-=======
-    <property name="sun.boot.library.path" value="C:\Program Files\jdk-21.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\Lenovo\AppData\Local\Temp\surefire5239414913489258028\surefirebooter-20250708203951827_3.jar C:\Users\Lenovo\AppData\Local\Temp\surefire5239414913489258028 2025-07-08T20-39-51_738-jvmRun1 surefire-20250708203951827_1tmp surefire_0-20250708203951827_2tmp"/>
-    <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\target\test-classes;E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\target\classes;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-java\7.22.2\cucumber-java-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-core\7.22.2\cucumber-core-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-gherkin\7.22.2\cucumber-gherkin-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.22.2\cucumber-gherkin-messages-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\gherkin\32.1.1\gherkin-32.1.1.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\query\13.4.0\query-13.4.0.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\datatable\7.22.2\datatable-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-plugin\7.22.2\cucumber-plugin-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\docstring\7.22.2\docstring-7.22.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\html-formatter\21.10.1\html-formatter-21.10.1.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\Lenovo\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Lenovo\.m2\repository\io\cucumber\cucumber-testng\7.22.2\cucumber-testng-7.22.2.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-java\4.32.0\selenium-java-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-api\4.32.0\selenium-api-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.32.0\selenium-chrome-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.32.0\selenium-chromium-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-json\4.32.0\selenium-json-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.32.0\selenium-manager-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v134\4.32.0\selenium-devtools-v134-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v135\4.32.0\selenium-devtools-v135-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.32.0\selenium-devtools-v136-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.32.0\selenium-edge-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.32.0\selenium-firefox-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-http\4.32.0\selenium-http-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.32.0\selenium-ie-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.32.0\selenium-remote-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-api\1.49.0\opentelemetry-api-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-context\1.49.0\opentelemetry-context-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.49.0\opentelemetry-exporter-logging-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.49.0\opentelemetry-sdk-common-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.49.0\opentelemetry-sdk-extension-autoconfigure-spi-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.49.0\opentelemetry-sdk-extension-autoconfigure-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.49.0\opentelemetry-sdk-trace-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.49.0\opentelemetry-sdk-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.49.0\opentelemetry-sdk-metrics-1.49.0.jar;C:\Users\Lenovo\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.49.0\opentelemetry-sdk-logs-1.49.0.jar;C:\Users\Lenovo\.m2\repository\net\bytebuddy\byte-buddy\1.17.5\byte-buddy-1.17.5.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-os\4.32.0\selenium-os-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.32.0\selenium-safari-driver-4.32.0.jar;C:\Users\Lenovo\.m2\repository\org\seleniumhq\selenium\selenium-support\4.32.0\selenium-support-4.32.0.jar;C:\Users\Lenovo\.m2\repository\io\github\bonigarcia\webdrivermanager\6.1.0\webdrivermanager-6.1.0.jar;C:\Users\Lenovo\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\Lenovo\.m2\repository\com\google\code\gson\gson\2.13.1\gson-2.13.1.jar;C:\Users\Lenovo\.m2\repository\com\google\errorprone\error_prone_annotations\2.38.0\error_prone_annotations-2.38.0.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java\3.5.0\docker-java-3.5.0.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-core\3.5.0\docker-java-core-3.5.0.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-api\3.5.0\docker-java-api-3.5.0.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.5.0\docker-java-transport-httpclient5-3.5.0.jar;C:\Users\Lenovo\.m2\repository\com\github\docker-java\docker-java-transport\3.5.0\docker-java-transport-3.5.0.jar;C:\Users\Lenovo\.m2\repository\net\java\dev\jna\jna\5.17.0\jna-5.17.0.jar;C:\Users\Lenovo\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-compress\1.27.1\commons-compress-1.27.1.jar;C:\Users\Lenovo\.m2\repository\commons-codec\commons-codec\1.18.0\commons-codec-1.18.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.4.4\httpclient5-5.4.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.3.4\httpcore5-5.3.4.jar;C:\Users\Lenovo\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.3.4\httpcore5-h2-5.3.4.jar;C:\Users\Lenovo\.m2\repository\net\java\dev\jna\jna-platform\5.13.0\jna-platform-5.13.0.jar;C:\Users\Lenovo\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\Lenovo\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Lenovo\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\Lenovo\.m2\repository\commons-io\commons-io\2.19.0\commons-io-2.19.0.jar;C:\Users\Lenovo\.m2\repository\net\masterthought\cucumber-reporting\5.8.1\cucumber-reporting-5.8.1.jar;C:\Users\Lenovo\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.0\jackson-databind-2.19.0.jar;C:\Users\Lenovo\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.0\jackson-annotations-2.19.0.jar;C:\Users\Lenovo\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.0\jackson-core-2.19.0.jar;C:\Users\Lenovo\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.0\jackson-datatype-jsr310-2.19.0.jar;C:\Users\Lenovo\.m2\repository\org\apache\velocity\velocity-engine-core\2.3\velocity-engine-core-2.3.jar;C:\Users\Lenovo\.m2\repository\joda-time\joda-time\2.12.7\joda-time-2.12.7.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-configuration2\2.10.1\commons-configuration2-2.10.1.jar;C:\Users\Lenovo\.m2\repository\org\apache\commons\commons-text\1.11.0\commons-text-1.11.0.jar;C:\Users\Lenovo\.m2\repository\org\jsoup\jsoup\1.17.2\jsoup-1.17.2.jar;C:\Users\Lenovo\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20220608.1\owasp-java-html-sanitizer-20220608.1.jar;C:\Users\Lenovo\.m2\repository\com\google\guava\guava\33.1.0-jre\guava-33.1.0-jre.jar;C:\Users\Lenovo\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\Lenovo\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Lenovo\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Lenovo\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\Lenovo\.m2\repository\org\slf4j\jcl-over-slf4j\2.0.17\jcl-over-slf4j-2.0.17.jar;C:\Users\Lenovo\.m2\repository\org\postgresql\postgresql\42.7.3\postgresql-42.7.3.jar;C:\Users\Lenovo\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\Lenovo\.m2\repository\com\jcraft\jsch\0.1.55\jsch-0.1.55.jar;"/>
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\MSI"/>
     <property name="user.language" value="en"/>
@@ -46,21 +31,12 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-<<<<<<< HEAD
-    <property name="surefire.real.class.path" value="C:\Users\MSI\AppData\Local\Temp\surefire7156519659737062997\surefirebooter-20250710135810572_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\MSI\AppData\Local\Temp\surefire13802932771287124266\surefirebooter-20250710171326284_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="24.0.1+9-30"/>
     <property name="webdriver.edge.driver" value="C:\Users\MSI\.cache\selenium\msedgedriver\win64\138.0.3351.77\msedgedriver.exe"/>
     <property name="user.name" value="MSI"/>
-=======
-    <property name="surefire.real.class.path" value="C:\Users\Lenovo\AppData\Local\Temp\surefire5239414913489258028\surefirebooter-20250708203951827_3.jar"/>
-    <property name="user.script" value=""/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="21.0.1+12-29"/>
-    <property name="webdriver.edge.driver" value="C:\Users\Lenovo\.cache\selenium\msedgedriver\win64\138.0.3351.77\msedgedriver.exe"/>
-    <property name="user.name" value="Lenovo"/>
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
     <property name="stdout.encoding" value="Cp1252"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
@@ -85,11 +61,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-<<<<<<< HEAD
-  <testcase name="runScenario[&quot;Verify descending sorting operation on Pemantau Progres Belajar page&quot;, &quot;FR-12 Progress Overview&quot;](1)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="6.688">
-=======
-  <testcase name="runScenario[&quot;Login with valid credentials&quot;, &quot;FR-01 Authentication&quot;](1)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="5.953">
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
+  <testcase name="runScenario[&quot;Verify video can be played&quot;, &quot;FR08-Access Materials&quot;](1)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="15.638">
     <system-out><![CDATA[--- Starting Test Suite Setup ---
 Menghubungkan ke SSH Host cloudias79.com...
 Koneksi SSH berhasil dibuat.
@@ -97,9 +69,661 @@ SSH Tunnel dimulai: localhost:5433 -> localhost:5433
 Koneksi database melalui tunnel berhasil dibuka.
 --- Test Suite Setup Complete ---
 
-<<<<<<< HEAD
-@wip
-Scenario: Verify descending sorting operation on Pemantau Progres Belajar page                               &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:133&amp#27;[0m
+@AccessMaterials @VerifyVideo
+Scenario: Verify video can be played                                                                         &amp#27;[90m# src/test/resources/features/AccessMaterials.feature:5&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on course &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m                                                                &amp#27;[90m# com.zaidan.testng.definitions.AccessMaterials.userClicksOnCourse(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the continue button&amp#27;[0m                                                                     &amp#27;[90m# com.zaidan.testng.definitions.AccessMaterials.userClicksContinue()&amp#27;[0m
+Setting current material ID to: 9 (Video)
+Clicked example video material in nav bar.
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on one of the video in the navigation bar&amp#27;[0m                                                 &amp#27;[90m# com.zaidan.testng.definitions.AccessMaterials.userClicksOnOneVideo()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser should be able to see the page title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m                                           &amp#27;[90m# com.zaidan.testng.definitions.AccessMaterials.userSeesPageTitle(java.lang.String)&amp#27;[0m
+Step: User should be able to play the video
+Attempting to play YouTube embedded video...
+Video iframe found and visible.
+Switched to video iframe context.
+Waiting for the YouTube play button to be clickable...
+YouTube play button found. Clicking it now.
+Verifying video playback status...
+Current YouTube player state: 3 (1 = playing)
+Current YouTube player state: 3 (1 = playing)
+Current YouTube player state: 3 (1 = playing)
+Current YouTube player state: 1 (1 = playing)
+Video is confirmed to be playing.
+Switched back to main page content.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should be able to play the video&amp#27;[0m                                                                  &amp#27;[90m# com.zaidan.testng.definitions.AccessMaterials.userPlaysVideo()&amp#27;[0m
+Next or Previous button found and clickable.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should be able to see the next or previous button&amp#27;[0m                                                 &amp#27;[90m# com.zaidan.testng.definitions.AccessMaterials.userSeesTheNextPrevButton()&amp#27;[0m
+CourseDAO: Attempting to get course with ID: 4
+CourseDAO: SQL Query: SELECT id_course, id_pengajar, nama_course, enrollment_key, gambar_course, deskripsi FROM course WHERE id_course = ?
+CourseDAO: Found Course: Komputer Grafik (ID: 4)
+Course Title found: Komputer Grafik
+MateriDAO: Attempting to get materi with ID: 9
+MateriDAO: SQL Query: SELECT id_materi, id_course, nama_materi, konten_materi, jenis_materi FROM materi WHERE id_materi = ?
+MateriDAO: Found Materi: Test Video Komgraf (ID: 4)
+Material Title found: Test Video Komgraf
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe course name of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m and material name of id &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m&amp#27;[32m should be the same as in the database&amp#27;[0m                &amp#27;[90m# com.zaidan.testng.definitions.AccessMaterials.uiCourseNameEqualsDBCourseName(int,int)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Jul 10, 2025 5:13:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify PDF file can be opened and read&quot;, &quot;FR08-Access Materials&quot;](2)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="13.743">
+    <system-out><![CDATA[
+@AccessMaterials @VerifyPDF
+Scenario: Verify PDF file can be opened and read                                                             &amp#27;[90m# src/test/resources/features/AccessMaterials.feature:20&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on course &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m                                                                &amp#27;[90m# com.zaidan.testng.definitions.AccessMaterials.userClicksOnCourse(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the continue button&amp#27;[0m                                                                     &amp#27;[90m# com.zaidan.testng.definitions.AccessMaterials.userClicksContinue()&amp#27;[0m
+Setting current material ID to: 10 (PDF)
+Clicked example PDF material in nav bar.
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on the example PDF material&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.AccessMaterials.userClicksOnPDFMaterial()&amp#27;[0m
+Attempting to find the PDF content iframe and wait for it to be ready...
+PDF iframe is fully rendered and found successfully.
+MateriDAO: Attempting to get materi with ID: 10
+MateriDAO: SQL Query: SELECT id_materi, id_course, nama_materi, konten_materi, jenis_materi FROM materi WHERE id_materi = ?
+MateriDAO: Found Materi: Test PDF Komgraf (ID: 4)
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser should be able to read the PDF file with material id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m                                          &amp#27;[90m# com.zaidan.testng.definitions.AccessMaterials.userReadsPDFFile(int)&amp#27;[0m
+Next or Previous button found and clickable.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should be able to see the next or previous button&amp#27;[0m                                                 &amp#27;[90m# com.zaidan.testng.definitions.AccessMaterials.userSeesTheNextPrevButton()&amp#27;[0m
+CourseDAO: Attempting to get course with ID: 4
+CourseDAO: SQL Query: SELECT id_course, id_pengajar, nama_course, enrollment_key, gambar_course, deskripsi FROM course WHERE id_course = ?
+CourseDAO: Found Course: Komputer Grafik (ID: 4)
+Course Title found: Komputer Grafik
+MateriDAO: Attempting to get materi with ID: 10
+MateriDAO: SQL Query: SELECT id_materi, id_course, nama_materi, konten_materi, jenis_materi FROM materi WHERE id_materi = ?
+MateriDAO: Found Materi: Test PDF Komgraf (ID: 4)
+Material Title found: Test PDF Komgraf
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe course name of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m and material name of id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m&amp#27;[32m should be the same as in the database&amp#27;[0m               &amp#27;[90m# com.zaidan.testng.definitions.AccessMaterials.uiCourseNameEqualsDBCourseName(int,int)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:13:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify dashboard page for a student who hasn&apos;t registered for any courses&quot;, &quot;FR03-View Dashboard&quot;](3)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="7.237">
+    <system-out><![CDATA[
+@Dashboard @UnjoinedCourse
+Scenario: Verify dashboard page for a student who hasn't registered for any courses                          &amp#27;[90m# src/test/resources/features/Dashboard.feature:9&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar3@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar3"&amp#27;[0m                                   &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+Welcome message verified
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser should see the welcome message for email &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar3@example.com"&amp#27;[0m                                  &amp#27;[90m# com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeTheWelcomeMessage(java.lang.String)&amp#27;[0m
+Page title verified: Kursus
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should see the page title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kursus"&amp#27;[0m                                                                &amp#27;[90m# com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeThePageTitle(java.lang.String)&amp#27;[0m
+Verifying attributes for course: 'PABPMetagama'
+PengajarDAO: Found student name: Budi Pengajar for ID: 1 (and cached)
+Verifying attributes for course: 'Contoh Kursus'
+PengajarDAO: Found pengajar name in cache for ID: 1
+Verifying attributes for course: 'PABPMetagama2'
+PengajarDAO: Found pengajar name in cache for ID: 1
+Verifying attributes for course: 'Pemrograman Mobile'
+PengajarDAO: Found pengajar name in cache for ID: 1
+Verifying attributes for course: 'Komputer Grafik'
+PengajarDAO: Found pengajar name in cache for ID: 1
+Verifying attributes for course: 'Komdatjar'
+PengajarDAO: Found pengajar name in cache for ID: 1
+Verifying attributes for course: 'Memasak'
+PengajarDAO: Found student name: Rina Pengajar for ID: 2 (and cached)
+Verifying attributes for course: 'Pemrograman Web'
+PengajarDAO: Found pengajar name in cache for ID: 1
+All courses displayed on UI are successfully matched with database records.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should see all courses matching with the database records&amp#27;[0m                                         &amp#27;[90m# com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeAllCoursesMatchingWithTheDatabaseRecords()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:14:01 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify dashboard page for a student who registered in courses from different lecturer&quot;, &quot;FR03-View Dashboard&quot;](4)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="7.168">
+    <system-out><![CDATA[
+@Dashboard @JoinedCourse
+Scenario: Verify dashboard page for a student who registered in courses from different lecturer               &amp#27;[90m# src/test/resources/features/Dashboard.feature:17&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                           &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                         &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+Welcome message verified
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser should see the welcome message for email &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m                                   &amp#27;[90m# com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeTheWelcomeMessage(java.lang.String)&amp#27;[0m
+Page title verified: Kursus
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should see the page title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kursus"&amp#27;[0m                                                                 &amp#27;[90m# com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeThePageTitle(java.lang.String)&amp#27;[0m
+Verifying attributes for course: 'Contoh Kursus'
+PengajarDAO: Found pengajar name in cache for ID: 1
+Verifying attributes for course: 'Komputer Grafik'
+PengajarDAO: Found pengajar name in cache for ID: 1
+Verifying attributes for course: 'Komdatjar'
+PengajarDAO: Found pengajar name in cache for ID: 1
+Verifying attributes for course: 'Memasak'
+PengajarDAO: Found pengajar name in cache for ID: 2
+Verifying attributes for course: 'Pemrograman Web'
+PengajarDAO: Found pengajar name in cache for ID: 1
+All courses displayed on UI are successfully matched with database records.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should see the joined courses matching with the database records with email &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeJoinedCourses(java.lang.String)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:14:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Login with valid credentials&quot;, &quot;FR-01 Authentication&quot;](5)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="7.461">
+    <system-out><![CDATA[
+@Authentication @ValidCredentials
+Scenario: Login with valid credentials                                                                       &amp#27;[90m# src/test/resources/features/LoginPage.feature:11&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should be able to see navigation bar for pelajar&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_should_see_all_sidebar_items()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should be able to see photo and username&amp#27;[0m                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.userShouldSeePhotoAndUsername()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:14:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;User navigates to Beranda through Kursus Saya and sees course list&quot;, &quot;FR-01 Authentication&quot;](6)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="8.022">
+    <system-out><![CDATA[
+@Authentication @VerificationGoToHomepage
+Scenario: User navigates to Beranda through Kursus Saya and sees course list                                 &amp#27;[90m# src/test/resources/features/LoginPage.feature:17&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on Kursus Saya navigation&amp#27;[0m                                                                 &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_kursus_saya_navigation()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Beranda navigation&amp#27;[0m                                                                      &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_beranda_navigation()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mPage title should be displayed&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.page_title_displayed()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mCourse list created by the instructor should be visible&amp#27;[0m                                                &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.course_visible()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:14:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;User click on Username Menu and sub menu is displayed&quot;, &quot;FR-01 Authentication&quot;](7)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="5.731">
+    <system-out><![CDATA[
+@Authentication @VerificationSubMenuOnUserProfile
+Scenario: User click on Username Menu and sub menu is displayed                                              &amp#27;[90m# src/test/resources/features/LoginPage.feature:24&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on username&amp#27;[0m                                                                               &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_on_username()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mSub menu keluar is displayed&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.keluar_displayed()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:14:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Student verifies the enrolled course details and progress against the database&quot;, &quot;FR-06 Course Overview&quot;](8)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="8.64">
+    <system-out><![CDATA[
+@CourseOverview @VerifyCourseDetailsAndProgress
+Scenario: Student verifies the enrolled course details and progress against the database                     &amp#27;[90m# src/test/resources/features/MyCourseOverview.feature:12&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+User selects course: Komdatjar
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser navigates to the &amp#27;[0m&amp#27;[32m&amp#27;[1m"Dashboard"&amp#27;[0m&amp#27;[32m page and selects the course named &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komdatjar"&amp#27;[0m                       &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_navigates_to_page_and_selects_course(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe course details page should display the correct information for &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komdatjar"&amp#27;[0m                        &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.the_course_details_page_should_display_correct_information(java.lang.String)&amp#27;[0m
+UI progress (80.0%) is valid.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe displayed course progress should be greater than 0 and less than 100 percent&amp#27;[0m                       &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.the_displayed_course_progress_should_be_between_0_and_100()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe displayed course information for student &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m should match the database records&amp#27;[0m  &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.the_displayed_course_information_should_match_database(java.lang.String)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:14:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Enroll in a course with an invalid enrollment key&quot;, &quot;FR-06 Course Overview&quot;](9)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="8.9">
+    <system-out><![CDATA[
+@CourseOverview @InvalidEnrollmentKey
+Scenario: Enroll in a course with an invalid enrollment key                                                              &amp#27;[90m# src/test/resources/features/MyCourseOverview.feature:19&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                                      &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m             &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                                &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                                           &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser navigates to the course list and selects the unenrolled course &amp#27;[0m&amp#27;[32m&amp#27;[1m"PABPMetagama"&amp#27;[0m                                &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_selects_unenrolled_course(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters an enrollment key &amp#27;[0m&amp#27;[32m&amp#27;[1m"kunci_salah_123"&amp#27;[0m                                                                    &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_enters_an_invalid_enrollment_key(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks the enroll button&amp#27;[0m                                                                                      &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_clicks_the_enroll_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser should see an enrollment error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kode Pendaftaran yang Anda masukkan tidak valid. Silakan coba lagi!"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_should_see_an_enrollment_error_message(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should remain on the course information page&amp#27;[0m                                                                  &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_should_remain_on_the_course_information_page()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:14:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Enroll in a course that has no material content&quot;, &quot;FR-06 Course Overview&quot;](10)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="8.448">
+    <system-out><![CDATA[
+@CourseOverview @NoMaterialContent
+Scenario: Enroll in a course that has no material content                                                                                    &amp#27;[90m# src/test/resources/features/MyCourseOverview.feature:27&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m                                 &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                                                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                                                               &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser navigates to the course list and selects the unenrolled course &amp#27;[0m&amp#27;[32m&amp#27;[1m"PABPMetagama"&amp#27;[0m                                                    &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_selects_unenrolled_course(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters an enrollment key &amp#27;[0m&amp#27;[32m&amp#27;[1m"pabpmetagama"&amp#27;[0m                                                                                           &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_enters_an_invalid_enrollment_key(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks the enroll button&amp#27;[0m                                                                                                          &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_clicks_the_enroll_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser should see an enrollment error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pendaftaran kursus gagal, kursus setidaknya memiliki minimal satu buah materi dan kuis."&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_should_see_an_enrollment_error_message(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should remain on the course information page&amp#27;[0m                                                                                      &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_should_remain_on_the_course_information_page()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:14:54 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Enroll in a course that has no material content&quot;, &quot;FR-06 Course Overview&quot;](11)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="8.523">
+    <system-out><![CDATA[
+@CourseOverview @NoQuizContent
+Scenario: Enroll in a course that has no material content                                                                                    &amp#27;[90m# src/test/resources/features/MyCourseOverview.feature:35&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m                                 &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                                                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                                                               &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser navigates to the course list and selects the unenrolled course &amp#27;[0m&amp#27;[32m&amp#27;[1m"PABPMetagama2"&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_selects_unenrolled_course(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters an enrollment key &amp#27;[0m&amp#27;[32m&amp#27;[1m"pabpmetagama"&amp#27;[0m                                                                                           &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_enters_an_invalid_enrollment_key(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks the enroll button&amp#27;[0m                                                                                                          &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_clicks_the_enroll_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser should see an enrollment error message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pendaftaran kursus gagal, kursus setidaknya memiliki minimal satu buah materi dan kuis."&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_should_see_an_enrollment_error_message(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should remain on the course information page&amp#27;[0m                                                                                      &amp#27;[90m# com.zaidan.testng.definitions.CourseDetailsDefinitions.user_should_remain_on_the_course_information_page()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:15:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify progress overview page with a student has not finished all materials and quizzes yet&quot;, &quot;FR-12 Progress Overview&quot;](12)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="19.124">
+    <system-out><![CDATA[
+Scenario: Verify progress overview page with a student has not finished all materials and quizzes yet        &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:3&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1"&amp#27;[0m                                  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Pemantauan&amp#27;[0m                                                                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnProgressPage()&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 1 and material 9
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m has not started yet material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 1 and material 10
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m has not started yet material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 1 and quiz 7
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m has not started yet quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m                                                       &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedQuiz(int,int)&amp#27;[0m
+DAO: Setting progress for student 1 in course 4 to 0.0%
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe progress of student with id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m is set to &amp#27;[0m&amp#27;[32m&amp#27;[1m0&amp#27;[0m                                                          &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentProgressSetTo(int,float)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 4 and material 9
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m has not started yet material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 4 and material 10
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m has not started yet material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 4 and quiz 7
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m has not started yet quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m                                                       &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedQuiz(int,int)&amp#27;[0m
+DAO: Setting progress for student 4 in course 4 to 0.0%
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe progress of student with id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m is set to &amp#27;[0m&amp#27;[32m&amp#27;[1m0&amp#27;[0m                                                          &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentProgressSetTo(int,float)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 12 and material 9
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m has not started yet material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 12 and material 10
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m has not started yet material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m                                                 &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 12 and quiz 7
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m has not started yet quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m                                                      &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedQuiz(int,int)&amp#27;[0m
+DAO: Setting progress for student 12 in course 4 to 0.0%
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe progress of student with id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m is set to &amp#27;[0m&amp#27;[32m&amp#27;[1m0&amp#27;[0m                                                         &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentProgressSetTo(int,float)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on Progres button of Komputer Grafik course&amp#27;[0m                                               &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnProgresBtn()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe page title should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pemantau Progres Belajar"&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyPageTitle(java.lang.String)&amp#27;[0m
+CourseDAO: Attempting to get course with ID: 4
+CourseDAO: SQL Query: SELECT id_course, id_pengajar, nama_course, enrollment_key, gambar_course, deskripsi FROM course WHERE id_course = ?
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Found Course: Komputer Grafik (ID: 4)
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe page subtitle should be the same with course with id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m                                             &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyPageTitle(int)&amp#27;[0m
+--- Verifying data for student: Andi Pelajar ---
+CourseDAO: Getting progress for student ID: 1, course ID: 4
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Progress found: 0.0%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+Koneksi database melalui tunnel berhasil dibuka.
+--- Verifying data for student: John Doe ---
+CourseDAO: Getting progress for student ID: 12, course ID: 4
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Progress found: 0.0%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+Koneksi database melalui tunnel berhasil dibuka.
+--- Verifying data for student: Rafif Pelajar 3 ---
+CourseDAO: Getting progress for student ID: 4, course ID: 4
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Progress found: 0.0%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe study progress of every student should be displayed&amp#27;[0m                                                &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyDisplayedStudentProgressMatchesDatabase()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:15:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify progress overview page with some students finished some materials and quizzes&quot;, &quot;FR-12 Progress Overview&quot;](13)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="18.401">
+    <system-out><![CDATA[
+Scenario: Verify progress overview page with some students finished some materials and quizzes               &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:27&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1"&amp#27;[0m                                  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Pemantauan&amp#27;[0m                                                                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnProgressPage()&amp#27;[0m
+DAO: Successfully deleted history for student 1 and material 9
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m has not started yet material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedMaterial(int,int)&amp#27;[0m
+DAO: Setting material 10 to FINISHED for student 1
+Koneksi database melalui tunnel berhasil dibuka.
+HistoryMateriDAO: Delete successful
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m finished material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m                                                             &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 1 and quiz 7
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m has not started yet quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m                                                       &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedQuiz(int,int)&amp#27;[0m
+DAO: Setting progress for student 1 in course 4 to 33.333%
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe progress of student with id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m is set to &amp#27;[0m&amp#27;[32m&amp#27;[1m33.333&amp#27;[0m                                                     &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentProgressSetTo(int,float)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Set material 9 to IN_PROGRESS for student 4
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m is still on progress in material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m                                               &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentIsOnProgressInMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 4 and material 10
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m has not started yet material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Set quiz 7 to FINISHED for student 4 with score 95.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m finished quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m&amp#27;[32m with score &amp#27;[0m&amp#27;[32m&amp#27;[1m95&amp#27;[0m                                                    &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedQuiz(int,int,float)&amp#27;[0m
+DAO: Setting progress for student 4 in course 4 to 33.333%
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe progress of student with id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m is set to &amp#27;[0m&amp#27;[32m&amp#27;[1m33.333&amp#27;[0m                                                     &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentProgressSetTo(int,float)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 12 and material 9
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m has not started yet material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 12 and material 10
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m has not started yet material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m                                                 &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 12 and quiz 7
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m has not started yet quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m                                                      &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedQuiz(int,int)&amp#27;[0m
+DAO: Setting progress for student 12 in course 4 to 0.0%
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe progress of student with id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m is set to &amp#27;[0m&amp#27;[32m&amp#27;[1m0&amp#27;[0m                                                         &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentProgressSetTo(int,float)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on Progres button of Komputer Grafik course&amp#27;[0m                                               &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnProgresBtn()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe page title should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pemantau Progres Belajar"&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyPageTitle(java.lang.String)&amp#27;[0m
+CourseDAO: Attempting to get course with ID: 4
+CourseDAO: SQL Query: SELECT id_course, id_pengajar, nama_course, enrollment_key, gambar_course, deskripsi FROM course WHERE id_course = ?
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Found Course: Komputer Grafik (ID: 4)
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe page subtitle should be the same with course with id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m                                             &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyPageTitle(int)&amp#27;[0m
+--- Verifying data for student: Andi Pelajar ---
+CourseDAO: Getting progress for student ID: 1, course ID: 4
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Progress found: 33.333%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+Koneksi database melalui tunnel berhasil dibuka.
+--- Verifying data for student: John Doe ---
+CourseDAO: Getting progress for student ID: 12, course ID: 4
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Progress found: 0.0%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+Koneksi database melalui tunnel berhasil dibuka.
+--- Verifying data for student: Rafif Pelajar 3 ---
+CourseDAO: Getting progress for student ID: 4, course ID: 4
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Progress found: 33.333%
+DAO: Score for quiz 7 is 95.0. Status: PASSED
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe study progress of every student should be displayed&amp#27;[0m                                                &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyDisplayedStudentProgressMatchesDatabase()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:15:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify progress overview page with all students finished all materials and quizzes&quot;, &quot;FR-12 Progress Overview&quot;](14)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="20.254">
+    <system-out><![CDATA[
+Scenario: Verify progress overview page with all students finished all materials and quizzes                 &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:51&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1"&amp#27;[0m                                  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Pemantauan&amp#27;[0m                                                                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnProgressPage()&amp#27;[0m
+DAO: Setting material 9 to FINISHED for student 1
+HistoryMateriDAO: Delete successful
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m finished material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m                                                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedMaterial(int,int)&amp#27;[0m
+DAO: Setting material 10 to FINISHED for student 1
+Koneksi database melalui tunnel berhasil dibuka.
+HistoryMateriDAO: Delete successful
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m finished material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m                                                             &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Set quiz 7 to FINISHED for student 1 with score 90.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m finished quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m&amp#27;[32m with score &amp#27;[0m&amp#27;[32m&amp#27;[1m90&amp#27;[0m                                                    &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedQuiz(int,int,float)&amp#27;[0m
+DAO: Setting progress for student 1 in course 4 to 100.0%
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe progress of student with id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m is set to &amp#27;[0m&amp#27;[32m&amp#27;[1m100&amp#27;[0m                                                        &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentProgressSetTo(int,float)&amp#27;[0m
+DAO: Setting material 9 to FINISHED for student 4
+Koneksi database melalui tunnel berhasil dibuka.
+HistoryMateriDAO: Delete successful
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m finished material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m                                                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedMaterial(int,int)&amp#27;[0m
+DAO: Setting material 10 to FINISHED for student 4
+Koneksi database melalui tunnel berhasil dibuka.
+HistoryMateriDAO: Delete successful
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m finished material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m                                                             &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Set quiz 7 to FINISHED for student 4 with score 95.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m finished quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m&amp#27;[32m with score &amp#27;[0m&amp#27;[32m&amp#27;[1m95&amp#27;[0m                                                    &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedQuiz(int,int,float)&amp#27;[0m
+DAO: Setting progress for student 4 in course 4 to 100.0%
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe progress of student with id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m is set to &amp#27;[0m&amp#27;[32m&amp#27;[1m100&amp#27;[0m                                                        &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentProgressSetTo(int,float)&amp#27;[0m
+DAO: Setting material 9 to FINISHED for student 12
+Koneksi database melalui tunnel berhasil dibuka.
+HistoryMateriDAO: Delete successful
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m finished material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m                                                             &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedMaterial(int,int)&amp#27;[0m
+DAO: Setting material 10 to FINISHED for student 12
+Koneksi database melalui tunnel berhasil dibuka.
+HistoryMateriDAO: Delete successful
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m finished material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m                                                            &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Set quiz 7 to FINISHED for student 12 with score 85.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m finished quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m&amp#27;[32m with score &amp#27;[0m&amp#27;[32m&amp#27;[1m85&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedQuiz(int,int,float)&amp#27;[0m
+DAO: Setting progress for student 12 in course 4 to 100.0%
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe progress of student with id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m is set to &amp#27;[0m&amp#27;[32m&amp#27;[1m100&amp#27;[0m                                                       &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentProgressSetTo(int,float)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on Progres button of Komputer Grafik course&amp#27;[0m                                               &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnProgresBtn()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe page title should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pemantau Progres Belajar"&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyPageTitle(java.lang.String)&amp#27;[0m
+CourseDAO: Attempting to get course with ID: 4
+CourseDAO: SQL Query: SELECT id_course, id_pengajar, nama_course, enrollment_key, gambar_course, deskripsi FROM course WHERE id_course = ?
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Found Course: Komputer Grafik (ID: 4)
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe page subtitle should be the same with course with id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m                                             &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyPageTitle(int)&amp#27;[0m
+--- Verifying data for student: Andi Pelajar ---
+CourseDAO: Getting progress for student ID: 1, course ID: 4
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Progress found: 100.0%
+DAO: Score for quiz 7 is 90.0. Status: PASSED
+Koneksi database melalui tunnel berhasil dibuka.
+--- Verifying data for student: John Doe ---
+CourseDAO: Getting progress for student ID: 12, course ID: 4
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Progress found: 100.0%
+DAO: Score for quiz 7 is 85.0. Status: PASSED
+Koneksi database melalui tunnel berhasil dibuka.
+--- Verifying data for student: Rafif Pelajar 3 ---
+CourseDAO: Getting progress for student ID: 4, course ID: 4
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Progress found: 100.0%
+DAO: Score for quiz 7 is 95.0. Status: PASSED
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe study progress of every student should be displayed&amp#27;[0m                                                &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyDisplayedStudentProgressMatchesDatabase()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:15:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify progress overview page with three different student states;&quot;, &quot;FR-12 Progress Overview&quot;](15)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="18.528">
+    <system-out><![CDATA[
+Scenario: Verify progress overview page with three different student states;                                 &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:75&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1"&amp#27;[0m                                  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Pemantauan&amp#27;[0m                                                                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnProgressPage()&amp#27;[0m
+DAO: Successfully deleted history for student 1 and material 9
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m has not started yet material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 1 and material 10
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m has not started yet material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 1 and quiz 7
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m has not started yet quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m                                                       &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedQuiz(int,int)&amp#27;[0m
+DAO: Setting progress for student 1 in course 4 to 0.0%
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe progress of student with id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m is set to &amp#27;[0m&amp#27;[32m&amp#27;[1m0&amp#27;[0m                                                          &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentProgressSetTo(int,float)&amp#27;[0m
+DAO: Setting material 9 to FINISHED for student 4
+Koneksi database melalui tunnel berhasil dibuka.
+HistoryMateriDAO: Delete successful
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m finished material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m                                                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Set material 10 to IN_PROGRESS for student 4
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m is still on progress in material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m                                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentIsOnProgressInMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Successfully deleted history for student 4 and quiz 7
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m has not started yet quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m                                                       &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentHasNotStartedQuiz(int,int)&amp#27;[0m
+DAO: Setting progress for student 4 in course 4 to 33.333%
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe progress of student with id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m is set to &amp#27;[0m&amp#27;[32m&amp#27;[1m33.333&amp#27;[0m                                                     &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentProgressSetTo(int,float)&amp#27;[0m
+DAO: Setting material 9 to FINISHED for student 12
+Koneksi database melalui tunnel berhasil dibuka.
+HistoryMateriDAO: Delete successful
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m finished material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m9&amp#27;[0m                                                             &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedMaterial(int,int)&amp#27;[0m
+DAO: Setting material 10 to FINISHED for student 12
+Koneksi database melalui tunnel berhasil dibuka.
+HistoryMateriDAO: Delete successful
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m finished material of id &amp#27;[0m&amp#27;[32m&amp#27;[1m10&amp#27;[0m                                                            &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedMaterial(int,int)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Set quiz 7 to FINISHED for student 12 with score 100.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m finished quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m&amp#27;[32m with score &amp#27;[0m&amp#27;[32m&amp#27;[1m100&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedQuiz(int,int,float)&amp#27;[0m
+DAO: Setting progress for student 12 in course 4 to 100.0%
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe progress of student with id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m is set to &amp#27;[0m&amp#27;[32m&amp#27;[1m100&amp#27;[0m                                                       &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentProgressSetTo(int,float)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on Progres button of Komputer Grafik course&amp#27;[0m                                               &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnProgresBtn()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe page title should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pemantau Progres Belajar"&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyPageTitle(java.lang.String)&amp#27;[0m
+CourseDAO: Attempting to get course with ID: 4
+CourseDAO: SQL Query: SELECT id_course, id_pengajar, nama_course, enrollment_key, gambar_course, deskripsi FROM course WHERE id_course = ?
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Found Course: Komputer Grafik (ID: 4)
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe page subtitle should be the same with course with id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m                                             &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyPageTitle(int)&amp#27;[0m
+--- Verifying data for student: Andi Pelajar ---
+CourseDAO: Getting progress for student ID: 1, course ID: 4
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Progress found: 0.0%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+Koneksi database melalui tunnel berhasil dibuka.
+--- Verifying data for student: John Doe ---
+CourseDAO: Getting progress for student ID: 12, course ID: 4
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Progress found: 100.0%
+DAO: Score for quiz 7 is 100.0. Status: PASSED
+Koneksi database melalui tunnel berhasil dibuka.
+--- Verifying data for student: Rafif Pelajar 3 ---
+CourseDAO: Getting progress for student ID: 4, course ID: 4
+Koneksi database melalui tunnel berhasil dibuka.
+CourseDAO: Progress found: 33.333%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe study progress of every student should be displayed&amp#27;[0m                                                &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyDisplayedStudentProgressMatchesDatabase()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:16:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify ascending sorting operation on Riwayat Kuis page&quot;, &quot;FR-12 Progress Overview&quot;](16)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="10.011">
+    <system-out><![CDATA[
+Scenario: Verify ascending sorting operation on Riwayat Kuis page                                            &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:101&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1"&amp#27;[0m                                  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Pemantauan&amp#27;[0m                                                                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnProgressPage()&amp#27;[0m
+DAO: Set quiz 7 to FINISHED for student 1 with score 100.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m finished quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m&amp#27;[32m with score &amp#27;[0m&amp#27;[32m&amp#27;[1m100&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedQuiz(int,int,float)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Set quiz 7 to FINISHED for student 4 with score 90.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m finished quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m&amp#27;[32m with score &amp#27;[0m&amp#27;[32m&amp#27;[1m90&amp#27;[0m                                                    &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedQuiz(int,int,float)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Set quiz 7 to FINISHED for student 12 with score 85.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m finished quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m&amp#27;[32m with score &amp#27;[0m&amp#27;[32m&amp#27;[1m85&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedQuiz(int,int,float)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on Detail Kuis button of Komputer Grafik course&amp#27;[0m                                           &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnDetailKuis()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Lihat Hasil button of Tes Progres quiz&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnLihatHasil()&amp#27;[0m
+Selected dropdown option: A-Z
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"ascending"&amp#27;[0m&amp#27;[32m sorting button&amp#27;[0m                                                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnSortingButton(java.lang.String)&amp#27;[0m
+Names found on UI: [Andi Pelajar, John Doe, Rafif Pelajar 3]
+Original UI Order: [Andi Pelajar, John Doe, Rafif Pelajar 3]
+Expected Sorted Order: [Andi Pelajar, John Doe, Rafif Pelajar 3]
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe displayed names should be sorted in &amp#27;[0m&amp#27;[32m&amp#27;[1m"ascending"&amp#27;[0m&amp#27;[32m order&amp#27;[0m                                             &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyDisplayedNames(java.lang.String)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:16:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify ascending sorting operation on Riwayat Kuis page&quot;, &quot;FR-12 Progress Overview&quot;](17)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="11.892">
+    <system-out><![CDATA[
+Scenario: Verify ascending sorting operation on Riwayat Kuis page                                            &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:116&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1"&amp#27;[0m                                  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Pemantauan&amp#27;[0m                                                                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnProgressPage()&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Set quiz 7 to FINISHED for student 1 with score 100.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m1&amp#27;[0m&amp#27;[32m finished quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m&amp#27;[32m with score &amp#27;[0m&amp#27;[32m&amp#27;[1m100&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedQuiz(int,int,float)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Set quiz 7 to FINISHED for student 4 with score 90.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m4&amp#27;[0m&amp#27;[32m finished quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m&amp#27;[32m with score &amp#27;[0m&amp#27;[32m&amp#27;[1m90&amp#27;[0m                                                    &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedQuiz(int,int,float)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+DAO: Set quiz 7 to FINISHED for student 12 with score 85.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent of id &amp#27;[0m&amp#27;[32m&amp#27;[1m12&amp#27;[0m&amp#27;[32m finished quiz of id &amp#27;[0m&amp#27;[32m&amp#27;[1m7&amp#27;[0m&amp#27;[32m with score &amp#27;[0m&amp#27;[32m&amp#27;[1m85&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.studentFinishedQuiz(int,int,float)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on Detail Kuis button of Komputer Grafik course&amp#27;[0m                                           &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnDetailKuis()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Lihat Hasil button of Tes Progres quiz&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnLihatHasil()&amp#27;[0m
+Selected dropdown option: Z-A
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"descending"&amp#27;[0m&amp#27;[32m sorting button&amp#27;[0m                                                             &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.userClicksOnSortingButton(java.lang.String)&amp#27;[0m
+Names found on UI: [Rafif Pelajar 3, John Doe, Andi Pelajar]
+Original UI Order: [Rafif Pelajar 3, John Doe, Andi Pelajar]
+Expected Sorted Order (Desc): [Rafif Pelajar 3, John Doe, Andi Pelajar]
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe displayed names should be sorted in &amp#27;[0m&amp#27;[32m&amp#27;[1m"descending"&amp#27;[0m&amp#27;[32m order&amp#27;[0m                                            &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyDisplayedNames(java.lang.String)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:16:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify descending sorting operation on Pemantau Progres Belajar page&quot;, &quot;FR-12 Progress Overview&quot;](18)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="8.038">
+    <system-out><![CDATA[
+Scenario: Verify descending sorting operation on Pemantau Progres Belajar page                               &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:131&amp#27;[0m
 HelperClass: Properties loaded successfully from application.properties.
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
@@ -113,91 +737,214 @@ Names found on UI: [Rafif Pelajar 3, John Doe, Andi Pelajar]
 Original UI Order: [Rafif Pelajar 3, John Doe, Andi Pelajar]
 Expected Sorted Order (Desc): [Rafif Pelajar 3, John Doe, Andi Pelajar]
   &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe displayed names on Pemantau Progres Belajar page should be sorted in descending order&amp#27;[0m             &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverview.verifyPemantauProgresDescendingSorting()&amp#27;[0m
-=======
-@Authentication @ValidCredentials
-Scenario: Login with valid credentials                                                                             &amp#27;[90m# src/test/resources/features/LoginPage.feature:12&amp#27;[0m
-HelperClass: Properties loaded successfully from application.properties.
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                                &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn-buggy/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                              &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                                     &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should be able to see navigation bar for pelajar&amp#27;[0m                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_should_see_all_sidebar_items()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should be able to see photo and username&amp#27;[0m                                                                &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.userShouldSeePhotoAndUsername()&amp#27;[0m
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
 ]]></system-out>
-    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
-SLF4J(W): Defaulting to no-operation (NOP) logger implementation
-SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
-<<<<<<< HEAD
-Jul 10, 2025 1:58:18 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-=======
-Jul 08, 2025 8:39:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jul 10, 2025 5:16:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;User navigates to Beranda through Kursus Saya and sees course list&quot;, &quot;FR-01 Authentication&quot;](2)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="35.461">
-    <failure message="The title is not match! expected [Kursus] but found [kosong]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: The title is not match! expected [Kursus] but found [kosong]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.zaidan.testng.definitions.LoginPageDefinitions.page_title_displayed(LoginPageDefinitions.java:115)
-	at ✽.Page title should be displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Penelitian%20Fault%20Seeding/Tester/jtklearn-testing/jtklearn-testing/src/test/resources/features/LoginPage.feature:21)
-]]></failure>
+  <testcase name="runScenario[&quot;View quiz history page when no courses are enrolled&quot;, &quot;TC FR-11 Quiz Results History&quot;](19)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="8.991">
     <system-out><![CDATA[
-@Authentication @VerificationGoToHomepage
-Scenario: User navigates to Beranda through Kursus Saya and sees course list                                       &amp#27;[90m# src/test/resources/features/LoginPage.feature:18&amp#27;[0m
+@QuizHistory @EmptyCourseHistory
+Scenario: View quiz history page when no courses are enrolled                                                &amp#27;[90m# src/test/resources/features/QuizHistory.feature:10&amp#27;[0m
 HelperClass: Properties loaded successfully from application.properties.
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                                &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn-buggy/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                              &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on Kursus Saya navigation&amp#27;[0m                                                                       &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_kursus_saya_navigation()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Beranda navigation&amp#27;[0m                                                                            &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_beranda_navigation()&amp#27;[0m
-  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mPage title should be displayed&amp#27;[0m                                                                              &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.page_title_displayed()&amp#27;[0m
-      &amp#27;[31mjava.lang.AssertionError: The title is not match! expected [Kursus] but found [kosong]
-      	at org.testng.Assert.fail(Assert.java:111)
-      	at org.testng.Assert.failNotEquals(Assert.java:1590)
-      	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-      	at org.testng.Assert.assertEquals(Assert.java:132)
-      	at org.testng.Assert.assertEquals(Assert.java:656)
-      	at com.zaidan.testng.definitions.LoginPageDefinitions.page_title_displayed(LoginPageDefinitions.java:115)
-      	at ✽.Page title should be displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Penelitian%20Fault%20Seeding/Tester/jtklearn-testing/jtklearn-testing/src/test/resources/features/LoginPage.feature:21)&amp#27;[0m
-  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mCourse list created by the instructor should be visible&amp#27;[0m                                                      &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.course_visible()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"rapelajar@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"rapelajar"&amp#27;[0m                                 &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser navigates to the Quiz History page&amp#27;[0m                                                                &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.user_navigates_to_the_quiz_history_page()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Quiz History page should display the title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Riwayat Kuis"&amp#27;[0m                                         &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.the_quiz_history_page_should_display_the_title(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe Quiz History page should display a message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Belum ada kursus yang diikuti."&amp#27;[0m                        &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.the_quiz_history_page_should_display_a_message(java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Jul 08, 2025 8:40:00 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jul 10, 2025 5:16:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;User click on Username Menu and sub menu is displayed&quot;, &quot;FR-01 Authentication&quot;](3)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="35.216">
-    <failure message="Sub menu Keluar is not displayed expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Sub menu Keluar is not displayed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.zaidan.testng.definitions.LoginPageDefinitions.keluar_displayed(LoginPageDefinitions.java:134)
-	at ✽.Sub menu keluar is displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Penelitian%20Fault%20Seeding/Tester/jtklearn-testing/jtklearn-testing/src/test/resources/features/LoginPage.feature:27)
-]]></failure>
+  <testcase name="runScenario[&quot;View quiz history for an enrolled course with no quiz attempts&quot;, &quot;TC FR-11 Quiz Results History&quot;](20)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="8.526">
     <system-out><![CDATA[
-@Authentication @VerificationSubMenuOnUserProfile
-Scenario: User click on Username Menu and sub menu is displayed                                                    &amp#27;[90m# src/test/resources/features/LoginPage.feature:25&amp#27;[0m
+@QuizHistory @QuizHistoryForEnrolledCourse
+Scenario: View quiz history for an enrolled course with no quiz attempts                                     &amp#27;[90m# src/test/resources/features/QuizHistory.feature:19&amp#27;[0m
 HelperClass: Properties loaded successfully from application.properties.
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                                &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn-buggy/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                              &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on username&amp#27;[0m                                                                                     &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_on_username()&amp#27;[0m
-  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mSub menu keluar is displayed&amp#27;[0m                                                                                &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.keluar_displayed()&amp#27;[0m
-      &amp#27;[31mjava.lang.AssertionError: Sub menu Keluar is not displayed expected [true] but found [false]
-      	at org.testng.Assert.fail(Assert.java:111)
-      	at org.testng.Assert.failNotEquals(Assert.java:1590)
-      	at org.testng.Assert.assertTrue(Assert.java:57)
-      	at com.zaidan.testng.definitions.LoginPageDefinitions.keluar_displayed(LoginPageDefinitions.java:134)
-      	at ✽.Sub menu keluar is displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Penelitian%20Fault%20Seeding/Tester/jtklearn-testing/jtklearn-testing/src/test/resources/features/LoginPage.feature:27)&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"reci@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"recipelajar"&amp#27;[0m                                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser is on the Quiz History page&amp#27;[0m                                                                       &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.user_is_on_the_quiz_history_page()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks the detail button for the course &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komdatjar"&amp#27;[0m                                               &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.user_clicks_the_detail_button_for_the_course(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe Sub Quiz History page should display the title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Riwayat Hasil Kuis"&amp#27;[0m                               &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.the_sub_quiz_history_page_should_display_the_title(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe subtitle for the course &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komdatjar"&amp#27;[0m&amp#27;[32m should be visible&amp#27;[0m                                              &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.the_subtitle_for_the_course_should_be_visible(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe history for &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komdatjar"&amp#27;[0m&amp#27;[32m should show a message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Belum ada kuis yang diselesaikan."&amp#27;[0m                  &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.the_history_for_should_show_a_message(java.lang.String,java.lang.String)&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Jul 08, 2025 8:40:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
+    <system-err><![CDATA[Jul 10, 2025 5:17:06 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;View quiz history for an enrolled course with some quiz attempts&quot;, &quot;TC FR-11 Quiz Results History&quot;](21)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="9.473">
+    <system-out><![CDATA[
+@QuizHistory @QuizHistoryWithSomeAttempts
+Scenario: View quiz history for an enrolled course with some quiz attempts                                                       &amp#27;[90m# src/test/resources/features/QuizHistory.feature:30&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                                              &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m                     &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"sa@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"sapelajar"&amp#27;[0m                                                            &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                                            &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                                                   &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser is on the Quiz History page&amp#27;[0m                                                                                           &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.user_is_on_the_quiz_history_page()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks the detail button for the course &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komdatjar"&amp#27;[0m                                                                   &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.user_clicks_the_detail_button_for_the_course(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe system should display a list of quizzes for &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komdatjar"&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.the_system_should_display_a_list_of_quizzes(java.lang.String)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe quiz details displayed on the UI for student &amp#27;[0m&amp#27;[32m&amp#27;[1m"sa@example.com"&amp#27;[0m&amp#27;[32m and course &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komdatjar"&amp#27;[0m&amp#27;[32m should match the database records&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.the_quiz_details_should_match_database(java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:17:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;View quiz history for an enrolled course with quiz attempts completely&quot;, &quot;TC FR-11 Quiz Results History&quot;](22)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="10.787">
+    <system-out><![CDATA[
+@QuizHistory @QuizHistoryWithFullAttempts
+Scenario: View quiz history for an enrolled course with quiz attempts completely                                                   &amp#27;[90m# src/test/resources/features/QuizHistory.feature:40&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                                                &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m                       &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"full@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"fullpelajar"&amp#27;[0m                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                                              &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                                                     &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser is on the Quiz History page&amp#27;[0m                                                                                             &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.user_is_on_the_quiz_history_page()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks the detail button for the course &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komdatjar"&amp#27;[0m                                                                     &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.user_clicks_the_detail_button_for_the_course(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe system should display a list of quizzes for &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komdatjar"&amp#27;[0m                                                                 &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.the_system_should_display_a_list_of_quizzes(java.lang.String)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe quiz details displayed on the UI for student &amp#27;[0m&amp#27;[32m&amp#27;[1m"full@example.com"&amp#27;[0m&amp#27;[32m and course &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komdatjar"&amp#27;[0m&amp#27;[32m should match the database records&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.the_quiz_details_should_match_database(java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:17:24 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Search for a specific quiz in the history&quot;, &quot;TC FR-11 Quiz Results History&quot;](23)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="10.385">
+    <system-out><![CDATA[
+@QuizHistory @SearchQuizHistory
+Scenario: Search for a specific quiz in the history                                                                                                    &amp#27;[90m# src/test/resources/features/QuizHistory.feature:50&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                                                                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m                                           &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"sa@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"sapelajar"&amp#27;[0m                                                                                  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                                                                  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                                                                         &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser is on the Quiz History page&amp#27;[0m                                                                                                                 &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.user_is_on_the_quiz_history_page()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks the detail button for the course &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komdatjar"&amp#27;[0m                                                                                         &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.user_clicks_the_detail_button_for_the_course(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser searches for the quiz &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kuis Pengantar"&amp#27;[0m                                                                                                      &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.user_searches_for_the_quiz(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe system should display a filtered list containing &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kuis Pengantar"&amp#27;[0m                                                                           &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.the_system_should_display_a_filtered_list_containing(java.lang.String)&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe filtered quiz details for student &amp#27;[0m&amp#27;[32m&amp#27;[1m"sa@example.com"&amp#27;[0m&amp#27;[32m should match the database records for course &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komdatjar"&amp#27;[0m&amp#27;[32m and search term &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kuis Pengantar"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.QuizHistoryDefinitions.the_filtered_quiz_details_should_match_database(java.lang.String,java.lang.String,java.lang.String)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:17:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify empty &apos;Dalam Progress&apos; tab&quot;, &quot;My Course Functionality&quot;](24)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="70.186">
+    <system-out><![CDATA[
+@MyCourse @Positive @TCF-FRS-01
+Scenario: Verify empty 'Dalam Progress' tab                                                                  &amp#27;[90m# src/test/resources/features/myCourse.feature:15&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"luthfipelajar@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"luthfipelajar"&amp#27;[0m                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kursus Saya"&amp#27;[0m&amp#27;[32m navigation&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.clickNavigationMenu(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mSystem displays active tab &amp#27;[0m&amp#27;[32m&amp#27;[1m"Dalam Progres"&amp#27;[0m                                                            &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.verifyActiveTab(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSystem shows message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Belum ada kursus yang sedang dijalani."&amp#27;[0m                                          &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.verifyEmptyMessage(java.lang.String)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:17:45 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify empty &apos;Selesai&apos; tab&quot;, &quot;My Course Functionality&quot;](25)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="39.73">
+    <system-out><![CDATA[
+@MyCourse @Positive @TCF-FRS-05
+Scenario: Verify empty 'Selesai' tab                                                                         &amp#27;[90m# src/test/resources/features/myCourse.feature:21&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"luthfipelajar@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"luthfipelajar"&amp#27;[0m                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kursus Saya"&amp#27;[0m&amp#27;[32m navigation&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.clickNavigationMenu(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser switches to &amp#27;[0m&amp#27;[32m&amp#27;[1m"Selesai"&amp#27;[0m&amp#27;[32m tab&amp#27;[0m                                                                         &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.switchTab(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mSystem displays active tab &amp#27;[0m&amp#27;[32m&amp#27;[1m"Selesai"&amp#27;[0m                                                                  &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.verifyActiveTab(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSystem shows message &amp#27;[0m&amp#27;[32m&amp#27;[1m"Belum ada kursus yang selesai"&amp#27;[0m                                                   &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.verifyEmptyMessage(java.lang.String)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:18:56 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify populated &apos;Selesai&apos; tab&quot;, &quot;My Course Functionality&quot;](26)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="46.78">
+    <system-out><![CDATA[
+@MyCourse @Positive @TCF-FRS-07
+Scenario: Verify populated 'Selesai' tab                                                                     &amp#27;[90m# src/test/resources/features/myCourse.feature:28&amp#27;[0m
+HelperClass: Properties loaded successfully from application.properties.
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"luthfipelajar@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"luthfipelajar"&amp#27;[0m                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+Found 3 completed courses in test database
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has completed courses in database&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.setupCompletedCourses()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser has navigated to the login page of JTK Learn app &amp#27;[0m&amp#27;[32m&amp#27;[1m"https://polban-space.cloudias79.com/jtk-learn/"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"luthfipelajar2@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"luthfipelajar2"&amp#27;[0m                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser is navigated to the dashboard page&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_is_navigated_to_dashboard()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kursus Saya"&amp#27;[0m&amp#27;[32m navigation&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.clickNavigationMenu(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser switches to &amp#27;[0m&amp#27;[32m&amp#27;[1m"Selesai"&amp#27;[0m&amp#27;[32m tab&amp#27;[0m                                                                         &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.switchTab(java.lang.String)&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mSystem displays active tab &amp#27;[0m&amp#27;[32m&amp#27;[1m"Selesai"&amp#27;[0m                                                                  &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.verifyActiveTab(java.lang.String)&amp#27;[0m
+=== DEBUGGING CURRENT STATE ===
+Current URL: https://polban-space.cloudias79.com/jtk-learn/my-courses
+Page title: React App
+On My Courses page: true
+Active tab text: Selesai
+=== ENSURING COMPLETED TAB IS ACTIVE ===
+Completed tab classes: nav-link active nav-link-tab
+'Selesai' tab is already active
+=== WAITING FOR COURSE CARDS ===
+Found 1 course cards
+First card is visible and ready for verification
+Verifying: Course image - Matches database
+courseCard HTML: null
+=== VERIFYING COURSE IMAGE ===
+img element found for course image
+Extracted image src from UI: https://polban-space.cloudias79.com/jtk-learn/api/uploads/images/Komdatjar_2.png
+Extracted image file name: Komdatjar_2.png
+Course name from UI: Komdatjar
+Koneksi database melalui tunnel berhasil dibuka.
+Expected image from DB: Komdatjar_2.png
+Course image verification PASSED for src: https://polban-space.cloudias79.com/jtk-learn/api/uploads/images/Komdatjar_2.png
+Verifying: Course name - Matches database
+Koneksi database melalui tunnel berhasil dibuka.
+Course name verified: Komdatjar
+Verifying: Instructor name - Matches database
+Koneksi database melalui tunnel berhasil dibuka.
+Koneksi database melalui tunnel berhasil dibuka.
+Instructor name verified: Budi Pengajar
+Verifying: Progress bar - Shows 100% completion
+Progress bar verified as 100% complete
+Verifying: Completion percentage - Shows 100%
+Completion percentage verified: 100%
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mSystem shows course list with:&amp#27;[0m                                                                         &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.verifyCourseList(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | Component             | Verification          |
+    | Course image          | Matches database      |
+    | Course name           | Matches database      |
+    | Instructor name       | Matches database      |
+    | Progress bar          | Shows 100% completion |
+    | Completion percentage | Shows 100%            |
+Koneksi database melalui tunnel berhasil dibuka.
+Logged in as [Luthfi Pelajar 2] with id_pelajar=5
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser session is initialized&amp#27;[0m                                                                          &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.initUserSession()&amp#27;[0m
+Koneksi database melalui tunnel berhasil dibuka.
+Verified course: Komdatjar → 100%
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mAll course data matches database records&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.MyCourseDefinitions.verifyDatabaseConsistency()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 10, 2025 5:19:35 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
 ]]></system-err>
   </testcase>

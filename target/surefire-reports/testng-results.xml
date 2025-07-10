@@ -1,75 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="26" passed="26" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-10T13:58:12 WIB" name="Suite" finished-at="2025-07-10T13:58:22 WIB" duration-ms="10598">
-=======
-<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2025-07-08T20:39:52 WIB" name="Suite" finished-at="2025-07-08T20:41:10 WIB" duration-ms="78583">
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
+  <suite started-at="2025-07-10T17:13:27 WIB" name="Suite" finished-at="2025-07-10T17:20:21 WIB" duration-ms="413982">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-<<<<<<< HEAD
-    <test started-at="2025-07-10T13:58:12 WIB" name="Cucumber Reporting" finished-at="2025-07-10T13:58:22 WIB" duration-ms="10598">
+    <test started-at="2025-07-10T17:13:27 WIB" name="Cucumber Reporting" finished-at="2025-07-10T17:20:21 WIB" duration-ms="413982">
       <class name="com.zaidan.testng.runner.CucumberRunnerTests">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T13:58:12 WIB" name="setUpClass" finished-at="2025-07-10T13:58:15 WIB" duration-ms="3750" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:13:27 WIB" name="setUpClass" finished-at="2025-07-10T17:13:31 WIB" duration-ms="3098" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@ef60710]]>
-=======
-    <test started-at="2025-07-08T20:39:52 WIB" name="Cucumber Reporting" finished-at="2025-07-08T20:41:10 WIB" duration-ms="78583">
-      <class name="com.zaidan.testng.runner.CucumberRunnerTests">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@34123d65]" started-at="2025-07-08T20:39:52 WIB" name="setUpClass" finished-at="2025-07-08T20:39:54 WIB" duration-ms="1893" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@5d3b58ca]]>
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
+                <![CDATA[org.testng.TestRunner@380cd266]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T13:58:16 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T13:58:22 WIB" duration-ms="6688" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:13:31 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:13:46 WIB" duration-ms="15637" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify descending sorting operation on Pemantau Progres Belajar page"]]>
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@34123d65]" started-at="2025-07-08T20:39:54 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-08T20:40:00 WIB" duration-ms="5949" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login with valid credentials"]]>
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
+                <![CDATA["Verify video can be played"]]>
               </value>
             </param>
             <param index="1">
               <value>
-<<<<<<< HEAD
-                <![CDATA["FR-12 Progress Overview"]]>
-=======
-                <![CDATA["FR-01 Authentication"]]>
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
+                <![CDATA["FR08-Access Materials"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T13:58:22 WIB" name="tearDownClass" finished-at="2025-07-10T13:58:22 WIB" duration-ms="83" status="PASS">
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@34123d65]" started-at="2025-07-08T20:40:00 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-08T20:40:35 WIB" duration-ms="35453" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:13:46 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:14:00 WIB" duration-ms="13752" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify PDF file can be opened and read"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR08-Access Materials"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:14:00 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:14:07 WIB" duration-ms="7237" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify dashboard page for a student who hasn't registered for any courses"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR03-View Dashboard"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:14:07 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:14:14 WIB" duration-ms="7168" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify dashboard page for a student who registered in courses from different lecturer"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR03-View Dashboard"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:14:14 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:14:22 WIB" duration-ms="7461" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR-01 Authentication"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:14:22 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:14:30 WIB" duration-ms="8022" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -82,26 +114,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The title is not match! expected [Kursus] but found [kosong]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The title is not match! expected [Kursus] but found [kosong]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at com.zaidan.testng.definitions.LoginPageDefinitions.page_title_displayed(LoginPageDefinitions.java:115)
-at ✽.Page title should be displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Penelitian%20Fault%20Seeding/Tester/jtklearn-testing/jtklearn-testing/src/test/resources/features/LoginPage.feature:21)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@34123d65]" started-at="2025-07-08T20:40:35 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-08T20:41:10 WIB" duration-ms="35217" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:14:30 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:14:36 WIB" duration-ms="5731" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -114,25 +130,314 @@ at ✽.Page title should be displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/P
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Sub menu Keluar is not displayed expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Sub menu Keluar is not displayed expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at com.zaidan.testng.definitions.LoginPageDefinitions.keluar_displayed(LoginPageDefinitions.java:134)
-at ✽.Sub menu keluar is displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Penelitian%20Fault%20Seeding/Tester/jtklearn-testing/jtklearn-testing/src/test/resources/features/LoginPage.feature:27)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@34123d65]" started-at="2025-07-08T20:41:10 WIB" name="tearDownClass" finished-at="2025-07-08T20:41:10 WIB" duration-ms="29" status="PASS">
->>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:14:36 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:14:44 WIB" duration-ms="8640" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Student verifies the enrolled course details and progress against the database"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR-06 Course Overview"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:14:44 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:14:53 WIB" duration-ms="8900" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Enroll in a course with an invalid enrollment key"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR-06 Course Overview"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:14:53 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:15:02 WIB" duration-ms="8449" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Enroll in a course that has no material content"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR-06 Course Overview"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:15:02 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:15:10 WIB" duration-ms="8523" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Enroll in a course that has no material content"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR-06 Course Overview"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:15:10 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:15:29 WIB" duration-ms="19124" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify progress overview page with a student has not finished all materials and quizzes yet"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR-12 Progress Overview"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:15:29 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:15:48 WIB" duration-ms="18401" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify progress overview page with some students finished some materials and quizzes"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR-12 Progress Overview"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:15:48 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:16:08 WIB" duration-ms="20254" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify progress overview page with all students finished all materials and quizzes"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR-12 Progress Overview"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:16:08 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:16:26 WIB" duration-ms="18528" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify progress overview page with three different student states;"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR-12 Progress Overview"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:16:26 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:16:36 WIB" duration-ms="10010" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ascending sorting operation on Riwayat Kuis page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR-12 Progress Overview"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:16:36 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:16:48 WIB" duration-ms="11892" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify ascending sorting operation on Riwayat Kuis page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR-12 Progress Overview"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:16:48 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:16:56 WIB" duration-ms="8039" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify descending sorting operation on Pemantau Progres Belajar page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["FR-12 Progress Overview"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:16:56 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:17:05 WIB" duration-ms="8991" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View quiz history page when no courses are enrolled"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC FR-11 Quiz Results History"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:17:05 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:17:14 WIB" duration-ms="8526" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View quiz history for an enrolled course with no quiz attempts"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC FR-11 Quiz Results History"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:17:14 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:17:23 WIB" duration-ms="9472" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View quiz history for an enrolled course with some quiz attempts"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC FR-11 Quiz Results History"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:17:23 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:17:34 WIB" duration-ms="10787" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View quiz history for an enrolled course with quiz attempts completely"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC FR-11 Quiz Results History"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:17:34 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:17:45 WIB" duration-ms="10385" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for a specific quiz in the history"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["TC FR-11 Quiz Results History"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:17:45 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:18:55 WIB" duration-ms="70186" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify empty 'Dalam Progress' tab"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["My Course Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:18:55 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:19:34 WIB" duration-ms="39730" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify empty 'Selesai' tab"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["My Course Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:19:34 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T17:20:21 WIB" duration-ms="46780" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify populated 'Selesai' tab"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["My Course Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T17:20:21 WIB" name="tearDownClass" finished-at="2025-07-10T17:20:21 WIB" duration-ms="145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
