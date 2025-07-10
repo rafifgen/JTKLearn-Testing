@@ -113,7 +113,6 @@ Scenario: Verify ascending sorting operation on Riwayat Kuis page
     And User clicks on "ascending" sorting button
     Then The displayed names should be sorted in "ascending" order
 
-# @wip
 Scenario: Verify ascending sorting operation on Riwayat Kuis page
     TC-FR12-24
     Given User has opened the browser
@@ -129,7 +128,6 @@ Scenario: Verify ascending sorting operation on Riwayat Kuis page
     And User clicks on "descending" sorting button
     Then The displayed names should be sorted in "descending" order
 
-@wip
 Scenario: Verify descending sorting operation on Pemantau Progres Belajar page
     TC-FR12-26
     Given User has opened the browser
