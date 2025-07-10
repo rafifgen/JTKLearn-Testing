@@ -201,35 +201,37 @@ public class ProgressOverview {
     }
 
     public void verifyAscendingSorting() {
-        // 1. Get the list of names exactly as they appear on the UI
+        // 1. Get the list of names from the UI
         List<String> uiNames = summaryQuizDetailActions.getDisplayedStudentNames();
-        Assert.assertFalse(uiNames.isEmpty(), "No student names were found on the page to verify sorting.");
+        Assert.assertFalse(uiNames.isEmpty(), "No student names were found on the page.");
 
-        // 2. Create a copy of the list and sort it alphabetically (A-Z)
+        // 2. Create a copy and sort it alphabetically, ignoring case
         List<String> sortedNames = new ArrayList<>(uiNames);
-        Collections.sort(sortedNames);
-        
+        // --- THIS IS THE FIX ---
+        sortedNames.sort(String.CASE_INSENSITIVE_ORDER);
+
         System.out.println("Original UI Order: " + uiNames);
         System.out.println("Expected Sorted Order: " + sortedNames);
 
-        // 3. Assert that the original list from the UI is identical to the sorted copy.
-        // If they are not the same, it means the UI was not sorted correctly.
-        Assert.assertEquals(uiNames, sortedNames, "The student names are not sorted in ascending order.");
+        // 3. Assert that the lists are identical
+        Assert.assertEquals(uiNames, sortedNames, "The student names are not sorted case-insensitively (A-Z).");
     }
+
 
     public void verifyDescendingSorting() {
         // 1. Get the list of names from the UI
         List<String> uiNames = summaryQuizDetailActions.getDisplayedStudentNames();
         Assert.assertFalse(uiNames.isEmpty(), "No student names were found on the page.");
 
-        // 2. Create a copy and sort it in reverse alphabetical order (Z-A)
+        // 2. Create a copy and sort it in reverse alphabetical order, ignoring case
         List<String> sortedNames = new ArrayList<>(uiNames);
-        sortedNames.sort(Collections.reverseOrder());
+        // --- THIS IS THE FIX ---
+        sortedNames.sort(String.CASE_INSENSITIVE_ORDER.reversed());
 
         System.out.println("Original UI Order: " + uiNames);
         System.out.println("Expected Sorted Order (Desc): " + sortedNames);
 
-        // 3. Assert that the original list matches the reverse-sorted copy
-        Assert.assertEquals(uiNames, sortedNames, "The student names are not sorted in descending order.");
+        // 3. Assert that the lists are identical
+        Assert.assertEquals(uiNames, sortedNames, "The student names are not sorted case-insensitively (Z-A).");
     }
 }
