@@ -55,11 +55,19 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Cucumber Reporting</h2><table border='1' align="center">
 <tr>
+<<<<<<< HEAD
 <td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
 <td>Started on:</td><td>Thu Jul 10 13:58:12 WIB 2025</td>
 </tr>
 <tr><td>Total time:</td><td>10 seconds (10598 ms)</td>
+=======
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jul 08 20:39:52 WIB 2025</td>
+</tr>
+<tr><td>Total time:</td><td>78 seconds (78583 ms)</td>
+>>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +75,47 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User click on Username Menu and sub menu is displayed", "FR-01 Authentication"</td>
+<td><div><pre>java.lang.AssertionError: Sub menu Keluar is not displayed expected [true] but found [false]
+	at com.zaidan.testng.definitions.LoginPageDefinitions.keluar_displayed(LoginPageDefinitions.java:134)
+	at ✽.Sub menu keluar is displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Penelitian%20Fault%20Seeding/Tester/jtklearn-testing/jtklearn-testing/src/test/resources/features/LoginPage.feature:27)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1594214614", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1594214614'><pre>java.lang.AssertionError: Sub menu Keluar is not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.zaidan.testng.definitions.LoginPageDefinitions.keluar_displayed(LoginPageDefinitions.java:134)
+	at ✽.Sub menu keluar is displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Penelitian%20Fault%20Seeding/Tester/jtklearn-testing/jtklearn-testing/src/test/resources/features/LoginPage.feature:27)
+</pre></div></td>
+<td>35</td>
+<td>com.zaidan.testng.runner.CucumberRunnerTests@34123d65</td></tr>
+<tr>
+<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigates to Beranda through Kursus Saya and sees course list", "FR-01 Authentication"</td>
+<td><div><pre>java.lang.AssertionError: The title is not match! expected [Kursus] but found [kosong]
+	at com.zaidan.testng.definitions.LoginPageDefinitions.page_title_displayed(LoginPageDefinitions.java:115)
+	at ✽.Page title should be displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Penelitian%20Fault%20Seeding/Tester/jtklearn-testing/jtklearn-testing/src/test/resources/features/LoginPage.feature:21)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace793483510", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace793483510'><pre>java.lang.AssertionError: The title is not match! expected [Kursus] but found [kosong]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.zaidan.testng.definitions.LoginPageDefinitions.page_title_displayed(LoginPageDefinitions.java:115)
+	at ✽.Page title should be displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Penelitian%20Fault%20Seeding/Tester/jtklearn-testing/jtklearn-testing/src/test/resources/features/LoginPage.feature:21)
+</pre></div></td>
+<td>35</td>
+<td>com.zaidan.testng.runner.CucumberRunnerTests@34123d65</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +125,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<<<<<<< HEAD
 <td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify descending sorting operation on Pemantau Progres Belajar page", "FR-12 Progress Overview"</td>
 <td></td>
 <td>6</td>
 <td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
+=======
+<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with valid credentials", "FR-01 Authentication"</td>
+<td></td>
+<td>5</td>
+<td>com.zaidan.testng.runner.CucumberRunnerTests@34123d65</td></tr>
+>>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
 </table><p>
 </body>
 </html>

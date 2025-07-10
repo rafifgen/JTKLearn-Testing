@@ -1,8 +1,11 @@
 package com.zaidan.testng.definitions;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import com.zaidan.testng.actions.HomePageActions;
 import com.zaidan.testng.actions.LoginPageActions;
@@ -43,15 +46,24 @@ public class LoginPageDefinitions {
 
     @Then("User is navigated to the dashboard page")
     public void user_is_navigated_to_dashboard() {
-        String dashboardText = objHomePage.getHomePageText();
-        // Validasi bahwa teks dashboard mengandung setidaknya salah satu dari ketiga
-        // peran
-        boolean isAdmin = dashboardText.contains("Admin");
-        boolean isPelajar = dashboardText.contains("Pelajar");
-        boolean isPengajar = dashboardText.contains("Pengajar");
+        try {
+            // 1. Buat objek wait dengan durasi timeout (misalnya 10 detik)
+            WebDriverWait wait = new WebDriverWait(HelperClass.getDriver(), Duration.ofSeconds(10));
 
-        Assert.assertTrue(isAdmin || isPelajar || isPengajar,
-                "Dashboard page did not contain expected roles text.");
+            // 2. Perintahkan Selenium untuk menunggu sampai URL mengandung "dashboard-pelajar"
+            wait.until(ExpectedConditions.urlContains("dashboard-pelajar"));
+
+            // 3. (Opsional) Lakukan assertion tambahan jika diperlukan
+            // Jika baris di atas berhasil, berarti URL sudah benar.
+            String currentUrl = HelperClass.getDriver().getCurrentUrl();
+            Assert.assertTrue(currentUrl.contains("dashboard-pelajar"), "URL tidak mengandung 'dashboard-pelajar' setelah menunggu.");
+
+        } catch (Exception e) {
+            // Jika setelah 10 detik URL tidak juga berubah, tes akan gagal di sini.
+            // Cetak URL terakhir untuk debugging.
+            String finalUrl = HelperClass.getDriver().getCurrentUrl();
+            Assert.fail("User tidak diarahkan ke halaman dashboard. URL terakhir: " + finalUrl, e);
+        }
     }
 
     @And("User should be able to see navigation bar for pelajar")

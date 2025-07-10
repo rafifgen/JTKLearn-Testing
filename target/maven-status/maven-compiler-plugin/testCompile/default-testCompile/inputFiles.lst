@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\test\java\com\zaidan\testng\definitions\LogoutDefinitions.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\test\java\com\zaidan\testng\definitions\LoginPageDefinitions.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\test\java\com\zaidan\testng\runner\CucumberRunnerTests.java
@@ -6,3 +7,14 @@ C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\test\j
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\test\java\com\zaidan\testng\definitions\Hooks.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\test\java\com\zaidan\testng\definitions\CourseDetailsDefinitions.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\test\java\com\zaidan\testng\definitions\ProgressOverview.java
+=======
+E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\test\java\com\zaidan\testng\definitions\LogoutDefinitions.java
+E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\test\java\com\zaidan\testng\definitions\CourseDetailsDefinitions.java
+E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\test\java\com\zaidan\testng\definitions\MyCourseDefinitions.java
+E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\test\java\com\zaidan\testng\definitions\Hooks.java
+E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\test\java\com\zaidan\testng\runner\CucumberRunnerTests.java
+E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\test\java\com\zaidan\testng\definitions\AccessMaterials.java
+E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\test\java\com\zaidan\testng\definitions\LoginPageDefinitions.java
+E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\test\java\com\zaidan\testng\definitions\DashboardDefinitions.java
+E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\test\java\com\zaidan\testng\definitions\QuizHistoryDefinitions.java
+>>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1

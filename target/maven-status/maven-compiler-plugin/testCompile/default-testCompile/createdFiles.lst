@@ -1,1 +1,12 @@
+<<<<<<< HEAD
+=======
+com\zaidan\testng\definitions\AccessMaterials.class
+com\zaidan\testng\definitions\MyCourseDefinitions.class
+com\zaidan\testng\definitions\LogoutDefinitions.class
+com\zaidan\testng\definitions\QuizHistoryDefinitions.class
+com\zaidan\testng\runner\CucumberRunnerTests.class
+com\zaidan\testng\definitions\CourseDetailsDefinitions.class
+com\zaidan\testng\definitions\DashboardDefinitions.class
+com\zaidan\testng\definitions\LoginPageDefinitions.class
+>>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
 com\zaidan\testng\definitions\Hooks.class

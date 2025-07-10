@@ -7,7 +7,7 @@ public class Pelajar {
     private String nim;
     private String kelas;
 
-    // Constructor
+    // Constructor(s)
     public Pelajar(int idPelajar, int idUser, String nama, String nim, String kelas) {
         this.idPelajar = idPelajar;
         this.idUser = idUser;
@@ -16,13 +16,21 @@ public class Pelajar {
         this.kelas = kelas;
     }
 
-    // Getters
+    public Pelajar(int idPelajar, String nama) {
+        this.idPelajar = idPelajar;
+        this.nama = nama;
+    }
+
     public int getIdPelajar() {
         return idPelajar;
     }
 
     public int getIdUser() {
         return idUser;
+    }
+
+    public void setIdPelajar(int idPelajar) {
+        this.idPelajar = idPelajar;
     }
 
     public String getNama() {
@@ -35,5 +43,9 @@ public class Pelajar {
 
     public String getKelas() {
         return kelas;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
     }
 }

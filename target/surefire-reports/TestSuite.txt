@@ -1,4 +1,26 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.54 s -- in TestSuite
+=======
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 78.93 s <<< FAILURE! -- in TestSuite
+com.zaidan.testng.runner.CucumberRunnerTests.runScenario["User navigates to Beranda through Kursus Saya and sees course list", "FR-01 Authentication"](2) -- Time elapsed: 35.46 s <<< FAILURE!
+java.lang.AssertionError: The title is not match! expected [Kursus] but found [kosong]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.zaidan.testng.definitions.LoginPageDefinitions.page_title_displayed(LoginPageDefinitions.java:115)
+	at ✽.Page title should be displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Penelitian%20Fault%20Seeding/Tester/jtklearn-testing/jtklearn-testing/src/test/resources/features/LoginPage.feature:21)
+
+com.zaidan.testng.runner.CucumberRunnerTests.runScenario["User click on Username Menu and sub menu is displayed", "FR-01 Authentication"](3) -- Time elapsed: 35.22 s <<< FAILURE!
+java.lang.AssertionError: Sub menu Keluar is not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.zaidan.testng.definitions.LoginPageDefinitions.keluar_displayed(LoginPageDefinitions.java:134)
+	at ✽.Sub menu keluar is displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Penelitian%20Fault%20Seeding/Tester/jtklearn-testing/jtklearn-testing/src/test/resources/features/LoginPage.feature:27)
+
+>>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1

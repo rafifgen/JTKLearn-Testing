@@ -22,4 +22,13 @@ public class CourseDetailsPageLocators {
 
     @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div[2]/div[5]/button")
     public WebElement continueButton;
+    // CourseEnrollmentLocator
+    @FindBy(className = "form-control")
+    public WebElement enrollmentKeyInput;
+
+    @FindBy(className = "button-enroll")
+    public WebElement enrollButton;
+
+    @FindBy(className = "swal2-html-container")
+    public WebElement errorMessage;
 }

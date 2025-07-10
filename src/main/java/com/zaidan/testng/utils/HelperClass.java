@@ -4,19 +4,23 @@ import java.io.InputStream;
 import  java.time.Duration;
 import java.util.Properties;
 
+import com.zaidan.testng.locators.MyCourseLocators;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HelperClass {
 
     private static HelperClass helperClass;
     private static WebDriver driver;
-    public final static int TIMEOUT = 10;
+    public final static int TIMEOUT = 30;
     private static Properties props = new Properties();
+    private static int loggedInUserId;
 
     private HelperClass() {
         try (InputStream input = HelperClass.class.getClassLoader().getResourceAsStream("application.properties")) {
@@ -43,7 +47,7 @@ public class HelperClass {
 
         EdgeOptions options = new EdgeOptions();
         driver = new EdgeDriver(options);
-
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
         // Remove navigator.webdriver via JS
         ((JavascriptExecutor) driver).executeScript(
             "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
@@ -55,6 +59,22 @@ public class HelperClass {
 
     public static void openPage(String url) {
         driver.get(url);
+
+        // Tunggu hingga halaman sepenuhnya dimuat
+        new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT)).until(
+                webDriver -> ((JavascriptExecutor) webDriver)
+                        .executeScript("return document.readyState").equals("complete")
+        );
+
+        // Tunggu tambahan untuk framework JavaScript
+        new WebDriverWait(driver, Duration.ofSeconds(5)).until(d -> {
+            try {
+                return (Boolean) ((JavascriptExecutor) d)
+                        .executeScript("return window.jQuery !== undefined ? jQuery.active === 0 : true");
+            } catch (Exception e) {
+                return true;
+            }
+        });
     }
 
     public static WebDriver getDriver() {
@@ -86,5 +106,22 @@ public class HelperClass {
             setUpDriver(); // This will ensure props are loaded
         }
         return props.getProperty(key);
+    }
+
+    public static void setLoggedInUserId(int id) {
+        loggedInUserId = id;
+    }
+    public static int getLoggedInUserId() {
+        return loggedInUserId;
+    }
+
+    /**
+     * Ambil nama user yang tampil di navbar.
+     */
+    public static String getLoggedInUserName() {
+        WebDriver driver = getDriver();
+        return driver.findElement(MyCourseLocators.LOGGED_IN_USERNAME)
+                .getText()
+                .trim();
     }
 }

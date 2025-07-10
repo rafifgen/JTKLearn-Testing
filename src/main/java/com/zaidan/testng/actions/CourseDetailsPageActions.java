@@ -28,7 +28,7 @@ public class CourseDetailsPageActions {
     public String getCourseImageFilename() {
         try {
             // 1. Ambil seluruh URL dari atribut "src"
-            String imageUrl = courseDetailsPageLocators.courseImage.getAttribute("src");
+            String imageUrl = courseDetailsPageLocators.courseImage.getDomAttribute("src");
 
             // 2. Gunakan utilitas Java untuk mengekstrak nama file dari URL
             if (imageUrl != null && !imageUrl.isEmpty()) {
@@ -88,6 +88,22 @@ public class CourseDetailsPageActions {
             System.err.println("Gagal mengambil atau mem-parsing persentase progres: " + e.getMessage());
         }
         return 0.0; // Mengembalikan nilai default jika terjadi error
+    }
+
+    public void enterEnrollmentKey(String key) {
+        courseDetailsPageLocators.enrollmentKeyInput.sendKeys(key);
+    }
+
+    public void clickEnrollButton() {
+        courseDetailsPageLocators.enrollButton.click();
+    }
+
+    public String getEnrollmentErrorMessage() {
+        try {
+            return courseDetailsPageLocators.errorMessage.getText();
+        } catch (NoSuchElementException e) {
+            return "Pesan Error Tidak Ditemukan";
+        }
     }
 
     public void continueCourse() {

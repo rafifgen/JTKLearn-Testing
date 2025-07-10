@@ -1,9 +1,7 @@
 package com.zaidan.testng.actions;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -205,4 +203,22 @@ public class HomePageActions {
     public void clickOnPemantauan() {
         homePageLocators.pemantauanNav.click();
     }
+
+    public void clickNavigationMenu(String menuName) {
+        try {
+            // Find the navigation item by its text
+            WebElement navItem = homePageLocators.navBarItems.stream()
+                    .filter(item -> item.getText().equalsIgnoreCase(menuName))
+                    .findFirst()
+                    .orElseThrow(() -> new NoSuchElementException("Navigation item '" + menuName + "' not found"));
+
+            // Click the found navigation item
+            navItem.click();
+        } catch (NoSuchElementException e) {
+            System.err.println("Navigation item '" + menuName + "' not found: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Error clicking navigation item '" + menuName + "': " + e.getMessage());
+        }
+    }
 }
+
