@@ -127,4 +127,27 @@ public class HistoryQuizDAO {
             e.printStackTrace();
         }
     }
+
+    public void resetQuizProgressByStudentAndQuizId(int idPelajar, int idKuis) throws SQLException {
+        String deleteSQL = "DELETE FROM \"historyQuiz\" WHERE \"id_pelajar\" = ? AND \"id_quiz\" = ?";
+        
+        // This 'try-with-resources' block automatically closes the connection and statement.
+        try (Connection conn = DatabaseUtil.getConnection();
+            PreparedStatement pStatement = conn.prepareStatement(deleteSQL)) {
+            
+            // Set the parameters for the WHERE clause
+            pStatement.setInt(1, idPelajar);
+            pStatement.setInt(2, idKuis);
+            
+            // Execute the DELETE command
+            pStatement.executeUpdate();
+            
+            System.out.println("DAO: Successfully deleted history for student " + idPelajar + " and quiz " + idKuis);
+
+        } catch (SQLException e) {
+            System.err.println("DAO: Error deleting history record: " + e.getMessage());
+            // Re-throw the exception so the calling method knows something went wrong.
+            throw e;
+        }
+    }
 }

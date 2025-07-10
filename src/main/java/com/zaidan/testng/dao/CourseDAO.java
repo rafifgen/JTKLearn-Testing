@@ -262,4 +262,38 @@ public class CourseDAO {
 
         return progress;
     }
+
+    public void setCourseProgressByStudentAndCourseId(int idPelajar, int idCourse, float courseProgress) {
+        String deleteSql = "DELETE FROM \"courseParticipant\" WHERE id_pelajar = ? AND id_course = ?";
+        
+        // This query inserts the new progress and sets createdAt/updatedAt to the current time
+        String insertSql = "INSERT INTO \"courseParticipant\" " +
+                         "(id_pelajar, id_course, persentase_course, \"createdAt\", \"updatedAt\") " +
+                         "VALUES (?, ?, ?, NOW(), NOW())";
+
+        System.out.println("DAO: Setting progress for student " + idPelajar + " in course " + idCourse + " to " + courseProgress + "%");
+
+        try (Connection conn = DatabaseUtil.getConnection()) {
+            
+            // Step 1: Delete any old progress record to ensure a clean state.
+            try (PreparedStatement deleteStmt = conn.prepareStatement(deleteSql)) {
+                deleteStmt.setInt(1, idPelajar);
+                deleteStmt.setInt(2, idCourse);
+                deleteStmt.executeUpdate();
+            }
+
+            // Step 2: Insert the new progress record.
+            try (PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
+                insertStmt.setInt(1, idPelajar);
+                insertStmt.setInt(2, idCourse);
+                insertStmt.setFloat(3, courseProgress);
+                insertStmt.executeUpdate();
+            }
+            
+        } catch (SQLException e) {
+            System.err.println("DAO: Error setting course progress: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
 }

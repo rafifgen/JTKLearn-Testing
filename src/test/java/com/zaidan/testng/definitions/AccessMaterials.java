@@ -178,6 +178,12 @@ public class AccessMaterials {
         Assert.assertEquals(finishTime, dbFinishTime);
     }
 
+    @And("The course percentage is set to increase to {float}")
+    public void setCourseProgress(float percentage) {
+        int idPelajar = 1;
+        int idCourse = 4;
+        courseDAO.setCourseProgressByStudentAndCourseId(idPelajar, idCourse, percentage);
+    }
     // --- VIDEO-SPECIFIC VERIFICATION STEP ---
     
     @Then("The system correctly tracks video material completion for {int} minutes")
@@ -252,6 +258,13 @@ public class AccessMaterials {
         Assert.assertNotNull(navColor, "Could not determine the PDF nav item's color.");
         String expectedGreenColorRgb = "rgb(162, 245, 200)";
         Assert.assertEquals(navColor.toLowerCase().replace(" ", ""), expectedGreenColorRgb.replace(" ", ""), "The PDF navigation item was not highlighted in green.");
+    }
+
+    @And("The initial course progress set to be 0")
+    public void setInitialCourseProgressZero() {
+        int idPelajar = 1;
+        int idCourse = 4;
+        courseDAO.setCourseProgressByStudentAndCourseId(idPelajar, idCourse, 0);
     }
 
 

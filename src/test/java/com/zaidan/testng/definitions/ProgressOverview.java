@@ -63,6 +63,16 @@ public class ProgressOverview {
         Assert.assertEquals(actualPageTitle, expectedPageTitle);
     }
 
+    @And("Student of id {int} has not started yet material of id {int}")
+    public void studentHasNotStartedMaterial(int idPelajar, int idMateri) throws SQLException {
+        historyMateriDAO.resetMateriProgressByStudentAndMateriId(idPelajar, idMateri);
+    }
+
+    @And("Student of id {int} has not started yet quiz of id {int}")
+    public void studentHasNotStartedQuiz(int idPelajar, int idQuiz) throws SQLException {
+        historyQuizDAO.resetQuizProgressByStudentAndQuizId(idPelajar, idQuiz);
+    }
+
     @And("The study progress of every student should be displayed")
     public void verifyDisplayedStudentProgressMatchesDatabase() throws SQLException {
         // Step 1: Get all the data from the UI table
@@ -140,5 +150,10 @@ public class ProgressOverview {
     @And("The page should be reloaded first")
     public void reloadPage() {
         HelperClass.getDriver().navigate().refresh();
+    }
+
+    @And("The progress of student with id {int} is set to {float}")
+    public void studentProgressSetTo(int idPelajar, float percentage) {
+        courseDAO.setCourseProgressByStudentAndCourseId(idPelajar, 4, percentage);
     }
 }
