@@ -31,14 +31,6 @@ public class ProgressOverview {
     int idMateri9 = 9;
     int idMateri10 = 10;
 
-    @And("The progress of student id {int} and {int} for all materials should be reset to zero")
-    public void resetStudentProgress(int idPelajar1, int idPelajar2) throws SQLException {
-        historyMateriDAO.resetMateriProgressByStudentAndMateriId(idPelajar1, idMateri9);
-        historyMateriDAO.resetMateriProgressByStudentAndMateriId(idPelajar1, idMateri10);
-        historyMateriDAO.resetMateriProgressByStudentAndMateriId(idPelajar2, idMateri9);
-        historyMateriDAO.resetMateriProgressByStudentAndMateriId(idPelajar2, idMateri10);
-    }
-
     @And("User clicks on Pemantauan")
     public void userClicksOnProgressPage() {
         homePageActions.clickOnPemantauan();
