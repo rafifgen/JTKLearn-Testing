@@ -1,7 +1,7 @@
 @CourseOverview
 Feature:FR-06 Course Overview
 
-  Background:
+Background:
     Given User has opened the browser
     And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
     And User enters username "pelajar1@example.com" and password "pelajar1"

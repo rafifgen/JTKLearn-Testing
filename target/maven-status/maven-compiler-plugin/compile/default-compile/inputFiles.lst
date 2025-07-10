@@ -1,18 +1,44 @@
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\dao\PengajarDAO.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\dao\UserDAO.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\actions\LoginPageActions.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\model\CourseDetails.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\model\Pengajar.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\utils\DatabaseUtil.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\actions\HomePageActions.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\model\Pelajar.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\dao\CourseDetailsDAO.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\locators\HomePageLocators.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\model\Course.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\locators\LogoutLocators.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\locators\CourseDetailsPageLocators.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\actions\CourseDetailsPageActions.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\utils\HelperClass.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\actions\LogoutActions.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\dao\CourseDAO.java
-E:\POLITEKNIK NEGERI BANDUNG\Penelitian Fault Seeding\Tester\jtklearn-testing\jtklearn-testing\src\main\java\com\zaidan\testng\locators\LoginPageLocators.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\dao\CourseDAO.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\LogoutLocators.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\dao\HistoryMateriDAO.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\CourseProgress.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\Pelajar.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\HomePageActions.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\Course.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\MyCourseActions.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\HomePageLocators.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\SummaryCourseLocators.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\dao\HistoryQuizDAO.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\LoginPageLocators.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\CourseDetailsPageActions.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\dao\PelajarDAO.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\CourseDetails.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\LearnCoursePageLocators.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\utils\HelperClass.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\enums\TaskStatus.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\SummaryQuizDetailLocators.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\StudentProgressUI.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\dao\UserDAO.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\Pengajar.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\HistoryQuiz.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\HistoryMateri.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\LoginPageActions.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\Materi.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\dao\QuizHistoryDAO.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\dao\MateriDAO.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\QuizHistoryPageActions.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\LogoutActions.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\MyCourseLocators.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\SummaryQuizLocators.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\utils\DatabaseUtil.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\dao\PengajarDAO.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\SummaryProgressLocators.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\QuizAttemptDetails.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\enums\JenisMateri.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\QuizHistoryPageLocators.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\CourseDetailsPageLocators.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\LearnCoursePageActions.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\SummaryCourseActions.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\SummaryQuizDetailActions.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\SummaryProgressActions.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\SummaryQuizActions.java

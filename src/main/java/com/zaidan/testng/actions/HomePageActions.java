@@ -1,9 +1,7 @@
 package com.zaidan.testng.actions;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -14,7 +12,6 @@ import com.zaidan.testng.utils.HelperClass;
 import org.openqa.selenium.WebElement;
 
 public class HomePageActions {
-
     HomePageLocators homePageLocators = null;
 
     public HomePageActions() {
@@ -67,35 +64,6 @@ public class HomePageActions {
         } catch (NoSuchElementException e) {
             return false;
         }
-    }
-
-    /**
-     * Simulates fetching expected course data from a database.
-     * In a real scenario, this would involve a DB connection and query.
-     *
-     * @return List of maps representing expected courses from the DB.
-     */
-    public List<Map<String, String>> getExpectedCoursesFromDatabase() {
-        // !!! IMPORTANT: Replace this with actual database fetching logic !!!
-        // For now, hardcoding to match the Gherkin example and DOM.
-        List<Map<String, String>> dbCourses = new ArrayList<>();
-
-        Map<String, String> course1 = new HashMap<>();
-        course1.put("courseName", "Contoh Kursus");
-        course1.put("instructorName", "Budi Pengajar");
-        dbCourses.add(course1);
-
-        Map<String, String> course2 = new HashMap<>();
-        course2.put("courseName", "Pemrograman Web");
-        course2.put("instructorName", "Budi Pengajar");
-        dbCourses.add(course2);
-
-        Map<String, String> course3 = new HashMap<>();
-        course3.put("courseName", "Pemrograman Mobile");
-        course3.put("instructorName", "Budi Pengajar");
-        dbCourses.add(course3);
-
-        return dbCourses;
     }
 
     public void clickedKursusSayaNav() {
@@ -232,6 +200,9 @@ public class HomePageActions {
         return new ArrayList<>(); // Return empty list until implemented correctly
     }
 
+    public void clickOnPemantauan() {
+        homePageLocators.pemantauanNav.click();
+    }
 
     public void clickNavigationMenu(String menuName) {
         try {

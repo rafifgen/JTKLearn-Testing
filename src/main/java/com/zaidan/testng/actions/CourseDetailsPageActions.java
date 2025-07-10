@@ -28,7 +28,7 @@ public class CourseDetailsPageActions {
     public String getCourseImageFilename() {
         try {
             // 1. Ambil seluruh URL dari atribut "src"
-            String imageUrl = courseDetailsPageLocators.courseImage.getAttribute("src");
+            String imageUrl = courseDetailsPageLocators.courseImage.getDomAttribute("src");
 
             // 2. Gunakan utilitas Java untuk mengekstrak nama file dari URL
             if (imageUrl != null && !imageUrl.isEmpty()) {
@@ -60,9 +60,9 @@ public class CourseDetailsPageActions {
         }
     }
 
+    // Memeriksa apakah progress bar terlihat
     public boolean isProgressBarVisible() {
         try {
-            // Gunakan container yang selalu terlihat
             return courseDetailsPageLocators.progressBar.isDisplayed();
         } catch (NoSuchElementException e) {
             return false;
@@ -76,12 +76,18 @@ public class CourseDetailsPageActions {
      */
     public double getProgressPercentage() {
         try {
-            String rawText = courseDetailsPageLocators.progressPercentageText.getText();
+            String rawText = courseDetailsPageLocators.progressPercentageText.getText(); // Contoh: "75.5%"
+
+            // Membersihkan teks dari karakter non-numerik (kecuali titik)
             String cleanedText = rawText.replaceAll("[^\\d.]", "");
-            return cleanedText.isEmpty() ? 0.0 : Double.parseDouble(cleanedText);
-        } catch (Exception e) {
-            return 0.0;
+
+            if (!cleanedText.isEmpty()) {
+                return Double.parseDouble(cleanedText);
+            }
+        } catch (NoSuchElementException | NumberFormatException e) {
+            System.err.println("Gagal mengambil atau mem-parsing persentase progres: " + e.getMessage());
         }
+        return 0.0; // Mengembalikan nilai default jika terjadi error
     }
 
     public void enterEnrollmentKey(String key) {
@@ -109,4 +115,8 @@ public class CourseDetailsPageActions {
     }
 
 
+
+    public void continueCourse() {
+        courseDetailsPageLocators.continueButton.click();
+    }
 }

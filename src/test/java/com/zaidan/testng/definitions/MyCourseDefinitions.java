@@ -57,11 +57,14 @@ public class MyCourseDefinitions {
 
     @Given("User has completed courses in database")
     public void setupCompletedCourses() {
+        // Verify that test data exists
         CourseDAO courseDAO = new CourseDAO();
         List<CourseProgress> completedCourses = courseDAO.getCompletedCourses();
+
         if (completedCourses.isEmpty()) {
             throw new IllegalStateException("No completed courses found in database for testing. Please setup test data first.");
         }
+
         System.out.println("Found " + completedCourses.size() + " completed courses in test database");
     }
 
@@ -92,9 +95,15 @@ public class MyCourseDefinitions {
 
     @Then("System shows course list with:")
     public void verifyCourseList(DataTable dataTable) {
+        // Debug current state
         debugCurrentState();
+
+        // Ensure we're on the correct tab
         ensureCompletedTabIsActive();
+
+        // Wait for course cards with multiple strategies
         List<WebElement> courseCards = waitForCourseCards();
+
         if (courseCards.isEmpty()) {
             handleEmptyState();
             return;
@@ -111,9 +120,11 @@ public class MyCourseDefinitions {
         Pelajar datapelajar = new PelajarDAO().getPelajarByNama(pelajarLoggedin);
         String namaPelajar = datapelajar.getNama();
         int idpelajar = datapelajar.getIdPelajar();
+
         HelperClass.setLoggedInUserId(idpelajar);
         System.out.println("Logged in as [" + namaPelajar + "] with id_pelajar=" + idpelajar);
     }
+
 
     @Then("All course data matches database records")
     public void verifyDatabaseConsistency() {
@@ -123,10 +134,13 @@ public class MyCourseDefinitions {
         List<WebElement> courseCards = locators.completedcourseCards;
         Assert.assertEquals(courseCards.size(), dbCoursesProgress.size(),
                 "Jumlah card UI vs record Completed di DB untuk id_pelajar=" + idPelajar);
+
         for (WebElement card : courseCards) {
             verifyCourseCardAgainstDatabase(card, dbCoursesProgress);
         }
     }
+
+
 
     // ============ HELPER METHODS ============
 //    private void waitForTabContentToLoad() {
@@ -146,9 +160,13 @@ public class MyCourseDefinitions {
         System.out.println("=== DEBUGGING CURRENT STATE ===");
         System.out.println("Current URL: " + driver.getCurrentUrl());
         System.out.println("Page title: " + driver.getTitle());
+
+        // Check if we're on the my courses page
         boolean onMyCoursesPage = driver.getCurrentUrl().contains("/my-courses") ||
                 driver.getTitle().contains("My Courses");
         System.out.println("On My Courses page: " + onMyCoursesPage);
+
+        // Check active tab
         try {
             System.out.println("Active tab text: " + locators.activeTab.getText());
         } catch (NoSuchElementException e) {
@@ -188,8 +206,11 @@ public class MyCourseDefinitions {
         }
     }
 
+
     private void handleEmptyState() {
         System.out.println("=== HANDLING EMPTY STATE ===");
+
+        // Check if there's an empty state message
         try {
             System.out.println("Empty state message: " + locators.emptyStateMessageCompleted.getText());
             Assert.fail("Expected to find completed courses but found empty state message: " +
@@ -206,18 +227,24 @@ public class MyCourseDefinitions {
         ((JavascriptExecutor) driver).executeScript(
                 "arguments[0].scrollIntoView({behavior: 'instant', block: 'center'});", card);
         wait.until(ExpectedConditions.visibilityOf(card));
+
+        // Additional check
         if (!card.isDisplayed()) {
             throw new RuntimeException("Course card is not displayed after scrolling");
         }
+
         System.out.println("First card is visible and ready for verification");
     }
 
     private void verifyCardComponents(WebElement card, DataTable dataTable) {
         List<Map<String, String>> components = dataTable.asMaps(String.class, String.class);
+
         for (Map<String, String> component : components) {
             String elementType = component.get("Component");
             String verification = component.get("Verification");
+
             System.out.println("Verifying: " + elementType + " - " + verification);
+
             switch (elementType) {
                 case "Course image":
                     verifyCourseImage(card, verification);
@@ -241,11 +268,16 @@ public class MyCourseDefinitions {
     }
 
     private void verifyCourseImage(WebElement courseCard, String verification) {
-        System.out.println("courseCard HTML: " + courseCard.getAttribute("outerHTML"));
+        System.out.println("courseCard HTML: " + courseCard.getDomAttribute("outerHTML"));
+
         System.out.println("=== VERIFYING COURSE IMAGE ===");
         try {
             WebElement image = courseCard.findElement(MyCourseLocators.COURSE_IMAGE);
-            String uiSrc = image.getAttribute("src");
+            System.out.println(image.getTagName() + " element found for course image");
+            String uiSrc = image.getDomAttribute("src");
+
+
+            // Ekstrak nama file dari URL
             String fileName = uiSrc.substring(uiSrc.lastIndexOf("/") + 1);
             System.out.println("Extracted image src from UI: " + uiSrc);
             System.out.println("Extracted image file name: " + fileName);
@@ -263,16 +295,22 @@ public class MyCourseDefinitions {
                 if (course == null) {
                     Assert.fail("Course with name '" + uiName + "' not found in database.");
                 }
+
                 String expectedImage = course.getGambarCourse();
                 System.out.println("Expected image from DB: " + expectedImage);
+
+                // Bandingkan nama file dari src dengan value di database
                 Assert.assertEquals(fileName, expectedImage,
                         "Image file name mismatch. UI: " + fileName + ", DB: " + expectedImage);
             }
+
             System.out.println("Course image verification PASSED for src: " + uiSrc);
+
         } catch (NoSuchElementException e) {
             Assert.fail("Course image element not found");
         }
     }
+
 
     private void verifyCourseName(WebElement courseCard, String verification) {
         try {
@@ -283,7 +321,7 @@ public class MyCourseDefinitions {
 
             if (verification.equals("Matches database")) {
                 Course course = new CourseDAO().getCourseByName(uiName);
-                Assert.assertEquals(uiName, course.getNamaCourse(),
+                Assert.assertEquals(uiName, course.getNamaCourse(), // Use getter method
                         "Course name UI does not match DB");
             }
             System.out.println("Course name verified: " + uiName);
@@ -318,9 +356,10 @@ public class MyCourseDefinitions {
         try {
             WebElement progressBar = courseCard.findElement(MyCourseLocators.PROGRESS_BAR);
             if (verification.equals("Shows 100% completion")) {
-                String style = progressBar.getAttribute("style");
+                // Check various ways the progress might be displayed
+                String style = progressBar.getDomAttribute("style");
                 String width = progressBar.getCssValue("width");
-                String ariaValue = progressBar.getAttribute("aria-valuenow");
+                String ariaValue = progressBar.getDomAttribute("aria-valuenow");
 
                 boolean isComplete = false;
                 if (style != null && style.contains("width: 100%")) isComplete = true;
@@ -330,6 +369,7 @@ public class MyCourseDefinitions {
                 Assert.assertTrue(isComplete, "Progress bar should show 100% completion");
                 System.out.println("Progress bar verified as 100% complete");
             }
+
         } catch (NoSuchElementException e) {
             Assert.fail("Progress bar element not found");
         }
@@ -338,17 +378,28 @@ public class MyCourseDefinitions {
     private void verifyCompletionPercentage(WebElement courseCard, String verification) {
         try {
             WebElement percentage = courseCard.findElement(MyCourseLocators.PROGRESS_PERCENT);
+
             if (verification.equals("Shows 100%")) {
                 String percentText = percentage.getText().trim();
                 Assert.assertTrue(percentText.contains("100"),
                         "Completion percentage should show 100%, but found: " + percentText);
+
                 System.out.println("Completion percentage verified: " + percentText);
             }
+
         } catch (NoSuchElementException e) {
             Assert.fail("Progress percentage element not found");
         }
     }
 
+    /**
+     * Verifikasi tiap card di UI cocok dengan data di tabel course (tanpa detail progress).
+     * @param courseCard elemen card di UI
+     * @param allCourses list hasil CourseDAO.getAllCourses()
+     */
+    /**
+     * Verifikasi tiap card di UI cocok dengan CourseProgress (nama + progress).
+     */
     private void verifyCourseCardAgainstDatabase(WebElement courseCard,
                                                  List<CourseProgress> dbCoursesProgress) {
         try {
@@ -373,4 +424,7 @@ public class MyCourseDefinitions {
             Assert.fail("Required course card elements not found: " + e.getMessage());
         }
     }
+
+
+
 }

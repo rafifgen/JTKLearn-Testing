@@ -21,7 +21,7 @@ public class Hooks {
         System.out.println("--- Test Suite Setup Complete ---");
     }
 
-    @Before
+    @Before(order = 0)
     public static void setUp() {
 
         HelperClass.setUpDriver();
