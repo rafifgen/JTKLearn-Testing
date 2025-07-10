@@ -23,8 +23,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static org.testng.AssertJUnit.assertFalse;
-
 public class MyCourseDefinitions {
 
     private final MyCourseActions myCourseActions = new MyCourseActions();
@@ -202,7 +200,7 @@ public class MyCourseDefinitions {
             WebElement completedTab = driver.findElement(MyCourseLocators.COMPLETED_TAB);
 
             // Check if tab is already active
-            String classes = completedTab.getAttribute("class");
+            String classes = completedTab.getDomAttribute("class");
             System.out.println("Completed tab classes: " + classes);
 
             if (!classes.contains("active")) {
@@ -370,7 +368,7 @@ public class MyCourseDefinitions {
 //    }
 
     private void verifyCourseImage(WebElement courseCard, String verification) {
-        System.out.println("courseCard HTML: " + courseCard.getAttribute("outerHTML"));
+        System.out.println("courseCard HTML: " + courseCard.getDomAttribute("outerHTML"));
 
         System.out.println("=== VERIFYING COURSE IMAGE ===");
 
@@ -379,7 +377,7 @@ public class MyCourseDefinitions {
             wait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(courseCard, MyCourseLocators.COURSE_IMAGE));
             WebElement image = courseCard.findElement(MyCourseLocators.COURSE_IMAGE);
             System.out.println(image.getTagName() + " element found for course image");
-            String uiSrc = image.getAttribute("src");
+            String uiSrc = image.getDomAttribute("src");
 
 
             // Ekstrak nama file dari URL
@@ -401,9 +399,10 @@ public class MyCourseDefinitions {
                 String uiName = courseCard.findElement(MyCourseLocators.COURSE_NAME)
                         .getText().trim();
                 System.out.println("Course name from UI: " + uiName);
+                CourseDAO courseDAO = new CourseDAO();
 
                 // Ambil data dari database
-                Course course = new CourseDAO().getCourseByName(uiName);
+                Course course = courseDAO.getCourseByName(uiName);
 
                 if (course == null) {
                     Assert.fail("Course with name '" + uiName + "' not found in database.");
@@ -482,9 +481,9 @@ public class MyCourseDefinitions {
 
             if (verification.equals("Shows 100% completion")) {
                 // Check various ways the progress might be displayed
-                String style = progressBar.getAttribute("style");
+                String style = progressBar.getDomAttribute("style");
                 String width = progressBar.getCssValue("width");
-                String ariaValue = progressBar.getAttribute("aria-valuenow");
+                String ariaValue = progressBar.getDomAttribute("aria-valuenow");
 
                 boolean isComplete = false;
 

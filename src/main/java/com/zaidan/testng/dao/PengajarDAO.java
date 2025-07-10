@@ -92,8 +92,4 @@ public class PengajarDAO {
         }
         return pengajarName;
     }
-
-    // TODO: Soon?
-    // You can add other methods to fetch Dosen details if needed, e.g., by NIP or all dosen.
-    // public Pengajar getDosenByNip(String nip) { ... }
 }

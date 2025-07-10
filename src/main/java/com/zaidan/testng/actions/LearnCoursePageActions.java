@@ -1,6 +1,5 @@
 package com.zaidan.testng.actions;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor; // Important for executing JavaScript
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -198,7 +197,7 @@ public class LearnCoursePageActions {
             WebElement progressBarElement = learnCoursePageLocators.progressBar;
             
             // Get the value from the 'aria-valuenow' attribute, which holds the precise number
-            String progressValue = progressBarElement.getAttribute("aria-valuenow");
+            String progressValue = progressBarElement.getDomAttribute("aria-valuenow");
             
             System.out.println("UI Progress Bar 'aria-valuenow' attribute found: " + progressValue);
             

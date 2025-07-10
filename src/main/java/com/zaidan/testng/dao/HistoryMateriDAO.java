@@ -1,8 +1,6 @@
 package com.zaidan.testng.dao;
 
 import java.sql.Timestamp;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
 import java.util.concurrent.TimeUnit;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +10,6 @@ import java.sql.SQLException;
 import com.zaidan.testng.enums.TaskStatus;
 import com.zaidan.testng.model.HistoryMateri;
 import com.zaidan.testng.utils.DatabaseUtil;
-import com.zaidan.testng.utils.HelperClass;
 
 public class HistoryMateriDAO {
     public Timestamp getStartingTime(int idPelajar, int idMateri) throws SQLException {
