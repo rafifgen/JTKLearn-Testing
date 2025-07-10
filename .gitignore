@@ -31,5 +31,5 @@ build/
 ### VS Code ###
 .vscode/
 
-## Binaries ##
+### Binaries ###
 *.class
