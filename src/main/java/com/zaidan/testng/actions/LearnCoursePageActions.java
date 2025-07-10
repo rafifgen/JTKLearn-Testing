@@ -172,10 +172,6 @@ public class LearnCoursePageActions {
             
             System.out.println("Attempting to find the PDF content iframe and wait for it to be ready...");
 
-            // This is the new, more robust wait condition.
-            // It waits until the element located by 'contentIframe' has an 'src' attribute
-            // that contains the substring ".pdf".
-            // This solves the race condition.
             wait.until(ExpectedConditions.attributeContains(
                 learnCoursePageLocators.contentIframe, "src", ".pdf"
             ));

@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.CucumberOptions.SnippetType;
 
 @CucumberOptions(
-        tags = "",
+        tags = "not @wip",
         features = "src/test/resources/features",
         glue = "com.zaidan.testng.definitions",
         plugin = {

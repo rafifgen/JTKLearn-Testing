@@ -20,7 +20,7 @@ public class LearnCoursePageLocators {
     public WebElement exampleVidInNavBar;
     
     // More robust: Finds the list item containing the unique text "Test PDF Komgraf".
-    @FindBy(xpath = "//ul[contains(@class, 'learn-list')]//li[contains(., 'Test PDF Komgraf')]")
+    @FindBy(xpath = "//*[@id=\"sidebarMenu\"]/div/ul/li[2]")
     public WebElement examplePDFInNavBar;
 
     public By contentIframe = By.cssSelector("div.content-box iframe");

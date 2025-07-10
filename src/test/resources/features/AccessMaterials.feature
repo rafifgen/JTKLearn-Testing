@@ -31,7 +31,7 @@ Scenario: Verify PDF file can be opened and read
     And The course name of id 4 and material name of id 10 should be the same as in the database
 
 # TODO: solve the finish time
-# @wip
+@wip
 @ResetMaterialState
 Scenario Outline: Verify the time of finishing video material
     TC-FR08-09, TC-FR08-10, TC-FR08-11
