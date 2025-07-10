@@ -97,7 +97,6 @@ Scenario: Verify progress overview page with three different student states;
     And The page subtitle should be the same with course with id 4
     And The study progress of every student should be displayed
 
-# @wip
 Scenario: Verify ascending sorting operation on Riwayat Kuis page
     TC-FR12-23
     Given User has opened the browser
