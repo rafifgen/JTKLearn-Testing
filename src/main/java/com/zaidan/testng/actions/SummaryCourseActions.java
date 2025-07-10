@@ -16,4 +16,8 @@ public class SummaryCourseActions {
     public void clickOnKomputerGrafikProgresBtn() {
         summaryCourseLocators.komputerGrafikProgresBtn.click();
     }
+
+    public void clickOnKomputerGrafikDetailKuisBtn() {
+        summaryCourseLocators.komputerGrafikDetailKuisBtn.click();
+    }
 }

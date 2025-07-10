@@ -69,4 +69,24 @@ public class SummaryProgressActions {
         }
         return allProgressData;
     }
+
+    public List<String> getDisplayedStudentNames() {
+        List<String> studentNames = new ArrayList<>();
+        
+        // --- THIS IS THE FIX ---
+        // The XPath now looks for the table with the correct class: 'custom-user-table'
+        String xpathForRows = "//table[contains(@class, 'custom-user-table')]/tbody/tr";
+        
+        List<WebElement> tableRows = driver.findElements(By.xpath(xpathForRows));
+
+        for (WebElement row : tableRows) {
+            List<WebElement> cells = row.findElements(By.tagName("td"));
+            if (cells.size() > 1) {
+                // The name is still in the second cell (index 1)
+                studentNames.add(cells.get(1).getText());
+            }
+        }
+        System.out.println("Names found on UI: " + studentNames);
+        return studentNames;
+    }
 }

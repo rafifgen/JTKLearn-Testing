@@ -1,6 +1,8 @@
 package com.zaidan.testng.definitions;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +11,8 @@ import org.testng.Assert;
 import com.zaidan.testng.actions.HomePageActions;
 import com.zaidan.testng.actions.SummaryCourseActions;
 import com.zaidan.testng.actions.SummaryProgressActions;
+import com.zaidan.testng.actions.SummaryQuizActions;
+import com.zaidan.testng.actions.SummaryQuizDetailActions;
 import com.zaidan.testng.dao.CourseDAO;
 import com.zaidan.testng.dao.HistoryMateriDAO;
 import com.zaidan.testng.dao.HistoryQuizDAO;
@@ -19,11 +23,14 @@ import com.zaidan.testng.utils.HelperClass;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class ProgressOverview {
     HomePageActions homePageActions = new HomePageActions();
     SummaryCourseActions summaryCourseActions = new SummaryCourseActions();
     SummaryProgressActions summaryProgressActions = new SummaryProgressActions();
+    SummaryQuizActions summaryQuizActions = new SummaryQuizActions();
+    SummaryQuizDetailActions summaryQuizDetailActions = new SummaryQuizDetailActions();
     HistoryMateriDAO historyMateriDAO = new HistoryMateriDAO();
     CourseDAO courseDAO = new CourseDAO();
     HistoryQuizDAO historyQuizDAO = new HistoryQuizDAO();
@@ -132,10 +139,9 @@ public class ProgressOverview {
     /**
      * Sets a quiz to FINISHED with a passing score using the new DAO method.
      */
-    @And("Student of id {int} finished quiz of id {int}")
-    public void studentFinishedQuiz(int studentId, int quizId) {
+    @And("Student of id {int} finished quiz of id {int} with score {float}")
+    public void studentFinishedQuiz(int studentId, int quizId, float passingScore) {
         // Set a high score to ensure it's considered "passed"
-        float passingScore = 95.0f; 
         historyQuizDAO.setQuizFinished(studentId, quizId, passingScore);
     }
 
@@ -147,5 +153,83 @@ public class ProgressOverview {
     @And("The progress of student with id {int} is set to {float}")
     public void studentProgressSetTo(int idPelajar, float percentage) {
         courseDAO.setCourseProgressByStudentAndCourseId(idPelajar, 4, percentage);
+    }
+
+    @When("User clicks on Detail Kuis button of Komputer Grafik course")
+    public void userClicksOnDetailKuis() {
+        summaryCourseActions.clickOnKomputerGrafikDetailKuisBtn();
+    }
+
+    @And("User clicks on Lihat Hasil button of Tes Progres quiz")
+    public void userClicksOnLihatHasil() {
+        summaryQuizActions.clickOnLihatHasilBtn();
+    }
+
+    @And("User clicks on {string} sorting button")
+    public void userClicksOnSortingButton(String sorting) {
+        if (sorting.equals("ascending")) {
+            summaryQuizDetailActions.selectSortOptionByVisibleText("A-Z");
+        } else {
+            summaryQuizDetailActions.selectSortOptionByVisibleText("Z-A");
+        }
+    }
+
+    @Then("The displayed names should be sorted in {string} order")
+    public void verifyDisplayedNames(String sorting) {
+        if (sorting.equals("ascending")) {
+            verifyAscendingSorting();
+        } else {
+            verifyDescendingSorting();
+        }
+    }
+
+    @Then("The displayed names on Pemantau Progres Belajar page should be sorted in descending order")
+    public void verifyPemantauProgresDescendingSorting() {
+        // 1. Get the list of names from the UI
+        List<String> uiNames = summaryProgressActions.getDisplayedStudentNames();
+        Assert.assertFalse(uiNames.isEmpty(), "No student names were found on the page.");
+
+        // 2. Create a copy and sort it in reverse alphabetical order (Z-A)
+        List<String> sortedNames = new ArrayList<>(uiNames);
+        sortedNames.sort(Collections.reverseOrder());
+
+        System.out.println("Original UI Order: " + uiNames);
+        System.out.println("Expected Sorted Order (Desc): " + sortedNames);
+
+        // 3. Assert that the original list matches the reverse-sorted copy
+        Assert.assertEquals(uiNames, sortedNames, "The student names are not sorted in descending order.");
+    }
+
+    public void verifyAscendingSorting() {
+        // 1. Get the list of names exactly as they appear on the UI
+        List<String> uiNames = summaryQuizDetailActions.getDisplayedStudentNames();
+        Assert.assertFalse(uiNames.isEmpty(), "No student names were found on the page to verify sorting.");
+
+        // 2. Create a copy of the list and sort it alphabetically (A-Z)
+        List<String> sortedNames = new ArrayList<>(uiNames);
+        Collections.sort(sortedNames);
+        
+        System.out.println("Original UI Order: " + uiNames);
+        System.out.println("Expected Sorted Order: " + sortedNames);
+
+        // 3. Assert that the original list from the UI is identical to the sorted copy.
+        // If they are not the same, it means the UI was not sorted correctly.
+        Assert.assertEquals(uiNames, sortedNames, "The student names are not sorted in ascending order.");
+    }
+
+    public void verifyDescendingSorting() {
+        // 1. Get the list of names from the UI
+        List<String> uiNames = summaryQuizDetailActions.getDisplayedStudentNames();
+        Assert.assertFalse(uiNames.isEmpty(), "No student names were found on the page.");
+
+        // 2. Create a copy and sort it in reverse alphabetical order (Z-A)
+        List<String> sortedNames = new ArrayList<>(uiNames);
+        sortedNames.sort(Collections.reverseOrder());
+
+        System.out.println("Original UI Order: " + uiNames);
+        System.out.println("Expected Sorted Order (Desc): " + sortedNames);
+
+        // 3. Assert that the original list matches the reverse-sorted copy
+        Assert.assertEquals(uiNames, sortedNames, "The student names are not sorted in descending order.");
     }
 }
