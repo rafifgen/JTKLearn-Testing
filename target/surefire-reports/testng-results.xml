@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-10T13:58:12 WIB" name="Suite" finished-at="2025-07-10T13:58:22 WIB" duration-ms="10598">
+=======
 <testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
   <suite started-at="2025-07-08T20:39:52 WIB" name="Suite" finished-at="2025-07-08T20:41:10 WIB" duration-ms="78583">
+>>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@34123d65]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< HEAD
+    <test started-at="2025-07-10T13:58:12 WIB" name="Cucumber Reporting" finished-at="2025-07-10T13:58:22 WIB" duration-ms="10598">
+      <class name="com.zaidan.testng.runner.CucumberRunnerTests">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T13:58:12 WIB" name="setUpClass" finished-at="2025-07-10T13:58:15 WIB" duration-ms="3750" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ef60710]]>
+=======
     <test started-at="2025-07-08T20:39:52 WIB" name="Cucumber Reporting" finished-at="2025-07-08T20:41:10 WIB" duration-ms="78583">
       <class name="com.zaidan.testng.runner.CucumberRunnerTests">
         <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@34123d65]" started-at="2025-07-08T20:39:52 WIB" name="setUpClass" finished-at="2025-07-08T20:39:54 WIB" duration-ms="1893" status="PASS">
@@ -15,28 +31,44 @@
             <param index="0">
               <value>
                 <![CDATA[org.testng.TestRunner@5d3b58ca]]>
+>>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T13:58:16 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-10T13:58:22 WIB" duration-ms="6688" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify descending sorting operation on Pemantau Progres Belajar page"]]>
+=======
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@34123d65]" started-at="2025-07-08T20:39:54 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-08T20:40:00 WIB" duration-ms="5949" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA["Login with valid credentials"]]>
+>>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
+                <![CDATA["FR-12 Progress Overview"]]>
+=======
                 <![CDATA["FR-01 Authentication"]]>
+>>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-10T13:58:22 WIB" name="tearDownClass" finished-at="2025-07-10T13:58:22 WIB" duration-ms="83" status="PASS">
+=======
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@34123d65]" started-at="2025-07-08T20:40:00 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-08T20:40:35 WIB" duration-ms="35453" status="FAIL">
           <params>
             <param index="0">
@@ -100,6 +132,7 @@ at ✽.Sub menu keluar is displayed(file:///E:/POLITEKNIK%20NEGERI%20BANDUNG/Pen
           </reporter-output>
         </test-method> <!-- runScenario -->
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@34123d65]" started-at="2025-07-08T20:41:10 WIB" name="tearDownClass" finished-at="2025-07-08T20:41:10 WIB" duration-ms="29" status="PASS">
+>>>>>>> 01579ad7a99bba793d07fa7e147ca11228045ed1
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

@@ -2,7 +2,7 @@ package com.zaidan.testng.definitions;
 
 import com.zaidan.testng.actions.HomePageActions; // Asumsi: Anda punya kelas ini
 import com.zaidan.testng.actions.CourseDetailsPageActions; // Asumsi: Anda perlu membuat kelas ini
-import com.zaidan.testng.dao.CourseDetailsDAO;
+import com.zaidan.testng.dao.CourseDAO;
 import com.zaidan.testng.model.CourseDetails;
 import com.zaidan.testng.utils.HelperClass;
 import io.cucumber.java.en.And;
@@ -15,7 +15,7 @@ public class CourseDetailsDefinitions {
     // Inisialisasi objek yang diperlukan
     HomePageActions homePageActions = new HomePageActions();
     CourseDetailsPageActions courseDetailsPageActions = new CourseDetailsPageActions();
-    CourseDetailsDAO courseDetailsDAO = new CourseDetailsDAO();
+    CourseDAO courseDetailsDAO = new CourseDAO();
 
     // Variabel untuk menyimpan data antar langkah
     private String courseName;

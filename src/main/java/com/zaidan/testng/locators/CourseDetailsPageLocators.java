@@ -20,6 +20,8 @@ public class CourseDetailsPageLocators {
     @FindBy(className = "progress-percentage-text")
     public WebElement progressPercentageText;
 
+    @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div[2]/div[5]/button")
+    public WebElement continueButton;
     // CourseEnrollmentLocator
     @FindBy(className = "form-control")
     public WebElement enrollmentKeyInput;

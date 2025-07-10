@@ -28,7 +28,7 @@ public class CourseDetailsPageActions {
     public String getCourseImageFilename() {
         try {
             // 1. Ambil seluruh URL dari atribut "src"
-            String imageUrl = courseDetailsPageLocators.courseImage.getAttribute("src");
+            String imageUrl = courseDetailsPageLocators.courseImage.getDomAttribute("src");
 
             // 2. Gunakan utilitas Java untuk mengekstrak nama file dari URL
             if (imageUrl != null && !imageUrl.isEmpty()) {
@@ -104,5 +104,9 @@ public class CourseDetailsPageActions {
         } catch (NoSuchElementException e) {
             return "Pesan Error Tidak Ditemukan";
         }
+    }
+
+    public void continueCourse() {
+        courseDetailsPageLocators.continueButton.click();
     }
 }

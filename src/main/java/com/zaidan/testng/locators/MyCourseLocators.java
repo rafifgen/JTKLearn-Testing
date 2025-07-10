@@ -1,6 +1,5 @@
 package com.zaidan.testng.locators;
 
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 
 public class MyCourseLocators {
