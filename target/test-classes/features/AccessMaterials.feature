@@ -46,6 +46,7 @@ Scenario Outline: Verify the time of finishing video material
     When User clicks on one of the video in the navigation bar
     And User should be able to play the video
     And User moves to the next page right after <duration> minutes
+    And The course percentage is set to increase to 33.33
     Then The system correctly tracks video material completion for <duration> minutes
 
     Examples:
@@ -72,7 +73,6 @@ Scenario Outline: Verify the time of finishing PDF material
     And User moves to the next page right after <duration> minutes
     And The course percentage is set to increase to 33.33
     Then The system correctly tracks PDF material completion for <duration> minutes
-
 
     Examples:
     | duration |

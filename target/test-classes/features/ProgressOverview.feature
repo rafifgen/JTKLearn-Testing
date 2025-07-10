@@ -13,7 +13,7 @@ Scenario: Verify progress overview page with a student has not finished all mate
     And The progress of student with id 1 is set to 0
     And Student of id 4 has not started yet material of id 9
     And Student of id 4 has not started yet material of id 10
-    And Student of id 1 has not started yet quiz of id 7
+    And Student of id 4 has not started yet quiz of id 7
     And The progress of student with id 4 is set to 0
     And Student of id 12 has not started yet material of id 9
     And Student of id 12 has not started yet material of id 10

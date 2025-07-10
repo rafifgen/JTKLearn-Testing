@@ -32,7 +32,7 @@ public class CourseDetailsPageLocators {
     @FindBy(className = "swal2-html-container")
     public WebElement errorMessage;
 
-    //button lanjutkan dengan class button.button-overview
-    @FindBy(className = "button-overview")
-    public WebElement continueButton;
+//    //button lanjutkan dengan class button.button-overview
+//    @FindBy(className = "button-overview")
+//    public WebElement continueButton;
 }
