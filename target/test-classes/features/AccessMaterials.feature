@@ -41,6 +41,7 @@ Scenario Outline: Verify the time of finishing video material
     And User clicks on the login button
     And User clicks on course "Komputer Grafik"
     And User clicks on the continue button
+    And The initial course progress set to be 0
     And The initial progress is tracked
     When User clicks on one of the video in the navigation bar
     And User should be able to play the video
@@ -64,10 +65,12 @@ Scenario Outline: Verify the time of finishing PDF material
     And User clicks on the login button
     And User clicks on course "Komputer Grafik"
     And User clicks on the continue button
+    And The initial course progress set to be 0
     And The initial progress is tracked
     When User clicks on the example PDF material
     And User should be able to read the PDF file with material id 10
     And User moves to the next page right after <duration> minutes
+    And The course percentage is set to increase to 33.33
     Then The system correctly tracks PDF material completion for <duration> minutes
 
 
