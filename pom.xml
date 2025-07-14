@@ -38,7 +38,7 @@
         <profile>
             <id>buggy</id>
             <properties>
-                <env>buggy</env>
+                <env>bug</env>
             </properties>
         </profile>
     </profiles>
@@ -147,6 +147,9 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <systemPropertyVariables>
+                        <env>${env}</env>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
 

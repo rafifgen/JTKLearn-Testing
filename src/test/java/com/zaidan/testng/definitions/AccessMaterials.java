@@ -48,7 +48,7 @@ public class AccessMaterials {
     private final int pdfMaterialLookupId = 10;
     private final int studentLookupId = 1;
     private final int buggyVideoMaterialLookupId = 11;
-    private final int buggyPDFMaterialLookupId = 12;
+    // private final int buggyPDFMaterialLookupId = 12;
 
     @Before(value = "@ResetMaterialState", order = 1)
     public void resetMaterialStateBeforeScenario() {
