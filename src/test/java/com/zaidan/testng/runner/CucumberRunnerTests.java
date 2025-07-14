@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.CucumberOptions.SnippetType;
 
 @CucumberOptions(
-        tags = "@Dashboard",
+        tags = "@VerifyVideo",
         features = "src/test/resources/features",
         glue = "com.zaidan.testng.definitions",
         plugin = {

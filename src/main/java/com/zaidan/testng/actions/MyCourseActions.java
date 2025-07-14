@@ -40,4 +40,8 @@ public class MyCourseActions {
                 By.cssSelector(".fade:not(.show)")
         ));
     }
+
+    public static String getLoggedInUserName() {
+        return HelperClass.getDriver().findElement(MyCourseLocators.LOGGED_IN_USERNAME).getText().trim();
+    }
 }

@@ -3,7 +3,7 @@ Feature: FR-01 Authentication
 
 Background:
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "pelajar1@example.com" and password "pelajar1"
     And User clicks on the login button
 

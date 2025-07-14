@@ -1,11 +1,16 @@
 package com.zaidan.testng.actions;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.zaidan.testng.locators.HomePageLocators;
 import com.zaidan.testng.model.Course;
 import com.zaidan.testng.utils.HelperClass;
@@ -220,5 +225,24 @@ public class HomePageActions {
             System.err.println("Error clicking navigation item '" + menuName + "': " + e.getMessage());
         }
     }
-}
 
+    // BUGGY APP METHOD(S)
+    public void scrollIntoViewAndClick(WebElement element) {
+        try {
+            JavascriptExecutor js = (JavascriptExecutor) HelperClass.getDriver();
+
+            // This JavaScript command scrolls the element into the center of the view,
+            // which helps avoid issues with sticky headers and footers.
+            js.executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", element);
+            
+            // After scrolling, it's crucial to wait for the element to be stable and clickable
+            WebDriverWait wait = new WebDriverWait(HelperClass.getDriver(), Duration.ofSeconds(10));
+            wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+            
+        } catch (Exception e) {
+            System.err.println("Could not scroll to and click element: " + e.getMessage());
+            // Re-throw the exception to fail the test if the click is unsuccessful
+            throw e;
+        }
+    }
+}

@@ -29,6 +29,7 @@ public class MyCourseDefinitions {
     private final HomePageActions homePageActions = new HomePageActions();
     private final WebDriver driver = HelperClass.getDriver();
     private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30)); // Increased timeout
+    private int userId = 0;
 
     @When("User clicks on {string} navigation")
     public void clickNavigationMenu(String menuName) {
@@ -123,19 +124,21 @@ public class MyCourseDefinitions {
 
     @Given("User session is initialized")
     public void initUserSession() {
-        String pelajarLoggedin = HelperClass.getLoggedInUserName();
+        String pelajarLoggedin = MyCourseActions.getLoggedInUserName();
         Pelajar datapelajar = new PelajarDAO().getPelajarByNama(pelajarLoggedin);
         String namaPelajar = datapelajar.getNama();
         int idpelajar = datapelajar.getIdPelajar();
 
-        HelperClass.setLoggedInUserId(idpelajar);
+        // HelperClass.setLoggedInUserId(idpelajar);
+        userId = idpelajar;
         System.out.println("Logged in as [" + namaPelajar + "] with id_pelajar=" + idpelajar);
     }
 
 
     @Then("All course data matches database records")
     public void verifyDatabaseConsistency() {
-        int idPelajar = HelperClass.getLoggedInUserId();
+        // int idPelajar = HelperClass.getLoggedInUserId();
+        int idPelajar = this.userId;
         CourseDAO dao = new CourseDAO();
         List<CourseProgress> dbCoursesProgress =
                 dao.getCompletedCoursesByPelajar(idPelajar);

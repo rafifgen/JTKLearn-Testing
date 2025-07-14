@@ -60,7 +60,7 @@ public class LearnCoursePageActions {
         }
 
         // Check if the src indicates playable content based on the blob URL pattern
-        if (vidLink != null && vidLink.startsWith("blob:")) { // A simplified check for blob URLs
+        if (vidLink != null && vidLink.contains("embed")) { // A simplified check for blob URLs
             System.out.println("Video link indicates playable content (blob URL): " + vidLink);
             return true;
         } else {

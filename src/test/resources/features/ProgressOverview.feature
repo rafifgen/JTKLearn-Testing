@@ -3,7 +3,7 @@ Feature: FR-12 Progress Overview
 Scenario: Verify progress overview page with a student has not finished all materials and quizzes yet
     TC-FR12-08
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
@@ -27,7 +27,7 @@ Scenario: Verify progress overview page with a student has not finished all mate
 Scenario: Verify progress overview page with some students finished some materials and quizzes
     TC-FR12-09
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
@@ -51,7 +51,7 @@ Scenario: Verify progress overview page with some students finished some materia
 Scenario: Verify progress overview page with all students finished all materials and quizzes
     TC-FR12-10
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
@@ -76,7 +76,7 @@ Scenario: Verify progress overview page with three different student states;
           has not finished all, finished some materials, and finished all
     TC-FR12-11
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
@@ -100,7 +100,7 @@ Scenario: Verify progress overview page with three different student states;
 Scenario: Verify ascending sorting operation on Riwayat Kuis page
     TC-FR12-23
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
@@ -115,7 +115,7 @@ Scenario: Verify ascending sorting operation on Riwayat Kuis page
 Scenario: Verify ascending sorting operation on Riwayat Kuis page
     TC-FR12-24
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
@@ -130,7 +130,7 @@ Scenario: Verify ascending sorting operation on Riwayat Kuis page
 Scenario: Verify descending sorting operation on Pemantau Progres Belajar page
     TC-FR12-26
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan

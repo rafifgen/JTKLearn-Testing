@@ -4,7 +4,9 @@ import java.sql.Timestamp;
 import java.sql.SQLException;
 import java.time.Instant;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import com.zaidan.testng.actions.CourseDetailsPageActions;
@@ -14,6 +16,7 @@ import com.zaidan.testng.dao.CourseDAO;
 import com.zaidan.testng.dao.HistoryMateriDAO;
 import com.zaidan.testng.dao.MateriDAO;
 import com.zaidan.testng.model.Materi;
+import com.zaidan.testng.utils.HelperClass;
 import com.zaidan.testng.model.Course;
 import com.zaidan.testng.model.HistoryMateri;
 
@@ -44,6 +47,8 @@ public class AccessMaterials {
     private final int videoMaterialLookupId = 9;
     private final int pdfMaterialLookupId = 10;
     private final int studentLookupId = 1;
+    private final int buggyVideoMaterialLookupId = 11;
+    private final int buggyPDFMaterialLookupId = 12;
 
     @Before(value = "@ResetMaterialState", order = 1)
     public void resetMaterialStateBeforeScenario() {
@@ -56,7 +61,12 @@ public class AccessMaterials {
 
     @And("User clicks on course {string}")
     public void userClicksOnCourse(String courseName) {
-        homePageActions.selectCourseByName(courseName);
+        // homePageActions.selectCourseByName(courseName);
+
+        // FOR BUGGY APP
+        WebElement element = HelperClass.getDriver().findElement(By.xpath("//*[@id=\"root\"]/div/div/div[2]/div[11]/div"));
+        Actions actions = new Actions(HelperClass.getDriver());
+        actions.moveToElement(element).click().perform();
     }
 
     @And("User clicks on the continue button")
@@ -75,9 +85,15 @@ public class AccessMaterials {
     @When("User clicks on one of the video in the navigation bar")
     public void userClicksOnOneVideo() {
         // Set the context to the video material
-        this.currentMaterialId = this.videoMaterialLookupId;
-        System.out.println("Setting current material ID to: " + this.currentMaterialId + " (Video)");
-        learnCoursePageActions.clickExampleVidMaterial();
+        // this.currentMaterialId = this.videoMaterialLookupId;
+        // System.out.println("Setting current material ID to: " + this.currentMaterialId + " (Video)");
+        // learnCoursePageActions.clickExampleVidMaterial();
+
+        // BUGGY APP
+        this.currentMaterialId = this.buggyVideoMaterialLookupId;
+        
+        WebElement element = HelperClass.getDriver().findElement(By.xpath("//*[@id=\"sidebarMenu\"]/div/ul/li[1]"));
+        element.click();
     }
 
     @Then("User should be able to see the page title {string}")
@@ -91,8 +107,9 @@ public class AccessMaterials {
 
     @And("User should be able to play the video")
     public void userPlaysVideo() {
-        System.out.println("Step: User should be able to play the video");
-        learnCoursePageActions.playExampleVideo();
+        // System.out.println("Step: User should be able to play the video");
+        // learnCoursePageActions.playExampleVideo();
+        Assert.assertTrue(learnCoursePageActions.verifyExampleVideoCanBePlayed());
     }
 
 
