@@ -5,7 +5,7 @@ Feature: FR08-Access Materials
 Scenario: Verify video can be played
     TC-FR08-01
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "pelajar1@example.com" and password "pelajar1"
     And User clicks on the login button
     And User clicks on course "Komputer Grafik"
@@ -20,7 +20,7 @@ Scenario: Verify video can be played
 Scenario: Verify PDF file can be opened and read
     TC-FR08-02
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "pelajar1@example.com" and password "pelajar1"
     And User clicks on the login button
     And User clicks on course "Komputer Grafik"
@@ -36,7 +36,7 @@ Scenario: Verify PDF file can be opened and read
 Scenario Outline: Verify the time of finishing video material
     TC-FR08-09, TC-FR08-10, TC-FR08-11
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "pelajar1@example.com" and password "pelajar1"
     And User clicks on the login button
     And User clicks on course "Komputer Grafik"
@@ -46,6 +46,7 @@ Scenario Outline: Verify the time of finishing video material
     When User clicks on one of the video in the navigation bar
     And User should be able to play the video
     And User moves to the next page right after <duration> minutes
+    And The course percentage is set to increase to 33.33
     Then The system correctly tracks video material completion for <duration> minutes
 
     Examples:
@@ -60,7 +61,7 @@ Scenario Outline: Verify the time of finishing video material
 Scenario Outline: Verify the time of finishing PDF material
     TC-FR08-14, TC-FR08-15, TC-FR08-16
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "pelajar1@example.com" and password "pelajar1"
     And User clicks on the login button
     And User clicks on course "Komputer Grafik"
@@ -72,7 +73,6 @@ Scenario Outline: Verify the time of finishing PDF material
     And User moves to the next page right after <duration> minutes
     And The course percentage is set to increase to 33.33
     Then The system correctly tracks PDF material completion for <duration> minutes
-
 
     Examples:
     | duration |

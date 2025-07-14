@@ -3,7 +3,7 @@ Feature: FR03-View Dashboard
 
 Background:
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
 
 @UnjoinedCourse
 Scenario: Verify dashboard page for a student who hasn't registered for any courses
