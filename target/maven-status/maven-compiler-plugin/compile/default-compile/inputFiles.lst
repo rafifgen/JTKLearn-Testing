@@ -35,6 +35,7 @@ C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\j
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\SummaryProgressLocators.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\QuizAttemptDetails.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\enums\JenisMateri.java
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\utils\ConfigReader.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\QuizHistoryPageLocators.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\CourseDetailsPageLocators.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\LearnCoursePageActions.java
