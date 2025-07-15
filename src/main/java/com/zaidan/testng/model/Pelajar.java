@@ -5,15 +5,13 @@ public class Pelajar {
     private int idUser;
     private String nama;
     private String nim;
-    private String kelas;
 
     // Constructor(s)
-    public Pelajar(int idPelajar, int idUser, String nama, String nim, String kelas) {
+    public Pelajar(int idPelajar, int idUser, String nama, String nim) {
         this.idPelajar = idPelajar;
         this.idUser = idUser;
         this.nama = nama;
         this.nim = nim;
-        this.kelas = kelas;
     }
 
     public Pelajar(int idPelajar, String nama) {
@@ -39,10 +37,6 @@ public class Pelajar {
 
     public String getNim() {
         return nim;
-    }
-
-    public String getKelas() {
-        return kelas;
     }
 
     public void setNama(String nama) {

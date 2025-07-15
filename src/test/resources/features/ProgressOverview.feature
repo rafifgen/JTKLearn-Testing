@@ -120,11 +120,13 @@ Scenario: Verify ascending sorting operation on Riwayat Kuis page
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
-    And Student of id 1 finished quiz of id 7 with score 100
-    And Student of id 4 finished quiz of id 7 with score 90
-    And Student of id 12 finished quiz of id 7 with score 85
-    When User clicks on Detail Kuis button of Komputer Grafik course
+    When User clicks on "Detail Kuis" button of "Komputer Grafik" course
     And User clicks on Lihat Hasil button of Tes Progres quiz
+    And The quiz results for "Tes Progres Komgraf" in course "Komputer Grafik" are set as follows:
+    | student_position | score |
+    | 1                | 100   |
+    | 2                | 90    |
+    | 3                | 85    |
     And User clicks on "ascending" sorting button
     Then The displayed names should be sorted in "ascending" order
 
@@ -135,11 +137,13 @@ Scenario: Verify ascending sorting operation on Riwayat Kuis page
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
-    And Student of id 1 finished quiz of id 7 with score 100
-    And Student of id 4 finished quiz of id 7 with score 90
-    And Student of id 12 finished quiz of id 7 with score 85
-    When User clicks on Detail Kuis button of Komputer Grafik course
+    When User clicks on "Detail Kuis" button of "Komputer Grafik" course
     And User clicks on Lihat Hasil button of Tes Progres quiz
+    And The quiz results for "Tes Progres Komgraf" in course "Komputer Grafik" are set as follows:
+    | student_position | score |
+    | 1                | 100   |
+    | 2                | 90    |
+    | 3                | 85    |
     And User clicks on "descending" sorting button
     Then The displayed names should be sorted in "descending" order
 
@@ -150,6 +154,6 @@ Scenario: Verify descending sorting operation on Pemantau Progres Belajar page
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
-    When User clicks on Progres button of Komputer Grafik course
+    When User clicks on "Progres" button of "Komputer Grafik" course
     And User clicks on "descending" sorting button
     Then The displayed names on Pemantau Progres Belajar page should be sorted in descending order

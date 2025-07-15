@@ -18,7 +18,9 @@ import com.zaidan.testng.dao.CourseDAO;
 import com.zaidan.testng.dao.HistoryMateriDAO;
 import com.zaidan.testng.dao.HistoryQuizDAO;
 import com.zaidan.testng.dao.PelajarDAO;
+import com.zaidan.testng.dao.QuizDAO;
 import com.zaidan.testng.enums.TaskStatus;
+import com.zaidan.testng.model.Pelajar;
 import com.zaidan.testng.model.StudentProgressUI;
 import com.zaidan.testng.utils.HelperClass;
 
@@ -41,6 +43,7 @@ public class ProgressOverviewDefinitions {
     CourseDAO courseDAO = new CourseDAO();
     HistoryQuizDAO historyQuizDAO = new HistoryQuizDAO();
     PelajarDAO pelajarDAO = new PelajarDAO();
+    QuizDAO quizDAO = new QuizDAO();
     int idMateri9 = 9;
     int idMateri10 = 10;
 
@@ -49,10 +52,13 @@ public class ProgressOverviewDefinitions {
         homePageActions.clickOnPemantauan();
     }
 
-    @And("User clicks on Progres button of Komputer Grafik course")
-    public void userClicksOnProgresBtn() throws SQLException {
-        summaryCourseActions.clickOnKomputerGrafikProgresBtn();
-        setupAndDiscoverData();
+    @And("User clicks on {string} button of {string} course")
+    public void userClicksOnProgresBtn(String buttonName, String courseName) throws SQLException {
+        // summaryCourseActions.clickOnKomputerGrafikProgresBtn();
+        summaryCourseActions.clickCourseActionButton(courseName, buttonName);
+        if (buttonName.equals("Progres")) {
+            setupAndDiscoverData();
+        }
     }
 
     public void setupAndDiscoverData() throws SQLException {
@@ -179,15 +185,34 @@ public class ProgressOverviewDefinitions {
         Assert.assertEquals(actualPageTitle, expectedPageTitle);
     }
 
+    @And("The quiz results for {string} in course {string} are set as follows:")
+    public void setQuizResultsForCourse(String quizName, String courseName, DataTable dataTable) throws SQLException {
+        // Step 1: Discover the IDs for the course and quiz from their names
+        int courseId = courseDAO.getCourseByName(courseName).getIdCourse();
+        int quizId = quizDAO.getIdByName(quizName); // Assuming you have a QuizDAO with this method
 
-    @And("Student of id {int} has not started yet material of id {int}")
-    public void studentHasNotStartedMaterial(int idPelajar, int idMateri) throws SQLException {
-        historyMateriDAO.resetMateriProgressByStudentAndMateriId(idPelajar, idMateri);
-    }
+        // Step 2: Discover all students enrolled in this course
+        List<Pelajar> enrolledStudents = pelajarDAO.getEnrolledStudentsByCourseId(courseId);
+        
+        // Step 3: Parse the Data Table
+        List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
 
-    @And("Student of id {int} has not started yet quiz of id {int}")
-    public void studentHasNotStartedQuiz(int idPelajar, int idQuiz) throws SQLException {
-        historyQuizDAO.resetQuizProgressByStudentAndQuizId(idPelajar, idQuiz);
+        // Step 4: Loop through the Data Table to set the score for each specified student
+        for (Map<String, String> row : rows) {
+            int studentPosition = Integer.parseInt(row.get("student_position")) - 1; // -1 for 0-based index
+            float score = Float.parseFloat(row.get("score"));
+
+            // Get the student from the discovered list based on their position
+            if (studentPosition < enrolledStudents.size()) {
+                Pelajar student = enrolledStudents.get(studentPosition);
+                int studentId = student.getIdPelajar();
+
+                // Use the discovered IDs to set the quiz result
+                historyQuizDAO.setQuizFinished(studentId, quizId, score);
+            } else {
+                System.out.println("WARNING: student_position " + (studentPosition + 1) + " is out of bounds. Only " + enrolledStudents.size() + " students are enrolled.");
+            }
+        }
     }
 
     @And("The study progress of every student should be displayed")
@@ -240,45 +265,6 @@ public class ProgressOverviewDefinitions {
         }
     }
 
-    @And("Student of id {int} finished material of id {int}")
-    public void studentFinishedMaterial(int studentId, int materialId) {
-        // We assume text material (ID 10) requires 2 minutes to be "finished".
-        int requiredDuration = 5; 
-        historyMateriDAO.setFinishTimeAfterDuration(studentId, materialId, requiredDuration);
-    }
-
-    /**
-     * Sets a material to IN_PROGRESS using the new DAO method.
-     */
-    @And("Student of id {int} is still on progress in material of id {int}")
-    public void studentIsOnProgressInMaterial(int studentId, int materialId) {
-        historyMateriDAO.setMaterialInProgress(studentId, materialId);
-    }
-
-    /**
-     * Sets a quiz to FINISHED with a passing score using the new DAO method.
-     */
-    @And("Student of id {int} finished quiz of id {int} with score {float}")
-    public void studentFinishedQuiz(int studentId, int quizId, float passingScore) {
-        // Set a high score to ensure it's considered "FINISHED"
-        historyQuizDAO.setQuizFinished(studentId, quizId, passingScore);
-    }
-
-    @And("The page should be reloaded first")
-    public void reloadPage() {
-        HelperClass.getDriver().navigate().refresh();
-    }
-
-    @And("The progress of student with id {int} is set to {float}")
-    public void studentProgressSetTo(int idPelajar, float percentage) {
-        courseDAO.setCourseProgressByStudentAndCourseId(idPelajar, 4, percentage);
-    }
-
-    @When("User clicks on Detail Kuis button of Komputer Grafik course")
-    public void userClicksOnDetailKuis() {
-        summaryCourseActions.clickOnKomputerGrafikDetailKuisBtn();
-    }
-
     @And("User clicks on Lihat Hasil button of Tes Progres quiz")
     public void userClicksOnLihatHasil() {
         summaryQuizActions.clickOnLihatHasilBtn();
@@ -286,6 +272,7 @@ public class ProgressOverviewDefinitions {
 
     @And("User clicks on {string} sorting button")
     public void userClicksOnSortingButton(String sorting) {
+        HelperClass.getDriver().navigate().refresh();
         if (sorting.equals("ascending")) {
             summaryQuizDetailActions.selectSortOptionByVisibleText("A-Z");
         } else {

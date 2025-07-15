@@ -119,7 +119,6 @@ public class HistoryQuizDAO {
                 insertStmt.setFloat(3, score);
                 insertStmt.executeUpdate();
             }
-            
             System.out.println("DAO: Set quiz " + quizId + " to FINISHED for student " + studentId + " with score " + score);
 
         } catch (SQLException e) {
