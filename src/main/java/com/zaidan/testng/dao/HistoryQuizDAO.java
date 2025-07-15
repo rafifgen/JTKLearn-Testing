@@ -59,8 +59,8 @@ public class HistoryQuizDAO {
 
         // Rule 2: Check if the score meets the passing threshold
         if (history.getNilai() >= passingScore) {
-            System.out.println("DAO: Score for quiz " + quizId + " is " + history.getNilai() + ". Status: PASSED");
-            return TaskStatus.PASSED;
+            System.out.println("DAO: Score for quiz " + quizId + " is " + history.getNilai() + ". Status: FINISHED");
+            return TaskStatus.FINISHED;
         } else {
             System.out.println("DAO: Score for quiz " + quizId + " is " + history.getNilai() + ". Status: NOT_TAKEN");
             return TaskStatus.NOT_TAKEN;

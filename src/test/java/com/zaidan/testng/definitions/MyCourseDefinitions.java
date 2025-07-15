@@ -418,7 +418,7 @@ public class MyCourseDefinitions {
                         "Image file name mismatch. UI: " + fileName + ", DB: " + expectedImage);
             }
 
-            System.out.println("Course image verification PASSED for src: " + uiSrc);
+            System.out.println("Course image verification FINISHED for src: " + uiSrc);
 
         } catch (NoSuchElementException e) {
             Assert.fail("Course image element not found");

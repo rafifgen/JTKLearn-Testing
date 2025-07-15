@@ -7,21 +7,25 @@ Scenario: Verify progress overview page with a student has not finished all mate
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
-    And Student of id 1 has not started yet material of id 9
-    And Student of id 1 has not started yet material of id 10
-    And Student of id 1 has not started yet quiz of id 7
-    And The progress of student with id 1 is set to 0
-    And Student of id 4 has not started yet material of id 9
-    And Student of id 4 has not started yet material of id 10
-    And Student of id 4 has not started yet quiz of id 7
-    And The progress of student with id 4 is set to 0
-    And Student of id 12 has not started yet material of id 9
-    And Student of id 12 has not started yet material of id 10
-    And Student of id 12 has not started yet quiz of id 7
-    And The progress of student with id 12 is set to 0
     When User clicks on Progres button of Komputer Grafik course
+    And Student tasks finish status should be set like these:
+    | student_position | task_position | status      | score |
+    | 1                | 1             | NOT_STARTED | 0     |
+    | 1                | 2             | NOT_STARTED | 0     |
+    | 1                | 3             | NOT_STARTED | 0     |
+    | 2                | 1             | NOT_STARTED | 0     |
+    | 2                | 2             | NOT_STARTED | 0     |
+    | 2                | 3             | NOT_STARTED | 0     |
+    | 3                | 1             | NOT_STARTED | 0     |
+    | 3                | 2             | NOT_STARTED | 0     |
+    | 3                | 3             | NOT_STARTED | 0     |
+    And Student progress of "Komputer Grafik" course should be set like these:
+    | student_position | percentage |
+    | 1                | 0          |
+    | 2                | 0          |
+    | 3                | 0          |
     Then The page title should be "Pemantau Progres Belajar"
-    And The page subtitle should be the same with course with id 4
+    And The page subtitle should be the same with "Komputer Grafik" course
     And The study progress of every student should be displayed
 
 Scenario: Verify progress overview page with some students finished some materials and quizzes
@@ -31,23 +35,28 @@ Scenario: Verify progress overview page with some students finished some materia
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
-    And Student of id 1 has not started yet material of id 9
-    And Student of id 1 finished material of id 10
-    And Student of id 1 has not started yet quiz of id 7
-    And The progress of student with id 1 is set to 33.333
-    And Student of id 4 is still on progress in material of id 9 
-    And Student of id 4 has not started yet material of id 10
-    And Student of id 4 finished quiz of id 7 with score 95
-    And The progress of student with id 4 is set to 33.333
-    And Student of id 12 has not started yet material of id 9
-    And Student of id 12 has not started yet material of id 10
-    And Student of id 12 has not started yet quiz of id 7
-    And The progress of student with id 12 is set to 0
     When User clicks on Progres button of Komputer Grafik course
+    And Student tasks finish status should be set like these:
+    | student_position | task_position | status      | score |
+    | 1                | 1             | NOT_STARTED | 0     |
+    | 1                | 2             | FINISHED    | 0     |
+    | 1                | 3             | NOT_STARTED | 0     |
+    | 2                | 1             | IN_PROGRESS | 0     |
+    | 2                | 2             | NOT_STARTED | 0     |
+    | 2                | 3             | FINISHED    | 95    |
+    | 3                | 1             | NOT_STARTED | 0     |
+    | 3                | 2             | NOT_STARTED | 0     |
+    | 3                | 3             | NOT_STARTED | 0     |
+    And Student progress of "Komputer Grafik" course should be set like these:
+    | student_position | percentage |
+    | 1                | 33.33      |
+    | 2                | 33.33      |
+    | 3                | 0          |
     Then The page title should be "Pemantau Progres Belajar"
-    And The page subtitle should be the same with course with id 4
+    And The page subtitle should be the same with "Komputer Grafik" course
     And The study progress of every student should be displayed
 
+@wip
 Scenario: Verify progress overview page with all students finished all materials and quizzes
     TC-FR12-10
     Given User has opened the browser
@@ -55,21 +64,25 @@ Scenario: Verify progress overview page with all students finished all materials
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
-    And Student of id 1 finished material of id 9
-    And Student of id 1 finished material of id 10
-    And Student of id 1 finished quiz of id 7 with score 90
-    And The progress of student with id 1 is set to 100
-    And Student of id 4 finished material of id 9
-    And Student of id 4 finished material of id 10
-    And Student of id 4 finished quiz of id 7 with score 95
-    And The progress of student with id 4 is set to 100
-    And Student of id 12 finished material of id 9
-    And Student of id 12 finished material of id 10
-    And Student of id 12 finished quiz of id 7 with score 85
-    And The progress of student with id 12 is set to 100
     When User clicks on Progres button of Komputer Grafik course
+    And Student tasks finish status should be set like these:
+    | student_position | task_position | status      | score |
+    | 1                | 1             | FINISHED    | 0     |
+    | 1                | 2             | FINISHED    | 0     |
+    | 1                | 3             | FINISHED    | 90    |
+    | 2                | 1             | FINISHED    | 0     |
+    | 2                | 2             | FINISHED    | 0     |
+    | 2                | 3             | FINISHED    | 95    |
+    | 3                | 1             | FINISHED    | 0     |
+    | 3                | 2             | FINISHED    | 0     |
+    | 3                | 3             | FINISHED    | 85    |
+    And Student progress of "Komputer Grafik" course should be set like these:
+    | student_position | percentage |
+    | 1                | 100        |
+    | 2                | 100        |
+    | 3                | 100        |
     Then The page title should be "Pemantau Progres Belajar"
-    And The page subtitle should be the same with course with id 4
+    And The page subtitle should be the same with "Komputer Grafik" course
     And The study progress of every student should be displayed
 
 Scenario: Verify progress overview page with three different student states;

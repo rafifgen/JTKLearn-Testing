@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.zaidan.testng.actions.HomePageActions;
@@ -20,12 +22,17 @@ import com.zaidan.testng.enums.TaskStatus;
 import com.zaidan.testng.model.StudentProgressUI;
 import com.zaidan.testng.utils.HelperClass;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class ProgressOverview {
+public class ProgressOverviewDefinitions {
     HomePageActions homePageActions = new HomePageActions();
+    List<Integer> discoveredMaterialIds = new ArrayList<Integer>();
+    List<Integer> discoveredQuizIds = new ArrayList<Integer>();
+    List<Integer> discoveredStudentIds = new ArrayList<Integer>();
+    List<String> discoveredTaskHeaders = new ArrayList<String>();
     SummaryCourseActions summaryCourseActions = new SummaryCourseActions();
     SummaryProgressActions summaryProgressActions = new SummaryProgressActions();
     SummaryQuizActions summaryQuizActions = new SummaryQuizActions();
@@ -43,10 +50,121 @@ public class ProgressOverview {
     }
 
     @And("User clicks on Progres button of Komputer Grafik course")
-    public void userClicksOnProgresBtn() {
+    public void userClicksOnProgresBtn() throws SQLException {
         summaryCourseActions.clickOnKomputerGrafikProgresBtn();
+        setupAndDiscoverData();
     }
 
+    public void setupAndDiscoverData() throws SQLException {
+
+        // 2. Scrape the UI
+        List<StudentProgressUI> uiProgressList = summaryProgressActions.getAllStudentProgressFromUI();
+        Assert.assertFalse(uiProgressList.isEmpty(), "Could not find any students on the overview page.");
+
+        List<WebElement> headerElements = HelperClass.getDriver().findElements(By.xpath("//table[contains(@class, 'custom-user-table')]/thead/tr/th"));
+        // We start at index 3 to skip the "No", "Nama Pelajar", and "Progres" columns
+        for (int i = 3; i < headerElements.size(); i++) {
+            this.discoveredTaskHeaders.add(headerElements.get(i).getText());
+        }
+
+        // 3. Discover and Store Student IDs
+        for (StudentProgressUI student : uiProgressList) {
+            int id = pelajarDAO.getIdByName(student.getStudentName());
+            if (id != -1) {
+                discoveredStudentIds.add(id);
+            }
+        }
+
+        // 4. Discover and Store Task IDs from the first student's data
+        if (!uiProgressList.isEmpty()) {
+            StudentProgressUI firstStudent = uiProgressList.get(0);
+            for (String taskName : firstStudent.getTaskStatuses().keySet()) {
+                if (taskName.startsWith("M")) {
+                    int id = Integer.parseInt(taskName.substring(1));
+                    discoveredMaterialIds.add(id);
+                    // taskNameToIdMap.put(taskName, id);
+                } else if (taskName.startsWith("Q")) {
+                    int id = Integer.parseInt(taskName.substring(1));
+                    discoveredQuizIds.add(id);
+                    // taskNameToIdMap.put(taskName, id);
+                }
+            }
+        }
+        System.out.println("Discovered Student IDs: " + discoveredStudentIds);
+        System.out.println("Discovered Material IDs: " + discoveredMaterialIds);
+        System.out.println("Discovered Quiz IDs: " + discoveredQuizIds);
+    }
+
+    @And("Student tasks finish status should be set like these:")
+    public void setStudentTasksFinishStatus(DataTable dataTable) throws SQLException {
+        List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
+
+        for (Map<String, String> row : rows) {
+            // --- Get data from the Gherkin table row ---
+            int studentPos = Integer.parseInt(row.get("student_position")) - 1; // -1 for 0-based index
+            int taskPos = Integer.parseInt(row.get("task_position")) - 1;
+            String status = row.get("status");
+            float score = Float.parseFloat(row.get("score"));
+
+            // --- Get the dynamically discovered IDs and names from instance variables ---
+            int studentId = this.discoveredStudentIds.get(studentPos);
+            String taskName = this.discoveredTaskHeaders.get(taskPos); // e.g., "M9" or "Q7"
+            
+            System.out.println("Setting status for student " + studentId + " on task " + taskName + " to " + status);
+
+            // --- Logic to call the correct DAO method based on task type and status ---
+            if (taskName.startsWith("M")) {
+                // It's a Material
+                int materialId = Integer.parseInt(taskName.substring(1));
+                
+                switch (status) {
+                    case "FINISHED":
+                        // Assuming a default duration of 5 minutes to be considered "finished"
+                        historyMateriDAO.setFinishTimeAfterDuration(studentId, materialId, 5);
+                        break;
+                    case "IN_PROGRESS":
+                        historyMateriDAO.setMaterialInProgress(studentId, materialId);
+                        break;
+                    case "NOT_STARTED":
+                        historyMateriDAO.resetMateriProgressByStudentAndMateriId(studentId, materialId);
+                        break;
+                }
+            } else if (taskName.startsWith("Q")) {
+                // It's a Quiz
+                int quizId = Integer.parseInt(taskName.substring(1));
+
+                if ("FINISHED".equals(status)) {
+                    // Uses the score from the data table
+                    historyQuizDAO.setQuizFinished(studentId, quizId, score);
+                } else { // "NOT_TAKEN" status
+                    historyQuizDAO.resetQuizProgressByStudentAndQuizId(studentId, quizId);
+                }
+            }
+        }
+    }
+
+    @And("Student progress of {string} course should be set like these:")
+    public void setStudentProgressForCourse(String courseName, DataTable dataTable) throws SQLException {
+        // First, find the ID of the course from its name
+        int courseId = courseDAO.getCourseByName(courseName).getIdCourse();
+        Assert.assertNotEquals(courseId, -1, "Could not find course with name: " + courseName);
+
+        List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
+
+        for (Map<String, String> row : rows) {
+            int studentPos = Integer.parseInt(row.get("student_position")) - 1; // -1 for 0-based index
+            float percentage = Float.parseFloat(row.get("percentage"));
+
+            // Get the student ID that was discovered in the @Before hook
+            int studentId = this.discoveredStudentIds.get(studentPos);
+            
+            System.out.println("Setting progress for student " + studentId + " in course " + courseId + " to " + percentage + "%");
+            
+            // Call the DAO to set the overall course progress
+            courseDAO.setCourseProgressByStudentAndCourseId(studentId, courseId, percentage);
+        }
+        HelperClass.getDriver().navigate().refresh();
+    }
 
     @Then("The page title should be {string}")
     public void verifyPageTitle(String expectedPageSubtitle) {
@@ -54,12 +172,13 @@ public class ProgressOverview {
         Assert.assertEquals(actualPageSubtitle, expectedPageSubtitle);
     }
 
-    @And("The page subtitle should be the same with course with id {int}")
-    public void verifyPageTitle(int idCourse) throws SQLException {
-        String expectedPageTitle = courseDAO.getCourseById(idCourse).getNamaCourse();
+    @And("The page subtitle should be the same with {string} course")
+    public void verifyPageSubtitle(String courseName) throws SQLException {
+        String expectedPageTitle = courseDAO.getCourseByName(courseName).getNamaCourse();
         String actualPageTitle = summaryProgressActions.getPageSubtitle().getText();
         Assert.assertEquals(actualPageTitle, expectedPageTitle);
     }
+
 
     @And("Student of id {int} has not started yet material of id {int}")
     public void studentHasNotStartedMaterial(int idPelajar, int idMateri) throws SQLException {
@@ -73,44 +192,45 @@ public class ProgressOverview {
 
     @And("The study progress of every student should be displayed")
     public void verifyDisplayedStudentProgressMatchesDatabase() throws SQLException {
-        // Step 1: Get all the data from the UI table
+        // Step 1: Scrape all visible data from the UI table
         List<StudentProgressUI> uiProgressList = summaryProgressActions.getAllStudentProgressFromUI();
         Assert.assertFalse(uiProgressList.isEmpty(), "No student progress data was found on the page.");
+        int courseId = courseDAO.getCourseByName("Komputer Grafik").getIdCourse();
 
         // Step 2: Loop through each student found on the UI
         for (StudentProgressUI uiProgress : uiProgressList) {
             String studentName = uiProgress.getStudentName();
             System.out.println("--- Verifying data for student: " + studentName + " ---");
 
-            // Get the student's ID from the database to use for DB checks
             int studentId = pelajarDAO.getIdByName(studentName);
             Assert.assertNotEquals(studentId, -1, "Could not find ID for student: " + studentName);
 
-            // --- Verify Overall Progress Percentage ---
-            float dbProgress = courseDAO.getCourseProgressByStudentAndCourseId(studentId, 4); // Assuming course ID 4
+            float dbProgress = courseDAO.getCourseProgressByStudentAndCourseId(studentId, courseId); // Assuming course ID 4
             Assert.assertEquals(uiProgress.getProgressPercentage(), dbProgress, 0.1,
                 "Overall progress mismatch for student: " + studentName);
 
             // Step 3: Loop through each task found for that student
             for (Map.Entry<String, TaskStatus> uiTaskEntry : uiProgress.getTaskStatuses().entrySet()) {
-                String taskName = uiTaskEntry.getKey(); // e.g., "M10", "M9", or "Q7"
+                String taskName = uiTaskEntry.getKey(); // This will be "M10", "M9", "Q7", etc.
                 TaskStatus uiStatus = uiTaskEntry.getValue();
-                TaskStatus dbStatus = null;
+                TaskStatus dbStatus;
 
-                // Step 4: Use the task name to decide which DB check to run
-                switch (taskName) {
-                    case "M10":
-                        dbStatus = historyMateriDAO.getDBMaterialStatus(studentId, 10, 2); // ID 10, requires 2 mins
-                        break;
-                    case "M9":
-                        dbStatus = historyMateriDAO.getDBMaterialStatus(studentId, 9, 5); // ID 9, requires 5 mins
-                        break;
-                    case "Q7":
-                        dbStatus = historyQuizDAO.getDBQuizStatus(studentId, 7, 80); // ID 7, requires 80 to pass
-                        break;
-                    default:
-                        System.out.println("WARNING: Unknown task header '" + taskName + "' found on UI. Skipping verification.");
-                        continue; // Skip to the next task
+                // Step 4: Check if the task is a Material or a Quiz and parse its ID
+                if (taskName.startsWith("M")) {
+                    // For "M9", this gets "9" and converts it to an integer
+                    int materialId = Integer.parseInt(taskName.substring(1));
+                    
+                    // You can add logic here if different materials have different required times
+                    int requiredDuration = 5; // Defaulting to 5 minutes
+                    dbStatus = historyMateriDAO.getDBMaterialStatus(studentId, materialId, requiredDuration);
+                } else if (taskName.startsWith("Q")) {
+                    // For "Q7", this gets "7" and converts it to an integer
+                    int quizId = Integer.parseInt(taskName.substring(1));
+                    int passingScore = 80; // Default passing score
+                    dbStatus = historyQuizDAO.getDBQuizStatus(studentId, quizId, passingScore);
+                } else {
+                    System.out.println("WARNING: Unknown task header '" + taskName + "' found on UI. Skipping.");
+                    continue; // Skip to the next task
                 }
 
                 // Step 5: Assert that the UI status matches the DB status for that specific task
@@ -140,7 +260,7 @@ public class ProgressOverview {
      */
     @And("Student of id {int} finished quiz of id {int} with score {float}")
     public void studentFinishedQuiz(int studentId, int quizId, float passingScore) {
-        // Set a high score to ensure it's considered "passed"
+        // Set a high score to ensure it's considered "FINISHED"
         historyQuizDAO.setQuizFinished(studentId, quizId, passingScore);
     }
 
