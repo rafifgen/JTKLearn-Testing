@@ -1,4 +1,3 @@
-com\zaidan\testng\definitions\AccessMaterials.class
 com\zaidan\testng\definitions\MyCourseDefinitions.class
 com\zaidan\testng\definitions\QuizHistoryDefinitions.class
 com\zaidan\testng\runner\CucumberRunnerTests.class

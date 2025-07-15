@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="19.136" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="189.085" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="24"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin"/>
-    <property name="sun.java.command" value="C:\Users\MSI\AppData\Local\Temp\surefire8493609649979075112\surefirebooter-20250714104414443_3.jar C:\Users\MSI\AppData\Local\Temp\surefire8493609649979075112 2025-07-14T10-44-14_309-jvmRun1 surefire-20250714104414443_1tmp surefire_0-20250714104414443_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\MSI\AppData\Local\Temp\surefire53129539388569469\surefirebooter-20250715165226403_3.jar C:\Users\MSI\AppData\Local\Temp\surefire53129539388569469 2025-07-15T16-52-26_280-jvmRun1 surefire-20250715165226403_1tmp surefire_0-20250715165226403_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\target\test-classes;C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\target\classes;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-java\7.22.2\cucumber-java-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-core\7.22.2\cucumber-core-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-gherkin\7.22.2\cucumber-gherkin-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.22.2\cucumber-gherkin-messages-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\gherkin\32.1.1\gherkin-32.1.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\MSI\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\query\13.5.0\query-13.5.0.jar;C:\Users\MSI\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\datatable\7.22.2\datatable-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-plugin\7.22.2\cucumber-plugin-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\docstring\7.22.2\docstring-7.22.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\html-formatter\21.10.1\html-formatter-21.10.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\MSI\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\MSI\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\MSI\.m2\repository\io\cucumber\cucumber-testng\7.22.2\cucumber-testng-7.22.2.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-java\4.32.0\selenium-java-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-api\4.32.0\selenium-api-4.32.0.jar;C:\Users\MSI\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.32.0\selenium-chrome-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.32.0\selenium-chromium-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-json\4.32.0\selenium-json-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.32.0\selenium-manager-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v134\4.32.0\selenium-devtools-v134-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v135\4.32.0\selenium-devtools-v135-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.32.0\selenium-devtools-v136-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.32.0\selenium-edge-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.32.0\selenium-firefox-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-http\4.32.0\selenium-http-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.32.0\selenium-ie-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.32.0\selenium-remote-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-api\1.49.0\opentelemetry-api-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-context\1.49.0\opentelemetry-context-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.49.0\opentelemetry-exporter-logging-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.49.0\opentelemetry-sdk-common-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.49.0\opentelemetry-sdk-extension-autoconfigure-spi-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.49.0\opentelemetry-sdk-extension-autoconfigure-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.49.0\opentelemetry-sdk-trace-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.49.0\opentelemetry-sdk-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.49.0\opentelemetry-sdk-metrics-1.49.0.jar;C:\Users\MSI\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.49.0\opentelemetry-sdk-logs-1.49.0.jar;C:\Users\MSI\.m2\repository\net\bytebuddy\byte-buddy\1.17.5\byte-buddy-1.17.5.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-os\4.32.0\selenium-os-4.32.0.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.32.0\selenium-safari-driver-4.32.0.jar;C:\Users\MSI\.m2\repository\org\seleniumhq\selenium\selenium-support\4.32.0\selenium-support-4.32.0.jar;C:\Users\MSI\.m2\repository\io\github\bonigarcia\webdrivermanager\6.1.0\webdrivermanager-6.1.0.jar;C:\Users\MSI\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\MSI\.m2\repository\com\google\code\gson\gson\2.13.1\gson-2.13.1.jar;C:\Users\MSI\.m2\repository\com\google\errorprone\error_prone_annotations\2.38.0\error_prone_annotations-2.38.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java\3.5.0\docker-java-3.5.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java-core\3.5.0\docker-java-core-3.5.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java-api\3.5.0\docker-java-api-3.5.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.5.0\docker-java-transport-httpclient5-3.5.0.jar;C:\Users\MSI\.m2\repository\com\github\docker-java\docker-java-transport\3.5.0\docker-java-transport-3.5.0.jar;C:\Users\MSI\.m2\repository\net\java\dev\jna\jna\5.17.0\jna-5.17.0.jar;C:\Users\MSI\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-compress\1.27.1\commons-compress-1.27.1.jar;C:\Users\MSI\.m2\repository\commons-codec\commons-codec\1.18.0\commons-codec-1.18.0.jar;C:\Users\MSI\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.4.4\httpclient5-5.4.4.jar;C:\Users\MSI\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.3.4\httpcore5-5.3.4.jar;C:\Users\MSI\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.3.4\httpcore5-h2-5.3.4.jar;C:\Users\MSI\.m2\repository\net\java\dev\jna\jna-platform\5.13.0\jna-platform-5.13.0.jar;C:\Users\MSI\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\MSI\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\MSI\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\MSI\.m2\repository\commons-io\commons-io\2.19.0\commons-io-2.19.0.jar;C:\Users\MSI\.m2\repository\net\masterthought\cucumber-reporting\5.8.1\cucumber-reporting-5.8.1.jar;C:\Users\MSI\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.0\jackson-databind-2.19.0.jar;C:\Users\MSI\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.0\jackson-annotations-2.19.0.jar;C:\Users\MSI\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.0\jackson-core-2.19.0.jar;C:\Users\MSI\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.0\jackson-datatype-jsr310-2.19.0.jar;C:\Users\MSI\.m2\repository\org\apache\velocity\velocity-engine-core\2.3\velocity-engine-core-2.3.jar;C:\Users\MSI\.m2\repository\joda-time\joda-time\2.12.7\joda-time-2.12.7.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-configuration2\2.10.1\commons-configuration2-2.10.1.jar;C:\Users\MSI\.m2\repository\org\apache\commons\commons-text\1.11.0\commons-text-1.11.0.jar;C:\Users\MSI\.m2\repository\org\jsoup\jsoup\1.17.2\jsoup-1.17.2.jar;C:\Users\MSI\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20220608.1\owasp-java-html-sanitizer-20220608.1.jar;C:\Users\MSI\.m2\repository\com\google\guava\guava\33.1.0-jre\guava-33.1.0-jre.jar;C:\Users\MSI\.m2\repository\com\google\guava\failureaccess\1.0.2\failureaccess-1.0.2.jar;C:\Users\MSI\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\MSI\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\MSI\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\MSI\.m2\repository\org\slf4j\jcl-over-slf4j\2.0.17\jcl-over-slf4j-2.0.17.jar;C:\Users\MSI\.m2\repository\org\postgresql\postgresql\42.7.3\postgresql-42.7.3.jar;C:\Users\MSI\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\MSI\.m2\repository\com\jcraft\jsch\0.1.55\jsch-0.1.55.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\MSI\AppData\Local\Temp\surefire8493609649979075112\surefirebooter-20250714104414443_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\MSI\AppData\Local\Temp\surefire53129539388569469\surefirebooter-20250715165226403_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="24.0.1+9-30"/>
@@ -62,7 +62,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="68.0"/>
   </properties>
-  <testcase name="runScenario[&quot;Verify dashboard page for a student who hasn&apos;t registered for any courses&quot;, &quot;FR03-View Dashboard&quot;](1)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="9.41">
+  <testcase name="runScenario[&quot;Verify progress overview page with a student has not finished all materials and quizzes yet&quot;, &quot;FR-12 Progress Overview&quot;](1)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="34.589">
     <system-out><![CDATA[--- Starting Test Suite Setup ---
 Loading configuration for environmet: fix
 Connecting to SSH Host cloudias79.com...
@@ -70,74 +70,420 @@ SSH Connection successful.
 SSH Tunnel started on port: 5433
 --- Test Suite Setup Complete ---
 
-@Dashboard @UnjoinedCourse
-Scenario: Verify dashboard page for a student who hasn't registered for any courses &amp#27;[90m# src/test/resources/features/Dashboard.feature:9&amp#27;[0m
+@FR12
+Scenario: Verify progress overview page with a student has not finished all materials and quizzes yet &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:4&amp#27;[0m
 Navigating to URL: https://polban-space.cloudias79.com/jtk-learn/
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                 &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe user is on the application login page&amp#27;[0m                                     &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar3@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar3"&amp#27;[0m          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                               &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
-Welcome message verified
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser should see the welcome message for email &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar3@example.com"&amp#27;[0m         &amp#27;[90m# com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeTheWelcomeMessage(java.lang.String)&amp#27;[0m
-Page title verified: Kursus
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should see the page title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kursus"&amp#27;[0m                                       &amp#27;[90m# com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeThePageTitle(java.lang.String)&amp#27;[0m
-Verifying attributes for course: 'PABPMetagama'
-PengajarDAO: Found student name: Budi Pengajar for ID: 1 (and cached)
-Verifying attributes for course: 'Contoh Kursus'
-PengajarDAO: Found pengajar name in cache for ID: 1
-Verifying attributes for course: 'PABPMetagama2'
-PengajarDAO: Found pengajar name in cache for ID: 1
-Verifying attributes for course: 'FR09'
-PengajarDAO: Found pengajar name in cache for ID: 1
-Verifying attributes for course: 'Pemrograman Mobile'
-PengajarDAO: Found pengajar name in cache for ID: 1
-Verifying attributes for course: 'Komputer Grafik'
-PengajarDAO: Found pengajar name in cache for ID: 1
-Verifying attributes for course: 'Komdatjar'
-PengajarDAO: Found pengajar name in cache for ID: 1
-Verifying attributes for course: 'Memasak'
-PengajarDAO: Found student name: Rina Pengajar for ID: 2 (and cached)
-Verifying attributes for course: 'Pemrograman Web'
-PengajarDAO: Found pengajar name in cache for ID: 1
-All courses displayed on UI are successfully matched with database records.
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should see all courses matching with the database records&amp#27;[0m                &amp#27;[90m# com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeAllCoursesMatchingWithTheDatabaseRecords()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                   &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe user is on the application login page&amp#27;[0m                                                       &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1"&amp#27;[0m                           &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                 &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Pemantauan&amp#27;[0m                                                                       &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgressPage()&amp#27;[0m
+Finding button 'Progres' for course 'Komputer Grafik'
+Discovered Student IDs: [1, 12, 35, 4]
+Discovered Material IDs: [9, 10]
+Discovered Quiz IDs: [7]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"Progres"&amp#27;[0m&amp#27;[32m button of &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course&amp#27;[0m                                    &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgresBtn(java.lang.String,java.lang.String)&amp#27;[0m
+Setting status for student 1 on task M10 to NOT_STARTED
+DAO: Successfully deleted history for student 1 and material 10
+Setting status for student 1 on task M9 to NOT_STARTED
+DAO: Successfully deleted history for student 1 and material 9
+Setting status for student 1 on task Q7 to NOT_STARTED
+DAO: Successfully deleted history for student 1 and quiz 7
+Setting status for student 12 on task M10 to NOT_STARTED
+DAO: Successfully deleted history for student 12 and material 10
+Setting status for student 12 on task M9 to NOT_STARTED
+DAO: Successfully deleted history for student 12 and material 9
+Setting status for student 12 on task Q7 to NOT_STARTED
+DAO: Successfully deleted history for student 12 and quiz 7
+Setting status for student 35 on task M10 to NOT_STARTED
+DAO: Successfully deleted history for student 35 and material 10
+Setting status for student 35 on task M9 to NOT_STARTED
+DAO: Successfully deleted history for student 35 and material 9
+Setting status for student 35 on task Q7 to NOT_STARTED
+DAO: Successfully deleted history for student 35 and quiz 7
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent tasks finish status should be set like these:&amp#27;[0m                                           &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.setStudentTasksFinishStatus(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | student_position | task_position | status      | score |
+    | 1                | 1             | NOT_STARTED | 0     |
+    | 1                | 2             | NOT_STARTED | 0     |
+    | 1                | 3             | NOT_STARTED | 0     |
+    | 2                | 1             | NOT_STARTED | 0     |
+    | 2                | 2             | NOT_STARTED | 0     |
+    | 2                | 3             | NOT_STARTED | 0     |
+    | 3                | 1             | NOT_STARTED | 0     |
+    | 3                | 2             | NOT_STARTED | 0     |
+    | 3                | 3             | NOT_STARTED | 0     |
+Setting progress for student 1 in course 4 to 0.0%
+DAO: Setting progress for student 1 in course 4 to 0.0%
+Setting progress for student 12 in course 4 to 0.0%
+DAO: Setting progress for student 12 in course 4 to 0.0%
+Setting progress for student 35 in course 4 to 0.0%
+DAO: Setting progress for student 35 in course 4 to 0.0%
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent progress of &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course should be set like these:&amp#27;[0m                          &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.setStudentProgressForCourse(java.lang.String,io.cucumber.datatable.DataTable)&amp#27;[0m
+    | student_position | percentage |
+    | 1                | 0          |
+    | 2                | 0          |
+    | 3                | 0          |
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe page title should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pemantau Progres Belajar"&amp#27;[0m                                            &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyPageTitle(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe page subtitle should be the same with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course&amp#27;[0m                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyPageSubtitle(java.lang.String)&amp#27;[0m
+--- Verifying data for student: Andi Pelajar ---
+CourseDAO: Getting progress for student ID: 1, course ID: 4
+CourseDAO: Progress found: 0.0%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+--- Verifying data for student: John Doe ---
+CourseDAO: Getting progress for student ID: 12, course ID: 4
+CourseDAO: Progress found: 0.0%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+--- Verifying data for student: pelajarQuiz1 ---
+CourseDAO: Getting progress for student ID: 35, course ID: 4
+CourseDAO: Progress found: 0.0%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+--- Verifying data for student: Rafif Pelajar 3 ---
+CourseDAO: Getting progress for student ID: 4, course ID: 4
+CourseDAO: Progress found: 100.0%
+DAO: Score for quiz 7 is 90.0. Status: FINISHED
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe study progress of every student should be displayed&amp#27;[0m                                         &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase()&amp#27;[0m
 ]]></system-out>
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
-Jul 14, 2025 10:44:18 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jul 15, 2025 4:52:30 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario[&quot;Verify dashboard page for a student who registered in courses from different lecturer&quot;, &quot;FR03-View Dashboard&quot;](2)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="7.362">
+  <testcase name="runScenario[&quot;Verify progress overview page with some students finished some materials and quizzes&quot;, &quot;FR-12 Progress Overview&quot;](2)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="34.831">
     <system-out><![CDATA[
-@Dashboard @JoinedCourse
-Scenario: Verify dashboard page for a student who registered in courses from different lecturer               &amp#27;[90m# src/test/resources/features/Dashboard.feature:17&amp#27;[0m
+@FR12
+Scenario: Verify progress overview page with some students finished some materials and quizzes &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:32&amp#27;[0m
 Navigating to URL: https://polban-space.cloudias79.com/jtk-learn/
-  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                                           &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe user is on the application login page&amp#27;[0m                                                               &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page()&amp#27;[0m
-  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1"&amp#27;[0m                                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                                         &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
-Welcome message verified
-  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser should see the welcome message for email &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m                                   &amp#27;[90m# com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeTheWelcomeMessage(java.lang.String)&amp#27;[0m
-Page title verified: Kursus
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should see the page title &amp#27;[0m&amp#27;[32m&amp#27;[1m"Kursus"&amp#27;[0m                                                                 &amp#27;[90m# com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeThePageTitle(java.lang.String)&amp#27;[0m
-Verifying attributes for course: 'Contoh Kursus'
-PengajarDAO: Found pengajar name in cache for ID: 1
-Verifying attributes for course: 'FR09'
-PengajarDAO: Found pengajar name in cache for ID: 1
-Verifying attributes for course: 'Komputer Grafik'
-PengajarDAO: Found pengajar name in cache for ID: 1
-Verifying attributes for course: 'Komdatjar'
-PengajarDAO: Found pengajar name in cache for ID: 1
-Verifying attributes for course: 'Memasak'
-PengajarDAO: Found pengajar name in cache for ID: 2
-Verifying attributes for course: 'Pemrograman Web'
-PengajarDAO: Found pengajar name in cache for ID: 1
-All courses displayed on UI are successfully matched with database records.
-  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser should see the joined courses matching with the database records with email &amp#27;[0m&amp#27;[32m&amp#27;[1m"pelajar1@example.com"&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.DashboardDefinitions.userShouldSeeJoinedCourses(java.lang.String)&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                            &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe user is on the application login page&amp#27;[0m                                                &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1"&amp#27;[0m                    &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Pemantauan&amp#27;[0m                                                                &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgressPage()&amp#27;[0m
+Finding button 'Progres' for course 'Komputer Grafik'
+Discovered Student IDs: [1, 12, 35, 4]
+Discovered Material IDs: [9, 10]
+Discovered Quiz IDs: [7]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"Progres"&amp#27;[0m&amp#27;[32m button of &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course&amp#27;[0m                             &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgresBtn(java.lang.String,java.lang.String)&amp#27;[0m
+Setting status for student 1 on task M10 to NOT_STARTED
+DAO: Successfully deleted history for student 1 and material 10
+Setting status for student 1 on task M9 to FINISHED
+DAO: Setting material 9 to FINISHED for student 1
+HistoryMateriDAO: Delete successful
+Setting status for student 1 on task Q7 to NOT_STARTED
+DAO: Successfully deleted history for student 1 and quiz 7
+Setting status for student 12 on task M10 to IN_PROGRESS
+DAO: Set material 10 to IN_PROGRESS for student 12
+Setting status for student 12 on task M9 to NOT_STARTED
+DAO: Successfully deleted history for student 12 and material 9
+Setting status for student 12 on task Q7 to FINISHED
+DAO: Set quiz 7 to FINISHED for student 12 with score 95.0
+Setting status for student 35 on task M10 to NOT_STARTED
+DAO: Successfully deleted history for student 35 and material 10
+Setting status for student 35 on task M9 to NOT_STARTED
+DAO: Successfully deleted history for student 35 and material 9
+Setting status for student 35 on task Q7 to NOT_STARTED
+DAO: Successfully deleted history for student 35 and quiz 7
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent tasks finish status should be set like these:&amp#27;[0m                                    &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.setStudentTasksFinishStatus(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | student_position | task_position | status      | score |
+    | 1                | 1             | NOT_STARTED | 0     |
+    | 1                | 2             | FINISHED    | 0     |
+    | 1                | 3             | NOT_STARTED | 0     |
+    | 2                | 1             | IN_PROGRESS | 0     |
+    | 2                | 2             | NOT_STARTED | 0     |
+    | 2                | 3             | FINISHED    | 95    |
+    | 3                | 1             | NOT_STARTED | 0     |
+    | 3                | 2             | NOT_STARTED | 0     |
+    | 3                | 3             | NOT_STARTED | 0     |
+Setting progress for student 1 in course 4 to 33.33%
+DAO: Setting progress for student 1 in course 4 to 33.33%
+Setting progress for student 12 in course 4 to 33.33%
+DAO: Setting progress for student 12 in course 4 to 33.33%
+Setting progress for student 35 in course 4 to 0.0%
+DAO: Setting progress for student 35 in course 4 to 0.0%
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent progress of &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course should be set like these:&amp#27;[0m                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.setStudentProgressForCourse(java.lang.String,io.cucumber.datatable.DataTable)&amp#27;[0m
+    | student_position | percentage |
+    | 1                | 33.33      |
+    | 2                | 33.33      |
+    | 3                | 0          |
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe page title should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pemantau Progres Belajar"&amp#27;[0m                                     &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyPageTitle(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe page subtitle should be the same with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course&amp#27;[0m                       &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyPageSubtitle(java.lang.String)&amp#27;[0m
+--- Verifying data for student: Andi Pelajar ---
+CourseDAO: Getting progress for student ID: 1, course ID: 4
+CourseDAO: Progress found: 33.33%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+--- Verifying data for student: John Doe ---
+CourseDAO: Getting progress for student ID: 12, course ID: 4
+CourseDAO: Progress found: 33.33%
+DAO: Score for quiz 7 is 95.0. Status: FINISHED
+--- Verifying data for student: pelajarQuiz1 ---
+CourseDAO: Getting progress for student ID: 35, course ID: 4
+CourseDAO: Progress found: 0.0%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+--- Verifying data for student: Rafif Pelajar 3 ---
+CourseDAO: Getting progress for student ID: 4, course ID: 4
+CourseDAO: Progress found: 100.0%
+DAO: Score for quiz 7 is 90.0. Status: FINISHED
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe study progress of every student should be displayed&amp#27;[0m                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase()&amp#27;[0m
 ]]></system-out>
-    <system-err><![CDATA[Jul 14, 2025 10:44:27 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+    <system-err><![CDATA[Jul 15, 2025 4:53:04 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify progress overview page with all students finished all materials and quizzes&quot;, &quot;FR-12 Progress Overview&quot;](3)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="40.37">
+    <system-out><![CDATA[
+@FR12
+Scenario: Verify progress overview page with all students finished all materials and quizzes &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:60&amp#27;[0m
+Navigating to URL: https://polban-space.cloudias79.com/jtk-learn/
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe user is on the application login page&amp#27;[0m                                              &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1"&amp#27;[0m                  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Pemantauan&amp#27;[0m                                                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgressPage()&amp#27;[0m
+Finding button 'Progres' for course 'Komputer Grafik'
+Discovered Student IDs: [1, 12, 35, 4]
+Discovered Material IDs: [9, 10]
+Discovered Quiz IDs: [7]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"Progres"&amp#27;[0m&amp#27;[32m button of &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course&amp#27;[0m                           &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgresBtn(java.lang.String,java.lang.String)&amp#27;[0m
+Setting status for student 1 on task M10 to FINISHED
+DAO: Setting material 10 to FINISHED for student 1
+HistoryMateriDAO: Delete successful
+Setting status for student 1 on task M9 to FINISHED
+DAO: Setting material 9 to FINISHED for student 1
+HistoryMateriDAO: Delete successful
+Setting status for student 1 on task Q7 to FINISHED
+DAO: Set quiz 7 to FINISHED for student 1 with score 90.0
+Setting status for student 12 on task M10 to FINISHED
+DAO: Setting material 10 to FINISHED for student 12
+HistoryMateriDAO: Delete successful
+Setting status for student 12 on task M9 to FINISHED
+DAO: Setting material 9 to FINISHED for student 12
+HistoryMateriDAO: Delete successful
+Setting status for student 12 on task Q7 to FINISHED
+DAO: Set quiz 7 to FINISHED for student 12 with score 95.0
+Setting status for student 35 on task M10 to FINISHED
+DAO: Setting material 10 to FINISHED for student 35
+HistoryMateriDAO: Delete successful
+Setting status for student 35 on task M9 to FINISHED
+DAO: Setting material 9 to FINISHED for student 35
+HistoryMateriDAO: Delete successful
+Setting status for student 35 on task Q7 to FINISHED
+DAO: Set quiz 7 to FINISHED for student 35 with score 85.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent tasks finish status should be set like these:&amp#27;[0m                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.setStudentTasksFinishStatus(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | student_position | task_position | status   | score |
+    | 1                | 1             | FINISHED | 0     |
+    | 1                | 2             | FINISHED | 0     |
+    | 1                | 3             | FINISHED | 90    |
+    | 2                | 1             | FINISHED | 0     |
+    | 2                | 2             | FINISHED | 0     |
+    | 2                | 3             | FINISHED | 95    |
+    | 3                | 1             | FINISHED | 0     |
+    | 3                | 2             | FINISHED | 0     |
+    | 3                | 3             | FINISHED | 85    |
+Setting progress for student 1 in course 4 to 100.0%
+DAO: Setting progress for student 1 in course 4 to 100.0%
+Setting progress for student 12 in course 4 to 100.0%
+DAO: Setting progress for student 12 in course 4 to 100.0%
+Setting progress for student 35 in course 4 to 100.0%
+DAO: Setting progress for student 35 in course 4 to 100.0%
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent progress of &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course should be set like these:&amp#27;[0m                 &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.setStudentProgressForCourse(java.lang.String,io.cucumber.datatable.DataTable)&amp#27;[0m
+    | student_position | percentage |
+    | 1                | 100        |
+    | 2                | 100        |
+    | 3                | 100        |
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe page title should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pemantau Progres Belajar"&amp#27;[0m                                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyPageTitle(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe page subtitle should be the same with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course&amp#27;[0m                     &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyPageSubtitle(java.lang.String)&amp#27;[0m
+--- Verifying data for student: Andi Pelajar ---
+CourseDAO: Getting progress for student ID: 1, course ID: 4
+CourseDAO: Progress found: 100.0%
+DAO: Score for quiz 7 is 90.0. Status: FINISHED
+--- Verifying data for student: John Doe ---
+CourseDAO: Getting progress for student ID: 12, course ID: 4
+CourseDAO: Progress found: 100.0%
+DAO: Score for quiz 7 is 95.0. Status: FINISHED
+--- Verifying data for student: pelajarQuiz1 ---
+CourseDAO: Getting progress for student ID: 35, course ID: 4
+CourseDAO: Progress found: 100.0%
+DAO: Score for quiz 7 is 85.0. Status: FINISHED
+--- Verifying data for student: Rafif Pelajar 3 ---
+CourseDAO: Getting progress for student ID: 4, course ID: 4
+CourseDAO: Progress found: 100.0%
+DAO: Score for quiz 7 is 90.0. Status: FINISHED
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe study progress of every student should be displayed&amp#27;[0m                                &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 15, 2025 4:53:39 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify progress overview page with three different student states;&quot;, &quot;FR-12 Progress Overview&quot;](4)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="37.282">
+    <system-out><![CDATA[
+@FR12
+Scenario: Verify progress overview page with three different student states; &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:88&amp#27;[0m
+Navigating to URL: https://polban-space.cloudias79.com/jtk-learn/
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                          &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe user is on the application login page&amp#27;[0m                              &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1"&amp#27;[0m  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                        &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Pemantauan&amp#27;[0m                                              &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgressPage()&amp#27;[0m
+Finding button 'Progres' for course 'Komputer Grafik'
+Discovered Student IDs: [1, 12, 35, 4]
+Discovered Material IDs: [9, 10]
+Discovered Quiz IDs: [7]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"Progres"&amp#27;[0m&amp#27;[32m button of &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course&amp#27;[0m           &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgresBtn(java.lang.String,java.lang.String)&amp#27;[0m
+Setting status for student 1 on task M10 to NOT_STARTED
+DAO: Successfully deleted history for student 1 and material 10
+Setting status for student 1 on task M9 to NOT_STARTED
+DAO: Successfully deleted history for student 1 and material 9
+Setting status for student 1 on task Q7 to NOT_STARTED
+DAO: Successfully deleted history for student 1 and quiz 7
+Setting status for student 12 on task M10 to FINISHED
+DAO: Setting material 10 to FINISHED for student 12
+HistoryMateriDAO: Delete successful
+Setting status for student 12 on task M9 to IN_PROGRESS
+DAO: Set material 9 to IN_PROGRESS for student 12
+Setting status for student 12 on task Q7 to NOT_STARTED
+DAO: Successfully deleted history for student 12 and quiz 7
+Setting status for student 35 on task M10 to FINISHED
+DAO: Setting material 10 to FINISHED for student 35
+HistoryMateriDAO: Delete successful
+Setting status for student 35 on task M9 to FINISHED
+DAO: Setting material 9 to FINISHED for student 35
+HistoryMateriDAO: Delete successful
+Setting status for student 35 on task Q7 to FINISHED
+DAO: Set quiz 7 to FINISHED for student 35 with score 100.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent tasks finish status should be set like these:&amp#27;[0m                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.setStudentTasksFinishStatus(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | student_position | task_position | status      | score |
+    | 1                | 1             | NOT_STARTED | 0     |
+    | 1                | 2             | NOT_STARTED | 0     |
+    | 1                | 3             | NOT_STARTED | 0     |
+    | 2                | 1             | FINISHED    | 0     |
+    | 2                | 2             | IN_PROGRESS | 0     |
+    | 2                | 3             | NOT_STARTED | 0     |
+    | 3                | 1             | FINISHED    | 0     |
+    | 3                | 2             | FINISHED    | 0     |
+    | 3                | 3             | FINISHED    | 100   |
+Setting progress for student 1 in course 4 to 0.0%
+DAO: Setting progress for student 1 in course 4 to 0.0%
+Setting progress for student 12 in course 4 to 33.33%
+DAO: Setting progress for student 12 in course 4 to 33.33%
+Setting progress for student 35 in course 4 to 100.0%
+DAO: Setting progress for student 35 in course 4 to 100.0%
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mStudent progress of &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course should be set like these:&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.setStudentProgressForCourse(java.lang.String,io.cucumber.datatable.DataTable)&amp#27;[0m
+    | student_position | percentage |
+    | 1                | 0          |
+    | 2                | 33.33      |
+    | 3                | 100        |
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe page title should be &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pemantau Progres Belajar"&amp#27;[0m                   &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyPageTitle(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe page subtitle should be the same with &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course&amp#27;[0m     &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyPageSubtitle(java.lang.String)&amp#27;[0m
+--- Verifying data for student: Andi Pelajar ---
+CourseDAO: Getting progress for student ID: 1, course ID: 4
+CourseDAO: Progress found: 0.0%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+--- Verifying data for student: John Doe ---
+CourseDAO: Getting progress for student ID: 12, course ID: 4
+CourseDAO: Progress found: 33.33%
+DAO: No history found for quiz 7. Status: NOT_TAKEN
+--- Verifying data for student: pelajarQuiz1 ---
+CourseDAO: Getting progress for student ID: 35, course ID: 4
+CourseDAO: Progress found: 100.0%
+DAO: Score for quiz 7 is 100.0. Status: FINISHED
+--- Verifying data for student: Rafif Pelajar 3 ---
+CourseDAO: Getting progress for student ID: 4, course ID: 4
+CourseDAO: Progress found: 100.0%
+DAO: Score for quiz 7 is 90.0. Status: FINISHED
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe study progress of every student should be displayed&amp#27;[0m                &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 15, 2025 4:54:19 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify ascending sorting operation on Riwayat Kuis page&quot;, &quot;FR-12 Progress Overview&quot;](5)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="14.309">
+    <system-out><![CDATA[
+@FR12
+Scenario: Verify ascending sorting operation on Riwayat Kuis page                                &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:117&amp#27;[0m
+Navigating to URL: https://polban-space.cloudias79.com/jtk-learn/
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                              &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe user is on the application login page&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1"&amp#27;[0m                      &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                            &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Pemantauan&amp#27;[0m                                                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgressPage()&amp#27;[0m
+Finding button 'Detail Kuis' for course 'Komputer Grafik'
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"Detail Kuis"&amp#27;[0m&amp#27;[32m button of &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course&amp#27;[0m                           &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgresBtn(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Lihat Hasil button of Tes Progres quiz&amp#27;[0m                                      &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnLihatHasil()&amp#27;[0m
+DAO: Set quiz 7 to FINISHED for student 1 with score 100.0
+DAO: Set quiz 7 to FINISHED for student 4 with score 90.0
+DAO: Set quiz 7 to FINISHED for student 12 with score 85.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe quiz results for &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tes Progres Komgraf"&amp#27;[0m&amp#27;[32m in course &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m are set as follows:&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.setQuizResultsForCourse(java.lang.String,java.lang.String,io.cucumber.datatable.DataTable)&amp#27;[0m
+    | student_position | score |
+    | 1                | 100   |
+    | 2                | 90    |
+    | 3                | 85    |
+Selected dropdown option: A-Z
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"ascending"&amp#27;[0m&amp#27;[32m sorting button&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnSortingButton(java.lang.String)&amp#27;[0m
+Names found on UI: [Andi Pelajar, John Doe, pelajarQuiz1, Rafif Pelajar 3]
+Original UI Order: [Andi Pelajar, John Doe, pelajarQuiz1, Rafif Pelajar 3]
+Expected Sorted Order: [Andi Pelajar, John Doe, pelajarQuiz1, Rafif Pelajar 3]
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe displayed names should be sorted in &amp#27;[0m&amp#27;[32m&amp#27;[1m"ascending"&amp#27;[0m&amp#27;[32m order&amp#27;[0m                                 &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedNames(java.lang.String)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 15, 2025 4:54:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify descending sorting operation on Riwayat Kuis page&quot;, &quot;FR-12 Progress Overview&quot;](6)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="14.206">
+    <system-out><![CDATA[
+@FR12
+Scenario: Verify descending sorting operation on Riwayat Kuis page                               &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:134&amp#27;[0m
+Navigating to URL: https://polban-space.cloudias79.com/jtk-learn/
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                              &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe user is on the application login page&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1"&amp#27;[0m                      &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                            &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Pemantauan&amp#27;[0m                                                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgressPage()&amp#27;[0m
+Finding button 'Detail Kuis' for course 'Komputer Grafik'
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"Detail Kuis"&amp#27;[0m&amp#27;[32m button of &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course&amp#27;[0m                           &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgresBtn(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Lihat Hasil button of Tes Progres quiz&amp#27;[0m                                      &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnLihatHasil()&amp#27;[0m
+DAO: Set quiz 7 to FINISHED for student 1 with score 100.0
+DAO: Set quiz 7 to FINISHED for student 4 with score 90.0
+DAO: Set quiz 7 to FINISHED for student 12 with score 85.0
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe quiz results for &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tes Progres Komgraf"&amp#27;[0m&amp#27;[32m in course &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m are set as follows:&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.setQuizResultsForCourse(java.lang.String,java.lang.String,io.cucumber.datatable.DataTable)&amp#27;[0m
+    | student_position | score |
+    | 1                | 100   |
+    | 2                | 90    |
+    | 3                | 85    |
+Selected dropdown option: Z-A
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"descending"&amp#27;[0m&amp#27;[32m sorting button&amp#27;[0m                                                 &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnSortingButton(java.lang.String)&amp#27;[0m
+Names found on UI: [Rafif Pelajar 3, pelajarQuiz1, John Doe, Andi Pelajar]
+Original UI Order: [Rafif Pelajar 3, pelajarQuiz1, John Doe, Andi Pelajar]
+Expected Sorted Order (Desc): [Rafif Pelajar 3, pelajarQuiz1, John Doe, Andi Pelajar]
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe displayed names should be sorted in &amp#27;[0m&amp#27;[32m&amp#27;[1m"descending"&amp#27;[0m&amp#27;[32m order&amp#27;[0m                                &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedNames(java.lang.String)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 15, 2025 4:55:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Verify descending sorting operation on Pemantau Progres Belajar page&quot;, &quot;FR-12 Progress Overview&quot;](7)" classname="com.zaidan.testng.runner.CucumberRunnerTests" time="10.683">
+    <system-out><![CDATA[
+@FR12
+Scenario: Verify descending sorting operation on Pemantau Progres Belajar page                   &amp#27;[90m# src/test/resources/features/ProgressOverview.feature:151&amp#27;[0m
+Navigating to URL: https://polban-space.cloudias79.com/jtk-learn/
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser has opened the browser&amp#27;[0m                                                              &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_opened_the_browser()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mThe user is on the application login page&amp#27;[0m                                                  &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.user_has_navigated_to_login_page()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser enters username &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1@example.com"&amp#27;[0m&amp#27;[32m and password &amp#27;[0m&amp#27;[32m&amp#27;[1m"pengajar1"&amp#27;[0m                      &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.go_to_home_page(java.lang.String,java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on the login button&amp#27;[0m                                                            &amp#27;[90m# com.zaidan.testng.definitions.LoginPageDefinitions.click_login_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on Pemantauan&amp#27;[0m                                                                  &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgressPage()&amp#27;[0m
+Finding button 'Progres' for course 'Komputer Grafik'
+Discovered Student IDs: [1, 12, 35, 4]
+Discovered Material IDs: [9, 10]
+Discovered Quiz IDs: [7]
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"Progres"&amp#27;[0m&amp#27;[32m button of &amp#27;[0m&amp#27;[32m&amp#27;[1m"Komputer Grafik"&amp#27;[0m&amp#27;[32m course&amp#27;[0m                               &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnProgresBtn(java.lang.String,java.lang.String)&amp#27;[0m
+Selected dropdown option: Z-A
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser clicks on &amp#27;[0m&amp#27;[32m&amp#27;[1m"descending"&amp#27;[0m&amp#27;[32m sorting button&amp#27;[0m                                                 &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.userClicksOnSortingButton(java.lang.String)&amp#27;[0m
+Names found on UI: [Rafif Pelajar 3, pelajarQuiz1, John Doe, Andi Pelajar]
+Original UI Order: [Rafif Pelajar 3, pelajarQuiz1, John Doe, Andi Pelajar]
+Expected Sorted Order (Desc): [Rafif Pelajar 3, pelajarQuiz1, John Doe, Andi Pelajar]
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mThe displayed names on Pemantau Progres Belajar page should be sorted in descending order&amp#27;[0m &amp#27;[90m# com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyPemantauProgresDescendingSorting()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[Jul 15, 2025 4:55:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 138, returning the closest version; found: 136; Please update to a Selenium version that supports CDP version 138
 ]]></system-err>
   </testcase>
