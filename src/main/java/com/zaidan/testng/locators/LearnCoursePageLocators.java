@@ -14,14 +14,11 @@ public class LearnCoursePageLocators {
     @FindBy(className = "material-title")
     public WebElement materialTitle;
 
-    // More robust: Finds the list item that contains the unique text "Test Video Komgraf".
-    // This is much better than relying on the order (li[1]).
-    @FindBy(xpath = "//ul[contains(@class, 'learn-list')]//li[contains(., 'Test Video Komgraf')]")
-    public WebElement exampleVidInNavBar;
-    
-    // More robust: Finds the list item containing the unique text "Test PDF Komgraf".
-    @FindBy(xpath = "//*[@id=\"sidebarMenu\"]/div/ul/li[2]")
-    public WebElement examplePDFInNavBar;
+    // Finds the first item in the list that has a "Materi" icon
+    public By firstVideoInSidebar = By.xpath("(//ul[contains(@class, 'learn-list')]//li[.//img[@alt='Materi']])[1]");
+
+    // Finds the second item in the list that has a "Materi" icon
+    public By secondPdfInSidebar = By.xpath("(//ul[contains(@class, 'learn-list')]//li[.//img[@alt='Materi']])[2]");
 
     public By contentIframe = By.cssSelector("div.content-box iframe");
 

@@ -30,9 +30,7 @@ Scenario: Verify PDF file can be opened and read
     And User should be able to see the next or previous button
     And The course name of id 4 and material name of id 10 should be the same as in the database
 
-# TODO: solve the finish time
-@wip
-@ResetMaterialState
+@ResetMaterialState @VerifyVideo
 Scenario Outline: Verify the time of finishing video material
     TC-FR08-09, TC-FR08-10, TC-FR08-11
     Given User has opened the browser
@@ -40,8 +38,8 @@ Scenario Outline: Verify the time of finishing video material
     And User enters username "pelajar1@example.com" and password "pelajar1"
     And User clicks on the login button
     And User clicks on course "Komputer Grafik"
-    And User clicks on the continue button
     And The initial course progress set to be 0
+    And User clicks on the continue button
     And The initial progress is tracked
     When User clicks on one of the video in the navigation bar
     And User should be able to play the video
@@ -55,9 +53,7 @@ Scenario Outline: Verify the time of finishing video material
     | 6        |
     | 7        |
 
-# TODO: solve the finish time
-@wip
-@ResetMaterialState
+@ResetMaterialState @VerifyPDF
 Scenario Outline: Verify the time of finishing PDF material
     TC-FR08-14, TC-FR08-15, TC-FR08-16
     Given User has opened the browser
@@ -65,8 +61,8 @@ Scenario Outline: Verify the time of finishing PDF material
     And User enters username "pelajar1@example.com" and password "pelajar1"
     And User clicks on the login button
     And User clicks on course "Komputer Grafik"
-    And User clicks on the continue button
     And The initial course progress set to be 0
+    And User clicks on the continue button
     And The initial progress is tracked
     When User clicks on the example PDF material
     And User should be able to read the PDF file with material id 10

@@ -72,4 +72,23 @@ public class MateriDAO {
         }
         return materi;
     }
+
+    public int getIdByName(String materialName) throws SQLException {
+        int materialId = -1;
+        String sql = "SELECT id_materi FROM materi WHERE nama_materi = ?";
+        
+        try (Connection conn = DatabaseUtil.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, materialName);
+            try (ResultSet rs = pstmt.executeQuery()) {
+                if (rs.next()) {
+                    materialId = rs.getInt("id_materi");
+                }
+            }
+        } catch (SQLException e) {
+            System.err.println("DAO: Error finding material ID by name: " + e.getMessage());
+            throw e;
+        }
+        return materialId;
+    }
 }
