@@ -1,3 +1,4 @@
+@FR12
 Feature: FR-12 Progress Overview
 
 Scenario: Verify progress overview page with a student has not finished all materials and quizzes yet
@@ -7,7 +8,7 @@ Scenario: Verify progress overview page with a student has not finished all mate
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
-    When User clicks on Progres button of Komputer Grafik course
+    When User clicks on "Progres" button of "Komputer Grafik" course
     And Student tasks finish status should be set like these:
     | student_position | task_position | status      | score |
     | 1                | 1             | NOT_STARTED | 0     |
@@ -35,7 +36,7 @@ Scenario: Verify progress overview page with some students finished some materia
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
-    When User clicks on Progres button of Komputer Grafik course
+    When User clicks on "Progres" button of "Komputer Grafik" course
     And Student tasks finish status should be set like these:
     | student_position | task_position | status      | score |
     | 1                | 1             | NOT_STARTED | 0     |
@@ -63,7 +64,7 @@ Scenario: Verify progress overview page with all students finished all materials
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
-    When User clicks on Progres button of Komputer Grafik course
+    When User clicks on "Progres" button of "Komputer Grafik" course
     And Student tasks finish status should be set like these:
     | student_position | task_position | status      | score |
     | 1                | 1             | FINISHED    | 0     |
@@ -92,7 +93,7 @@ Scenario: Verify progress overview page with three different student states;
     And User enters username "pengajar1@example.com" and password "pengajar1"
     And User clicks on the login button
     And User clicks on Pemantauan
-    When User clicks on Progres button of Komputer Grafik course
+    When User clicks on "Progres" button of "Komputer Grafik" course
     And Student tasks finish status should be set like these:
     | student_position | task_position | status      | score |
     | 1                | 1             | NOT_STARTED | 0     |
@@ -130,7 +131,7 @@ Scenario: Verify ascending sorting operation on Riwayat Kuis page
     And User clicks on "ascending" sorting button
     Then The displayed names should be sorted in "ascending" order
 
-Scenario: Verify ascending sorting operation on Riwayat Kuis page
+Scenario: Verify descending sorting operation on Riwayat Kuis page
     TC-FR12-24
     Given User has opened the browser
     And The user is on the application login page
