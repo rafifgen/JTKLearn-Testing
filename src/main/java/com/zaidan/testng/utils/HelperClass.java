@@ -43,8 +43,10 @@ public class HelperClass {
             ex.printStackTrace();
             throw new RuntimeException("Failed to load application.properties", ex);
         }
-        // Setup Edge driver
-        WebDriverManager.edgedriver().setup();
+//        // Setup Edge driver
+//        WebDriverManager.edgedriver().setup();
+        // Initialize EdgeDriver
+        System.setProperty("webdriver.edge.driver", "drivers/msedgedriver.exe");
 
         EdgeOptions options = new EdgeOptions();
         driver = new EdgeDriver(options);
