@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Cucumber Reporting</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 15 16:52:27 WIB 2025</td>
+<td>Started on:</td><td>Tue Jul 15 17:01:00 WIB 2025</td>
 </tr>
-<tr><td>Total time:</td><td>188 seconds (188624 ms)</td>
+<tr><td>Total time:</td><td>142 seconds (142308 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,115 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify descending sorting operation on Pemantau Progres Belajar page", "FR-12 Progress Overview"</td>
+<td><div><pre>java.lang.AssertionError: The student names are not sorted in descending order.: Lists differ at element [0]: Rafif != Andi Pelajar expected [Rafif] but found [Andi Pelajar]
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyPemantauProgresDescendingSorting(ProgressOverviewDefinitions.java:306)
+	at ✽.The displayed names on Pemantau Progres Belajar page should be sorted in descending order(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:160)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1950069658", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1950069658'><pre>java.lang.AssertionError: The student names are not sorted in descending order.: Lists differ at element [0]: Rafif != Andi Pelajar expected [Rafif] but found [Andi Pelajar]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:1656)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyPemantauProgresDescendingSorting(ProgressOverviewDefinitions.java:306)
+	at ✽.The displayed names on Pemantau Progres Belajar page should be sorted in descending order(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:160)
+</pre></div></td>
+<td>11</td>
+<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
+<tr>
+<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify progress overview page with three different student states;", "FR-12 Progress Overview"</td>
+<td><div><pre>java.lang.AssertionError: Task &apos;M11&apos; status mismatch for student: fullpelajar expected [FINISHED] but found [NOT_TAKEN]
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase(ProgressOverviewDefinitions.java:262)
+	at ✽.The study progress of every student should be displayed(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:115)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1248595768", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1248595768'><pre>java.lang.AssertionError: Task &apos;M11&apos; status mismatch for student: fullpelajar expected [FINISHED] but found [NOT_TAKEN]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase(ProgressOverviewDefinitions.java:262)
+	at ✽.The study progress of every student should be displayed(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:115)
+</pre></div></td>
+<td>28</td>
+<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
+<tr>
+<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ascending sorting operation on Riwayat Kuis page", "FR-12 Progress Overview"</td>
+<td><div><pre>java.lang.AssertionError: The student names are not sorted case-insensitively (A-Z).: Lists differ at element [0]: Andi Pelajar != Rafif expected [Andi Pelajar] but found [Rafif]
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyAscendingSorting(ProgressOverviewDefinitions.java:323)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedNames(ProgressOverviewDefinitions.java:286)
+	at ✽.The displayed names should be sorted in &quot;ascending&quot; order(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:132)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace700171153", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace700171153'><pre>java.lang.AssertionError: The student names are not sorted case-insensitively (A-Z).: Lists differ at element [0]: Andi Pelajar != Rafif expected [Andi Pelajar] but found [Rafif]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:1656)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyAscendingSorting(ProgressOverviewDefinitions.java:323)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedNames(ProgressOverviewDefinitions.java:286)
+	at ✽.The displayed names should be sorted in &quot;ascending&quot; order(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:132)
+</pre></div></td>
+<td>12</td>
+<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
+<tr>
+<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify progress overview page with all students finished all materials and quizzes", "FR-12 Progress Overview"</td>
+<td><div><pre>java.lang.AssertionError: Task &apos;Q3&apos; status mismatch for student: Andi Pelajar expected [FINISHED] but found [NOT_TAKEN]
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase(ProgressOverviewDefinitions.java:262)
+	at ✽.The study progress of every student should be displayed(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:86)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace409832049", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace409832049'><pre>java.lang.AssertionError: Task &apos;Q3&apos; status mismatch for student: Andi Pelajar expected [FINISHED] but found [NOT_TAKEN]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase(ProgressOverviewDefinitions.java:262)
+	at ✽.The study progress of every student should be displayed(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:86)
+</pre></div></td>
+<td>26</td>
+<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
+<tr>
+<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify descending sorting operation on Riwayat Kuis page", "FR-12 Progress Overview"</td>
+<td><div><pre>java.lang.AssertionError: The student names are not sorted case-insensitively (Z-A).: Lists differ at element [0]: Rafif != Andi Pelajar expected [Rafif] but found [Andi Pelajar]
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDescendingSorting(ProgressOverviewDefinitions.java:341)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedNames(ProgressOverviewDefinitions.java:288)
+	at ✽.The displayed names should be sorted in &quot;descending&quot; order(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:149)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1991010480", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1991010480'><pre>java.lang.AssertionError: The student names are not sorted case-insensitively (Z-A).: Lists differ at element [0]: Rafif != Andi Pelajar expected [Rafif] but found [Andi Pelajar]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:1656)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDescendingSorting(ProgressOverviewDefinitions.java:341)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedNames(ProgressOverviewDefinitions.java:288)
+	at ✽.The displayed names should be sorted in &quot;descending&quot; order(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:149)
+</pre></div></td>
+<td>12</td>
+<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
+<tr>
+<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify progress overview page with some students finished some materials and quizzes", "FR-12 Progress Overview"</td>
+<td><div><pre>java.lang.AssertionError: Task &apos;M12&apos; status mismatch for student: Andi Pelajar expected [FINISHED] but found [NOT_TAKEN]
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase(ProgressOverviewDefinitions.java:262)
+	at ✽.The study progress of every student should be displayed(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:58)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace497333241", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace497333241'><pre>java.lang.AssertionError: Task &apos;M12&apos; status mismatch for student: Andi Pelajar expected [FINISHED] but found [NOT_TAKEN]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase(ProgressOverviewDefinitions.java:262)
+	at ✽.The study progress of every student should be displayed(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:58)
+</pre></div></td>
+<td>21</td>
+<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,39 +185,9 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify progress overview page with three different student states;", "FR-12 Progress Overview"</td>
-<td></td>
-<td>37</td>
-<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
-<tr>
-<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify descending sorting operation on Riwayat Kuis page", "FR-12 Progress Overview"</td>
-<td></td>
-<td>14</td>
-<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
-<tr>
-<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify progress overview page with some students finished some materials and quizzes", "FR-12 Progress Overview"</td>
-<td></td>
-<td>34</td>
-<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
-<tr>
-<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify ascending sorting operation on Riwayat Kuis page", "FR-12 Progress Overview"</td>
-<td></td>
-<td>14</td>
-<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
-<tr>
-<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify progress overview page with all students finished all materials and quizzes", "FR-12 Progress Overview"</td>
-<td></td>
-<td>40</td>
-<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
-<tr>
 <td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify progress overview page with a student has not finished all materials and quizzes yet", "FR-12 Progress Overview"</td>
 <td></td>
-<td>34</td>
-<td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
-<tr>
-<td title='com.zaidan.testng.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.zaidan.testng.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify descending sorting operation on Pemantau Progres Belajar page", "FR-12 Progress Overview"</td>
-<td></td>
-<td>10</td>
+<td>25</td>
 <td>com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce</td></tr>
 </table><p>
 </body>

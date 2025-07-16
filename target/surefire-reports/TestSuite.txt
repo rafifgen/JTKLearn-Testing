@@ -1,4 +1,60 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 189.1 s -- in TestSuite
+Tests run: 7, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 142.8 s <<< FAILURE! -- in TestSuite
+com.zaidan.testng.runner.CucumberRunnerTests.runScenario["Verify progress overview page with some students finished some materials and quizzes", "FR-12 Progress Overview"](2) -- Time elapsed: 21.98 s <<< FAILURE!
+java.lang.AssertionError: Task 'M12' status mismatch for student: Andi Pelajar expected [FINISHED] but found [NOT_TAKEN]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase(ProgressOverviewDefinitions.java:262)
+	at ✽.The study progress of every student should be displayed(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:58)
+
+com.zaidan.testng.runner.CucumberRunnerTests.runScenario["Verify progress overview page with all students finished all materials and quizzes", "FR-12 Progress Overview"](3) -- Time elapsed: 26.58 s <<< FAILURE!
+java.lang.AssertionError: Task 'Q3' status mismatch for student: Andi Pelajar expected [FINISHED] but found [NOT_TAKEN]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase(ProgressOverviewDefinitions.java:262)
+	at ✽.The study progress of every student should be displayed(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:86)
+
+com.zaidan.testng.runner.CucumberRunnerTests.runScenario["Verify progress overview page with three different student states;", "FR-12 Progress Overview"](4) -- Time elapsed: 28.33 s <<< FAILURE!
+java.lang.AssertionError: Task 'M11' status mismatch for student: fullpelajar expected [FINISHED] but found [NOT_TAKEN]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase(ProgressOverviewDefinitions.java:262)
+	at ✽.The study progress of every student should be displayed(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:115)
+
+com.zaidan.testng.runner.CucumberRunnerTests.runScenario["Verify ascending sorting operation on Riwayat Kuis page", "FR-12 Progress Overview"](5) -- Time elapsed: 12.45 s <<< FAILURE!
+java.lang.AssertionError: The student names are not sorted case-insensitively (A-Z).: Lists differ at element [0]: Andi Pelajar != Rafif expected [Andi Pelajar] but found [Rafif]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:1656)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyAscendingSorting(ProgressOverviewDefinitions.java:323)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedNames(ProgressOverviewDefinitions.java:286)
+	at ✽.The displayed names should be sorted in "ascending" order(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:132)
+
+com.zaidan.testng.runner.CucumberRunnerTests.runScenario["Verify descending sorting operation on Riwayat Kuis page", "FR-12 Progress Overview"](6) -- Time elapsed: 12.63 s <<< FAILURE!
+java.lang.AssertionError: The student names are not sorted case-insensitively (Z-A).: Lists differ at element [0]: Rafif != Andi Pelajar expected [Rafif] but found [Andi Pelajar]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:1656)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDescendingSorting(ProgressOverviewDefinitions.java:341)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedNames(ProgressOverviewDefinitions.java:288)
+	at ✽.The displayed names should be sorted in "descending" order(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:149)
+
+com.zaidan.testng.runner.CucumberRunnerTests.runScenario["Verify descending sorting operation on Pemantau Progres Belajar page", "FR-12 Progress Overview"](7) -- Time elapsed: 11.74 s <<< FAILURE!
+java.lang.AssertionError: The student names are not sorted in descending order.: Lists differ at element [0]: Rafif != Andi Pelajar expected [Rafif] but found [Andi Pelajar]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:1656)
+	at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyPemantauProgresDescendingSorting(ProgressOverviewDefinitions.java:306)
+	at ✽.The displayed names on Pemantau Progres Belajar page should be sorted in descending order(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:160)
+

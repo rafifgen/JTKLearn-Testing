@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="1" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-15T16:52:27 WIB" name="Suite" finished-at="2025-07-15T16:55:35 WIB" duration-ms="188624">
+  <suite started-at="2025-07-15T17:01:00 WIB" name="Suite" finished-at="2025-07-15T17:03:22 WIB" duration-ms="142308">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-07-15T16:52:27 WIB" name="Cucumber Reporting" finished-at="2025-07-15T16:55:35 WIB" duration-ms="188624">
+    <test started-at="2025-07-15T17:01:00 WIB" name="Cucumber Reporting" finished-at="2025-07-15T17:03:22 WIB" duration-ms="142308">
       <class name="com.zaidan.testng.runner.CucumberRunnerTests">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T16:52:27 WIB" name="setUpClass" finished-at="2025-07-15T16:52:29 WIB" duration-ms="2261" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T17:01:00 WIB" name="setUpClass" finished-at="2025-07-15T17:01:03 WIB" duration-ms="2790" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@74eec640]]>
+                <![CDATA[org.testng.TestRunner@38bc5ac0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T16:52:29 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T16:53:04 WIB" duration-ms="34588" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T17:01:03 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T17:01:29 WIB" duration-ms="25704" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T16:53:04 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T16:53:38 WIB" duration-ms="34837" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T17:01:29 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T17:01:51 WIB" duration-ms="21977" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -50,10 +50,25 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Task 'M12' status mismatch for student: Andi Pelajar expected [FINISHED] but found [NOT_TAKEN]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Task 'M12' status mismatch for student: Andi Pelajar expected [FINISHED] but found [NOT_TAKEN]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase(ProgressOverviewDefinitions.java:262)
+at ✽.The study progress of every student should be displayed(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:58)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T16:53:38 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T16:54:19 WIB" duration-ms="40371" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T17:01:51 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T17:02:17 WIB" duration-ms="26583" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -66,10 +81,25 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Task 'Q3' status mismatch for student: Andi Pelajar expected [FINISHED] but found [NOT_TAKEN]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Task 'Q3' status mismatch for student: Andi Pelajar expected [FINISHED] but found [NOT_TAKEN]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase(ProgressOverviewDefinitions.java:262)
+at ✽.The study progress of every student should be displayed(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:86)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T16:54:19 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T16:54:56 WIB" duration-ms="37281" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T17:02:17 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T17:02:45 WIB" duration-ms="28325" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -82,10 +112,25 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Task 'M11' status mismatch for student: fullpelajar expected [FINISHED] but found [NOT_TAKEN]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Task 'M11' status mismatch for student: fullpelajar expected [FINISHED] but found [NOT_TAKEN]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedStudentProgressMatchesDatabase(ProgressOverviewDefinitions.java:262)
+at ✽.The study progress of every student should be displayed(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:115)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T16:54:56 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T16:55:10 WIB" duration-ms="14310" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T17:02:45 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T17:02:58 WIB" duration-ms="12454" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -98,10 +143,26 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The student names are not sorted case-insensitively (A-Z).: Lists differ at element [0]: Andi Pelajar != Rafif expected [Andi Pelajar] but found [Rafif]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The student names are not sorted case-insensitively (A-Z).: Lists differ at element [0]: Andi Pelajar != Rafif expected [Andi Pelajar] but found [Rafif]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:1656)
+at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyAscendingSorting(ProgressOverviewDefinitions.java:323)
+at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedNames(ProgressOverviewDefinitions.java:286)
+at ✽.The displayed names should be sorted in "ascending" order(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:132)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T16:55:10 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T16:55:25 WIB" duration-ms="14205" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T17:02:58 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T17:03:11 WIB" duration-ms="12633" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -114,10 +175,26 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The student names are not sorted case-insensitively (Z-A).: Lists differ at element [0]: Rafif != Andi Pelajar expected [Rafif] but found [Andi Pelajar]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The student names are not sorted case-insensitively (Z-A).: Lists differ at element [0]: Rafif != Andi Pelajar expected [Rafif] but found [Andi Pelajar]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:1656)
+at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDescendingSorting(ProgressOverviewDefinitions.java:341)
+at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyDisplayedNames(ProgressOverviewDefinitions.java:288)
+at ✽.The displayed names should be sorted in "descending" order(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:149)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T16:55:25 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T16:55:35 WIB" duration-ms="10683" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T17:03:11 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-15T17:03:22 WIB" duration-ms="11743" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -130,10 +207,25 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The student names are not sorted in descending order.: Lists differ at element [0]: Rafif != Andi Pelajar expected [Rafif] but found [Andi Pelajar]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The student names are not sorted in descending order.: Lists differ at element [0]: Rafif != Andi Pelajar expected [Rafif] but found [Andi Pelajar]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:1656)
+at com.zaidan.testng.definitions.ProgressOverviewDefinitions.verifyPemantauProgresDescendingSorting(ProgressOverviewDefinitions.java:306)
+at ✽.The displayed names on Pemantau Progres Belajar page should be sorted in descending order(file:///C:/Users/MSI/OneDrive/Documents/Proyek/Fault%20Seeding/JTKLearn-Testing/src/test/resources/features/ProgressOverview.feature:160)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T16:55:35 WIB" name="tearDownClass" finished-at="2025-07-15T16:55:35 WIB" duration-ms="44" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.zaidan.testng.runner.CucumberRunnerTests@1d9b7cce]" started-at="2025-07-15T17:03:22 WIB" name="tearDownClass" finished-at="2025-07-15T17:03:22 WIB" duration-ms="51" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
