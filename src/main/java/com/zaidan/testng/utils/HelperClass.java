@@ -23,9 +23,17 @@ public class HelperClass {
 
     public static void setUpDriver() {
         if (driver == null) {
-            WebDriverManager.edgedriver().setup();
+            // Initialize EdgeDriver
+            System.setProperty("webdriver.edge.driver", "drivers/msedgedriver.exe");
+
             EdgeOptions options = new EdgeOptions();
             driver = new EdgeDriver(options);
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
+            // Remove navigator.webdriver via JS
+            ((JavascriptExecutor) driver).executeScript(
+                "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
+            );
+
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
             driver.manage().window().maximize();
             
@@ -34,21 +42,6 @@ public class HelperClass {
             System.out.println("Navigating to URL: " + url);
             driver.get(url);
         }
-//        // Setup Edge driver
-//        WebDriverManager.edgedriver().setup();
-        // Initialize EdgeDriver
-        System.setProperty("webdriver.edge.driver", "drivers/msedgedriver.exe");
-
-        EdgeOptions options = new EdgeOptions();
-        driver = new EdgeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
-        // Remove navigator.webdriver via JS
-        ((JavascriptExecutor) driver).executeScript(
-            "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
-        );
-
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
-        driver.manage().window().maximize();
     }
 
     public static void openPage(String url) {
