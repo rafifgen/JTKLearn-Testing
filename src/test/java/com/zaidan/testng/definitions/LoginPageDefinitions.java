@@ -28,6 +28,12 @@ public class LoginPageDefinitions {
         HelperClass.setUpDriver();
     }
 
+    @Given("User has navigated to the login page of JTK Learn app {string}")
+    public void userHasNavigatedToTheLoginPageOfJTKLearnApp(String url) {
+        WebDriver driver = HelperClass.getDriver();
+        driver.get(url);
+    }
+
     @And("The user is on the application login page")
     public void user_has_navigated_to_login_page() {
         // HelperClass.openPage(url);
