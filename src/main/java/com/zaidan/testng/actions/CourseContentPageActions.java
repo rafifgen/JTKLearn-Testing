@@ -81,7 +81,7 @@ public class CourseContentPageActions {
             WebElement img = locators.allSidebarItems
                     .get(locators.allSidebarItems.indexOf(li))
                     .findElement(By.cssSelector("span.icon img"));
-            String alt = img.getAttribute("alt").toLowerCase();
+            String alt = img.getDomAttribute("alt").toLowerCase();
             ContentType type = alt.contains("materi")
                     ? ContentType.MATERIAL
                     : ContentType.QUIZ;
@@ -112,7 +112,7 @@ public class CourseContentPageActions {
 
             // 2. Tentukan tipe lewat ikon <img alt="...">
             WebElement img = li.findElement(By.cssSelector("span.icon img"));
-            String alt = img.getAttribute("alt").toLowerCase();
+            String alt = img.getDomAttribute("alt").toLowerCase();
             ContentType type = alt.contains("materi")
                     ? ContentType.MATERIAL
                     : ContentType.QUIZ;
@@ -145,7 +145,7 @@ public class CourseContentPageActions {
 
     public double getProgressbarValue() {
         // mengambil aria-valuenow
-        String value = locators.progressBar.getAttribute("aria-valuenow");
+        String value = locators.progressBar.getDomAttribute("aria-valuenow");
         try {
             return Double.parseDouble(value);
         } catch (NumberFormatException e) {

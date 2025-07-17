@@ -1,5 +1,6 @@
 package com.zaidan.testng.actions;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor; // Important for executing JavaScript
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

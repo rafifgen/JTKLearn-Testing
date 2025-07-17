@@ -186,7 +186,7 @@ public class CourseContentPageDefinitions {
         List<WebElement> completedItems = CourseContentPageLocators.completedNavItems;
         Assert.assertFalse(completedItems.isEmpty(), "Tidak ada item dengan background hijau (completed)");
         for (WebElement item : completedItems) {
-            Assert.assertTrue(item.getAttribute("style").contains("background-color: rgb(162, 245, 200)"),
+            Assert.assertTrue(item.getDomAttribute("style").contains("background-color: rgb(162, 245, 200)"),
                     "Item tidak memiliki background hijau");
         }
     }

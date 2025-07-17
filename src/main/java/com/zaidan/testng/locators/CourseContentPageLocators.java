@@ -64,7 +64,7 @@ public class CourseContentPageLocators {
     public static List<WebElement> completedNavItems;
 
     // WebElement img = li.findElement(By.cssSelector("span.icon img"));
-    //            String alt = img.getAttribute("alt").toLowerCase();
+    //            String alt = img.getDomAttribute("alt").toLowerCase();
     @FindBy(css = "ul.learn-list li.learn-list-item span.icon img")
     public List<WebElement> allSidebarIcons;
 
