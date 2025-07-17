@@ -6,7 +6,11 @@
       <class name="com.zaidan.testng.runner.CucumberRunnerTests">
         <methods>
           <include name="setUpClass"/>
+<<<<<<< HEAD
           <include name="runScenario" invocation-numbers="16 20 8"/>
+=======
+          <include name="runScenario" invocation-numbers="0 1 2 3 4 5 6"/>
+>>>>>>> rafif
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.zaidan.testng.runner.CucumberRunnerTests -->

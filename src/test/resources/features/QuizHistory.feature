@@ -3,7 +3,7 @@ Feature: TC FR-11 Quiz Results History
 
 Background:
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
 
 
 @EmptyCourseHistory

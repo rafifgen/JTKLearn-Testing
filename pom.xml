@@ -25,6 +25,23 @@
 		<tag/>
 		<url/>
 	</scm>
+    <profiles>
+        <profile>
+            <id>fix</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <env>fix</env>
+            </properties>
+        </profile>
+        <profile>
+            <id>buggy</id>
+            <properties>
+                <env>bug</env>
+            </properties>
+        </profile>
+    </profiles>
     <properties>
 		<java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
@@ -130,6 +147,9 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <systemPropertyVariables>
+                        <env>${env}</env>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
 

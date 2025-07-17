@@ -3,7 +3,6 @@ package com.zaidan.testng.utils;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
 
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -12,104 +11,71 @@ import java.sql.Statement;
 import java.util.Properties; // No longer explicitly loaded by DatabaseUtil, now by HelperClass
 
 public class DatabaseUtil {
-
-    private static Properties props = new Properties();
-    private static Connection connection = null;
     private static Session sshSession = null;
 
-    static {
-        try (InputStream input = HelperClass.class.getClassLoader().getResourceAsStream("application.properties")) {
-            if (input == null) {
-                System.out.println("Sorry, unable to find application.properties");
-            }
-            props.load(input);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-    }
-
     /**
-     * Memulai SSH Tunnel.
-     * Method ini akan dipanggil secara otomatis oleh getConnection().
+     * Establishes an SSH Tunnel using details from the ConfigReader.
      */
     private static void startSshTunnel() throws Exception {
-        if (sshSession != null && sshSession.isConnected()) {
-            return; // Tunnel sudah aktif
-        }
+        if (sshSession != null && sshSession.isConnected()) return;
 
         JSch jsch = new JSch();
+        // Get all SSH properties from our new ConfigReader
         sshSession = jsch.getSession(
-                props.getProperty("ssh.username"),
-                props.getProperty("ssh.host"),
-                Integer.parseInt(props.getProperty("ssh.port"))
+            ConfigReader.getProperty("ssh.username"),
+            ConfigReader.getProperty("ssh.host"),
+            Integer.parseInt(ConfigReader.getProperty("ssh.port"))
         );
-        sshSession.setPassword(props.getProperty("ssh.password"));
+        sshSession.setPassword(ConfigReader.getProperty("ssh.password"));
 
         Properties config = new Properties();
         config.put("StrictHostKeyChecking", "no");
         sshSession.setConfig(config);
 
-        System.out.println("Menghubungkan ke SSH Host " + props.getProperty("ssh.host") + "...");
-        sshSession.connect(); // Mulai koneksi SSH
-        System.out.println("Koneksi SSH berhasil dibuat.");
+        System.out.println("Connecting to SSH Host " + ConfigReader.getProperty("ssh.host") + "...");
+        sshSession.connect();
+        System.out.println("SSH Connection successful.");
 
-        // Atur Port Forwarding
-        // Lport, Rhost, Rport
         int assignedPort = sshSession.setPortForwardingL(
-                Integer.parseInt(props.getProperty("ssh.local_port")),
-                props.getProperty("ssh.remote_host"),
-                Integer.parseInt(props.getProperty("ssh.remote_port"))
+            Integer.parseInt(ConfigReader.getProperty("ssh.local_port")),
+            ConfigReader.getProperty("ssh.remote_host"),
+            Integer.parseInt(ConfigReader.getProperty("ssh.remote_port"))
         );
-        System.out.println("SSH Tunnel dimulai: localhost:" + assignedPort + " -> " + props.getProperty("ssh.remote_host") + ":" + props.getProperty("ssh.remote_port"));
+        System.out.println("SSH Tunnel started on port: " + assignedPort);
     }
 
     /**
-     * Mendapatkan koneksi database, memastikan SSH Tunnel sudah aktif sebelumnya.
+     * Gets a NEW database connection. It no longer reuses a single static connection.
      */
     public static Connection getConnection() throws SQLException {
         try {
-            // Pastikan SSH Tunnel sudah berjalan sebelum membuat koneksi database
             startSshTunnel();
         } catch (Exception e) {
-            throw new SQLException("Gagal memulai SSH Tunnel!", e);
+            throw new SQLException("Failed to start SSH Tunnel!", e);
         }
 
-        if (connection == null || connection.isClosed()) {
-            try {
-                Class.forName("org.postgresql.Driver");
-                connection = DriverManager.getConnection(
-                        props.getProperty("db.url"), // URL ini sudah benar menunjuk ke localhost
-                        props.getProperty("db.username"),
-                        props.getProperty("db.password")
-                );
-                System.out.println("Koneksi database melalui tunnel berhasil dibuka.");
-            } catch (ClassNotFoundException e) {
-                throw new SQLException("PostgreSQL JDBC Driver tidak ditemukan!", e);
-            }
+        try {
+            // Get all DB properties from our new ConfigReader
+            String url = ConfigReader.getProperty("db.url");
+            String user = ConfigReader.getProperty("db.username");
+            String password = ConfigReader.getProperty("db.password");
+            
+            Class.forName("org.postgresql.Driver");
+            // Always return a new connection
+            return DriverManager.getConnection(url, user, password);
+        } catch (ClassNotFoundException e) {
+            throw new SQLException("PostgreSQL JDBC Driver not found!", e);
         }
-        return connection;
     }
 
     /**
-     * Menutup koneksi database dan juga koneksi SSH Tunnel.
+     * Closes only the SSH Tunnel. The DB connection is now managed by try-with-resources in the DAOs.
      */
-    public static void closeConnection() {
-        // Tutup koneksi database terlebih dahulu
-        if (connection != null) {
-            try {
-                connection.close();
-                connection = null;
-                System.out.println("Koneksi database ditutup.");
-            } catch (SQLException e) {
-                System.err.println("Error menutup koneksi database: " + e.getMessage());
-            }
-        }
-
-        // Tutup sesi SSH
+    public static void closeSshTunnel() {
         if (sshSession != null && sshSession.isConnected()) {
             sshSession.disconnect();
             sshSession = null;
-            System.out.println("SSH Tunnel ditutup.");
+            System.out.println("SSH Tunnel closed.");
         }
     }
 

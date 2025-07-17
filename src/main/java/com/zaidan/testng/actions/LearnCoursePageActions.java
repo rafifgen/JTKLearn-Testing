@@ -60,7 +60,7 @@ public class LearnCoursePageActions {
         }
 
         // Check if the src indicates playable content based on the blob URL pattern
-        if (vidLink != null && vidLink.startsWith("blob:")) { // A simplified check for blob URLs
+        if (vidLink != null && vidLink.contains("embed")) { // A simplified check for blob URLs
             System.out.println("Video link indicates playable content (blob URL): " + vidLink);
             return true;
         } else {
@@ -72,7 +72,7 @@ public class LearnCoursePageActions {
     public void clickExampleVidMaterial() {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(HelperClass.TIMEOUT));
-            WebElement vidNavButton = wait.until(ExpectedConditions.elementToBeClickable(learnCoursePageLocators.exampleVidInNavBar));
+            WebElement vidNavButton = wait.until(ExpectedConditions.elementToBeClickable(learnCoursePageLocators.firstVideoInSidebar));
             vidNavButton.click();
             System.out.println("Clicked example video material in nav bar.");
         } catch (Exception e) {
@@ -155,7 +155,7 @@ public class LearnCoursePageActions {
     public void clickExamplePDFMaterial() {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(HelperClass.TIMEOUT));
-            WebElement pdfNavButton = wait.until(ExpectedConditions.elementToBeClickable(learnCoursePageLocators.examplePDFInNavBar));
+            WebElement pdfNavButton = wait.until(ExpectedConditions.elementToBeClickable(learnCoursePageLocators.secondPdfInSidebar));
             pdfNavButton.click();
             System.out.println("Clicked example PDF material in nav bar.");
         } catch (Exception e) {
@@ -216,8 +216,9 @@ public class LearnCoursePageActions {
     public String getVidNavStatusColor() {
         String color = null;
         try {
+            By vidLocator = learnCoursePageLocators.firstVideoInSidebar;
             // Get the specific navigation element using the locator
-            WebElement vidNavItem = learnCoursePageLocators.exampleVidInNavBar;
+            WebElement vidNavItem = driver.findElement(vidLocator);
             
             // It's good practice to ensure the element is visible before checking its style
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(HelperClass.TIMEOUT));
@@ -237,17 +238,19 @@ public class LearnCoursePageActions {
     public String getPDFNavStatusColor() {
         String color = null;
         try {
-            // Get the specific navigation element using the locator
-            WebElement PDFNavItem = learnCoursePageLocators.examplePDFInNavBar;
+            // Step 1: Get the locator (the "address") from your locators class
+            By pdfLocator = learnCoursePageLocators.secondPdfInSidebar;
             
-            // It's good practice to ensure the element is visible before checking its style
+            // Step 2: Use the driver to find the actual element on the page
+            WebElement PDFNavItem = driver.findElement(pdfLocator);
+            
+            // Now that you have the correct WebElement, the rest of your code will work
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(HelperClass.TIMEOUT));
             wait.until(ExpectedConditions.visibilityOf(PDFNavItem));
 
-            // Get the computed background color property
             color = PDFNavItem.getCssValue("background-color");
             
-            System.out.println("Navigation item background color is: " + color);
+            System.out.println("PDF Navigation item background color is: " + color);
 
         } catch (Exception e) {
             System.err.println("Could not get background color of navigation item: " + e.getMessage());
@@ -255,7 +258,27 @@ public class LearnCoursePageActions {
         return color;
     }
 
+
     public void refreshPage() {
         driver.navigate().refresh();
+    }
+
+    public String getMaterialTitleAfterClick(By locator) {
+        driver.findElement(locator).click();
+        
+        // Wait for the material title element to be visible and get its text
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement titleElement = wait.until(
+            ExpectedConditions.visibilityOf(learnCoursePageLocators.materialTitle)
+        );
+        return titleElement.getText();
+    }
+
+    public By getFirstVidInNavbar() {
+        return learnCoursePageLocators.firstVideoInSidebar;
+    }
+
+    public By getSecondPDFInNavbar() {
+        return learnCoursePageLocators.secondPdfInSidebar;
     }
 }

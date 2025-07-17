@@ -6,7 +6,7 @@ Feature: My Course Functionality
 
   Background:
     Given User has opened the browser
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "luthfipelajar@example.com" and password "luthfipelajar"
     And User clicks on the login button
     Then User is navigated to the dashboard page
@@ -27,7 +27,7 @@ Feature: My Course Functionality
   @Positive @TCF-FRS-07
   Scenario: Verify populated 'Selesai' tab
     Given User has completed courses in database
-    And User has navigated to the login page of JTK Learn app "https://polban-space.cloudias79.com/jtk-learn/"
+    And The user is on the application login page
     And User enters username "luthfipelajar2@example.com" and password "luthfipelajar2"
     And User clicks on the login button
     Then User is navigated to the dashboard page

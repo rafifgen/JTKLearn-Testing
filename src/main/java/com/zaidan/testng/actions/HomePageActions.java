@@ -6,10 +6,12 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
+
 import com.zaidan.testng.locators.HomePageLocators;
 import com.zaidan.testng.model.Course;
 import com.zaidan.testng.utils.HelperClass;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class HomePageActions {
     HomePageLocators homePageLocators = null;
@@ -128,19 +130,44 @@ public class HomePageActions {
         }
     }
 
+    // public void selectCourseByName(String courseName) {
+    //     try {
+    //         // XPath ini mencari <h6> yang berisi nama kursus,
+    //         // lalu memilih "induk"-nya yaitu <div> utama dari card tersebut.
+    //         String dynamicXpath = String.format("//h6[normalize-space()='%s']/ancestor::div[@class='card custom-card']", courseName);
+
+    //         WebElement courseCard = HelperClass.getDriver().findElement(By.xpath(dynamicXpath));
+
+    //         courseCard.click();
+
+    //     } catch (NoSuchElementException e) {
+    //         System.err.println("Course card dengan nama '" + courseName + "' tidak ditemukan.");
+    //         throw new AssertionError("Gagal menemukan kursus: " + courseName, e);
+    //     }
+    // }
+
     public void selectCourseByName(String courseName) {
         try {
-            // XPath ini mencari <h6> yang berisi nama kursus,
-            // lalu memilih "induk"-nya yaitu <div> utama dari card tersebut.
-            String dynamicXpath = String.format("//h6[normalize-space()='%s']/ancestor::div[@class='card custom-card']", courseName);
+            // This dynamic XPath is more robust. It finds an <h6> with the exact course name,
+            // then finds the main clickable card container for that title.
+            // Using contains(@class, 'custom-card') is slightly more reliable than an exact match.
+            String dynamicXpath = String.format(
+                "//h6[normalize-space()='%s']/ancestor::div[contains(@class, 'custom-card')]", 
+                courseName
+            );
 
+            System.out.println("Attempting to find course card with XPath: " + dynamicXpath);
             WebElement courseCard = HelperClass.getDriver().findElement(By.xpath(dynamicXpath));
 
-            courseCard.click();
+            Actions actions = new Actions(HelperClass.getDriver());
+            actions.moveToElement(courseCard).click().perform();
+
+            System.out.println("Successfully clicked on course: " + courseName);
 
         } catch (NoSuchElementException e) {
-            System.err.println("Course card dengan nama '" + courseName + "' tidak ditemukan.");
-            throw new AssertionError("Gagal menemukan kursus: " + courseName, e);
+            System.err.println("Course card with name '" + courseName + "' was not found on the page.");
+            // Fail the test with a clear message if the course isn't found
+            throw new AssertionError("Failed to find course: " + courseName, e);
         }
     }
 
@@ -182,24 +209,6 @@ public class HomePageActions {
         return uiCourses;
     }
 
-    // TODO: IMPLEMENT THIS
-    // THIS METHOD NEEDS TO BE IMPLEMENTED BASED ON YOUR UI FOR JOINED COURSES
-    public List<Course> getJoinedCoursesDisplayed() {
-        // You need to inspect your UI when a user has joined courses.
-        // Is there a different section, a different class, or filtering?
-        // Example: If joined courses are within a specific div:
-        // WebElement joinedCoursesContainer =
-        // driver.findElement(By.id("joinedCoursesSection"));
-        // List<WebElement> joinedCourseCardElements =
-        // joinedCoursesContainer.findElements(homePageLocators.courseCardContainer);
-        // Then iterate over joinedCourseCardElements and extract data similarly to
-        // getAllDisplayedCourses.
-
-        System.out.println(
-                "TO BE IMPLEMENTED SOON");
-        return new ArrayList<>(); // Return empty list until implemented correctly
-    }
-
     public void clickOnPemantauan() {
         homePageLocators.pemantauanNav.click();
     }
@@ -221,4 +230,3 @@ public class HomePageActions {
         }
     }
 }
-

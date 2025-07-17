@@ -6,6 +6,10 @@ C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\j
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\HomePageActions.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\Course.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\MyCourseActions.java
+<<<<<<< HEAD
+=======
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\dao\QuizDAO.java
+>>>>>>> rafif
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\HomePageLocators.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\SummaryCourseLocators.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\dao\HistoryQuizDAO.java
@@ -35,6 +39,10 @@ C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\j
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\SummaryProgressLocators.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\model\QuizAttemptDetails.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\enums\JenisMateri.java
+<<<<<<< HEAD
+=======
+C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\utils\ConfigReader.java
+>>>>>>> rafif
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\QuizHistoryPageLocators.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\locators\CourseDetailsPageLocators.java
 C:\Users\MSI\OneDrive\Documents\Proyek\Fault Seeding\JTKLearn-Testing\src\main\java\com\zaidan\testng\actions\LearnCoursePageActions.java

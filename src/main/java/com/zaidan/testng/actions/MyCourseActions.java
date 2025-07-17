@@ -111,4 +111,8 @@ public class MyCourseActions {
         }
         return null;
     }
+
+    public static String getLoggedInUserName() {
+        return HelperClass.getDriver().findElement(MyCourseLocators.LOGGED_IN_USERNAME).getText().trim();
+    }
 }

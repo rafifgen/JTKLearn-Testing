@@ -116,12 +116,12 @@ public class MyCourseDefinitions {
 
     @Given("User session is initialized")
     public void initUserSession() {
-        String pelajarLoggedin = HelperClass.getLoggedInUserName();
+        String pelajarLoggedin = MyCourseActions.getLoggedInUserName();
         Pelajar datapelajar = new PelajarDAO().getPelajarByNama(pelajarLoggedin);
         String namaPelajar = datapelajar.getNama();
         int idpelajar = datapelajar.getIdPelajar();
 
-        HelperClass.setLoggedInUserId(idpelajar);
+        // HelperClass.setLoggedInUserId(idpelajar);
         System.out.println("Logged in as [" + namaPelajar + "] with id_pelajar=" + idpelajar);
     }
 
@@ -177,7 +177,10 @@ public class MyCourseDefinitions {
     private void ensureCompletedTabIsActive() {
         System.out.println("=== ENSURING COMPLETED TAB IS ACTIVE ===");
         try {
-            String classes = locators.completedTab.getAttribute("class");
+            WebElement completedTab = driver.findElement(MyCourseLocators.COMPLETED_TAB);
+
+            // Check if tab is already active
+            String classes = completedTab.getDomAttribute("class");
             System.out.println("Completed tab classes: " + classes);
             if (!classes.contains("active")) {
                 System.out.println("Clicking 'Selesai' tab...");
@@ -267,6 +270,63 @@ public class MyCourseDefinitions {
         }
     }
 
+//    private void verifyCourseImage(WebElement courseCard, String verification) {
+//        System.out.println("=== VERIFYING COURSE IMAGE ===");
+//
+//        try {
+//            WebElement image = courseCard.findElement(MyCourseLocators.COURSE_IMAGE);
+//
+//            if (verification.equals("Visible")) {
+//                Assert.assertTrue(image.isDisplayed(), "Course image should be visible");
+//
+//                // Check image source
+//                String src = image.getDomAttribute("src");
+//                Assert.assertNotNull(src, "Image source should not be null");
+//                Assert.assertFalse(src.isEmpty(), "Image source should not be empty");
+//
+//                System.out.println("Course image verified. Src: " + src);
+//            }
+//
+//        } catch (NoSuchElementException e) {
+//            // Try alternative selectors
+//            List<WebElement> images = courseCard.findElements(By.tagName("img"));
+//            if (images.isEmpty()) {
+//                Assert.fail("Course image element not found");
+//            }
+//
+//            // Use the first image found
+//            WebElement image = images.get(0);
+//            Assert.assertTrue(image.isDisplayed(), "Course image should be visible");
+//            System.out.println("Course image found with alternative selector");
+//        }
+//    }
+//
+//    private void verifyCourseName(WebElement courseCard, String verification) {
+//        try {
+//            WebElement name = courseCard.findElement(MyCourseLocators.COURSE_NAME);
+//            Assert.assertTrue(name.isDisplayed(), "Course name should be visible");
+//            Assert.assertFalse(name.getText().trim().isEmpty(), "Course name should not be empty");
+//
+//            System.out.println("Course name verified: " + name.getText());
+//
+//        } catch (NoSuchElementException e) {
+//            Assert.fail("Course name element not found");
+//        }
+//    }
+//
+//    private void verifyInstructorName(WebElement courseCard, String verification) {
+//        try {
+//            WebElement instructor = courseCard.findElement(MyCourseLocators.INSTRUCTOR_NAME);
+//            Assert.assertTrue(instructor.isDisplayed(), "Instructor name should be visible");
+//            Assert.assertFalse(instructor.getText().trim().isEmpty(), "Instructor name should not be empty");
+//
+//            System.out.println("Instructor name verified: " + instructor.getText());
+//
+//        } catch (NoSuchElementException e) {
+//            Assert.fail("Instructor name element not found");
+//        }
+//    }
+
     private void verifyCourseImage(WebElement courseCard, String verification) {
         System.out.println("courseCard HTML: " + courseCard.getDomAttribute("outerHTML"));
 
@@ -304,7 +364,7 @@ public class MyCourseDefinitions {
                         "Image file name mismatch. UI: " + fileName + ", DB: " + expectedImage);
             }
 
-            System.out.println("Course image verification PASSED for src: " + uiSrc);
+            System.out.println("Course image verification FINISHED for src: " + uiSrc);
 
         } catch (NoSuchElementException e) {
             Assert.fail("Course image element not found");

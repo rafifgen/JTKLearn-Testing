@@ -14,6 +14,7 @@ import com.zaidan.testng.dao.CourseDAO;
 import com.zaidan.testng.dao.HistoryMateriDAO;
 import com.zaidan.testng.dao.MateriDAO;
 import com.zaidan.testng.model.Materi;
+import com.zaidan.testng.utils.HelperClass;
 import com.zaidan.testng.model.Course;
 import com.zaidan.testng.model.HistoryMateri;
 
@@ -22,7 +23,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class AccessMaterials {
+public class AccessMaterialsDefinitions {
     HomePageActions homePageActions = new HomePageActions();
     CourseDetailsPageActions courseDetailsPageActions = new CourseDetailsPageActions();
     MateriDAO materiDAO = new MateriDAO();
@@ -74,10 +75,15 @@ public class AccessMaterials {
 
     @When("User clicks on one of the video in the navigation bar")
     public void userClicksOnOneVideo() {
-        // Set the context to the video material
-        this.currentMaterialId = this.videoMaterialLookupId;
-        System.out.println("Setting current material ID to: " + this.currentMaterialId + " (Video)");
-        learnCoursePageActions.clickExampleVidMaterial();
+        String materialTitleFromUI = learnCoursePageActions.getMaterialTitleAfterClick(learnCoursePageActions.getFirstVidInNavbar());
+        
+        try {
+            // 2. Use the title to look up the ID from the database
+            this.currentMaterialId = materiDAO.getIdByName(materialTitleFromUI);
+            System.out.println("Dynamically set current material ID to: " + this.currentMaterialId);
+        } catch (SQLException e) {
+            Assert.fail("Failed to get material ID from database for title: " + materialTitleFromUI);
+        }
     }
 
     @Then("User should be able to see the page title {string}")
@@ -91,7 +97,9 @@ public class AccessMaterials {
 
     @And("User should be able to play the video")
     public void userPlaysVideo() {
-        System.out.println("Step: User should be able to play the video");
+        // System.out.println("Step: User should be able to play the video");
+        Assert.assertTrue(learnCoursePageActions.verifyExampleVideoCanBePlayed(),
+        "The youtube video is not playable because it does not use embedded type link.");
         learnCoursePageActions.playExampleVideo();
     }
 
@@ -118,10 +126,15 @@ public class AccessMaterials {
 
     @When("User clicks on the example PDF material")
     public void userClicksOnPDFMaterial() {
-        // Set the context to the PDF material
-        this.currentMaterialId = this.pdfMaterialLookupId;
-        System.out.println("Setting current material ID to: " + this.currentMaterialId + " (PDF)");
-        learnCoursePageActions.clickExamplePDFMaterial();
+        String materialTitleFromUI = learnCoursePageActions.getMaterialTitleAfterClick(learnCoursePageActions.getSecondPDFInNavbar());
+        
+        try {
+            // 2. Use the title to look up the ID from the database
+            this.currentMaterialId = materiDAO.getIdByName(materialTitleFromUI);
+            System.out.println("Dynamically set current material ID to: " + this.currentMaterialId);
+        } catch (SQLException e) {
+            Assert.fail("Failed to get material ID from database for title: " + materialTitleFromUI);
+        }
     }
 
 
@@ -180,6 +193,7 @@ public class AccessMaterials {
         int idPelajar = 1;
         int idCourse = 4;
         courseDAO.setCourseProgressByStudentAndCourseId(idPelajar, idCourse, percentage);
+        HelperClass.getDriver().navigate().refresh();
     }
     // --- VIDEO-SPECIFIC VERIFICATION STEP ---
     
@@ -187,17 +201,12 @@ public class AccessMaterials {
     public void theSystemCorrectlyTracksVideoCompletion(int duration) throws SQLException {
         System.out.println("Verifying VIDEO material completion...");
         
-        // 1. Verify start and finish times in the database
         verifyMaterialStartTime();
         verifyMaterialFinishTime(duration, materialLookupId);
 
-        // 2. Verify the database progress percentage was updated
         theDbPercentageIsUpdated();
-
-        // 3. Verify the UI progress bar and text were updated
         theUiProgressBarIsUpdated();
-
-        // 4. Verify the navigation item is now highlighted in green
+        learnCoursePageActions.clickExamplePDFMaterial();
         theCompletedVideoMaterialIsHighlightedInGreen();
     }
 
@@ -209,6 +218,7 @@ public class AccessMaterials {
         verifyMaterialFinishTime(duration, this.materialLookupId);
         theDbPercentageIsUpdated();
         theUiProgressBarIsUpdated();
+        learnCoursePageActions.clickExampleVidMaterial();
         theCompletedPDFMaterialIsHighlightedInGreen();
     }
 
@@ -245,7 +255,7 @@ public class AccessMaterials {
     public void theCompletedVideoMaterialIsHighlightedInGreen() {
         String navColor = learnCoursePageActions.getVidNavStatusColor();
         Assert.assertNotNull(navColor, "Could not determine the video nav item's color.");
-        String expectedGreenColorRgb = "rgb(162, 245, 200)";
+        String expectedGreenColorRgb = "rgba(162, 245, 200, 1)";
         Assert.assertEquals(navColor.toLowerCase().replace(" ", ""), expectedGreenColorRgb.replace(" ", ""), "The video navigation item was not highlighted in green.");
     }
 
@@ -253,7 +263,7 @@ public class AccessMaterials {
     public void theCompletedPDFMaterialIsHighlightedInGreen() {
         String navColor = learnCoursePageActions.getPDFNavStatusColor();
         Assert.assertNotNull(navColor, "Could not determine the PDF nav item's color.");
-        String expectedGreenColorRgb = "rgb(162, 245, 200)";
+        String expectedGreenColorRgb = "rgba(162, 245, 200, 1)";
         Assert.assertEquals(navColor.toLowerCase().replace(" ", ""), expectedGreenColorRgb.replace(" ", ""), "The PDF navigation item was not highlighted in green.");
     }
 

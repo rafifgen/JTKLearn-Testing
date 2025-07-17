@@ -58,7 +58,7 @@ public class SummaryProgressActions {
                 String iconClasses = icon.getDomAttribute("class");
 
                 if (iconClasses.contains("text-success")) {
-                    taskStatuses.put(taskHeader, TaskStatus.PASSED);
+                    taskStatuses.put(taskHeader, TaskStatus.FINISHED);
                 } else if (iconClasses.contains("text-warning")) {
                     taskStatuses.put(taskHeader, TaskStatus.IN_PROGRESS);
                 } else {

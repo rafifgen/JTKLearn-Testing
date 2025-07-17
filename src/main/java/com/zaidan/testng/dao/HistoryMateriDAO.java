@@ -208,7 +208,7 @@ public class HistoryMateriDAO {
 
         if (diffInMinutes >= requiredMinutes) {
             // The time spent was long enough to be considered finished.
-            return TaskStatus.PASSED;
+            return TaskStatus.FINISHED;
         } else {
             // The time spent was too short, so it's still considered in progress.
             return TaskStatus.IN_PROGRESS;

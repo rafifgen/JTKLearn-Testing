@@ -4,11 +4,13 @@ import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import com.zaidan.testng.actions.HomePageActions;
 import com.zaidan.testng.actions.LoginPageActions;
+import com.zaidan.testng.utils.ConfigReader;
 import com.zaidan.testng.utils.HelperClass;
 
 import io.cucumber.java.en.And;
@@ -26,9 +28,12 @@ public class LoginPageDefinitions {
         HelperClass.setUpDriver();
     }
 
-    @And("User has navigated to the login page of JTK Learn app {string}")
-    public void user_has_navigated_to_login_page(String url) {
-        HelperClass.openPage(url);
+    @And("The user is on the application login page")
+    public void user_has_navigated_to_login_page() {
+        // HelperClass.openPage(url);
+        String url = ConfigReader.getProperty("app.url");
+        WebDriver driver = HelperClass.getDriver();
+        driver.get(url);
     }
 
     @When("User enters username {string} and password {string}")
