@@ -2,14 +2,12 @@ package com.zaidan.testng.definitions;
 
 import com.zaidan.testng.actions.CourseContentPageActions;
 import com.zaidan.testng.actions.CourseDetailsPageActions;
-import com.zaidan.testng.actions.HomePageActions;
 import com.zaidan.testng.actions.MyCourseActions;
 import com.zaidan.testng.dao.CourseDAO;
 import com.zaidan.testng.dao.CourseDetailsDAO;
 import com.zaidan.testng.locators.CourseContentPageLocators;
 import com.zaidan.testng.locators.MyCourseLocators;
 import com.zaidan.testng.model.ContentItem;
-import com.zaidan.testng.model.ContentType;
 import com.zaidan.testng.model.Course;
 import com.zaidan.testng.model.CourseProgress;
 import com.zaidan.testng.utils.HelperClass;
@@ -27,7 +25,6 @@ import java.util.Set;
 
 
 public class CourseContentPageDefinitions {
-    private final HomePageActions homePageActions = new HomePageActions();
     private final MyCourseActions myCourseActions = new MyCourseActions();
     private final CourseDetailsPageActions detailsActions = new CourseDetailsPageActions();
     private final CourseContentPageActions contentActions = new CourseContentPageActions();
