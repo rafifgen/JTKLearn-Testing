@@ -39,6 +39,8 @@ public class LoginPageDefinitions {
     @When("User enters username {string} and password {string}")
     public void go_to_home_page(String userName, String passWord) {
         objLogin.login(userName, passWord);
+        // Store email in shared context for other step definitions
+        SharedContext.setStudentEmail(userName);
     }
 
     @And("User clicks on the login button")
