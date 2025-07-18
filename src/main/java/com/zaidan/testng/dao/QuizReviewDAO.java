@@ -68,6 +68,117 @@ public class QuizReviewDAO {
         return quizReview;
     }
 
+    // Get quiz with questions and answers using the new database schema
+    public QuizReview getQuizWithQuestionsAndAnswers(int quizId) {
+        QuizReview quizReview = null;
+        String sql = "SELECT " +
+                "    q.\"id_quiz\", " +
+                "    q.\"nama_quiz\", " +
+                "    q.\"deskripsi_quiz\", " +
+                "    q.\"durasi\", " +
+                "    p.\"id_pertanyaan\", " +
+                "    p.\"konten_pertanyaan\", " +
+                "    p.\"jenis_pertanyaan\", " +
+                "    j.\"id_jawaban\", " +
+                "    j.\"nama_jawaban\", " +
+                "    j.\"konten_jawaban\", " +
+                "    j.\"status_jawaban\" " +
+                "FROM " +
+                "    \"quiz\" q " +
+                "JOIN " +
+                "    \"pertanyaan\" p ON p.\"id_quiz\" = q.\"id_quiz\" " +
+                "LEFT JOIN " +
+                "    \"jawaban\" j ON j.\"id_pertanyaan\" = p.\"id_pertanyaan\" " +
+                "WHERE " +
+                "    q.\"id_quiz\" = ? " +
+                "ORDER BY " +
+                "    p.\"id_pertanyaan\", j.\"id_jawaban\"";
+
+        try (Connection conn = DatabaseUtil.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, quizId);
+
+            try (ResultSet rs = pstmt.executeQuery()) {
+                List<QuizQuestion> questions = new ArrayList<>();
+                String currentQuizName = null;
+                String currentQuizDescription = null;
+                int currentQuestionId = -1;
+                QuizQuestion currentQuestion = null;
+                List<String> currentOptions = null;
+                String correctAnswer = null;
+
+                while (rs.next()) {
+                    // Quiz information
+                    if (currentQuizName == null) {
+                        currentQuizName = rs.getString("nama_quiz");
+                        currentQuizDescription = rs.getString("deskripsi_quiz");
+                    }
+
+                    int questionId = rs.getInt("id_pertanyaan");
+                    
+                    // Check if we're starting a new question
+                    if (questionId != currentQuestionId) {
+                        // Save previous question if exists
+                        if (currentQuestion != null) {
+                            currentQuestion.setOptions(currentOptions);
+                            currentQuestion.setCorrectAnswer(correctAnswer);
+                            questions.add(currentQuestion);
+                        }
+
+                        // Start new question
+                        currentQuestionId = questionId;
+                        currentQuestion = new QuizQuestion();
+                        currentQuestion.setQuestionId(questionId);
+                        currentQuestion.setQuestionText(rs.getString("konten_pertanyaan"));
+                        currentQuestion.setQuestionType(rs.getString("jenis_pertanyaan"));
+                        currentOptions = new ArrayList<>();
+                        correctAnswer = null;
+                    }
+
+                    // Add answer options
+                    String answerContent = rs.getString("konten_jawaban");
+                    String answerStatus = rs.getString("status_jawaban");
+                    
+                    if (answerContent != null) {
+                        currentOptions.add(answerContent);
+                        
+                        // Check if this is the correct answer
+                        if ("benar".equals(answerStatus)) {
+                            correctAnswer = answerContent;
+                        }
+                    }
+                }
+
+                // Don't forget the last question
+                if (currentQuestion != null) {
+                    currentQuestion.setOptions(currentOptions);
+                    currentQuestion.setCorrectAnswer(correctAnswer);
+                    questions.add(currentQuestion);
+                }
+
+                // Create QuizReview object
+                if (currentQuizName != null) {
+                    String reviewUrl = "https://polban-space.cloudias79.com/jtk-learn/learn-course/" + quizId + "?mode=review";
+                    quizReview = new QuizReview(
+                        quizId,
+                        currentQuizName,
+                        currentQuizDescription,
+                        0, // studentId not available from this query
+                        0.0, // score not available from this query
+                        questions,
+                        reviewUrl
+                    );
+                }
+            }
+        } catch (SQLException e) {
+            System.err.println("Error retrieving quiz with questions and answers: " + e.getMessage());
+            e.printStackTrace();
+        }
+
+        return quizReview;
+    }
+
     // Get all quiz questions and answers for a specific student and quiz
     public List<QuizQuestion> getQuizQuestionsForStudent(String studentEmail, int quizId) {
         List<QuizQuestion> questions = new ArrayList<>();
@@ -109,16 +220,14 @@ public class QuizReviewDAO {
 
                     // Create options list for multiple choice questions
                     List<String> options = new ArrayList<>();
-                    if ("multiple_choice".equals(questionType)) {
-                        options.add(rs.getString("pilihan_a"));
-                        options.add(rs.getString("pilihan_b"));
-                        options.add(rs.getString("pilihan_c"));
-                        options.add(rs.getString("pilihan_d"));
-                    }
+                    options.add(rs.getString("pilihan_a"));
+                    options.add(rs.getString("pilihan_b"));
+                    options.add(rs.getString("pilihan_c"));
+                    options.add(rs.getString("pilihan_d"));
 
-                    // Determine styling classes based on correctness
+                    // Set border and status classes based on correctness
                     String borderClass = isCorrect ? "border-success" : "border-danger";
-                    String statusClass = isCorrect ? "text-success" : "text-unsuccess";
+                    String statusClass = isCorrect ? "text-success" : "text-danger";
 
                     QuizQuestion question = new QuizQuestion(
                         questionId,
@@ -186,19 +295,17 @@ public class QuizReviewDAO {
 
             try (ResultSet rs = pstmt.executeQuery()) {
                 if (rs.next()) {
-                    int dbQuizId = rs.getInt("id_quiz");
                     String quizName = rs.getString("nama_quiz");
                     String quizDescription = rs.getString("deskripsi_quiz");
-
                     String reviewUrl = "https://polban-space.cloudias79.com/jtk-learn/learn-course/" + quizId + "?mode=review";
 
                     quizReview = new QuizReview(
-                        dbQuizId,
+                        quizId,
                         quizName,
                         quizDescription,
-                        0, // studentId not available in this query
-                        0.0, // score not available in this query
-                        new ArrayList<>(), // questions not loaded in this method
+                        0, // studentId not available from this query
+                        0.0, // score not available from this query
+                        new ArrayList<>(), // questions not retrieved in this method
                         reviewUrl
                     );
                 }
@@ -239,8 +346,7 @@ public class QuizReviewDAO {
                     String quizName = rs.getString("nama_quiz");
                     String quizDescription = rs.getString("deskripsi_quiz");
                     int studentId = rs.getInt("id_pelajar");
-                    double highestScore = rs.getDouble("highest_score");
-
+                    double score = rs.getDouble("highest_score");
                     String reviewUrl = "https://polban-space.cloudias79.com/jtk-learn/learn-course/" + quizId + "?mode=review";
 
                     QuizReview quizReview = new QuizReview(
@@ -248,8 +354,8 @@ public class QuizReviewDAO {
                         quizName,
                         quizDescription,
                         studentId,
-                        highestScore,
-                        new ArrayList<>(), // questions not loaded in this method
+                        score,
+                        new ArrayList<>(), // questions not retrieved in this method
                         reviewUrl
                     );
 
@@ -264,7 +370,7 @@ public class QuizReviewDAO {
         return completedQuizzes;
     }
 
-    // Validate quiz review data consistency
+    // Validate quiz review data specifically for database consistency
     public boolean validateQuizReviewData(QuizReview uiQuizReview, QuizReview dbQuizReview) {
         if (uiQuizReview == null || dbQuizReview == null) {
             return false;
@@ -319,4 +425,4 @@ public class QuizReviewDAO {
 
         return true;
     }
-} 
+}
