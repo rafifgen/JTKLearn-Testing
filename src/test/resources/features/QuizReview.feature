@@ -18,7 +18,7 @@ Feature: FR09-Review Quiz Results
     And User should see answer status for each question with correct styling
     And User should see correct answer key for wrong answers
     And For multiple choice questions with wrong answers, the correct answer should have green border
-    And For correct answers, the status should be displayed in blue font color
+    And For correct answers, the status should be displayed in green font color
     And For wrong answers, the status should be displayed in red font color
     And All quiz information should match with database records including:
       | Question content    |

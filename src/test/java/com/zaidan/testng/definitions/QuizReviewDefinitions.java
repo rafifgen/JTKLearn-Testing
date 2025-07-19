@@ -123,16 +123,35 @@ public class QuizReviewDefinitions {
                 totalQuestions = uiQuestions.size();
             }
             
-            // Check answer status and styling for each question
+            // Check comprehensive answer styling for each question
             for (int i = 1; i <= totalQuestions; i++) {
-                Assert.assertTrue(quizReviewPageActions.checkQuestionAnswerStatus(i),
-                    "Question " + i + " should have correct answer status display");
+                Assert.assertTrue(quizReviewPageActions.validateAnswerStyling(i),
+                    "Question " + i + " should have correct answer styling including text color and border");
                 
-                Assert.assertTrue(quizReviewPageActions.checkQuestionBorderStyling(i),
-                    "Question " + i + " should have correct border styling");
+                // Additional individual checks for better debugging
+                boolean isCorrect = quizReviewPageActions.isQuestionAnswerCorrect(i);
+                boolean textColorValid = quizReviewPageActions.checkAnswerTextColor(i);
+                
+                if (isCorrect) {
+                    System.out.println("Question " + i + " is CORRECT - Green text and border verified");
+                } else {
+                    boolean correctAnswerKeyBorderValid = quizReviewPageActions.checkCorrectAnswerKeyBorder(i);
+                    boolean incorrectAnswerStylingValid = quizReviewPageActions.checkIncorrectAnswerStyling(i);
+                    
+                    Assert.assertTrue(correctAnswerKeyBorderValid,
+                        "Question " + i + " correct answer key should have green border");
+                    
+                    Assert.assertTrue(incorrectAnswerStylingValid,
+                        "Question " + i + " incorrect answer should have unsuccessful border");
+                    
+                    System.out.println("Question " + i + " is INCORRECT - Red text for user answer and green border for correct answer verified");
+                }
+                
+                Assert.assertTrue(textColorValid,
+                    "Question " + i + " should have correct text color (green for correct, red for incorrect)");
             }
             
-            System.out.println("All questions show correct answer status with appropriate styling");
+            System.out.println("All questions show correct answer status with appropriate styling including color coding");
         } catch (Exception e) {
             Assert.fail("Failed to verify answer status styling: " + e.getMessage());
         }
@@ -181,23 +200,25 @@ public class QuizReviewDefinitions {
                 totalQuestions = uiQuestions.size();
             }
             
-            // Check green border for wrong answers
+            // Check green border for correct answer key when user answer is wrong
             for (int i = 1; i <= totalQuestions; i++) {
                 boolean isCorrect = quizReviewPageActions.isQuestionAnswerCorrect(i);
                 if (!isCorrect) {
-                    Assert.assertTrue(quizReviewPageActions.checkQuestionBorderStyling(i),
-                        "Question " + i + " with wrong answer should have green border for correct answer");
+                    Assert.assertTrue(quizReviewPageActions.checkCorrectAnswerKeyBorder(i),
+                        "Question " + i + " with wrong answer should have green border for correct answer key");
+                    
+                    System.out.println("Question " + i + " - Correct answer key has green border as expected");
                 }
             }
             
-            System.out.println("Green border styling verified for wrong answers");
+            System.out.println("Green border styling verified for correct answer keys on wrong answers");
         } catch (Exception e) {
             Assert.fail("Failed to verify green border styling: " + e.getMessage());
         }
     }
 
-    @And("For correct answers, the status should be displayed in blue font color")
-    public void forCorrectAnswersTheStatusShouldBeDisplayedInBlueFontColor() {
+    @And("For correct answers, the status should be displayed in green font color")
+    public void forCorrectAnswersTheStatusShouldBeDisplayedInGreenFontColor() {
         try {
             // Get total number of questions
             int totalQuestions = uiQuestions != null ? uiQuestions.size() : 0;
@@ -207,18 +228,20 @@ public class QuizReviewDefinitions {
                 totalQuestions = uiQuestions.size();
             }
             
-            // Check blue font color for correct answers
+            // Check green font color for correct answers
             for (int i = 1; i <= totalQuestions; i++) {
                 boolean isCorrect = quizReviewPageActions.isQuestionAnswerCorrect(i);
                 if (isCorrect) {
-                    Assert.assertTrue(quizReviewPageActions.checkQuestionAnswerStatus(i),
-                        "Question " + i + " correct answer should be displayed in blue font color");
+                    Assert.assertTrue(quizReviewPageActions.checkAnswerTextColor(i),
+                        "Question " + i + " correct answer should be displayed in green font color");
+                    
+                    System.out.println("Question " + i + " - Correct answer 'Benar' has green font color as expected");
                 }
             }
             
-            System.out.println("Blue font color verified for correct answers");
+            System.out.println("Green font color verified for correct answers");
         } catch (Exception e) {
-            Assert.fail("Failed to verify blue font color for correct answers: " + e.getMessage());
+            Assert.fail("Failed to verify green font color for correct answers: " + e.getMessage());
         }
     }
 
@@ -237,8 +260,10 @@ public class QuizReviewDefinitions {
             for (int i = 1; i <= totalQuestions; i++) {
                 boolean isCorrect = quizReviewPageActions.isQuestionAnswerCorrect(i);
                 if (!isCorrect) {
-                    Assert.assertTrue(quizReviewPageActions.checkQuestionAnswerStatus(i),
+                    Assert.assertTrue(quizReviewPageActions.checkAnswerTextColor(i),
                         "Question " + i + " wrong answer should be displayed in red font color");
+                    
+                    System.out.println("Question " + i + " - Incorrect answer 'Salah' has red font color as expected");
                 }
             }
             

@@ -139,4 +139,40 @@ public class QuizReviewPageLocators {
     
     @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div/form/div[2]/div/div[1]")
     public WebElement secondQuestionBorder;
+    
+    // Additional locators for correct/incorrect answer handling
+    // For correct answers (green border and text)
+    @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div/form/div[1]/div/div[1]")
+    public WebElement question1CorrectAnswerBorder;
+    
+    @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div/form/div[1]/div/div[1]/div/span/span[2]")
+    public WebElement question1CorrectAnswerText;
+    
+    // For incorrect answers - question 2
+    // Correct answer key (green border)
+    @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div/form/div[2]/div/div[1]")
+    public WebElement question2CorrectAnswerKeyBorder;
+    
+    @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div/form/div[2]/div/div[1]/div/span/span")
+    public WebElement question2CorrectAnswerKeyText;
+    
+    // User's incorrect answer (unsuccessful border)
+    @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div/form/div[2]/div/div[4]")
+    public WebElement question2IncorrectAnswerBorder;
+    
+    @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div/form/div[2]/div/div[4]/div/span/span[2]")
+    public WebElement question2IncorrectAnswerText;
+    
+    // Generic locators for dynamic question handling
+    @FindBy(xpath = "//div[contains(@class,'border-success') or contains(@class,'correct-answer')]")
+    public java.util.List<WebElement> correctAnswerBorders;
+    
+    @FindBy(xpath = "//div[contains(@class,'border-danger') or contains(@class,'incorrect-answer')]")
+    public java.util.List<WebElement> incorrectAnswerBorders;
+    
+    @FindBy(xpath = "//span[contains(text(),'Benar') and contains(@style,'color') and (contains(@style,'green') or contains(@style,'#0f5132'))]")
+    public java.util.List<WebElement> correctAnswerTexts;
+    
+    @FindBy(xpath = "//span[contains(text(),'Salah') and contains(@style,'color') and (contains(@style,'red') or contains(@style,'#842029'))]")
+    public java.util.List<WebElement> incorrectAnswerTexts;
 } 
