@@ -28,12 +28,6 @@ public class LoginPageDefinitions {
         HelperClass.setUpDriver();
     }
 
-    @Given("User has navigated to the login page of JTK Learn app {string}")
-    public void userHasNavigatedToTheLoginPageOfJTKLearnApp(String url) {
-        WebDriver driver = HelperClass.getDriver();
-        driver.get(url);
-    }
-
     @And("The user is on the application login page")
     public void user_has_navigated_to_login_page() {
         // HelperClass.openPage(url);
@@ -45,8 +39,6 @@ public class LoginPageDefinitions {
     @When("User enters username {string} and password {string}")
     public void go_to_home_page(String userName, String passWord) {
         objLogin.login(userName, passWord);
-        // Store email in shared context for other step definitions
-        SharedContext.setStudentEmail(userName);
     }
 
     @And("User clicks on the login button")
