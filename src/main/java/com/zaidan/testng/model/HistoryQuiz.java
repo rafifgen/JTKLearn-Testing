@@ -19,6 +19,10 @@ int idHistoryQuiz;
         this.nilai = nilai;
     }
 
+    public int getIdHistoryQuiz() {
+        return idHistoryQuiz;
+    }
+
     public float getNilai() {
         return nilai;
     }
