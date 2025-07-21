@@ -70,7 +70,7 @@ public class QuizReviewPageLocators {
     public java.util.List<WebElement> incorrectAnswerElements;
     
     // Navigation and control buttons
-    @FindBy(xpath = "//button[contains(text(),'See Result')]")
+    @FindBy(xpath = "//button[contains(text(),'Tutup Tinjauan')]")
     public WebElement akhiriTinjauanButton;
     
     @FindBy(xpath = "//a[contains(@href,'course-detail')]")

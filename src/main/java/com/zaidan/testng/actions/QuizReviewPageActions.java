@@ -114,19 +114,19 @@ public class QuizReviewPageActions {
         }
     }
     
-    // Click on "See Result" button
+    // Click on "Tutup Tinjauan" button
     public void clickAkhiriTinjauanButton() {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(quizReviewPageLocators.akhiriTinjauanButton));
             quizReviewPageLocators.akhiriTinjauanButton.click();
-            System.out.println("Successfully clicked on 'See Result' button");
+            System.out.println("Successfully clicked on 'Tutup Tinjauan' button");
             
             // Wait for redirection
             Thread.sleep(2000);
             
         } catch (Exception e) {
-            System.err.println("Error clicking 'See Result' button: " + e.getMessage());
-            throw new RuntimeException("Failed to click 'See Result' button", e);
+            System.err.println("Error clicking 'Tutup Tinjauan' button: " + e.getMessage());
+            throw new RuntimeException("Failed to click 'Tutup Tinjauan' button", e);
         }
     }
     
