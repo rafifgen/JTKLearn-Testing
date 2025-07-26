@@ -49,7 +49,7 @@ public class QuizReviewDefinitions {
             if ("Tinjau Hasil Kuis".equals(buttonText)) {
                 quizReviewPageActions.clickCompletedQuizNavigation();
                 quizReviewPageActions.clickTinjauHasilKuisButton();
-            } else if ("See Result".equals(buttonText)) {
+            } else if ("Tutup Tinjauan".equals(buttonText)) {
                 quizReviewPageActions.clickAkhiriTinjauanButton();
             } else {
                 Assert.fail("Unknown button: " + buttonText);

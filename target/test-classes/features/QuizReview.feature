@@ -25,5 +25,5 @@ Feature: FR09-Review Quiz Results
       | Student answers     |
       | Answer status       |
       | Correct answer keys |
-    When User clicks on "See Result" button
+    When User clicks on "Tutup Tinjauan" button
     Then User should be redirected to the course detail page
